@@ -21,7 +21,7 @@ helloPerson();
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-let faceImage = new Image();
-faceImage.src ="assets/images/female_outline.png";
+let faceImageFemale = new Image();
+faceImageFemale.src ="assets/images/female_outline.png";
 
-faceImage.onload = () => ctx.drawImage(faceImage, 100, 50, 400, 400);
+faceImageFemale.onload = () => ctx.drawImage(faceImageFemale, 100, 50, 400, 400);
