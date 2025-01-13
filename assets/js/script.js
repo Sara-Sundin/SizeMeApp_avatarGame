@@ -2,8 +2,8 @@ let person = {
     firstName: "Sara",
     lastName:"Sundin",
     email: "sara@iknw.se",
-    genderType: "Female",
-    age: "47",
+    genderType: "female",
+    age: 47,
     aroundChest: 90,
     aroundWaist: 70,
     aroundHips: 100,
@@ -12,4 +12,8 @@ let person = {
 
 person.firstName = "Linus";
 
-console.log("Welcome "+ person.firstName+"!")
+function helloPerson() {
+    console.log("Welcome "+ person.firstName+"!")   
+}
+
+helloPerson();
