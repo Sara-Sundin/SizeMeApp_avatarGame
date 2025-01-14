@@ -24,12 +24,13 @@ helloPerson();
 const features = {
     face: {
         options: {
+            "faceDefault":"assets/images/images_avatar/avatar_default.png",
             "face1":"assets/images/images_avatar/face_female_1.png",
             "face2":"assets/images/images_avatar/face_female_2.png",
             "face3":"assets/images/images_avatar/face_female_3.png",
             "face4":"assets/images/images_avatar/face_female_4.png",
         },
-            default: "face1",
+            default: "faceDefault",
     }
 }
 
