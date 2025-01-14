@@ -22,6 +22,6 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 let faceImageFemale = new Image();
-faceImageFemale.src ="assets/images/female_outline.png";
+faceImageFemale.src ="assets/images/images_avatar/face_female_1.png";
 
 faceImageFemale.onload = () => ctx.drawImage(faceImageFemale, 100, 50, 400, 400);
