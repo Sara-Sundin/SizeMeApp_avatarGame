@@ -61,25 +61,16 @@ defaultFace.src = features.face.options[features.face.default]; // Load default 
         option.textContent = key; //Display the key as the text (face1)
         facePicker.appendChild(option); //Add option to the drowpdown
     } 
+    //Event Listener for dropdown Face menu
+    facePicker.addEventListener("change", (event) => {
+        const selectedFace = event.target.value;
+        const newFaceImage = new Image();
+        newFaceImage.src = features.face.options[selectedFace];
+
+        newFaceImage.onload = () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clears the canvas
+            ctx.drawImage(newFaceImage,  100, 100, 400, 400); // Draws the new selected face)            
+        }; // 
+    }); // 
 });
 
-
-
-/*let faceImageFemale = new Image();
-faceImageFemale.src ="assets/images/images_avatar/face_female_1.png";
-
-let eyesImage1 = new Image();
-eyesImage1.src ="assets/images/images_avatar/eyes_1.png";
-
-let browImage1 = new Image();
-browImage1.src ="assets/images/images_avatar/brows_1.png";
-
-// Draw image on canvas
-
-faceImageFemale.onload = () => {
-    ctx.drawImage(faceImageFemale, 100, 50, 400, 400);
-
-    eyesImage1.onload = () => ctx.drawImage(eyesImage1, 100, 50, 400, 400);  // Draw eyes after the face
-
-    browImage1.onload = () => ctx.drawImage(browImage1, 100, 50, 400, 400);  // Draw brows after the eyes
-}; */
