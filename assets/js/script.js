@@ -36,7 +36,8 @@ const features = {
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Script loaded"); // Make DOM load before canvas
-    
+
+  
 // Canvas Setup
 const slide1 = document.getElementById("slide-1");
 const slide2 = document.getElementById("slide-2");
@@ -58,17 +59,20 @@ defaultFace.onload = () => {
     };
 
     // Face options dropdown
-    for (const [key, value] of Object.entries(features.face.options)) {
+    function populateFacePicker() {
+        facePicker.innerHTML = "";
+        for (const [key, value] of Object.entries(features.face.options)) {
         const option = document.createElement("option");
         option.value = key; //Use the key (face1 etc) as the value
         option.textContent = key; //Display the key as the text (face1)
         facePicker.appendChild(option); //Add option to the drowpdown
     };
-
+  };
       //Event Listener for Start Button
       startButton.addEventListener("click", () => {
         slide1.classList.remove("active");
         slide2.classList.add("active");
+        populateFacePicker();
       }); 
     
     //Event Listener for dropdown Face menu
@@ -80,7 +84,6 @@ defaultFace.onload = () => {
         newFaceImage.onload = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height); // Clears the canvas
             ctx.drawImage(newFaceImage, 0, 0, 400, 400); // Draws the new selected face)            
-        }; // 
-    }); // 
+        }; 
+    }); 
 });
-
