@@ -63,7 +63,14 @@ defaultFace.onload = () => {
         option.value = key; //Use the key (face1 etc) as the value
         option.textContent = key; //Display the key as the text (face1)
         facePicker.appendChild(option); //Add option to the drowpdown
-    } 
+    };
+
+      //Event Listener for Start Button
+      startButton.addEventListener("click", () => {
+        slide1.classList.remove("active");
+        slide2.classList.add("active");
+      }); 
+    
     //Event Listener for dropdown Face menu
     facePicker.addEventListener("change", (event) => {
         const selectedFace = event.target.value;
