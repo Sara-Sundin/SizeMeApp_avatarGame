@@ -20,6 +20,9 @@ helloPerson();
 
 // Avatar Generator
 
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Script loaded"); // Make DOM load before canvas
+
 // Features
 const features = {
     face: {
@@ -33,10 +36,6 @@ const features = {
             default: "faceDefault",
     }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("Script loaded"); // Make DOM load before canvas
-
   
 // Canvas Setup
 const slide1 = document.getElementById("slide-1");
