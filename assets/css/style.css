@@ -14,3 +14,33 @@
 #canvas {
     border: 1px solid #000;
 }
+
+/*Color Picker*/
+.color-button {
+    width: 15px;
+    height: 15px;
+}
+
+#skin-1 {
+    background-color: #f9bfa0;
+}
+
+#skin-2 {
+    background-color: #ffeabb;
+}
+
+#skin-3 {
+    background-color: #ead7c7;
+}
+
+#brown-1 {
+    background-color:#6c3b29 ;
+}
+
+#yellow-1 {
+    background-color: #ffd159;
+}
+
+#red-1 {
+    background-color: #e30613;
+}
