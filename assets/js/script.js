@@ -38,8 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Script loaded"); // Make DOM load before canvas
     
 // Canvas Setup
+const slide1 = document.getElementById("slide-1");
+const slide2 = document.getElementById("slide-2");
+const startButton = document.getElementById("start-button");
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
+const facePicker = document.getElementById("face-option-picker");
 
 // Canvas Dimensions
 canvas.width = 400;
