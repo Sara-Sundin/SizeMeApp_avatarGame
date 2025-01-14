@@ -52,7 +52,18 @@ defaultFace.src = features.face.options[features.face.default]; // Load default 
         console.log("Default face image loaded");
         ctx.drawImage(defaultFace, 100, 100, 400, 400); // Draw the face image on the canvas
     };
+
+    // Face options dropdown
+    const facePicker = document.getElementById("face-option-picker");
+    for (const [key, value] of Object.entries(features.face.options)) {
+        const option = document.createElement("option");
+        option.value = key; //Use the key (face1 etc) as the value
+        option.textContent = key; //Display the key as the text (face1)
+        facePicker.appendChild(option); //Add option to the drowpdown
+    } 
 });
+
+
 
 /*let faceImageFemale = new Image();
 faceImageFemale.src ="assets/images/images_avatar/face_female_1.png";
