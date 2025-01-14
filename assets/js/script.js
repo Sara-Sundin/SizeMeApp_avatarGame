@@ -20,14 +20,6 @@ helloPerson();
 
 // Avatar Generator
 
-// Canvas Setup
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-
-// Canvas Dimensions
-canvas.width = 600;
-canvas.height = 500;
-
 // Features
 const features = {
     face: {
@@ -40,6 +32,19 @@ const features = {
             default: "face1",
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Script loaded"); // Make DOM load before canvas
+    
+// Canvas Setup
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+// Canvas Dimensions
+canvas.width = 600;
+canvas.height = 500;
+
+});
 
 console.log(features.face.default);
 
