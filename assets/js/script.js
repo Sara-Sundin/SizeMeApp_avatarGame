@@ -28,7 +28,19 @@ const ctx = canvas.getContext("2d");
 canvas.width = 600;
 canvas.height = 500;
 
-let faceImageFemale = new Image();
+const features = {
+    face: {
+        options: {
+            "face1":"assets/images/images_avatar/face_female_1.png",
+            "face2" :"assets/images/images_avatar/face_female_2.png",
+            "face3" :"assets/images/images_avatar/face_female_3.png",
+            "face4" :"assets/images/images_avatar/face_female_4.png",
+        },
+            default
+    }
+}
+
+/*let faceImageFemale = new Image();
 faceImageFemale.src ="assets/images/images_avatar/face_female_1.png";
 
 let eyesImage1 = new Image();
@@ -45,4 +57,4 @@ faceImageFemale.onload = () => {
     eyesImage1.onload = () => ctx.drawImage(eyesImage1, 100, 50, 400, 400);  // Draw eyes after the face
 
     browImage1.onload = () => ctx.drawImage(browImage1, 100, 50, 400, 400);  // Draw brows after the eyes
-};
+}; */
