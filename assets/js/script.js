@@ -52,14 +52,12 @@ canvas.height = 400;
 // Load and Draw Default Face Image
 const defaultFace = new Image();
 defaultFace.src = features.face.options[features.face.default]; // Load default face image
-
-    defaultFace.onload = () => {
-        console.log("Default face image loaded");
-        ctx.drawImage(defaultFace, 0, 0, 400, 400); // Draw the face image on the canvas
+defaultFace.onload = () => {
+    console.log("Default face image loaded");
+    ctx.drawImage(defaultFace, 0, 0, 400, 400); // Draw the face image on the canvas
     };
 
     // Face options dropdown
-    const facePicker = document.getElementById("face-option-picker");
     for (const [key, value] of Object.entries(features.face.options)) {
         const option = document.createElement("option");
         option.value = key; //Use the key (face1 etc) as the value
