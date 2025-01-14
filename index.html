@@ -8,35 +8,39 @@
 </head>
 <body>
   <!--Avatar Generator-->
+  <!--First Slide-->
   <div class="centered-text"><h1>Avatar Generator</h1>
-  <div id="avatar-generator">
-    <canvas id="canvas"></canvas>
-  <!--Feature Picker-->  
-    <div id="controls">
-      <div>
-        <label for="feature-picker">Choose your feature:</label>
+    <div id="avatar-generator">
+      <div id="slide-1" class="page ">
+        <canvas id="canvas"></canvas>
+        <div>
+          <button>Click to start!</button>
+        </div>  
+      </div>
+  <!--Second Slide-->  
+      <div id="slide-2" class="page active">
+        <canvas id="canvas"></canvas>
+        <!--Feature Picker-->  
+        <label for="feature-picker">Choose your feature:</label>  
         <select id="feature-picker">
         <option value="face">Face</option>
         <option value="eyes">Eyes</option>
         <option value="eyebrows">Eyebrows</option>
         </select>
-      </div>
-      <div>
         <label for="face-option-picker">Choose your option:</label>
         <select id="face-option-picker">
         </select>
+         <!--Color Picker-->
+        <div id="color-picker"></div>
+          <p>Choose a color:</p>
+          <button id="skin-1" class="color-button"></button>
+          <button id="skin-2" class="color-button"></button>
+          <button id="skin-3" class="color-button"></button>
+          <button id="brown-1" class="color-button"></button>
+          <button id="yellow-1" class="color-button"></button>
+          <button id="red-1" class="color-button"></button>
+        </div>
       </div>
-    </div>
-  <!--Color Picker-->
-  <div id="color-picker"></div>
-    <p>Choose a color:</p>
-    <button id="skin-1" class="color-button"></button>
-    <button id="skin-2" class="color-button"></button>
-    <button id="skin-3" class="color-button"></button>
-    <button id="brown-1" class="color-button"></button>
-    <button id="yellow-1" class="color-button"></button>
-    <button id="red-1" class="color-button"></button>
-  </div>
 </div>
 
 <script src="assets/js/script.js"></script>  
