@@ -42,8 +42,8 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 // Canvas Dimensions
-canvas.width = 600;
-canvas.height = 500;
+canvas.width = 400;
+canvas.height = 400;
 
 // Load and Draw Default Face Image
 const defaultFace = new Image();
@@ -51,7 +51,7 @@ defaultFace.src = features.face.options[features.face.default]; // Load default 
 
     defaultFace.onload = () => {
         console.log("Default face image loaded");
-        ctx.drawImage(defaultFace, 100, 100, 400, 400); // Draw the face image on the canvas
+        ctx.drawImage(defaultFace, 0, 0, 400, 400); // Draw the face image on the canvas
     };
 
     // Face options dropdown
@@ -70,7 +70,7 @@ defaultFace.src = features.face.options[features.face.default]; // Load default 
 
         newFaceImage.onload = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height); // Clears the canvas
-            ctx.drawImage(newFaceImage,  100, 100, 400, 400); // Draws the new selected face)            
+            ctx.drawImage(newFaceImage, 0, 0, 400, 400); // Draws the new selected face)            
         }; // 
     }); // 
 });
