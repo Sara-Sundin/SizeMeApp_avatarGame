@@ -44,9 +44,15 @@ const ctx = canvas.getContext("2d");
 canvas.width = 600;
 canvas.height = 500;
 
-});
+// Load and Draw Default Face Image
+const defaultFace = new Image();
+defaultFace.src = features.face.options[features.face.default]; // Load default face image
 
-console.log(features.face.default);
+    defaultFace.onload = () => {
+        console.log("Default face image loaded");
+        ctx.drawImage(defaultFace, 100, 100, 400, 400); // Draw the face image on the canvas
+    };
+});
 
 /*let faceImageFemale = new Image();
 faceImageFemale.src ="assets/images/images_avatar/face_female_1.png";
