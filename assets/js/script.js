@@ -28,17 +28,20 @@ const ctx = canvas.getContext("2d");
 canvas.width = 600;
 canvas.height = 500;
 
+// Features
 const features = {
     face: {
         options: {
             "face1":"assets/images/images_avatar/face_female_1.png",
-            "face2" :"assets/images/images_avatar/face_female_2.png",
-            "face3" :"assets/images/images_avatar/face_female_3.png",
-            "face4" :"assets/images/images_avatar/face_female_4.png",
+            "face2":"assets/images/images_avatar/face_female_2.png",
+            "face3":"assets/images/images_avatar/face_female_3.png",
+            "face4":"assets/images/images_avatar/face_female_4.png",
         },
-            default
+            default: "face1",
     }
 }
+
+console.log(features.face.default);
 
 /*let faceImageFemale = new Image();
 faceImageFemale.src ="assets/images/images_avatar/face_female_1.png";
