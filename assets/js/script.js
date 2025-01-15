@@ -74,6 +74,7 @@ defaultFace.onload = () => {
   function redrawCanvasWithFace() {
         const faceImage = new Image();
         faceImage.src = features.face.options[selectedFace];
+        console.log(`Redrawing canvas with: ${selectedFace}, src: ${faceImage.src}`); // Debug log
         faceImage.onload = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(faceImage, 0, 0, 400, 400);    
@@ -88,6 +89,7 @@ defaultFace.onload = () => {
         selectedFace = "face1";//Change default face to slide 2
         populateFacePicker();
         redrawCanvasWithFace();
+        console.log(redrawCanvasWithFace);
     });
 
     //Event Listener for dropdown Face menu
