@@ -58,6 +58,13 @@ function setUpSlide1() {
     loadAndDrawImage(ctxOne, defaultImage); // Pass the correct path to loadAndDrawImage
 }
 
+// Start Button Event Listener
+startButton.addEventListener("click", () => {
+    slide1.classList.remove("active");
+    slide2.classList.add("active");
+})
+
+
 function setUpSlide2() {
     const femaleShape = features.shape.options.Female;
     console.log(`Setting up slide 2 with image:${femaleShape})`); // Debug log
