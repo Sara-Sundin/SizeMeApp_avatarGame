@@ -16,8 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     };
 
-    let SelectedFace = features.defaultFace.defaultFace; //Loading face 1st slide
-
     // Canvas Setup
 const slide1 = document.getElementById("slide-1");
 const slide2 = document.getElementById("slide-2");
