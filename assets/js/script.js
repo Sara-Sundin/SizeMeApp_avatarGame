@@ -70,30 +70,30 @@ defaultFace.onload = () => {
     }
     facePicker.value = selectedFace; //Set the current face
   }
+
+  function redrawCanvasWithFace() {
+        const faceImage = new Image();
+        faceImage.src = features.face.options[selectedFace];
+        faceImage.onload = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(faceImage, 0, 0, 400, 400);    
+        };
+      }
+
       //Event Listener for Start Button
       startButton.addEventListener("click", () => {
         slide1.classList.remove("active");
         slide2.classList.add("active");
+        
+        selectedFace = "face1";//Change default face to slide 2
         populateFacePicker();
+        redrawCanvasWithFace();
+    });
 
-      //Redraw the canvas the selected face
-      const faceImage = new Image();
-      faceImage.src = features.face.options[selectedFace];
-      faceImage.onload = () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(faceImage, 0, 0, 400, 400);
-      };  
-      }); 
-    
     //Event Listener for dropdown Face menu
     facePicker.addEventListener("change", (event) => {
-        selectedFace = event.target.value;
-        const newFaceImage = new Image();
-        newFaceImage.src = features.face.options[selectedFace];
-
-        newFaceImage.onload = () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clears the canvas
-            ctx.drawImage(newFaceImage, 0, 0, 400, 400); // Draws the new selected face)            
-        }; 
-    }); 
+        selectedFace = event.target.value; //Update the selected face
+        redrawCanvasWithFace();
+  });  
 });
+
