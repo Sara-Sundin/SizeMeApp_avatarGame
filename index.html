@@ -9,27 +9,48 @@
 <body>
   <!--Avatar Generator-->
   <!--First Slide-->
-  <div class="centered-text"><h1>Avatar Generator</h1>
-    <div id="avatar-generator">
-      <div id="slide-1" class="slide active">
-        <canvas id="canvas"></canvas>
+  <div id="slides" class="centered-text">
+      <div id="slide-1" class="slide active" data-slide="1">
+        <h1>Avatar Generator</h1>
+        <canvas id="canvas-slide1" class="canvas"></canvas>
         <div>
           <button id="start-button">Click to start!</button>
         </div>  
       </div>
   <!--Second Slide-->  
-      <div id="slide-2" class="slide">
+      <div id="slide-2" class="slide" data-slide="2">
         <canvas id="canvas"></canvas>
         <!--Feature Picker-->  
-        <label for="feature-picker">Choose your feature:</label>  
-        <select id="feature-picker">
-        <option value="face">Face</option>
+        <label for="feature-picker1">Choose your feature:</label>  
+        <select id="feature-picker1">
+        <option value="body">Body</option>
         <option value="eyes">Eyes</option>
         <option value="eyebrows">Eyebrows</option>
         </select>
-        <label for="face-option-picker">Choose your option:</label>
-        <select id="face-option-picker">
+        <label for="body-option-picker">Choose your body:</label>
+        <select id="body-option-picker"></select>
+        <label for="eyes-option-picker">Choose your eyes:</label>
+        <select id="eyes-option-picker"></select>
+        <label for="brow-option-picker">Choose your eyebrows:</label>
+        <select id="brow-option-picker"></select>
+      </div> 
+      <!--Third Slide-->  
+      <div id="slide-2" class="slide" data-slide="2">
+        <canvas id="canvas"></canvas>
+        <!--Feature Picker-->  
+        <label for="feature-picker2">Choose your feature:</label>  
+        <select id="feature-picker2">
+        <option value="hair">Hair</option>
+        <option value="glasses">Glasses</option>
+        <option value="beard">Beard</option>
         </select>
+        <label for="hair-option-picker">Choose your hair:</label>
+        <select id="hair"></select>
+        <label for="glasses-option-picker">Choose your glasses:</label>
+        <select id="glasses-option-picker"></select>
+        <label for="beard-option-picker">Choose your feature:</label>
+        <select id="beard-option-picker"></select>
+      </div> 
          <!--Color Picker-->
         <div id="color-picker"></div>
           <p>Choose a color:</p>
@@ -40,7 +61,6 @@
           <button id="yellow-1" class="color-button"></button>
           <button id="red-1" class="color-button"></button>
         </div>
-      </div>
 </div>
 
 <script src="assets/js/script.js"></script>  

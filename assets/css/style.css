@@ -12,11 +12,6 @@ body {
 }
 
 /*Avatar Generator*/
-#avatar-generator {
-    margin: 0 auto;
-    text-align: center;
-
-}
 
 .slide {
     display: none;
@@ -31,12 +26,9 @@ body {
     display: flex;
 }
 
-#canvas {
+.canvas {
     border: 1px solid #000;
-    max-width: 90%;
-    max-height: 80%;
-    box-sizing: border-box;
-    display: block;
+    margin: 20 px auto;
 }
 
 /*Color Picker*/
