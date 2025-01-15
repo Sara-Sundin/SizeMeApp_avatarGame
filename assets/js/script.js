@@ -14,6 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Junior":"assets/images/images_avatar/shape_junior.png",
             },
         },
+        colorSkin: {
+            options: {
+                "skinOne":"assets/js/female_skin_1.png",
+                "skinTwo":"assets/js/female_skin_2.png",
+                "skinThree":"assets/js/female_skin_3.png",
+                "brownOne":"/workspace/SizeMeApp_avatarGame/assets/js/female_skin_4.png";
+                "yellowOne":"",
+                "redOne":"", 
+            }
+        }
     };
 
     // Canvas Setup
@@ -80,6 +90,21 @@ shapePicker.addEventListener("change", (event) => {
     console.log(`Selected shape: ${selectedShape}`); // Debug log
     loadAndDrawImage(ctxTwo, selectedShape); // Load and draw the selected shape
 });
+
+// Color Picker for shape selection
+
+// Color Picker Setup
+const skinOne = document.getElementById("skin-1");
+const skinTwo = document.getElementById("skin-2");
+const skinThree = document.getElementById("skin-3");
+const brownOne = document.getElementById("brown-1");
+const yellowOne = document.getElementById("yellow-1");
+const redOne = document.getElementById("red-1");
+         
+function colorPickerSkin() {
+    colorPickerSkin.innerHTML=""; //Clear existing options in the palette
+    const 
+}
 
 setUpSlide1();
 setUpSlide2();
