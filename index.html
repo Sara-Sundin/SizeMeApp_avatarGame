@@ -8,35 +8,57 @@
 </head>
 <body>
   <!--Avatar Generator-->
-  <!--First Slide-->
   <div id="slides" class="centered-text">
+     <!--First Slide-->
       <div id="slide-1" class="slide active" data-slide="1">
         <h1>Avatar Generator</h1>
-        <canvas id="canvas-slide1" class="canvas"></canvas>
+        <canvas id="canvas" class="canvas"></canvas>
         <div>
           <button id="start-button">Click to start!</button>
         </div>  
       </div>
   <!--Second Slide-->  
       <div id="slide-2" class="slide" data-slide="2">
-        <canvas id="canvas"></canvas>
+        <canvas id="canvas" class="canvas"></canvas>
         <!--Feature Picker-->  
-        <label for="feature-picker1">Choose your feature:</label>  
-        <select id="feature-picker1">
-        <option value="body">Body</option>
-        <option value="eyes">Eyes</option>
-        <option value="eyebrows">Eyebrows</option>
+        <div>
+          <label for="shape-picker">Choose your shape:</label>  
+          <select id="shape-picker">
+          <option value="female">Feminine</option>
+          <option value="male">Masculine</option>
+          <option value="junior">Youth</option>
+          </select>
+        </div>
+        <div>
+        <label for="feature-picker">Choose your features:</label>
+        <select id="feature-picker">
+         <option value="body">Eyes</option>
+         <option value="eyes">Eyebrows</option>
+         <option value="eyebrows">Nose</option>
+          <option value="eyebrows">Mouth</option>
         </select>
-        <label for="body-option-picker">Choose your body:</label>
-        <select id="body-option-picker"></select>
-        <label for="eyes-option-picker">Choose your eyes:</label>
-        <select id="eyes-option-picker"></select>
-        <label for="brow-option-picker">Choose your eyebrows:</label>
-        <select id="brow-option-picker"></select>
+      </div>
+      <div>
+        <label for="hair-picker">Choose your hair:</label>
+        <select id="eyes-option-picker">
+          <option value="body">Hair</option>
+          <option value="eyes">Beard</option>
+        </select>
+      </div> 
+         <!--Color Picker-->
+       <div id="color-picker1" class="col-12"></div>
+         <p>Choose a color:</p>
+         <button id="skin-1" class="color-button"></button>
+         <button id="skin-2" class="color-button"></button>
+         <button id="skin-3" class="color-button"></button>
+         <button id="brown-1" class="color-button"></button>
+         <button id="yellow-1" class="color-button"></button>
+         <button id="red-1" class="color-button"></button>
+       </div>
       </div> 
       <!--Third Slide-->  
-      <div id="slide-2" class="slide" data-slide="2">
-        <canvas id="canvas"></canvas>
+      <div id="slide-3" class="slide" data-slide="2">
+        <canvas id="canvas" class="canvas"></canvas>
         <!--Feature Picker-->  
         <label for="feature-picker2">Choose your feature:</label>  
         <select id="feature-picker2">
@@ -50,19 +72,19 @@
         <select id="glasses-option-picker"></select>
         <label for="beard-option-picker">Choose your feature:</label>
         <select id="beard-option-picker"></select>
-      </div> 
          <!--Color Picker-->
-        <div id="color-picker"></div>
-          <p>Choose a color:</p>
-          <button id="skin-1" class="color-button"></button>
-          <button id="skin-2" class="color-button"></button>
-          <button id="skin-3" class="color-button"></button>
-          <button id="brown-1" class="color-button"></button>
-          <button id="yellow-1" class="color-button"></button>
-          <button id="red-1" class="color-button"></button>
-        </div>
+         <div id="color-picker"></div>
+         <p>Choose a color:</p>
+         <button id="skin-1" class="color-button"></button>
+         <button id="skin-2" class="color-button"></button>
+         <button id="skin-3" class="color-button"></button>
+         <button id="brown-1" class="color-button"></button>
+         <button id="yellow-1" class="color-button"></button>
+         <button id="red-1" class="color-button"></button>
+       </div>
+      </div> 
 </div>
 
-<script src="assets/js/script.js"></script>  
+<script src="assets/js/script_trial.js"></script>  
 </body>
 </html>

@@ -23,18 +23,24 @@ body {
 }
 
 .slide.active {
-    display: flex;
+    display: block;
+    text-align: center;
 }
 
 .canvas {
     border: 1px solid #000;
-    margin: 20 px auto;
+    margin: 20px auto;
+    max-height: 300px;
 }
 
 /*Color Picker*/
 .color-button {
     width: 15px;
     height: 15px;
+}
+
+.color-picker1 {
+    border: 1px solid #000;
 }
 
 #skin-1 {
