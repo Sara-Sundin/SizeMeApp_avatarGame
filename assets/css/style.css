@@ -30,7 +30,9 @@ body {
 .canvas {
     border: 1px solid #000;
     margin: 20px auto;
-    max-height: 300px;
+    max-height: 200px;
+    min-height: 200px;
+    max-width: 200px;
 }
 
 /*Color Picker*/
