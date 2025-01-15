@@ -45,6 +45,13 @@ function setUpSlide1() {
     loadAndDrawImage(defaultImage); // Pass the correct path to loadAndDrawImage
 }
 
+function setUpSlide2() {
+    const femaleShape = features.shape.options.Female;
+    console.log(`Setting up slide 2 with image:${femaleShape})`); // Debug log
+    loadAndDrawImage(femaleShape); // Pass the image path to loadAndDrawImage
+    shapePicker.value = femaleShape; // Set "Female" as the selected option in the dropdown
+}
+
 function populateShapePicker() {
     shapePicker.innerHTML=""; //Clear existing options in the dropdown
 
@@ -70,6 +77,7 @@ shapePicker.addEventListener("change", (event) => {
 });
 
 setUpSlide1();
+setUpSlide2();
 populateShapePicker();
 
 });
