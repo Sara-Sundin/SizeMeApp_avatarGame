@@ -78,7 +78,7 @@ function populateShapePicker() {
 shapePicker.addEventListener("change", (event) => {
     const selectedShape = event.target.value; // Get the image path from the selected option
     console.log(`Selected shape: ${selectedShape}`); // Debug log
-    loadAndDrawImage(ctxTwo.selectedShape); // Load and draw the selected shape
+    loadAndDrawImage(ctxTwo, selectedShape); // Load and draw the selected shape
 });
 
 setUpSlide1();
