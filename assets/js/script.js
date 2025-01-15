@@ -9,19 +9,17 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         shape: {
             options: {
-                "Female":"assets/images/images_avatar/shape_female.png",
-                "Male":"assets/images/images_avatar/shape_male.png",
-                "Junior":"assets/images/images_avatar/shape_junior.png",
+                Female:"assets/images/images_avatar/shape_female.png",
+                Male:"assets/images/images_avatar/shape_male.png",
+                Junior:"assets/images/images_avatar/shape_junior.png",
             },
         },
         colorSkin: {
             options: {
-                "skinOne":"assets/js/female_skin_1.png",
-                "skinTwo":"assets/js/female_skin_2.png",
-                "skinThree":"assets/js/female_skin_3.png",
-                "brownOne":"/workspace/SizeMeApp_avatarGame/assets/js/female_skin_4.png";
-                "yellowOne":"",
-                "redOne":"", 
+                skinOne:"assets/js/female_skin_1.png",
+                skinTwo:"assets/js/female_skin_2.png",
+                skinThree:"assets/js/female_skin_3.png",
+                brownOne:"assets/js/female_skin_4.png",
             }
         }
     };
@@ -64,7 +62,7 @@ function setUpSlide2() {
     const femaleShape = features.shape.options.Female;
     console.log(`Setting up slide 2 with image:${femaleShape})`); // Debug log
     loadAndDrawImage(ctxTwo, femaleShape); // Pass the image path to loadAndDrawImage
-    shapePicker.value = features.shape.options.Female; // Set "Female" as the selected option in the dropdown
+    shapePicker.value = "Female"; // Set "Female" as the selected option in the dropdown
 }
 
 function populateShapePicker() {
@@ -94,17 +92,32 @@ shapePicker.addEventListener("change", (event) => {
 // Color Picker for shape selection
 
 // Color Picker Setup
-const skinOne = document.getElementById("skin-1");
-const skinTwo = document.getElementById("skin-2");
-const skinThree = document.getElementById("skin-3");
-const brownOne = document.getElementById("brown-1");
-const yellowOne = document.getElementById("yellow-1");
-const redOne = document.getElementById("red-1");
-         
-function colorPickerSkin() {
-    colorPickerSkin.innerHTML=""; //Clear existing options in the palette
-    const 
-}
+const colorButtonsSkin = {
+    skinOne: document.getElementById("skin-1"),
+    skinTwo: document.getElementById("skin-2"),
+    skinThree: document.getElementById("skin-3"),
+    brownOne: document.getElementById("brown-1"),
+};
+
+        // Function to handle color selection
+        function handleColorSkin(colorKey) {
+            if (shapePicker.value !== features.shape.options.Female) {
+                console.error("Female shape must be selected to change skin color");
+                return;
+            }
+            const colorImage = features.colorSkin.options[colorKey];
+            if (colorImage) {
+                console.log(`Changing to skin color: ${colorKey}`);
+                loadAndDrawImage(ctxTwo, colorImage);
+            } else {
+                console.error(`No image defined for color: ${colorKey}`);
+            }
+        }
+    
+        // Add event listeners for color buttons
+        Object.entries(colorButtonsSkin).forEach(([colorKey, button]) => {
+            button.addEventListener("click", () => handleColorSkin(colorKey));
+        });
 
 setUpSlide1();
 setUpSlide2();
