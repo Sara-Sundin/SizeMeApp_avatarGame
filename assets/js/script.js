@@ -108,10 +108,7 @@ const colorButtonsSkin = {
 
         // Function to handle color selection
         function handleColorSkin(colorKey) {
-            if (shapePicker.value !== features.shape.options.Female) {
-                console.error("Female shape must be selected to change skin color");
-                return;
-            }
+            
             const colorImage = features.colorSkin.options[colorKey];
             if (colorImage) {
                 console.log(`Changing to skin color: ${colorKey}`);
