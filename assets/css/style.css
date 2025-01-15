@@ -13,6 +13,35 @@ body {
 
 /*Avatar Generator*/
 
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.thumbnail {
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background: none;
+    outline: none;
+}
+
+.thumbnail img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.thumbnail img:hover,
+.thumbnail img:focus {
+    border-color: blue;
+}
+
 .slide {
     display: none;
     flex-direction: column;
