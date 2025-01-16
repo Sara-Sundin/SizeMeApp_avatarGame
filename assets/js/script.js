@@ -33,7 +33,7 @@ const canvasOne = document.getElementById("canvas-1");
 const canvasTwo = document.getElementById("canvas-2");
 const canvasThree = document.getElementById("canvas-3");
 const ctxOne = canvasOne.getContext("2d");
-const ctxTwo = canvasTwo.getContext("2d");
+//const ctxTwo = canvasTwo.getContext("2d");
 const ctxThree = canvasThree.getContext("2d");
 const shapePicker = document.getElementById("shape-picker");
 
@@ -67,12 +67,19 @@ startButton.addEventListener("click", () => {
     slide2.classList.add("active");
 })
 
-function setUpSlide2() {
+// Shape Button Event Listener
+startButton.addEventListener("click", () => {
+    console.log("Start button clicked."); // Debug log
+    slide1.classList.remove("active");
+    slide2.classList.add("active");
+})
+
+/*function setUpSlide2() {
     const femaleShape = features.shape.options.Female;
     console.log(`Setting up slide 2 with image:${femaleShape})`); // Debug log
     loadAndDrawImage(ctxTwo, femaleShape); // Pass the image path to loadAndDrawImage
     shapePicker.value = "Female"; // Set "Female" as the selected option in the dropdown
-}
+}*/
 
 function setUpSlide3() {
     const femaleShape = features.shape.options.Female;
@@ -99,13 +106,13 @@ function populateShapePicker() {
 }
 
 // Event listener for shape selection
-shapePicker.addEventListener("change", (event) => {
+/*shapePicker.addEventListener("change", (event) => {
     const selectedShape = event.target.value; // Get the image path from the selected option
     console.log(`Selected shape: ${selectedShape}`); // Debug log
     loadAndDrawImage(ctxTwo, selectedShape); // Load and draw the selected shape
-});
+});*/
 
-// Event listener for shape selection THREE
+// Event listener for shape selection
 shapePicker.addEventListener("change", (event) => {
     const selectedShape = event.target.value; // Get the image path from the selected option
     console.log(`Selected shape: ${selectedShape}`); // Debug log
@@ -140,7 +147,7 @@ const colorButtonsSkin = {
         });
 
 setUpSlide1();
-setUpSlide2();
+//setUpSlide2();
 setUpSlide3();
 populateShapePicker();
 
