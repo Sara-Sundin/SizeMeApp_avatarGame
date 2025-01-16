@@ -1,0 +1,72 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .centered-text {
+    text-align: center;
+  }
+  
+  .canvas-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+  }
+  
+  .canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .thumbnail-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .thumbnail {
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background: none;
+    outline: none;
+  }
+  
+  .thumbnail img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+  }
+  
+  .thumbnail img:hover,
+  .thumbnail img:focus {
+    border-color: blue;
+  }
+  
+  .color-picker {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .color-picker input[type="color"] {
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .hidden {
+    display: none;
+  }
