@@ -12,8 +12,9 @@
   <!--Avatar Generator-->
   <div id="slides" class="centered-text">
     <h1>Avatar Generator</h1>
+
     <!--First Slide-->
-    <div id="slide-1" class="slide" data-slide="1">
+    <div id="slide-1" class="slide active" data-slide="1">
       <div>
         <canvas id="canvas-1" class="canvas"></canvas>
       </div>
@@ -21,6 +22,7 @@
         <button id="start-button">Click to start!</button>
       </div>
     </div>
+
     <!--Second Slide-->
     <div id="slide-2" class="slide" data-slide="2">
       <div>
@@ -38,19 +40,49 @@
         </button>
       </div>
     </div>
+
     <!--Third Slide-->
-    <div id="slide-3" class="slide active" data-slide="3">
+    <div id="slide-3" class="slide" data-slide="3">
+      <!--Color Picker-->
+      <div class="thumbnail-container">
+        <div>
+          <button id="thumbnail-eyes" class="thumbnail-feature" data-shape="eyes">
+            <img src="assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/eyes_1.png"
+              alt="Eye feature">
+          </button>
+          <button class="thumbnail-feature" data-shape="eyes">
+            <img src="assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/eyes_2.png"
+              alt="Eye feature">
+          </button>
+          <button class="thumbnail-feature" data-shape="eyes">
+            <img src="assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/eyes_3.png"
+              alt="Eye feature">
+          </button>
+        </div>
+        <div id="color-picker-eyes" class="color-picker hidden">
+          <p>Choose eye color:</p>
+          <button id="skin-1" class="color-button"></button>
+          <button id="skin-2" class="color-button"></button>
+          <button id="skin-3" class="color-button"></button>
+          <button id="brown-1" class="color-button"></button>
+        </div>
+      </div>
       <div>
         <canvas id="canvas-3" class="canvas"></canvas>
       </div>
+      <div id="color-picker-skin" class="color-picker">
+        <p>Choose skin color:</p>
+        <button id="skin-1" class="color-button"></button>
+        <button id="skin-2" class="color-button"></button>
+        <button id="skin-3" class="color-button"></button>
+        <button id="brown-1" class="color-button"></button>
+      </div>
     </div>
-    <div id="color-picker-skin" class="color-picker"></div>
-    <p>Choose skin color:</p>
-    <button id="skin-1" class="color-button"></button>
-    <button id="skin-2" class="color-button"></button>
-    <button id="skin-3" class="color-button"></button>
-    <button id="brown-1" class="color-button"></button>
   </div>
+
+
+
+
   <!--Feature Picker-->
   <!--<div>
       <label for="shape-picker"></label>  
@@ -72,28 +104,6 @@
       <option value="eyes">Beard</option>
     </select>
   </div> -->
-  <!--Color Picker-->
-  <div>
-    <div class="thumbnail-container">
-      <button id="thumbnail-eyes" class="thumbnail-feature" data-shape="eyes">
-        <img src="assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/eyes_1.png" alt="Eye feature">
-      </button>
-      <button class="thumbnail-feature" data-shape="eyes">
-        <img src="assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/eyes_2.png" alt="Eye feature">
-      </button>
-      <button class="thumbnail-feature" data-shape="eyes">
-        <img src="assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/eyes_3.png" alt="Eye feature">
-      </button>
-    </div>
-    <div id="color-picker-eyes" class="color-picker hidden"></div>
-    <p>Choose eye color:</p>
-    <button id="skin-1" class="color-button"></button>
-    <button id="skin-2" class="color-button"></button>
-    <button id="skin-3" class="color-button"></button>
-    <button id="brown-1" class="color-button"></button>
-  </div>
-  </div>
-  </div>
 
   <script src="assets/js/script.js"></script>
 </body>
