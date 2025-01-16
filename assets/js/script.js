@@ -36,6 +36,7 @@ const ctxOne = canvasOne.getContext("2d");
 //const ctxTwo = canvasTwo.getContext("2d");
 const ctxThree = canvasThree.getContext("2d");
 const shapePicker = document.getElementById("shape-picker");
+const femaleButton = document.getElementById("thumbnail-female");
 
 // Canvas Dimensions
 [canvasOne, canvasTwo, canvasThree].forEach((canvas) => {
@@ -67,11 +68,11 @@ startButton.addEventListener("click", () => {
     slide2.classList.add("active");
 })
 
-// Shape Button Event Listener
-startButton.addEventListener("click", () => {
-    console.log("Start button clicked."); // Debug log
-    slide1.classList.remove("active");
-    slide2.classList.add("active");
+// Female Button Event Listener
+femaleButton.addEventListener("click", () => {
+    console.log("Female button clicked."); // Debug log
+    slide2.classList.remove("active");
+    slide3.classList.add("active");
 })
 
 /*function setUpSlide2() {
