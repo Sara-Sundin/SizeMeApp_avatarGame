@@ -9,19 +9,55 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         shape: {
             options: {
-                Female:"assets/images/images_avatar/shape_female.png",
-                Male:"assets/images/images_avatar/shape_male.png",
-                Junior:"assets/images/images_avatar/shape_junior.png",
+                Female:"assets/images/images_avatar/color_images/outlines/shape_female.png",
+                Male:"assets/images/images_avatar/color_images/outlines/shape_male.png",
+                Junior:"assets/images/images_avatar/color_images/outlines/shape_junior.png",
             },
-        },
-        colorSkin: {
-            options: {
+
+            colors: {
                 skinOne:"assets/images/images_avatar/color_images/female_skin_1.png",
                 skinTwo:"assets/images/images_avatar/color_images/female_skin_2.png",
                 skinThree:"assets/images/images_avatar/color_images/female_skin_3.png",
                 brownOne:"assets/images/images_avatar/color_images/female_skin_4.png",
-            }
-        }
+            },
+        },
+        eyes: {
+            options: {
+                eyesOne:"assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/eyes_1.png",
+                eyesTwo:"assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/eyes_2.png",
+                eyesThree:"assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/eyes_3.png",
+            },
+        },
+        eyebrows: {
+            options: {
+                eyebrowOne:"assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/brows_1.png",
+                eyebrowTwo:"assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/brows_2.png",
+                eyeBrowThree:"assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/brows_3.png",
+            },
+        },
+        nose: {
+            options: {
+                noseOne:"assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/nose_1.png",
+            },
+        },
+        mouthPlain: {
+            options: {
+                mouthOne:"assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/happy_mouth_1.png",
+                mouthTwo:"assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/plain_mouth_1.png",
+            },   
+        },
+        mouthFilled: {
+            options: {
+                mouthThree:"assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/filler_mouth_1.png",
+            },  
+            colors: {
+                mouthColorOne:"assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/filler_mouth_1.png",
+                mouthColorTwo:"assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/filler_mouth_2.png",
+                mouthColorThree:"assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/filler_mouth_3.png",
+                mouthColorFour:"assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/filler_mouth_4.png",   
+                mouthColorFive:"assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/filler_mouth_5.png",       
+            },
+        },    
     };
 
     // Canvas Setup
