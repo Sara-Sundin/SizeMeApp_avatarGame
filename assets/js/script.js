@@ -16,10 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         colorSkin: {
             options: {
-                skinOne:"assets/js/female_skin_1.png",
-                skinTwo:"assets/js/female_skin_2.png",
-                skinThree:"assets/js/female_skin_3.png",
-                brownOne:"assets/js/female_skin_4.png",
+                skinOne:"assets/images/images_avatar/color_images/female_skin_1.png",
+                skinTwo:"assets/images/images_avatar/color_images/female_skin_2.png",
+                skinThree:"assets/images/images_avatar/color_images/female_skin_3.png",
+                brownOne:"assets/images/images_avatar/color_images/female_skin_4.png",
             }
         }
     };
