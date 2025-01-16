@@ -120,9 +120,7 @@ shapePicker.addEventListener("change", (event) => {
     loadAndDrawImage(ctxThree, selectedShape); // Load and draw the selected shape
 });
 
-// Color Picker for shape selection
-
-// Color Picker Setup
+// Color Picker for Skin selection
 const colorButtonsSkin = {
     skinOne: document.getElementById("skin-1"),
     skinTwo: document.getElementById("skin-2"),
