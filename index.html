@@ -11,7 +11,7 @@
   <div id="slides" class="centered-text">
     <h1>Avatar Generator</h1>
      <!--First Slide-->
-      <div id="slide-1" class="slide active" data-slide="1">
+      <div id="slide-1" class="slide" data-slide="1">
          <div>
            <canvas id="canvas-1" class="canvas"></canvas>
          </div>
@@ -24,7 +24,7 @@
       <div>
         <canvas id="canvas-2" class="canvas"></canvas>
       </div>
-      <div id="thumbnails" class="thumbnail-container">
+      <div class="thumbnail-container">
         <button id="thumbnail-female" class="thumbnail" data-shape="Female">
             <img src="assets/images/images_avatar/shape_female.png" alt="Female Shape">
         </button>
@@ -37,7 +37,7 @@
      </div>
     </div> 
 <!--Third Slide-->  
-<div id="slide-3" class="slide" data-slide="3">
+<div id="slide-3" class="slide active" data-slide="3">
     <div>
       <canvas id="canvas-3" class="canvas"></canvas>
     </div>
@@ -63,24 +63,26 @@
     </select>
   </div> -->
      <!--Color Picker-->
-   <div id="color-picker1" class="col-12"></div>
+   <div>
+    <div class="thumbnail-container">
+      <button class="thumbnail-feature" data-shape="eyes">
+          <img src="assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/eyes_1.png" alt="Eye feature">
+      </button>
+      <button class="thumbnail-feature" data-shape="eyes">
+          <img src="assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/eyes_2.png" alt="Eye feature">
+      </button>
+      <button class="thumbnail-feature" data-shape="eyes">
+          <img src="assets/images/images_avatar/color_images/eyes_brows_nose_mouth_cheeks/eyes_3.png" alt="Eye feature">
+      </button>
+   </div>
+    <div id="color-picker1" class="col-12"></div>
      <p>Choose skin color:</p>
      <button id="skin-1" class="color-button"></button>
      <button id="skin-2" class="color-button"></button>
      <button id="skin-3" class="color-button"></button>
      <button id="brown-1" class="color-button"></button>
    </div>
-   <div id="thumbnails-eyes" class="thumbnail-container-feature">
-    <button class="thumbnail-feature" data-shape="eyes">
-        <img src="assets/images/images_avatar/shape_female.png" alt="Eye feature">
-    </button>
-    <button class="thumbnail-feature" data-shape="eyes">
-        <img src="assets/images/images_avatar/shape_male.png" alt="Eye feature">
-    </button>
-    <button class="thumbnail-feature" data-shape="eyes">
-        <img src="assets/images/images_avatar/shape_junior.png" alt="Eye feature">
-    </button>
- </div>
+</div>
 </div>
 
 <script src="assets/js/script.js"></script>  

@@ -37,6 +37,26 @@ body {
     transition: border-color 0.3s;
 }
 
+.thumbnail-feature {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    cursor: pointer;
+    background: none;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thumbnail-feature img {
+    width: 300%;
+    height: 300%;
+    object-fit: cover;
+}
+
 .thumbnail img:hover,
 .thumbnail img:focus {
     border-color: blue;
