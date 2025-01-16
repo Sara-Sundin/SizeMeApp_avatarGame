@@ -64,6 +64,10 @@ body {
     max-width: 200px;
 }
 
+#canvas-2 {
+    display: none;
+}
+
 /*Color Picker*/
 .color-button {
     width: 15px;

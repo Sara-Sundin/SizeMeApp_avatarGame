@@ -62,10 +62,10 @@ function setUpSlide1() {
 
 // Start Button Event Listener
 startButton.addEventListener("click", () => {
+    console.log("Start button clicked."); // Debug log
     slide1.classList.remove("active");
     slide2.classList.add("active");
 })
-
 
 function setUpSlide2() {
     const femaleShape = features.shape.options.Female;
@@ -120,26 +120,9 @@ const colorButtonsSkin = {
     skinTwo: document.getElementById("skin-2"),
     skinThree: document.getElementById("skin-3"),
     brownOne: document.getElementById("brown-1"),
-};
+};       
 
-        // Function to handle color selection
-        function handleColorSkin(colorKey) {
-            
-            const colorImage = features.colorSkin.options[colorKey];
-            if (colorImage) {
-                console.log(`Changing to skin color: ${colorKey}`);
-                loadAndDrawImage(ctxTwo, colorImage);
-            } else {
-                console.error(`No image defined for color: ${colorKey}`);
-            }
-        }
-    
-        // Add event listeners for color buttons
-        Object.entries(colorButtonsSkin).forEach(([colorKey, button]) => {
-            button.addEventListener("click", () => handleColorSkin(colorKey));
-        });
-
-         // Function to handle color selection THREE
+         // Function to handle color selection
          function handleColorSkin(colorKey) {
             
             const colorImage = features.colorSkin.options[colorKey];
@@ -150,6 +133,11 @@ const colorButtonsSkin = {
                 console.error(`No image defined for color: ${colorKey}`);
             }
         }
+
+         // Add event listeners for color buttons
+         Object.entries(colorButtonsSkin).forEach(([colorKey, button]) => {
+            button.addEventListener("click", () => handleColorSkin(colorKey));
+        });
 
 setUpSlide1();
 setUpSlide2();
