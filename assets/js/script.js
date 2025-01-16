@@ -89,7 +89,7 @@ function setUpSlide3() {
     shapePicker.value = "Female"; // Set "Female" as the selected option in the dropdown
 }
 
-function populateShapePicker() {
+/*function populateShapePicker() {
     shapePicker.innerHTML=""; //Clear existing options in the dropdown
 
     const defaultOption = document.createElement("option");
@@ -104,7 +104,7 @@ function populateShapePicker() {
         option.textContent = key;
         shapePicker.appendChild(option);
     }
-}
+}*/
 
 // Event listener for shape selection
 /*shapePicker.addEventListener("change", (event) => {
@@ -114,11 +114,11 @@ function populateShapePicker() {
 });*/
 
 // Event listener for shape selection
-shapePicker.addEventListener("change", (event) => {
+/*shapePicker.addEventListener("change", (event) => {
     const selectedShape = event.target.value; // Get the image path from the selected option
     console.log(`Selected shape: ${selectedShape}`); // Debug log
     loadAndDrawImage(ctxThree, selectedShape); // Load and draw the selected shape
-});
+});*/
 
 // Color Picker for Skin selection
 const colorButtonsSkin = {
@@ -148,6 +148,6 @@ const colorButtonsSkin = {
 setUpSlide1();
 //setUpSlide2();
 setUpSlide3();
-populateShapePicker();
+//populateShapePicker();
 
 });
