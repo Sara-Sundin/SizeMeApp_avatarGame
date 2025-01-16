@@ -31,21 +31,17 @@ const slide3 = document.getElementById("slide-3");
 const startButton = document.getElementById("start-button");
 const canvasOne = document.getElementById("canvas-1");
 const canvasTwo = document.getElementById("canvas-2");
-const canvasTwo = document.getElementById("canvas-3");
+const canvasThree = document.getElementById("canvas-3");
 const ctxOne = canvasOne.getContext("2d");
 const ctxTwo = canvasTwo.getContext("2d");
 const ctxThree = canvasThree.getContext("2d");
 const shapePicker = document.getElementById("shape-picker");
 
 // Canvas Dimensions
-canvasOne.width = 400;
-canvasOne.height = 400;
-
-canvasTwo.width = 400;
-canvasTwo.height = 400;
-
-canvasThree.width = 400;
-canvasThree.height = 400;
+[canvasOne, canvasTwo, canvasThree].forEach((canvas) => {
+    canvas.width = 400;
+    canvas.height = 400;
+});
 
 function loadAndDrawImage(ctx, imageSrc) {
     console.log(`Attempting to load image: ${imageSrc}`); // Debug log
