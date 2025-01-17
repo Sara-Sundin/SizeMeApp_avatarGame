@@ -149,6 +149,17 @@ body {
   /* Show nested options */
 }
 
+.thumbnail:focus {
+  border: 2px solid #007bff;
+  /* Highlight border */
+  border-radius: 8px;
+  /* Match existing border-radius */
+  outline: none;
+  /* Remove default browser outline */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+  /* Optional glow effect */
+}
+
 /*Color Picker*/
 .color-picker {
   margin: 20px 0;
