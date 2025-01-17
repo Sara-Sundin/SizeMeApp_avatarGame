@@ -2,6 +2,10 @@
  const canvases = {
    skin: document.getElementById("canvas-skin"),
    hair: document.getElementById("canvas-hair"),
+   eyes: document.getElementById("canvas-eyes"),
+   brows: document.getElementById("canvas-brows"),
+   mouth: document.getElementById("canvas-mouth"),
+   fox: document.getElementById("canvas-fox"),
  };
 
  // Current layers
@@ -13,9 +17,11 @@
  const contexts = {
    skin: canvases.skin.getContext("2d"),
    hair: canvases.hair.getContext("2d"),
+   eyes: canvases.eyes.getContext("2d"),
+   brows: canvases.brows.getContext("2d"),
+   mouth: canvases.mouth.getContext("2d"),
+   fox: canvases.fox.getContext("2d"),
  };
- console.log(canvases.skin);
- console.dir(canvases.skin);
 
  // Convert hex color to RGB
  function hexToRgb(hex) {
