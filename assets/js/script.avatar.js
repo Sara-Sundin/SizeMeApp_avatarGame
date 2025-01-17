@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const data = imageData.data;
 
      // Define tolerance for detecting white pixels
-     const tolerance = 200; // Adjust this value as needed (e.g., 5-20)
+     const tolerance = 100; // Adjust this value as needed (e.g., 5-20)
 
 
    // Modify only the white pixels (within the tolerance range)
