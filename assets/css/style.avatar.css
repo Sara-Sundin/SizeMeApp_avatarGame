@@ -22,6 +22,7 @@ body {
 
   #generator {
     text-align: center; /* Centers the text and content */
+    justify-content: center;
     width: 100%; /* Full width of the parent container */
     max-width: 600px; /* Restrict maximum width */
     padding: 20px; /* Adds inner space */
@@ -58,10 +59,11 @@ body {
     gap: 10px;
     width: 250px;
     height: 100%;
+    margin: 0 auto;
   }
   
   .thumbnail {
-    display: flex;
+
     border: 1px solid black;
     padding: 0;
     cursor: pointer;
