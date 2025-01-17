@@ -89,7 +89,46 @@ body {
     transform-origin: center center; /* Keep enlargement centered */
     transition: transform 0.3s ease; /* Add smooth scaling transition */
   }
-  
+
+  /* Nested Thumbnails (Hidden Initially) */
+.nested-thumbnails {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Match parent thumbnail size */
+  height: 100%; /* Match parent thumbnail size */
+  background: #fff;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  z-index: 10;
+}
+
+/* Nested Thumbnail Buttons */
+.nested-thumbnail {
+  width: 50px; /* Same size as original image */
+  height: 50px;
+  border: 1px solid black;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.nested-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Active State to Show Nested Thumbnails */
+.thumbnail.open .nested-thumbnails {
+  display: flex; /* Show nested options */
+}
+
+/*Color Picker*/  
   .color-picker {
     margin: 20px 0;
     text-align: center;
