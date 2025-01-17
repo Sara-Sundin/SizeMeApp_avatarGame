@@ -10,20 +10,35 @@ body {
   .centered-text {
     text-align: center;
   }
+
+  /*Avatar generator*/
+
+  #generator {
+    padding-top: 20px;
+    padding-right: 20px;
+  }
   
   .canvas-container {
     position: relative;
     width: 200px;
     height: 200px;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
   }
   
   .canvas {
     position: absolute;
     top: 0;
     left: 0;
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
   }
   
   .thumbnail-container {
