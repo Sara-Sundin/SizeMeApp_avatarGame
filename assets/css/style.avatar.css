@@ -52,30 +52,40 @@ body {
   
   .thumbnail-container {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content:center;
     gap: 10px;
     margin: 20px 0;
+    width: 250px;
+    height: 100%;
   }
   
   .thumbnail {
+    display: flex;
     border: 1px solid black;
     padding: 0;
     cursor: pointer;
     background: none;
+    overflow: hidden; /* Ensure enlarged images stay inside the thumbnail */
   }
   
   .thumbnail img {
     width: 50px;
     height: 50px;
     object-fit: cover;
-    border: 2px solid transparent;
+    border: 2px solid transparent; /* Default border is transparent */
     border-radius: 8px;
-    transition: border-color 0.3s;
+    transition: transform 0.3s, border-color 0.3s; /* Smooth scaling and border changes */
   }
   
-  .thumbnail img:hover,
-  .thumbnail img:focus {
-    border-color: blue;
+  .thumbnail:focus img {
+    transform: scale(1.3); /* Add scaling effect on hover or focus */
+  }
+  
+  .enlarged-img {
+    transform: scale(3); /* Enlarge specific images */
+    transform-origin: center center; /* Keep enlargement centered */
+    transition: transform 0.3s ease; /* Add smooth scaling transition */
   }
   
   .color-picker {
