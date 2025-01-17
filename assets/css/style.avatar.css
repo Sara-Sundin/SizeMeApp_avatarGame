@@ -25,13 +25,13 @@ body {
     width: 100%; /* Full width of the parent container */
     max-width: 600px; /* Restrict maximum width */
     padding: 20px; /* Adds inner space */
+
   }
   
   .canvas-container {
     position: relative;
-    width: 200px;
-    height: 200px;
-    border: 1px solid black;
+    width: 250px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,10 +40,11 @@ body {
   
   .canvas {
     position: absolute;
+    border: 1px solid black;
     top: 0;
     left: 0;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +56,6 @@ body {
     flex-wrap: wrap;
     justify-content:center;
     gap: 10px;
-    margin: 20px 0;
     width: 250px;
     height: 100%;
   }
