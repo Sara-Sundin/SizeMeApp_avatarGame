@@ -85,23 +85,23 @@ body {
     justify-content: center;
     display: flex; /* Enables horizontal alignment */
     gap: 10px; /* Adds spacing between items */
-    }
+  }
   
   .color-picker input[type="color"] {
     width: 30px;
     height: 30px;
     border: none;
     cursor: pointer;
+    position: relative;
+    transform: translateY(20%); /* Move the dropdown upwards */
+    z-index: 9999;
   }
 
   .color-picker button {
     height: 30px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    display: flex;
     padding: 0 10px;
     cursor: pointer;
+    margin-top: 6px;
   }
   
   .hidden {
