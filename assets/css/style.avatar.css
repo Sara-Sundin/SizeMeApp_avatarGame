@@ -34,11 +34,10 @@ body {
   }
   
   .thumbnail {
-    border: none;
+    border: 1px solid black;
     padding: 0;
     cursor: pointer;
     background: none;
-    outline: none;
   }
   
   .thumbnail img {
