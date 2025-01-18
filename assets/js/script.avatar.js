@@ -23,7 +23,7 @@ const contexts = {
   fox: canvases.fox.getContext("2d"),
 };
 
-// Convert hex color to RGB
+// Utility: Convert hex color to RGB
 function hexToRgb(hex) {
   const bigint = parseInt(hex.slice(1), 16);
   const r = (bigint >> 16) & 255;
@@ -32,7 +32,7 @@ function hexToRgb(hex) {
   return [r, g, b];
 }
 
-// Load and draw a single layer
+// Function: Load and draw a single layer
 function loadAndDrawLayer(layerName) {
   const ctx = contexts[layerName];
   const src = layers[layerName];
@@ -54,24 +54,8 @@ function loadAndDrawLayer(layerName) {
   }
 }
 
-// Load all layers
-function loadAllLayers() {
-  Object.keys(layers).forEach((layerName) => loadAndDrawLayer(layerName));
-}
-
-// Event listener for DOMContentLoaded
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Script loaded");
-
-  // Set canvas dimensions
-  Object.values(canvases).forEach((canvas) => {
-    canvas.width = 400;
-    canvas.height = 400;
-  });
-
-  let activeLayer = null; // Currently selected layer for coloring
-
-  // Thumbnail click event
+// Function: Handle thumbnail click
+function handleThumbnailClick() {
   document.querySelectorAll(".thumbnail").forEach((thumbnail) => {
     thumbnail.addEventListener("click", (e) => {
       const nested = thumbnail.querySelector(".nested-thumbnails");
@@ -91,8 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+}
 
-  // Handle clicks on nested thumbnails
+// Function: Handle nested thumbnail clicks
+function handleNestedThumbnailClick() {
   document.querySelectorAll(".nested-thumbnail").forEach((nestedBtn) => {
     nestedBtn.addEventListener("click", (e) => {
       e.stopPropagation(); // Prevent event from propagating to parent thumbnail
@@ -112,10 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+}
 
-
-
-  // Apply color to the active layer (restricting to white areas)
+// Function: Apply color to the active layer
+function applyColorToActiveLayer() {
   document.getElementById("apply-color-button").addEventListener("click", () => {
     const color = document.getElementById("color-picker-input").value;
 
@@ -161,7 +147,22 @@ document.addEventListener("DOMContentLoaded", () => {
       };
     }
   });
+}
 
-  // Initial load
-  loadAllLayers();
+// Function: Initialize canvas dimensions
+function initializeCanvases() {
+  Object.values(canvases).forEach((canvas) => {
+    canvas.width = 400;
+    canvas.height = 400;
+  });
+}
+
+// Call all functions
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Script loaded");
+
+  initializeCanvases(); // Set canvas dimensions
+  handleThumbnailClick(); // Set up thumbnail click events
+  handleNestedThumbnailClick(); // Set up nested thumbnail click events
+  applyColorToActiveLayer(); // Set up color picker functionality
 });
