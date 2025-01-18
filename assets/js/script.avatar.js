@@ -12,8 +12,13 @@ const canvases = {
 const layers = {
   skin: null,
   hair: null,
+  eyes: null,
+  brows: null,
+  mouth: null,
+  fox: null,
 };
 
+// Contexts for drawing
 const contexts = {
   skin: canvases.skin.getContext("2d"),
   hair: canvases.hair.getContext("2d"),
@@ -54,48 +59,28 @@ function loadAndDrawLayer(layerName) {
   }
 }
 
-// Function: Handle thumbnail click
-function handleThumbnailClick() {
-  document.querySelectorAll(".thumbnail").forEach((thumbnail) => {
-    thumbnail.addEventListener("click", (e) => {
-      const nested = thumbnail.querySelector(".nested-thumbnails");
-      if (nested) {
-        // Toggle nested thumbnails visibility
-        nested.style.display = nested.style.display === "flex" ? "none" : "flex";
-      } else {
-        const layer = e.target.closest("button").dataset.layer;
-        const src = e.target.closest("button").dataset.src;
+// Function: Handle thumbnail selection via radio buttons
+function handleThumbnailSelection() {
+  const thumbnails = document.querySelectorAll(".thumbnail-radio");
 
-        if (layer) {
-          layers[layer] = src; // Update selected layer
-          activeLayer = layer; // Set active layer for color picker
-          loadAndDrawLayer(layer); // Draw only the updated layer
-          document.getElementById("universal-color-picker").classList.remove("hidden"); // Show color picker
-        }
+  thumbnails.forEach((radio) => {
+    radio.addEventListener("change", (e) => {
+      const layer = e.target.dataset.layer;
+      const src = e.target.dataset.src;
+
+      if (layer) {
+        layers[layer] = src; // Update the selected layer source
+        loadAndDrawLayer(layer); // Draw the layer
+        document.getElementById("universal-color-picker").classList.remove("hidden"); // Show color picker
       }
     });
   });
-}
 
-// Function: Handle nested thumbnail clicks
-function handleNestedThumbnailClick() {
-  document.querySelectorAll(".nested-thumbnail").forEach((nestedBtn) => {
-    nestedBtn.addEventListener("click", (e) => {
-      e.stopPropagation(); // Prevent event from propagating to parent thumbnail
-      const layer = nestedBtn.getAttribute("data-layer");
-      const src = nestedBtn.getAttribute("data-src");
-
-      // Check if the layer exists in contexts
-      if (contexts[layer]) {
-        layers[layer] = src; // Update selected layer
-        activeLayer = layer; // Set active layer for color picker
-        loadAndDrawLayer(layer); // Draw the updated layer
-
-        // Hide nested options after selection
-        nestedBtn.closest(".nested-thumbnails").style.display = "none";
-      } else {
-        console.warn(`Layer "${layer}" is not defined in canvases or contexts.`);
-      }
+  // Ensure clicking labels works as well
+  document.querySelectorAll(".thumbnail").forEach((label) => {
+    label.addEventListener("click", (e) => {
+      const associatedRadio = document.getElementById(label.htmlFor);
+      if (associatedRadio) associatedRadio.click();
     });
   });
 }
@@ -104,47 +89,52 @@ function handleNestedThumbnailClick() {
 function applyColorToActiveLayer() {
   document.getElementById("apply-color-button").addEventListener("click", () => {
     const color = document.getElementById("color-picker-input").value;
+    const activeRadio = document.querySelector(".thumbnail-radio:checked");
 
-    if (activeLayer && layers[activeLayer]) {
-      const img = new Image();
-      img.src = layers[activeLayer];
-      img.onload = () => {
-        const ctx = contexts[activeLayer];
-        const canvas = canvases[activeLayer];
+    if (activeRadio) {
+      const layer = activeRadio.dataset.layer;
 
-        // Draw the image
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      if (layer && layers[layer]) {
+        const img = new Image();
+        img.src = layers[layer];
+        img.onload = () => {
+          const ctx = contexts[layer];
+          const canvas = canvases[layer];
 
-        // Extract image data
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-        const data = imageData.data;
+          // Draw the image
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-        // Define tolerance for detecting white pixels
-        const tolerance = 100;
+          // Extract image data
+          const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+          const data = imageData.data;
 
-        // Modify only the white pixels
-        for (let i = 0; i < data.length; i += 4) {
-          const red = data[i];
-          const green = data[i + 1];
-          const blue = data[i + 2];
-          const alpha = data[i + 3];
+          // Define tolerance for detecting white pixels
+          const tolerance = 100;
 
-          if (
-            red >= 255 - tolerance &&
-            green >= 255 - tolerance &&
-            blue >= 255 - tolerance &&
-            alpha > 0
-          ) {
-            const [r, g, b] = hexToRgb(color);
-            data[i] = r;
-            data[i + 1] = g;
-            data[i + 2] = b;
+          // Modify only the white pixels
+          for (let i = 0; i < data.length; i += 4) {
+            const red = data[i];
+            const green = data[i + 1];
+            const blue = data[i + 2];
+            const alpha = data[i + 3];
+
+            if (
+              red >= 255 - tolerance &&
+              green >= 255 - tolerance &&
+              blue >= 255 - tolerance &&
+              alpha > 0
+            ) {
+              const [r, g, b] = hexToRgb(color);
+              data[i] = r;
+              data[i + 1] = g;
+              data[i + 2] = b;
+            }
           }
-        }
 
-        ctx.putImageData(imageData, 0, 0);
-      };
+          ctx.putImageData(imageData, 0, 0);
+        };
+      }
     }
   });
 }
@@ -161,8 +151,7 @@ function initializeCanvases() {
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Script loaded");
 
-  initializeCanvases(); // Set canvas dimensions
-  handleThumbnailClick(); // Set up thumbnail click events
-  handleNestedThumbnailClick(); // Set up nested thumbnail click events
+  initializeCanvases(); // Set up canvas dimensions
+  handleThumbnailSelection(); // Set up thumbnail selection events
   applyColorToActiveLayer(); // Set up color picker functionality
 });
