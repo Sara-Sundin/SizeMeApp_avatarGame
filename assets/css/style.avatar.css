@@ -65,6 +65,17 @@ body {
   cursor: pointer;
   padding: 0;
   transition: transform 0.3s, border-color 0.3s;
+  display: flex;
+  /* Enable vertical stacking */
+  flex-direction: column;
+  /* Stack items vertically */
+  align-items: center;
+  /* Center items horizontally */
+}
+
+.thumbnail span {
+  font-size: 12px;
+  color: #000;
 }
 
 .thumbnail img {
