@@ -7,6 +7,7 @@ const canvases = {
   mouth: document.getElementById("canvas-mouth"),
   fox: document.getElementById("canvas-fox"),
 };
+console.log("Canvases initialized:", canvases);
 
 // Current layers
 const layers = {
@@ -17,6 +18,7 @@ const layers = {
   mouth: null,
   fox: null,
 };
+console.log("Initial layers:", layers);
 
 // Contexts for drawing
 const contexts = {
@@ -27,18 +29,22 @@ const contexts = {
   mouth: canvases.mouth.getContext("2d"),
   fox: canvases.fox.getContext("2d"),
 };
+console.log("Canvas contexts initialized:", contexts);
 
 // Utility: Convert hex color to RGB
 function hexToRgb(hex) {
+  console.log("Converting HEX to RGB:", hex);
   const bigint = parseInt(hex.slice(1), 16);
   const r = (bigint >> 16) & 255;
   const g = (bigint >> 8) & 255;
   const b = bigint & 255;
+  console.log("Converted RGB:", [r, g, b]);
   return [r, g, b];
 }
 
 // Function: Load and draw a single layer
 function loadAndDrawLayer(layerName) {
+  console.log(`Loading and drawing layer: ${layerName}`);
   const ctx = contexts[layerName];
   const src = layers[layerName];
 
@@ -47,20 +53,30 @@ function loadAndDrawLayer(layerName) {
     return;
   }
 
-  if (src) {
-    const img = new Image();
-    img.src = src;
-    img.onload = () => {
-      ctx.clearRect(0, 0, canvases[layerName].width, canvases[layerName].height);
-      ctx.drawImage(img, 0, 0, canvases[layerName].width, canvases[layerName].height);
-    };
-  } else {
+  if (!src) {
+    console.warn(`No source image for layer "${layerName}". Clearing canvas.`);
     ctx.clearRect(0, 0, canvases[layerName].width, canvases[layerName].height);
+    return;
   }
+
+  console.log(`Drawing image from source: ${src}`);
+  const img = new Image();
+  img.src = src;
+
+  img.onload = () => {
+    console.log(`Image loaded successfully for layer: ${layerName}`);
+    ctx.clearRect(0, 0, canvases[layerName].width, canvases[layerName].height);
+    ctx.drawImage(img, 0, 0, canvases[layerName].width, canvases[layerName].height);
+  };
+
+  img.onerror = () => {
+    console.error(`Failed to load image for layer: ${layerName}, source: ${src}`);
+  };
 }
 
 // Function: Handle thumbnail selection via radio buttons
 function handleThumbnailSelection() {
+  console.log("Setting up thumbnail selection...");
   const thumbnails = document.querySelectorAll(".thumbnail-radio");
 
   thumbnails.forEach((radio) => {
@@ -68,18 +84,20 @@ function handleThumbnailSelection() {
       const layer = e.target.dataset.layer;
       const src = e.target.dataset.src;
 
+      console.log(`Thumbnail selected: Layer - ${layer}, Source - ${src}`);
       if (layer) {
         layers[layer] = src; // Update the selected layer source
+        console.log("Updated layers state:", layers);
         loadAndDrawLayer(layer); // Draw the layer
         document.getElementById("universal-color-picker").classList.remove("hidden"); // Show color picker
       }
     });
   });
 
-  // Ensure clicking labels works as well
   document.querySelectorAll(".thumbnail").forEach((label) => {
     label.addEventListener("click", (e) => {
       const associatedRadio = document.getElementById(label.htmlFor);
+      console.log(`Label clicked: ${label.htmlFor}`);
       if (associatedRadio) associatedRadio.click();
     });
   });
@@ -87,6 +105,7 @@ function handleThumbnailSelection() {
 
 // Function: Toggle additional thumbnails
 function handleAdditionalThumbnails() {
+  console.log("Setting up additional thumbnails...");
   const mainThumbnailLabel = document.querySelector("label[for='thumbnail-hair']");
   const additionalThumbnailsContainer = document.getElementById("additional-thumbnails");
   const allThumbnails = document.querySelectorAll(".thumbnail-container > *:not(#additional-thumbnails)");
@@ -95,14 +114,13 @@ function handleAdditionalThumbnails() {
     mainThumbnailLabel.addEventListener("click", (event) => {
       event.preventDefault(); // Prevent default behavior
 
-      // Hide all non-hair thumbnails
+      console.log("Main thumbnail clicked. Showing additional thumbnails.");
       allThumbnails.forEach((element) => {
         if (!element.querySelector("[for='thumbnail-hair']")) {
           element.classList.add("hidden");
         }
       });
 
-      // Show the additional hair thumbnails
       additionalThumbnailsContainer.classList.remove("hidden");
     });
   } else {
@@ -112,68 +130,63 @@ function handleAdditionalThumbnails() {
 
 // Function: Handle Back Buttons
 function handleBackButtons() {
-  // Select all back buttons
+  console.log("Setting up back button functionality...");
   const backButtons = document.querySelectorAll(".back-button");
 
   backButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      // Find the parent additional thumbnails container
-      const additionalThumbnailsContainer = button.closest(".hidden, #additional-thumbnails");
+      console.log("Back button clicked.");
+      const additionalThumbnailsContainer = document.getElementById("additional-thumbnails");
 
       if (additionalThumbnailsContainer) {
-        // Hide the additional thumbnails container
         additionalThumbnailsContainer.classList.add("hidden");
-
-        // Show all main thumbnails
-        const mainThumbnails = document.querySelectorAll(".main-thumbnail");
-        mainThumbnails.forEach((thumbnail) => {
-          thumbnail.closest("div").classList.remove("hidden");
-        });
+        console.log("Additional thumbnails hidden.");
       }
+
+      const mainThumbnails = document.querySelectorAll(".main-thumbnail");
+      mainThumbnails.forEach((thumbnail) => {
+        const parent = thumbnail.closest("div");
+        if (parent) {
+          parent.classList.remove("hidden");
+          console.log("Main thumbnail restored:", thumbnail);
+        }
+      });
     });
   });
 }
 
 // Function: Apply color to the active layer
 function applyColorToActiveLayer() {
+  console.log("Setting up color picker functionality...");
   document.getElementById("apply-color-button").addEventListener("click", () => {
     const color = document.getElementById("color-picker-input").value;
     const activeRadio = document.querySelector(".thumbnail-radio:checked");
 
+    console.log(`Apply color clicked: Color - ${color}`);
     if (activeRadio) {
       const layer = activeRadio.dataset.layer;
 
       if (layer && layers[layer]) {
+        console.log(`Applying color to layer: ${layer}`);
         const img = new Image();
         img.src = layers[layer];
         img.onload = () => {
           const ctx = contexts[layer];
           const canvas = canvases[layer];
 
-          // Draw the image
           ctx.clearRect(0, 0, canvas.width, canvas.height);
           ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-          // Extract image data
           const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
           const data = imageData.data;
 
-          // Define tolerance for detecting white pixels
-          const tolerance = 100;
-
-          // Modify only the white pixels
           for (let i = 0; i < data.length; i += 4) {
             const red = data[i];
             const green = data[i + 1];
             const blue = data[i + 2];
             const alpha = data[i + 3];
 
-            if (
-              red >= 255 - tolerance &&
-              green >= 255 - tolerance &&
-              blue >= 255 - tolerance &&
-              alpha > 0
-            ) {
+            if (red > 200 && green > 200 && blue > 200 && alpha > 0) {
               const [r, g, b] = hexToRgb(color);
               data[i] = r;
               data[i + 1] = g;
@@ -182,6 +195,7 @@ function applyColorToActiveLayer() {
           }
 
           ctx.putImageData(imageData, 0, 0);
+          console.log(`Color applied to layer: ${layer}`);
         };
       }
     }
@@ -190,19 +204,21 @@ function applyColorToActiveLayer() {
 
 // Function: Initialize canvas dimensions
 function initializeCanvases() {
+  console.log("Initializing canvases...");
   Object.values(canvases).forEach((canvas) => {
     canvas.width = 400;
     canvas.height = 400;
+    console.log("Canvas initialized:", canvas);
   });
 }
 
 // Call all functions
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Script loaded");
+  console.log("Script loaded. Initializing all functions...");
 
   initializeCanvases(); // Set up canvas dimensions
   handleThumbnailSelection(); // Set up thumbnail selection events
   applyColorToActiveLayer(); // Set up color picker functionality
   handleAdditionalThumbnails(); // Handle additional thumbnails toggle
-  handleBackButtons();
+  handleBackButtons(); // Handle back button functionality
 });
