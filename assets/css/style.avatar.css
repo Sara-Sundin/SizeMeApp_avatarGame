@@ -123,6 +123,15 @@ body {
   box-shadow: 0 0 8px rgba(0, 0, 255, 0.6);
 }
 
+.back-button {
+  font-size: 12px;
+  color: #000;
+  align-items: center;
+  text-align: center;
+  width: 20px;
+  height: 16px;
+}
+
 /* Color Picker */
 .color-picker {
   margin-top: 20px;
