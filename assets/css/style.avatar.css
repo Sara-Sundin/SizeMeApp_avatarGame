@@ -18,6 +18,10 @@ body {
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Avatar Generator */
 #generator {
   text-align: center;
