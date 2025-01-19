@@ -64,18 +64,18 @@ body {
 }
 
 .thumbnail {
-  max-width: 50px;
-  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  /* Stack image and text vertically */
+  align-items: center;
+  /* Center the content */
+  width: 50px;
+  /* Ensure thumbnails are not too wide */
+  height: auto;
+  border: 1px solid black;
   border-radius: 8px;
   cursor: pointer;
-  padding: 0;
   transition: transform 0.3s, border-color 0.3s;
-  display: flex;
-  /* Enable vertical stacking */
-  flex-direction: column;
-  /* Stack items vertically */
-  align-items: center;
-  /* Center items horizontally */
 }
 
 .thumbnail span {
@@ -92,20 +92,15 @@ body {
 
 #additional-thumbnails {
   display: flex;
-  /* Lay out thumbnails horizontally or wrap */
   flex-wrap: wrap;
-  /* Allow thumbnails to wrap onto a new row if necessary */
-  justify-content: center;
-  /* Center thumbnails horizontally */
-  align-items: center;
   gap: 10px;
-  /* Add spacing between thumbnails */
-  margin-top: 15px;
-  /* Space above additional thumbnails */
-  opacity: 1;
-  /* Ensure fully visible when not hidden */
-  transition: opacity 0.3s ease-in-out;
-  /* Smooth transition */
+  /* Space between items */
+  justify-content: flex-start;
+  /* Align items to the left */
+  align-items: center;
+  /* Vertically align items */
+  width: 100%;
+  max-width: 600px;
 }
 
 #additional-thumbnails.hidden {
@@ -126,6 +121,7 @@ body {
 }
 
 .back-button {
+
   font-size: 12px;
   /* Small text size */
   width: 60px;
