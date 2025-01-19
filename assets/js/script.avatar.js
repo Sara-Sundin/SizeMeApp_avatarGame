@@ -85,6 +85,24 @@ function handleThumbnailSelection() {
   });
 }
 
+// Function: Toggle additional thumbnails
+function handleAdditionalThumbnails() {
+  const mainThumbnailLabel = document.querySelector("label[for='thumbnail-hair']");
+  const additionalThumbnailsContainer = document.getElementById("additional-thumbnails");
+
+  if (mainThumbnailLabel && additionalThumbnailsContainer) {
+    mainThumbnailLabel.addEventListener("click", (event) => {
+      console.log("Hair thumbnail clicked");
+      event.preventDefault(); // Prevent default input behavior
+
+      // Toggle the visibility of the additional thumbnails
+      additionalThumbnailsContainer.classList.toggle("hidden");
+    });
+  } else {
+    console.error("Main hair thumbnail or additional thumbnails container not found.");
+  }
+}
+
 // Function: Apply color to the active layer
 function applyColorToActiveLayer() {
   document.getElementById("apply-color-button").addEventListener("click", () => {
@@ -154,4 +172,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeCanvases(); // Set up canvas dimensions
   handleThumbnailSelection(); // Set up thumbnail selection events
   applyColorToActiveLayer(); // Set up color picker functionality
+  handleAdditionalThumbnails(); // Handle additional thumbnails toggle
 });
