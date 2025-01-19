@@ -89,14 +89,21 @@ function handleThumbnailSelection() {
 function handleAdditionalThumbnails() {
   const mainThumbnailLabel = document.querySelector("label[for='thumbnail-hair']");
   const additionalThumbnailsContainer = document.getElementById("additional-thumbnails");
+  const allThumbnails = document.querySelectorAll(".thumbnail-container > *:not(#additional-thumbnails)");
 
   if (mainThumbnailLabel && additionalThumbnailsContainer) {
     mainThumbnailLabel.addEventListener("click", (event) => {
-      console.log("Hair thumbnail clicked");
-      event.preventDefault(); // Prevent default input behavior
+      event.preventDefault(); // Prevent default behavior
 
-      // Toggle the visibility of the additional thumbnails
-      additionalThumbnailsContainer.classList.toggle("hidden");
+      // Hide all non-hair thumbnails
+      allThumbnails.forEach((element) => {
+        if (!element.querySelector("[for='thumbnail-hair']")) {
+          element.classList.add("hidden");
+        }
+      });
+
+      // Show the additional hair thumbnails
+      additionalThumbnailsContainer.classList.remove("hidden");
     });
   } else {
     console.error("Main hair thumbnail or additional thumbnails container not found.");

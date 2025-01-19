@@ -89,10 +89,37 @@ body {
   border-radius: 8px;
 }
 
+#additional-thumbnails {
+  display: flex;
+  /* Lay out thumbnails horizontally or wrap */
+  flex-wrap: wrap;
+  /* Allow thumbnails to wrap onto a new row if necessary */
+  justify-content: center;
+  /* Center thumbnails horizontally */
+  gap: 10px;
+  /* Add spacing between thumbnails */
+  margin-top: 15px;
+  /* Space above additional thumbnails */
+  opacity: 1;
+  /* Ensure fully visible when not hidden */
+  transition: opacity 0.3s ease-in-out;
+  /* Smooth transition */
+}
+
+#additional-thumbnails.hidden {
+  display: none;
+  /* Completely hide thumbnails when "hidden" class is applied */
+}
+
+#additional-thumbnails:not(.hidden) {
+  opacity: 1;
+  /* Ensures visible thumbnails are fully opaque */
+}
+
 /* Highlight Active Thumbnail */
 .thumbnail-radio:checked+.thumbnail {
   border-color: blue;
-  transform: scale(1.05);
+  transform: scale(1.2);
   box-shadow: 0 0 8px rgba(0, 0, 255, 0.6);
 }
 
