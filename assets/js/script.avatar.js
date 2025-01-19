@@ -219,6 +219,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeCanvases(); // Set up canvas dimensions
   handleThumbnailSelection(); // Set up thumbnail selection events
   applyColorToActiveLayer(); // Set up color picker functionality
-  handleAdditionalThumbnails(); // Handle additional thumbnails toggle
-  handleBackButtons(); // Handle back button functionality
+  //handleAdditionalThumbnails(); // Handle additional thumbnails toggle
+  //handleBackButtons(); // Handle back button functionality
 });
