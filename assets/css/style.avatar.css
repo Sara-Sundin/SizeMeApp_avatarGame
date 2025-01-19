@@ -64,6 +64,7 @@ body {
 }
 
 .thumbnail {
+  max-width: 50px;
   border: 1px solid #000;
   border-radius: 8px;
   cursor: pointer;
@@ -96,6 +97,7 @@ body {
   /* Allow thumbnails to wrap onto a new row if necessary */
   justify-content: center;
   /* Center thumbnails horizontally */
+  align-items: center;
   gap: 10px;
   /* Add spacing between thumbnails */
   margin-top: 15px;
@@ -125,11 +127,28 @@ body {
 
 .back-button {
   font-size: 12px;
-  color: #000;
-  align-items: center;
-  text-align: center;
-  width: 20px;
-  height: 16px;
+  /* Small text size */
+  width: 60px;
+  /* Button width */
+  height: 30px;
+  /* Button height */
+  color: #333;
+  /* Dark text color */
+  border: 1px solid #000;
+  /* Subtle border */
+  border-radius: 4px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer cursor for hover */
+  transition: all 0.3s ease;
+  /* Smooth hover effect */
+}
+
+.back-button:focus {
+  outline: none;
+  /* Remove default focus outline */
+  box-shadow: 0 0 2px #007bff;
+  /* Add focus ring for accessibility */
 }
 
 /* Color Picker */
