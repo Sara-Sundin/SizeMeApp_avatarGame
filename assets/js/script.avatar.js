@@ -110,6 +110,30 @@ function handleAdditionalThumbnails() {
   }
 }
 
+// Function: Handle Back Buttons
+function handleBackButtons() {
+  // Select all back buttons
+  const backButtons = document.querySelectorAll(".back-button");
+
+  backButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      // Find the parent additional thumbnails container
+      const additionalThumbnailsContainer = button.closest(".hidden, #additional-thumbnails");
+
+      if (additionalThumbnailsContainer) {
+        // Hide the additional thumbnails container
+        additionalThumbnailsContainer.classList.add("hidden");
+
+        // Show all main thumbnails
+        const mainThumbnails = document.querySelectorAll(".main-thumbnail");
+        mainThumbnails.forEach((thumbnail) => {
+          thumbnail.closest("div").classList.remove("hidden");
+        });
+      }
+    });
+  });
+}
+
 // Function: Apply color to the active layer
 function applyColorToActiveLayer() {
   document.getElementById("apply-color-button").addEventListener("click", () => {
@@ -180,4 +204,5 @@ document.addEventListener("DOMContentLoaded", () => {
   handleThumbnailSelection(); // Set up thumbnail selection events
   applyColorToActiveLayer(); // Set up color picker functionality
   handleAdditionalThumbnails(); // Handle additional thumbnails toggle
+  handleBackButtons();
 });
