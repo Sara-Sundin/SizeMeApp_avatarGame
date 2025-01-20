@@ -1,3 +1,11 @@
+body {
+    background-color: #000 !important;
+}
+
+#intro {
+    padding-top: 200px;
+}
+
 .ml4 {
     position: relative;
     font-weight: 900;
@@ -15,4 +23,22 @@
     right: 0;
     opacity: 0;
     transform: scale(0.2);
+}
+
+.letters-1 {
+    color: #fff;
+}
+
+.letters-2 {
+    color: #E6007E;
+}
+
+.letters-3 {
+    background: linear-gradient(to right, #E6007E, orange, green, blue);
+    background-clip: text;
+    /* Standard property */
+    -webkit-background-clip: text;
+    /* WebKit-prefixed property for compatibility */
+    color: transparent;
+    /* Use transparent text color for gradient visibility */
 }

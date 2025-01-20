@@ -2,9 +2,9 @@ var ml4 = {};
 ml4.opacityIn = [0, 1];
 ml4.scaleIn = [0.2, 1];
 ml4.scaleOut = 3;
-ml4.durationIn = 1200; // Adjusted for slower animation
-ml4.durationOut = 1000;
-ml4.delay = 600;
+ml4.durationIn = 800; // Adjusted for slower animation
+ml4.durationOut = 600;
+ml4.delay = 400;
 
 anime.timeline({
         loop: false // true for loop: false to run once
