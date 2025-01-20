@@ -5,7 +5,7 @@ const canvases = {
   eyes: document.getElementById("canvas-eyes"),
   brows: document.getElementById("canvas-brows"),
   mouth: document.getElementById("canvas-mouth"),
-  fox: document.getElementById("canvas-fox"),
+  animal: document.getElementById("canvas-animal"),
 };
 console.log("Canvases initialized:", canvases);
 
@@ -16,7 +16,7 @@ const layers = {
   eyes: null,
   brows: null,
   mouth: null,
-  fox: null,
+  animal: null,
 };
 console.log("Initial layers:", layers);
 
@@ -27,7 +27,7 @@ const contexts = {
   eyes: canvases.eyes.getContext("2d"),
   brows: canvases.brows.getContext("2d"),
   mouth: canvases.mouth.getContext("2d"),
-  fox: canvases.fox.getContext("2d"),
+  animal: canvases.animal.getContext("2d"),
 };
 console.log("Canvas contexts initialized:", contexts);
 
@@ -158,18 +158,35 @@ function applyColorToActiveLayer() {
 }
 
 function setupAdditionalThumbnails() {
-  document.querySelectorAll(".thumbnail-radio.main-thumbnail").forEach((thumbnail) => {
-    thumbnail.addEventListener("change", (event) => {
-      const layer = event.target.dataset.layer; // Get the selected layer
+  document.querySelectorAll(".thumbnail-radio.main-thumbnail").forEach((radio) => {
+    radio.addEventListener("change", (event) => {
+      const layer = event.target.dataset.layer;
       const additionalThumbnailsId = `additional-thumbnails-${layer}`;
       const additionalThumbnails = document.getElementById(additionalThumbnailsId);
 
-      // Hide all main thumbnails and show the corresponding additional thumbnails
       if (additionalThumbnails) {
         document.querySelectorAll(".thumbnail-container > div").forEach((thumb) => thumb.classList.add("hidden"));
         additionalThumbnails.classList.remove("hidden");
       } else {
         console.error(`No additional thumbnails found for layer: ${layer}`);
+      }
+    });
+
+    // Allow reopening additional thumbnails on repeated clicks
+    radio.addEventListener("click", (event) => {
+      const layer = event.target.dataset.layer;
+      const additionalThumbnailsId = `additional-thumbnails-${layer}`;
+      const additionalThumbnails = document.getElementById(additionalThumbnailsId);
+
+      if (additionalThumbnails && !additionalThumbnails.classList.contains("hidden")) {
+        // Additional thumbnails are already visible, do nothing
+        return;
+      }
+
+      // Trigger the same logic as the "change" event
+      document.querySelectorAll(".thumbnail-container > div").forEach((thumb) => thumb.classList.add("hidden"));
+      if (additionalThumbnails) {
+        additionalThumbnails.classList.remove("hidden");
       }
     });
   });
