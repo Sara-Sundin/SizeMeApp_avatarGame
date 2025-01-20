@@ -110,42 +110,49 @@ function applyColorToActiveLayer() {
     const color = document.getElementById("color-picker-input").value;
     const activeRadio = document.querySelector(".thumbnail-radio:checked");
 
-    console.log(`Apply color clicked: Color - ${color}`);
-    if (activeRadio) {
-      const layer = activeRadio.dataset.layer;
+    if (!activeRadio) {
+      console.warn("No active radio selected.");
+      return;
+    }
 
-      if (layer && layers[layer]) {
-        console.log(`Applying color to layer: ${layer}`);
-        const img = new Image();
-        img.src = layers[layer];
-        img.onload = () => {
-          const ctx = contexts[layer];
-          const canvas = canvases[layer];
+    const layer = activeRadio.dataset.layer;
 
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    if (layer && layers[layer]) {
+      console.log(`Applying color to layer: ${layer}`);
+      const img = new Image();
+      img.src = layers[layer];
+      img.onload = () => {
+        const ctx = contexts[layer];
+        const canvas = canvases[layer];
 
-          const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-          const data = imageData.data;
+        // Clear the canvas and draw the image
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-          for (let i = 0; i < data.length; i += 4) {
-            const red = data[i];
-            const green = data[i + 1];
-            const blue = data[i + 2];
-            const alpha = data[i + 3];
+        // Fetch image data only once
+        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const data = imageData.data;
 
-            if (red > 200 && green > 200 && blue > 200 && alpha > 0) {
-              const [r, g, b] = hexToRgb(color);
-              data[i] = r;
-              data[i + 1] = g;
-              data[i + 2] = b;
-            }
+        const [r, g, b] = hexToRgb(color);
+
+        // Optimize the loop by reducing checks
+        for (let i = 0; i < data.length; i += 4) {
+          if (data[i] > 200 && data[i + 1] > 200 && data[i + 2] > 200) {
+            // Directly set the new color
+            data[i] = r; // Red
+            data[i + 1] = g; // Green
+            data[i + 2] = b; // Blue
           }
+        }
 
-          ctx.putImageData(imageData, 0, 0);
-          console.log(`Color applied to layer: ${layer}`);
-        };
-      }
+        // Put the updated image data back on the canvas
+        ctx.putImageData(imageData, 0, 0);
+        console.log(`Color applied to layer: ${layer}`);
+      };
+
+      img.onerror = () => {
+        console.error(`Failed to load image for layer: ${layer}`);
+      };
     }
   });
 }
