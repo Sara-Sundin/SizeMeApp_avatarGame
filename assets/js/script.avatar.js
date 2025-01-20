@@ -150,6 +150,24 @@ function applyColorToActiveLayer() {
   });
 }
 
+function setupAdditionalThumbnails() {
+  document.querySelectorAll(".thumbnail-radio.main-thumbnail").forEach((thumbnail) => {
+    thumbnail.addEventListener("change", (event) => {
+      const layer = event.target.dataset.layer; // Get the selected layer
+      const additionalThumbnailsId = `additional-thumbnails-${layer}`;
+      const additionalThumbnails = document.getElementById(additionalThumbnailsId);
+
+      // Hide all main thumbnails and show the corresponding additional thumbnails
+      if (additionalThumbnails) {
+        document.querySelectorAll(".thumbnail-container > div").forEach((thumb) => thumb.classList.add("hidden"));
+        additionalThumbnails.classList.remove("hidden");
+      } else {
+        console.error(`No additional thumbnails found for layer: ${layer}`);
+      }
+    });
+  });
+}
+
 // Function: Initialize canvas dimensions
 function initializeCanvases() {
   console.log("Initializing canvases...");
@@ -167,4 +185,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeCanvases(); // Set up canvas dimensions
   handleThumbnailSelection(); // Set up thumbnail selection events
   applyColorToActiveLayer(); // Set up color picker functionality
+  setupAdditionalThumbnails();
 });
