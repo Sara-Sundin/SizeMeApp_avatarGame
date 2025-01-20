@@ -90,25 +90,34 @@ body {
   border-radius: 8px;
 }
 
-#additional-thumbnails {
+.additional-thumbnails {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  /* Prevent wrapping to keep them in one horizontal row */
   gap: 10px;
   /* Space between items */
   justify-content: flex-start;
   /* Align items to the left */
-  align-items: top;
+  align-items: center;
+  /* Align items vertically to the center */
   width: 100%;
-  max-width: 600px;
-  padding-top: 10px;
+  /* Ensure the container spans full width */
+  overflow-x: auto;
+  /* Enable horizontal scrolling if items overflow */
+  max-width: 100%;
+  /* Prevent container from exceeding the screen width */
+  padding: 10px;
+  /* Add padding for visual clarity */
+  box-sizing: border-box;
+  /* Include padding in width calculation */
 }
 
-#additional-thumbnails.hidden {
+.additional-thumbnails.hidden {
   display: none;
   /* Completely hide thumbnails when "hidden" class is applied */
 }
 
-#additional-thumbnails:not(.hidden) {
+.additional-thumbnails:not(.hidden) {
   opacity: 1;
   /* Ensures visible thumbnails are fully opaque */
 }
