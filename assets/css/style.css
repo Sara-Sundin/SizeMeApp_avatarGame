@@ -1,119 +1,18 @@
-
-/*General styling*/
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-}
-
-.centered-text {
+.ml4 {
+    position: relative;
+    font-weight: 900;
+    font-size: 4.5em;
     text-align: center;
-}
-
-/*Avatar Generator*/
-
-.thumbnail-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.thumbnail {
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    background: none;
-    outline: none;
-}
-
-.thumbnail img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    transition: border-color 0.3s;
-}
-
-.thumbnail-feature {
-    width: 30px;
-    height: 30px;
-    padding: 0;
-    cursor: pointer;
-    background: none;
-    border: 1px solid black;
-    border-radius: 8px;
-    transition: border-color 0.3s;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.thumbnail-feature img {
-    width: 300%;
-    height: 300%;
-    object-fit: cover;
-}
-
-.thumbnail img:hover,
-.thumbnail img:focus {
-    border-color: blue;
-}
-
-.slide {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin: 0 auto;
     width: 100%;
-    height: 100%;
 }
 
-.slide.active {
-    display: block;
-    text-align: center;
-}
-
-.canvas {
-    border: 1px solid #000;
-    margin: 20px auto;
-    max-height: 200px;
-    min-height: 200px;
-    max-width: 200px;
-}
-
-#canvas-2 {
-    display: none;
-}
-
-/*Color Picker*/
-.color-button {
-    width: 15px;
-    height: 15px;
-}
-
-#skin-1 {
-    background-color: #f9bfa0;
-}
-
-#skin-2 {
-    background-color: #ffeabb;
-}
-
-#skin-3 {
-    background-color: #ead7c7;
-}
-
-#brown-1 {
-    background-color:#6c3b29 ;
-}
-
-#yellow-1 {
-    background-color: #ffd159;
-}
-
-#red-1 {
-    background-color: #e30613;
+.ml4 .letters {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0.3em;
+    right: 0;
+    opacity: 0;
+    transform: scale(0.2);
 }
