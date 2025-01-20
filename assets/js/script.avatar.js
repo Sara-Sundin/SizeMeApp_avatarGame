@@ -103,58 +103,6 @@ function handleThumbnailSelection() {
   });
 }
 
-// Function: Toggle additional thumbnails
-function handleAdditionalThumbnails() {
-  console.log("Setting up additional thumbnails...");
-  const mainThumbnailLabel = document.querySelector("label[for='thumbnail-hair']");
-  const additionalThumbnailsContainer = document.getElementById("additional-thumbnails");
-  const allThumbnails = document.querySelectorAll(".thumbnail-container > *:not(#additional-thumbnails)");
-
-  if (mainThumbnailLabel && additionalThumbnailsContainer) {
-    mainThumbnailLabel.addEventListener("click", (event) => {
-      event.preventDefault(); // Prevent default behavior
-
-      console.log("Main thumbnail clicked. Showing additional thumbnails.");
-      allThumbnails.forEach((element) => {
-        if (!element.querySelector("[for='thumbnail-hair']")) {
-          element.classList.add("hidden");
-        }
-      });
-
-      additionalThumbnailsContainer.classList.remove("hidden");
-    });
-  } else {
-    console.error("Main hair thumbnail or additional thumbnails container not found.");
-  }
-}
-
-// Function: Handle Back Buttons
-function handleBackButtons() {
-  console.log("Setting up back button functionality...");
-  const backButtons = document.querySelectorAll(".back-button");
-
-  backButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      console.log("Back button clicked.");
-      const additionalThumbnailsContainer = document.getElementById("additional-thumbnails");
-
-      if (additionalThumbnailsContainer) {
-        additionalThumbnailsContainer.classList.add("hidden");
-        console.log("Additional thumbnails hidden.");
-      }
-
-      const mainThumbnails = document.querySelectorAll(".main-thumbnail");
-      mainThumbnails.forEach((thumbnail) => {
-        const parent = thumbnail.closest("div");
-        if (parent) {
-          parent.classList.remove("hidden");
-          console.log("Main thumbnail restored:", thumbnail);
-        }
-      });
-    });
-  });
-}
-
 // Function: Apply color to the active layer
 function applyColorToActiveLayer() {
   console.log("Setting up color picker functionality...");
@@ -219,6 +167,4 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeCanvases(); // Set up canvas dimensions
   handleThumbnailSelection(); // Set up thumbnail selection events
   applyColorToActiveLayer(); // Set up color picker functionality
-  //handleAdditionalThumbnails(); // Handle additional thumbnails toggle
-  //handleBackButtons(); // Handle back button functionality
 });
