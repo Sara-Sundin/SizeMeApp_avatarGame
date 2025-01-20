@@ -168,6 +168,29 @@ function setupAdditionalThumbnails() {
   });
 }
 
+function setupBackButtons() {
+  document.querySelectorAll(".back-button").forEach((button) => {
+    button.addEventListener("click", () => {
+      console.log("Back button clicked.");
+
+      // Hide all additional thumbnails
+      document.querySelectorAll(".additional-thumbnails").forEach((container) => {
+        container.classList.add("hidden");
+      });
+
+      // Show all main thumbnails inside the `thumbnail-container`
+      const mainThumbnails = document.querySelector(".thumbnail-container");
+      if (mainThumbnails) {
+        mainThumbnails.querySelectorAll("div").forEach((thumb) => {
+          thumb.classList.remove("hidden");
+        });
+      } else {
+        console.error("Thumbnail container not found.");
+      }
+    });
+  });
+}
+
 // Function: Initialize canvas dimensions
 function initializeCanvases() {
   console.log("Initializing canvases...");
@@ -186,4 +209,5 @@ document.addEventListener("DOMContentLoaded", () => {
   handleThumbnailSelection(); // Set up thumbnail selection events
   applyColorToActiveLayer(); // Set up color picker functionality
   setupAdditionalThumbnails();
+  setupBackButtons();
 });
