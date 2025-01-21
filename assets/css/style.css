@@ -116,3 +116,59 @@ h1 {
 #gender-female-container {
     background-color: red;
 }
+
+/* Avatar Section */
+#avatar-section {
+    padding: 20px 20px 20px 20px;
+    color: #000;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+span img {
+    width: 100%;
+    height: auto;
+    max-width: 35px;
+    margin: 10px;
+    display: block;
+}
+
+#avatar-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+#avatar-img img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+#color-picker-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+#color-picker-img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
