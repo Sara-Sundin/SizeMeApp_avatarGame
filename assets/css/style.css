@@ -1,8 +1,16 @@
+/* General Styling*/
+
 body {
     background-color: #000 !important;
 }
 
-#intro {
+.hidden {
+    display: none;
+}
+
+/* Intro Animation*/
+
+#intro-animation {
     padding-top: 200px;
 }
 
