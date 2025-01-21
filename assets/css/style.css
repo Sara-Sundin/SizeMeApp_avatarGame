@@ -67,6 +67,7 @@ div {
 /* Headings*/
 .heading-font {
     font-family: "Fredoka", sans-serif;
+    font-weight: 100;
 }
 
 h1 {
