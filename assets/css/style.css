@@ -1,11 +1,24 @@
 /* General Styling*/
+main {
+    color: white;
+}
+
+header {
+    color: white;
+}
 
 body {
     background-color: #000 !important;
+    margin: 0;
 }
+
 
 .hidden {
     display: none;
+}
+
+div {
+    border: 1px solid white;
 }
 
 /* Intro Animation*/
@@ -49,4 +62,16 @@ body {
     /* WebKit-prefixed property for compatibility */
     color: transparent;
     /* Use transparent text color for gradient visibility */
+}
+
+/* Hero Section */
+#hero {
+    width: 100%;
+    /* Full width of the page */
+    height: 200px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Fredoka", sans-serif;
 }
