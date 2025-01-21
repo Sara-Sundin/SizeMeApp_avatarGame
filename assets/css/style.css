@@ -34,7 +34,7 @@ body {
 }
 
 .letters-3 {
-    background: linear-gradient(to right, #E6007E, orange, green, blue);
+    background: linear-gradient(to right, #E6007E, orange, blue);
     background-clip: text;
     /* Standard property */
     -webkit-background-clip: text;
