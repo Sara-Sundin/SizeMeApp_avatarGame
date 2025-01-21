@@ -214,3 +214,25 @@ span img {
     justify-content: center;
     align-items: center;
 }
+
+footer {
+    margin-top: 0;
+    background-color: white;
+    bottom: 0;
+    position: relative;
+}
+
+#social-links {
+    background-color: white;
+    font-size: 30px;
+    display: flex;
+    /* Activates Flexbox */
+    padding: 10px 50px 20px 50px;
+    justify-content: center;
+    gap: 40px;
+    /* Add spacing between icons */
+}
+
+#social-links a {
+    color: #000
+}
