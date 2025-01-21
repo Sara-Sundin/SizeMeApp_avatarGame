@@ -88,6 +88,18 @@ h1 {
     background-color: white;
 }
 
+#arrow img {
+    width: 35px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+#intro-text {
+    padding-top: 20px;
+}
+
 /* Pick Gender Section*/
 #pick-gender {
     text-align: center;
@@ -207,12 +219,17 @@ span img {
 
 /* Contact Section */
 #contact {
-    padding: 20px 20px 20px 20px;
+    padding: 15px 0 15px 0;
     color: white;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#button-contact {
+    padding-top: 10px;
+    padding-bottom: 15px;
 }
 
 footer {
