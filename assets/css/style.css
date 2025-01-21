@@ -276,4 +276,13 @@ footer {
         margin-left: 25px;
         margin-right: 25px;
     }
+
+    #pick-gender {
+        max-width: 230px;
+    }
+
+    #arrow img {
+        transform: rotate(-90deg);
+        /* Rotate the image */
+    }
 }
