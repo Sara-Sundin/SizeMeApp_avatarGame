@@ -117,6 +117,7 @@ h1 {
 /* Pick Gender Section*/
 #pick-gender {
     text-align: center;
+    margin-bottom: 30px;
 }
 
 #pick-gender img {
@@ -239,6 +240,7 @@ span img {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 #button-contact {
@@ -266,4 +268,12 @@ footer {
 
 #social-links a {
     color: #000
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    #avatar-section {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
 }
