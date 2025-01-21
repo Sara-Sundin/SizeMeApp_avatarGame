@@ -17,6 +17,20 @@ body {
     display: none;
 }
 
+.image-hover {
+    width: 50px;
+    /* Default width */
+    height: auto;
+    /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+    /* Smooth transition */
+}
+
+.image-hover:hover {
+    transform: scale(1.2);
+    /* Enlarges the image */
+}
+
 /* Intro Animation*/
 #intro-animation {
     padding-top: 200px;
