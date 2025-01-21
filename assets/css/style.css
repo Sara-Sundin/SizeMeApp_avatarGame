@@ -173,21 +173,31 @@ span img {
 }
 
 /* Download Avatar Styling */
-#download-avatar {
-    max-height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+#download-heading {
+    height: 100px;
     background-color: #000;
     color: white;
     padding-top: 20px;
-    height: 100%;
-    text-align: center;
+    margin: 0;
 }
 
-#download-avatar img {
-    width: 80%;
+#download-avatar-row {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+#download-avatar-row img {
+    width: 70%;
     height: auto;
-    max-width: 100%;
-    padding: 20px;
+}
+
+#download-button {
+    padding-top: 40px;
 }
