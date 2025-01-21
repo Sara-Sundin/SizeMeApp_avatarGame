@@ -88,6 +88,31 @@ h1 {
 /* Introduction Section*/
 #introduction-text {
     padding: 20px 20px 20px 20px;
-    color: white;
+    color: #000;
     text-align: center;
+    background-color: white;
+}
+
+/* Pick Gender Section*/
+#pick-gender {
+    text-align: center;
+}
+
+#pick-gender img {
+    width: 100%;
+    /* Image will take up 100% of the container's width */
+    height: auto;
+    /* Maintain the aspect ratio */
+    object-fit: cover;
+    /* Ensure the image covers the container */
+    display: block;
+    /* Remove inline spacing from images */
+}
+
+#gender-male-container {
+    background-color: blue;
+}
+
+#gender-female-container {
+    background-color: red;
 }
