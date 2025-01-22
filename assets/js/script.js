@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 5000); // Adjust time (matches animation duration)
 });
 
-function openPopup() {
+/*function openPopup() {
     // Open a new window with the desired file
     window.open("avatar.female.html", "popupWindow", "width=320,height=480,resizable=no,scrollbars=yes");
-}
+}*/

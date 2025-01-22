@@ -73,9 +73,32 @@
                                         alt="Male Shape">
                                 </div>
                                 <div id="gender-female-container" class="col-6 col-lg-12">
+                                    <!-- Image as Modal Trigger -->
                                     <img class="image-hover" src="assets/images/images_page/choose_female_outline.png"
-                                        alt="Female Shape" onclick=openPopup()>
+                                        alt="Female Shape" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 </div>
+
+                                <!-- Female Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <!-- Iframe Embed -->
+                                                <div class="ratio ratio-16x9">
+                                                    <iframe src="avatar.female.html" title="Female Avatar"
+                                                        allowfullscreen>
+                                                    </iframe>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </section>
