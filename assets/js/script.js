@@ -51,3 +51,27 @@ anime.timeline({
         duration: 500,
         delay: 500
     });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const introAnimation = document.getElementById("intro-animation");
+    const header = document.querySelector("header");
+    const main = document.querySelector("main");
+    const footer = document.querySelector("footer");
+
+    // Simulate animation duration
+    setTimeout(() => {
+        // Hide intro animation
+        introAnimation.classList.add("hidden");
+        introAnimation.classList.remove("visible");
+
+        // Show other sections
+        header.classList.add("visible");
+        header.classList.remove("hidden");
+
+        main.classList.add("visible");
+        main.classList.remove("hidden");
+
+        footer.classList.add("visible");
+        footer.classList.remove("hidden");
+    }, 5000); // Adjust time (matches animation duration)
+});

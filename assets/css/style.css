@@ -14,7 +14,12 @@ body {
 
 
 .hidden {
-    display: none;
+    display: none !important;
+}
+
+/* Show when active */
+.visible {
+    display: block !important;
 }
 
 .image-hover {
@@ -60,17 +65,11 @@ body {
 }
 
 .letters-2 {
-    color: #E6007E;
+    color: red;
 }
 
 .letters-3 {
-    background: linear-gradient(to right, #E6007E, orange, blue);
-    background-clip: text;
-    /* Standard property */
-    -webkit-background-clip: text;
-    /* WebKit-prefixed property for compatibility */
-    color: transparent;
-    /* Use transparent text color for gradient visibility */
+    color: blue;
 }
 
 /* Headings*/
