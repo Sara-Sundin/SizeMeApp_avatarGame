@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assets/css/style.avatar.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Avatar Generator</title>
+</head>
+
+<body>
+  <div id="generator" class="centered-text">
+    <h1 class="heading">Avatar Generator</h1>
+
+    <!-- Avatar Canvas Container -->
+    <div id="canvas-container" class="canvas-container">
+      <canvas id="canvas-skin" class="canvas"></canvas>
+      <canvas id="canvas-brows" class="canvas"></canvas>
+      <canvas id="canvas-hair" class="canvas"></canvas>
+      <canvas id="canvas-eyes" class="canvas"></canvas>
+      <canvas id="canvas-mouth" class="canvas"></canvas>
+      <canvas id="canvas-animal" class="canvas"></canvas>
+    </div>
+
+    <!-- Main Thumbnails -->
+    <div class="thumbnail-container">
+
+      <!-- Skin Thumbnail -->
+      <div>
+        <input type="radio" id="thumbnail-skin" name="thumbnail" class="thumbnail-radio main-thumbnail"
+          data-layer="skin" data-src="assets/images/images_avatar/outlines/shape_female_outline.png" />
+        <label for="thumbnail-skin" class="thumbnail">
+          <span>Skin</span>
+          <img src="assets/images/images_avatar/outlines/shape_female_outline.png" alt="Skin">
+        </label>
+      </div>
+
+      <!-- Hair Thumbnail -->
+      <div>
+        <input type="radio" id="thumbnail-hair" name="thumbnail" class="thumbnail-radio main-thumbnail"
+          data-layer="hair" data-src="assets/images/images_avatar/outlines/hair_shoulder_outline.png" />
+        <label for="thumbnail-hair" class="thumbnail">
+          <span>Hair</span>
+          <img src="assets/images/images_avatar/outlines/hair_shoulder_outline.png" alt="Hair">
+        </label>
+      </div>
+
+      <!-- Eyes Thumbnail -->
+      <div>
+        <input type="radio" id="thumbnail-eyes" name="thumbnail" class="thumbnail-radio main-thumbnail"
+          data-layer="eyes" data-src="assets/images/images_avatar/outlines/eyes_2.png" />
+        <label for="thumbnail-eyes" class="thumbnail">
+          <span>Eyes</span>
+          <img src="assets/images/images_avatar/outlines/eyes_2.png" alt="Eyes">
+        </label>
+      </div>
+
+      <!-- Brows Thumbnail -->
+      <div>
+        <input type="radio" id="thumbnail-brows" name="thumbnail" class="thumbnail-radio main-thumbnail"
+          data-layer="brows" data-src="assets/images/images_avatar/outlines/brows_2.png" />
+        <label for="thumbnail-brows" class="thumbnail">
+          <span>Brows</span>
+          <img src="assets/images/images_avatar/outlines/brows_2.png" alt="Brows">
+        </label>
+      </div>
+
+      <!-- Mouth Thumbnail -->
+      <div>
+        <input type="radio" id="thumbnail-mouth" name="thumbnail" class="thumbnail-radio main-thumbnail"
+          data-layer="mouth" data-src="assets/images/images_avatar/outlines/filler_mouth_outline.png" />
+        <label for="thumbnail-mouth" class="thumbnail">
+          <span>Mouth</span>
+          <img src="assets/images/images_avatar/outlines/filler_mouth_outline.png" alt="Mouth">
+        </label>
+      </div>
+
+      <!-- Fox Thumbnail -->
+      <div>
+        <input type="radio" id="thumbnail-animal" name="thumbnail" class="thumbnail-radio main-thumbnail"
+          data-layer="animal" data-src="assets/images/images_avatar/animal/fox_1.png" />
+        <label for="thumbnail-animal" class="thumbnail">
+          <span>Animal</span>
+          <img src="assets/images/images_avatar/animal/fox_1.png" alt="Fox Ears">
+        </label>
+      </div>
+    </div>
+
+    <!-- Additional Thumbnails -->
+    <div id="additional-thumbnails-container">
+      <div id="additional-thumbnails-skin" class="additional-thumbnails hidden">
+        <button class="back-button">Back</button>
+        <div class="thumbnail">
+          <div class="clear-thumbnail" data-layer="skin"></div>
+        </div>
+        <div class="thumbnail">
+          <input type="radio" id="thumbnail-skin-female" name="thumbnail" class="thumbnail-radio" data-layer="skin"
+            data-src="assets/images/images_avatar/outlines/shape_female_outline.png" />
+          <label for="thumbnail-skin-female">
+            <img src="assets/images/images_avatar/outlines/shape_female_outline.png" alt="Female Shape">
+          </label>
+        </div>
+      </div>
+
+      <div id="additional-thumbnails-hair" class="additional-thumbnails hidden">
+        <button class="back-button">Back</button>
+        <div class="thumbnail">
+          <div class="clear-thumbnail" data-layer="hair"></div>
+        </div>
+        <div class="thumbnail">
+          <input type="radio" id="thumbnail-hair-shoulders" name="thumbnail" class="thumbnail-radio" data-layer="hair"
+            data-src="assets/images/images_avatar/outlines/hair_shoulder_outline.png" />
+          <label for="thumbnail-hair-shoulders">
+            <img src="assets/images/images_avatar/outlines/hair_shoulder_outline.png" alt="Shoulder Length Hair">
+          </label>
+        </div>
+        <div class="thumbnail">
+          <input type="radio" id="thumbnail-hair-long" name="thumbnail" class="thumbnail-radio" data-layer="hair"
+            data-src="assets/images/images_avatar/outlines/hair_long_outline.png" />
+          <label for="thumbnail-hair-long">
+            <img src="assets/images/images_avatar/outlines/hair_long_outline.png" alt="Long Hair">
+          </label>
+        </div>
+        <div class="thumbnail">
+          <input type="radio" id="thumbnail-hair-short" name="thumbnail" class="thumbnail-radio" data-layer="hair"
+            data-src="assets/images/images_avatar/outlines/hair_short_outline.png" />
+          <label for="thumbnail-hair-short">
+            <img src="assets/images/images_avatar/outlines/hair_short_outline.png" alt="Short Hair">
+          </label>
+        </div>
+      </div>
+
+      <div id="additional-thumbnails-eyes" class="additional-thumbnails hidden">
+        <button class="back-button">Back</button>
+        <div class="thumbnail">
+          <div class="clear-thumbnail" data-layer="eyes"></div>
+        </div>
+        <div class="thumbnail">
+          <input type="radio" id="thumbnail-eyes-1" name="thumbnail" class="thumbnail-radio" data-layer="eyes"
+            data-src="assets/images/images_avatar/outlines/eyes_1.png" />
+          <label for="thumbnail-eyes-1">
+            <img src="assets/images/images_avatar/outlines/eyes_1.png" alt="Alternative Eyes">
+          </label>
+        </div>
+        <div class="thumbnail">
+          <input type="radio" id="thumbnail-eyes-2" name="thumbnail" class="thumbnail-radio" data-layer="eyes"
+            data-src="assets/images/images_avatar/outlines/eyes_2.png" />
+          <label for="thumbnail-eyes-2">
+            <img src="assets/images/images_avatar/outlines/eyes_2.png" alt="Alternative Eyes">
+          </label>
+        </div>
+      </div>
+
+      <div id="additional-thumbnails-brows" class="additional-thumbnails hidden">
+        <button class="back-button">Back</button>
+        <div class="thumbnail">
+          <div class="clear-thumbnail" data-layer="brows"></div>
+        </div>
+        <div class="thumbnail">
+          <input type="radio" id="thumbnail-brows-1" name="thumbnail" class="thumbnail-radio" data-layer="brows"
+            data-src="assets/images/images_avatar/outlines/brows_1.png" />
+          <label for="thumbnail-brows-1">
+            <img src="assets/images/images_avatar/outlines/brows_1.png" alt="Alternative Brows">
+          </label>
+        </div>
+        <div class="thumbnail">
+          <input type="radio" id="thumbnail-brows-2" name="thumbnail" class="thumbnail-radio" data-layer="brows"
+            data-src="assets/images/images_avatar/outlines/brows_2.png" />
+          <label for="thumbnail-brows-2">
+            <img src="assets/images/images_avatar/outlines/brows_2.png" alt="Alternative Brows">
+          </label>
+        </div>
+      </div>
+
+      <div id="additional-thumbnails-mouth" class="additional-thumbnails hidden">
+        <button class="back-button">Back</button>
+        <div class="thumbnail">
+          <div class="clear-thumbnail" data-layer="mouth"></div>
+        </div>
+        <div class="thumbnail">
+          <input type="radio" id="thumbnail-mouth-1" name="thumbnail" class="thumbnail-radio" data-layer="mouth"
+            data-src="assets/images/images_avatar/outlines/happy_mouth_1.png" />
+          <label for="thumbnail-mouth-1">
+            <img src="assets/images/images_avatar/outlines/happy_mouth_1.png" alt="Alternative Mouth">
+          </label>
+        </div>
+        <div class="thumbnail">
+          <input type="radio" id="thumbnail-mouth-2" name="thumbnail" class="thumbnail-radio" data-layer="mouth"
+            data-src="assets/images/images_avatar/outlines/filler_mouth_outline.png" />
+          <label for="thumbnail-mouth-2">
+            <img src="assets/images/images_avatar/outlines/filler_mouth_outline.png" alt="Alternative Mouth">
+          </label>
+        </div>
+      </div>
+
+      <div id="additional-thumbnails-animal" class="additional-thumbnails hidden">
+        <button class="back-button">Back</button>
+        <div class="thumbnail">
+          <div class="clear-thumbnail" data-layer="animal"></div>
+        </div>
+        <div class="thumbnail">
+          <input type="radio" id="thumbnail-rabbit" name="thumbnail" class="thumbnail-radio" data-layer="animal"
+            data-src="assets/images/images_avatar/animal/rabbit_1.png" />
+          <label for="thumbnail-rabbit">
+            <img src="assets/images/images_avatar/animal/rabbit_1.png" alt="Rabbit Ears">
+          </label>
+        </div>
+        <div class="thumbnail">
+          <input type="radio" id="thumbnail-fox" name="thumbnail" class="thumbnail-radio" data-layer="animal"
+            data-src="assets/images/images_avatar/animal/fox_1.png" />
+          <label for="thumbnail-fox">
+            <img src="assets/images/images_avatar/animal/fox_1.png" alt="Fox Ears">
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Universal Color Picker -->
+    <div id="universal-color-picker" class="color-picker container hidden">
+      <div class="row">
+        <div class="heading col-12">
+          <p>Pick a Color:</p>
+        </div>
+        <div class="d-flex justify-content-center gap-2 col-12">
+          <button id="apply-color-button" class="btn btn-primary">Apply Color</button>
+          <input type="color" id="color-picker-input" value="#000000">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/script.avatar.female.js"></script>
+</body>
+
+</html>
