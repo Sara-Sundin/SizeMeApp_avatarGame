@@ -37,7 +37,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 20px;
 }
 
 .canvas {
@@ -45,8 +44,8 @@ body {
   border: 1px solid black;
   top: 0;
   left: 0;
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
 }
 
 .thumbnail-container {
@@ -54,7 +53,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  width: 250px;
+  width: 220px;
   margin: 0 auto;
 }
 
@@ -66,11 +65,9 @@ body {
 .thumbnail {
   display: flex;
   flex-direction: column;
-  /* Stack image and text vertically */
+  /* Stack image and text */
   align-items: center;
-  /* Center the content */
   width: 50px;
-  /* Ensure thumbnails are not too wide */
   height: auto;
   border: 1px solid black;
   border-radius: 8px;
@@ -90,6 +87,13 @@ body {
   border-radius: 8px;
 }
 
+.thumbnails-row {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  width: 100%;
+}
+
 #additional-thumbnails-container {
   display: flex;
   justify-content: center;
@@ -104,24 +108,15 @@ body {
 
 .additional-thumbnails {
   display: flex;
-  flex-wrap: nowrap;
-  /* Prevent wrapping to keep them in one horizontal row */
-  gap: 10px;
-  /* Space between items */
-  justify-content: center;
-  /* Align items to the left */
+  flex-direction: column;
+  /* Stack the back button and thumbnails vertically */
   align-items: center;
-  /* Align items vertically to the center */
+  /* Center align content */
   width: 100%;
-  /* Ensure the container spans full width */
-  overflow-x: auto;
-  /* Enable horizontal scrolling if items overflow */
-  max-width: 100%;
-  /* Prevent container from exceeding the screen width */
+  gap: 15px;
+  /* Space between rows */
   padding: 10px;
-  /* Add padding for visual clarity */
   box-sizing: border-box;
-  /* Include padding in width calculation */
 }
 
 .additional-thumbnails.hidden {
@@ -158,25 +153,15 @@ body {
   /* Add background color for visibility */
 }
 
-
 .back-button {
-
   font-size: 12px;
-  /* Small text size */
   width: 60px;
-  /* Button width */
   height: 30px;
-  /* Button height */
   color: #333;
-  /* Dark text color */
   border: 1px solid #000;
-  /* Subtle border */
   border-radius: 4px;
-  /* Rounded corners */
   cursor: pointer;
-  /* Pointer cursor for hover */
   transition: all 0.3s ease;
-  /* Smooth hover effect */
 }
 
 .back-button:focus {
