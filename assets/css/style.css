@@ -94,10 +94,21 @@ h1 {
 }
 
 /* Introduction Section*/
+#introduction {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
 #introduction-text {
     color: #000;
     text-align: center;
-    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #arrow img {
@@ -110,6 +121,11 @@ h1 {
 /* Pick Gender Section*/
 #pick-gender {
     text-align: center;
+    border: 10px solid #000;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #pick-gender img {
