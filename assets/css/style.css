@@ -95,7 +95,6 @@ h1 {
 
 /* Introduction Section*/
 #introduction-text {
-    padding: 20px 20px 20px 20px;
     color: #000;
     text-align: center;
     background-color: white;
@@ -106,17 +105,11 @@ h1 {
     height: auto;
     display: block;
     margin: 0 auto;
-    padding-top: 20px;
-}
-
-#intro-text {
-    padding-top: 20px;
 }
 
 /* Pick Gender Section*/
 #pick-gender {
     text-align: center;
-    margin-bottom: 30px;
 }
 
 #pick-gender img {
@@ -195,8 +188,6 @@ span img {
 
 /* Download Avatar Section */
 #download-avatar {
-    padding-top: 20px;
-    padding-bottom: 20px;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -279,9 +270,7 @@ footer {
 
 /* Medium devices (tablets, 1024px and up) */
 @media screen and (min-width: 1024px) {
-    #pick-gender {
-        max-width: 230px;
-    }
+    #pick-gender {}
 
     #arrow img {
         transform: rotate(-90deg);
