@@ -147,6 +147,15 @@ h1 {
     background-color: red;
 }
 
+.modal-title {
+    color: #000;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 100;
+    text-align: center;
+    padding-left: 45px;
+    font-size: 20px;
+}
+
 .responsive-iframe-container {
     position: relative;
     width: 120%;
@@ -314,6 +323,11 @@ footer {
         /* Adjust scaling for larger screens */
         transform-origin: top left;
     }
+
+    .modal-title {
+        padding-left: 105px;
+        font-size: 35px;
+    }
 }
 
 /* Medium devices (tablets, 1024px and up) */
@@ -333,6 +347,4 @@ footer {
         /* Restore original size for large screens */
         transform-origin: center;
     }
-
-
 }

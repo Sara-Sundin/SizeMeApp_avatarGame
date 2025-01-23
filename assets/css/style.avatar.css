@@ -79,6 +79,7 @@ body {
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.3s, border-color 0.3s;
+  overflow: hidden;
 }
 
 .thumbnail span {
@@ -91,6 +92,7 @@ body {
   height: 50px;
   object-fit: cover;
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .thumbnails-row {
@@ -123,6 +125,7 @@ body {
   /* Space between rows */
   padding: 10px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .additional-thumbnails.hidden {
@@ -145,12 +148,12 @@ body {
 .thumbnail-zoom {
   transform: scale(2.5);
   /* Zooms in the image */
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .thumbnail-zoom-md {
   transform: scale(1.5);
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .clear-thumbnail {
