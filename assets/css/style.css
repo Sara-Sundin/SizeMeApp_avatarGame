@@ -151,7 +151,7 @@ h1 {
     position: relative;
     width: 120%;
     height: auto;
-    min-height: 330px;
+    min-height: 480px;
     overflow: hidden;
     /* Ensure no overflow when scaling */
 }
@@ -301,8 +301,18 @@ footer {
 
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
+
     .responsive-iframe-container {
-        padding-top: 50%;
+        width: 100%;
+        min-height: 700px;
+    }
+
+    .responsive-iframe-container iframe {
+        width: 100%;
+        height: 100%;
+        transform: scale(1);
+        /* Adjust scaling for larger screens */
+        transform-origin: top left;
     }
 }
 
@@ -314,6 +324,15 @@ footer {
     }
 
     .responsive-iframe-container {
-        padding-top: 40%;
+        max-width: 100%;
+        min-height: 400px;
     }
+
+    .responsive-iframe-container iframe {
+        transform: scale(1);
+        /* Restore original size for large screens */
+        transform-origin: center;
+    }
+
+
 }
