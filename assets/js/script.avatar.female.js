@@ -7,20 +7,7 @@ const canvases = {
   mouth: document.getElementById("canvas-mouth"),
   animal: document.getElementById("canvas-animal"),
 };
-console.log("Canvases initialized:", canvases);
 
-// Current layers
-const layers = {
-  skin: null,
-  hair: null,
-  eyes: null,
-  brows: null,
-  mouth: null,
-  animal: null,
-};
-console.log("Initial layers:", layers);
-
-// Contexts for drawing
 const contexts = {
   skin: canvases.skin.getContext("2d"),
   hair: canvases.hair.getContext("2d"),
@@ -29,22 +16,37 @@ const contexts = {
   mouth: canvases.mouth.getContext("2d"),
   animal: canvases.animal.getContext("2d"),
 };
-console.log("Canvas contexts initialized:", contexts);
 
-// Utility: Convert hex color to RGB
-function hexToRgb(hex) {
-  console.log("Converting HEX to RGB:", hex);
-  const bigint = parseInt(hex.slice(1), 16);
-  const r = (bigint >> 16) & 255;
-  const g = (bigint >> 8) & 255;
-  const b = bigint & 255;
-  console.log("Converted RGB:", [r, g, b]);
-  return [r, g, b];
+const layers = {
+  skin: null,
+  hair: null,
+  eyes: null,
+  brows: null,
+  mouth: null,
+  animal: null,
+};
+
+// Utility: Convert HSL to RGB
+function hslToRgb(h, s, l) {
+  let r, g, b;
+  const hueToRgb = (p, q, t) => {
+    if (t < 0) t += 1;
+    if (t > 1) t -= 1;
+    if (t < 1 / 6) return p + (q - p) * 6 * t;
+    if (t < 1 / 2) return q;
+    if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+    return p;
+  };
+  const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+  const p = 2 * l - q;
+  r = hueToRgb(p, q, h + 1 / 3);
+  g = hueToRgb(p, q, h);
+  b = hueToRgb(p, q, h - 1 / 3);
+  return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
 }
 
 // Function: Load and draw a single layer
 function loadAndDrawLayer(layerName) {
-  console.log(`Loading and drawing layer: ${layerName}`);
   const ctx = contexts[layerName];
   const src = layers[layerName];
 
@@ -54,17 +56,14 @@ function loadAndDrawLayer(layerName) {
   }
 
   if (!src) {
-    console.warn(`No source image for layer "${layerName}". Clearing canvas.`);
     ctx.clearRect(0, 0, canvases[layerName].width, canvases[layerName].height);
     return;
   }
 
-  console.log(`Drawing image from source: ${src}`);
   const img = new Image();
   img.src = src;
 
   img.onload = () => {
-    console.log(`Image loaded successfully for layer: ${layerName}`);
     ctx.clearRect(0, 0, canvases[layerName].width, canvases[layerName].height);
     ctx.drawImage(img, 0, 0, canvases[layerName].width, canvases[layerName].height);
   };
@@ -74,89 +73,121 @@ function loadAndDrawLayer(layerName) {
   };
 }
 
-// Function: Handle thumbnail selection via radio buttons
+// Function: Handle thumbnail selection
 function handleThumbnailSelection() {
-  console.log("Setting up thumbnail selection...");
-  const thumbnails = document.querySelectorAll(".thumbnail-radio");
-
-  thumbnails.forEach((radio) => {
+  document.querySelectorAll(".thumbnail-radio").forEach((radio) => {
     radio.addEventListener("change", (e) => {
       const layer = e.target.dataset.layer;
       const src = e.target.dataset.src;
 
-      console.log(`Thumbnail selected: Layer - ${layer}, Source - ${src}`);
       if (layer) {
-        layers[layer] = src; // Update the selected layer source
-        console.log("Updated layers state:", layers);
-        loadAndDrawLayer(layer); // Draw the layer
-        document.getElementById("universal-color-picker").classList.remove("hidden"); // Show color picker
-      }
-    });
-  });
+        layers[layer] = src;
+        loadAndDrawLayer(layer);
 
-  document.querySelectorAll(".thumbnail").forEach((label) => {
-    label.addEventListener("click", (e) => {
-      const associatedRadio = document.getElementById(label.htmlFor);
-      console.log(`Label clicked: ${label.htmlFor}`);
-      if (associatedRadio) associatedRadio.click();
+        // Show color picker if applicable
+        const colorPicker = document.getElementById("custom-color-picker");
+        if (colorPicker) {
+          colorPicker.classList.remove("hidden");
+        }
+      }
     });
   });
 }
 
 // Function: Apply color to the active layer
+// Function: Apply color to the active layer
 function applyColorToActiveLayer() {
-  console.log("Setting up color picker functionality...");
-  document.getElementById("apply-color-button").addEventListener("click", () => {
-    const color = document.getElementById("color-picker-input").value;
-    const activeRadio = document.querySelector(".thumbnail-radio:checked");
+  const hueSlider = document.getElementById("hue-slider");
+  const lightnessSlider = document.getElementById("lightness-slider");
 
-    if (!activeRadio) {
-      console.warn("No active radio selected.");
-      return;
-    }
+  if (!hueSlider || !lightnessSlider) {
+    console.error("Hue or lightness slider not found.");
+    return;
+  }
+
+  let hue = 0;
+  let lightness = 50;
+
+  const updateColor = () => {
+    const activeRadio = document.querySelector(".thumbnail-radio:checked");
+    if (!activeRadio) return;
 
     const layer = activeRadio.dataset.layer;
+    if (!layer || !layers[layer]) return;
 
-    if (layer && layers[layer]) {
-      console.log(`Applying color to layer: ${layer}`);
-      const img = new Image();
-      img.src = layers[layer];
-      img.onload = () => {
-        const ctx = contexts[layer];
-        const canvas = canvases[layer];
+    const ctx = contexts[layer];
+    const canvas = canvases[layer];
+    const src = layers[layer];
 
-        // Clear the canvas and draw the image
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    if (!ctx || !canvas || !src) return;
 
-        // Fetch image data only once
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-        const data = imageData.data;
+    const img = new Image();
+    img.src = src;
 
-        const [r, g, b] = hexToRgb(color);
+    img.onload = () => {
+      // Clear and redraw the original image
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-        // Optimize the loop by reducing checks
-        for (let i = 0; i < data.length; i += 4) {
-          if (data[i] > 200 && data[i + 1] > 200 && data[i + 2] > 200) {
-            // Directly set the new color
-            data[i] = r; // Red
-            data[i + 1] = g; // Green
-            data[i + 2] = b; // Blue
-          }
+      // Fetch image data
+      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      const data = imageData.data;
+
+      // Convert HSL to RGB
+      const rgb = hslToRgb(hue / 360, 1, lightness / 100);
+
+      // Modify image data
+      for (let i = 0; i < data.length; i += 4) {
+        // Replace near-white colors with the selected color
+        if (data[i] > 200 && data[i + 1] > 200 && data[i + 2] > 200) {
+          data[i] = rgb[0]; // Red
+          data[i + 1] = rgb[1]; // Green
+          data[i + 2] = rgb[2]; // Blue
         }
+      }
 
-        // Put the updated image data back on the canvas
-        ctx.putImageData(imageData, 0, 0);
-        console.log(`Color applied to layer: ${layer}`);
-      };
+      // Put updated image data back onto the canvas
+      ctx.putImageData(imageData, 0, 0);
+      console.log(`Color applied to layer: ${layer}`);
+    };
 
-      img.onerror = () => {
-        console.error(`Failed to load image for layer: ${layer}`);
-      };
-    }
+    img.onerror = () => {
+      console.error(`Failed to load image for layer: ${layer}`);
+    };
+  };
+
+  // Attach events to sliders
+  const attachSliderEvents = (slider, callback) => {
+    let isDragging = false;
+
+    slider.addEventListener("mousedown", () => (isDragging = true));
+    window.addEventListener("mouseup", () => (isDragging = false));
+    window.addEventListener("mousemove", (e) => {
+      if (!isDragging) return;
+      const rect = slider.getBoundingClientRect();
+      const value = Math.min(Math.max((e.clientX - rect.left) / rect.width, 0), 1);
+      callback(value);
+    });
+
+    slider.addEventListener("click", (e) => {
+      const rect = slider.getBoundingClientRect();
+      const value = Math.min(Math.max((e.clientX - rect.left) / rect.width, 0), 1);
+      callback(value);
+    });
+  };
+
+  attachSliderEvents(hueSlider, (value) => {
+    hue = Math.round(value * 360);
+    updateColor();
+  });
+
+  attachSliderEvents(lightnessSlider, (value) => {
+    lightness = Math.round(value * 100);
+    updateColor();
   });
 }
 
+// Function: Additional thumbnails
 function setupAdditionalThumbnails() {
   document.querySelectorAll(".thumbnail-radio.main-thumbnail").forEach((radio) => {
     radio.addEventListener("change", (event) => {
@@ -167,23 +198,20 @@ function setupAdditionalThumbnails() {
       if (additionalThumbnails) {
         document.querySelectorAll(".thumbnail-container > div").forEach((thumb) => thumb.classList.add("hidden"));
         additionalThumbnails.classList.remove("hidden");
-      } else {
-        console.error(`No additional thumbnails found for layer: ${layer}`);
       }
     });
+  });
 
-    // Allow reopening additional thumbnails on repeated clicks
+  document.querySelectorAll(".thumbnail-radio").forEach((radio) => {
     radio.addEventListener("click", (event) => {
       const layer = event.target.dataset.layer;
       const additionalThumbnailsId = `additional-thumbnails-${layer}`;
       const additionalThumbnails = document.getElementById(additionalThumbnailsId);
 
       if (additionalThumbnails && !additionalThumbnails.classList.contains("hidden")) {
-        // Additional thumbnails are already visible, do nothing
         return;
       }
 
-      // Trigger the same logic as the "change" event
       document.querySelectorAll(".thumbnail-container > div").forEach((thumb) => thumb.classList.add("hidden"));
       if (additionalThumbnails) {
         additionalThumbnails.classList.remove("hidden");
@@ -192,75 +220,33 @@ function setupAdditionalThumbnails() {
   });
 }
 
-function setupClearThumbnail() {
-  // Select all clear thumbnails
-  document.querySelectorAll(".clear-thumbnail").forEach((clearThumbnail) => {
-    clearThumbnail.addEventListener("click", (event) => {
-      const layer = event.target.dataset.layer; // Get the associated layer from the data attribute
-
-      if (layer) {
-        // Clear the layer data
-        layers[layer] = null;
-
-        // Get the canvas and its context
-        const canvas = canvases[layer];
-        const ctx = contexts[layer];
-
-        // Clear the canvas
-        if (ctx) {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          console.log(`Cleared selection for layer: ${layer}`);
-        }
-
-        // Uncheck any selected radio buttons in this layer's group
-        const radios = document.querySelectorAll(`.thumbnail-radio[data-layer="${layer}"]`);
-        radios.forEach((radio) => (radio.checked = false));
-      }
-    });
-  });
-}
-
+// Back buttons
 function setupBackButtons() {
   document.querySelectorAll(".back-button").forEach((button) => {
     button.addEventListener("click", () => {
-      console.log("Back button clicked.");
+      document.querySelectorAll(".additional-thumbnails").forEach((el) => el.classList.add("hidden"));
 
-      // Hide all additional thumbnails
-      document.querySelectorAll(".additional-thumbnails").forEach((container) => {
-        container.classList.add("hidden");
-      });
-
-      // Show all main thumbnails inside the `thumbnail-container`
       const mainThumbnails = document.querySelector(".thumbnail-container");
       if (mainThumbnails) {
-        mainThumbnails.querySelectorAll("div").forEach((thumb) => {
-          thumb.classList.remove("hidden");
-        });
-      } else {
-        console.error("Thumbnail container not found.");
+        mainThumbnails.querySelectorAll("div").forEach((thumb) => thumb.classList.remove("hidden"));
       }
     });
   });
 }
 
-// Function: Initialize canvas dimensions
+// Initialize canvases
 function initializeCanvases() {
-  console.log("Initializing canvases...");
   Object.values(canvases).forEach((canvas) => {
     canvas.width = 400;
     canvas.height = 400;
-    console.log("Canvas initialized:", canvas);
   });
 }
 
-// Call all functions
+// Initialize everything
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Script loaded. Initializing all functions...");
-
-  initializeCanvases(); // Set up canvas dimensions
-  handleThumbnailSelection(); // Set up thumbnail selection events
-  applyColorToActiveLayer(); // Set up color picker functionality
+  initializeCanvases();
+  handleThumbnailSelection();
+  applyColorToActiveLayer();
   setupAdditionalThumbnails();
-  setupClearThumbnail();
   setupBackButtons();
 });
