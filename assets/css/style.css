@@ -147,8 +147,25 @@ h1 {
     background-color: red;
 }
 
+.responsive-iframe-container {
+    position: relative;
+    width: 100%;
+    /* Default aspect ratio */
+    padding-top: 56.25%;
+    /* 16:9 ratio (100/56.25 = 1.78) */
+}
+
+.responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 /* Avatar Section */
-#avatar-section {
+/*#avatar-section {
     padding: 20px 20px 20px 20px;
     color: #000;
     text-align: center;
@@ -200,7 +217,7 @@ span img {
     max-width: 100%;
     padding-bottom: 20px;
     padding-left: 40px;
-}
+}*/
 
 /* Download Avatar Section */
 #download-avatar {
@@ -278,18 +295,19 @@ footer {
 
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
-    #avatar-section {
-        margin-left: 25px;
-        margin-right: 25px;
+    .responsive-iframe-container {
+        padding-top: 50%;
     }
 }
 
 /* Medium devices (tablets, 1024px and up) */
 @media screen and (min-width: 1024px) {
-    #pick-gender {}
-
     #arrow img {
         transform: rotate(-90deg);
         /* Rotate the image */
+    }
+
+    .responsive-iframe-container {
+        padding-top: 25%;
     }
 }
