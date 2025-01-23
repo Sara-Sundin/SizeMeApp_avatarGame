@@ -1,4 +1,4 @@
-/*var ml4 = {};
+var ml4 = {};
 ml4.opacityIn = [0, 1];
 ml4.scaleIn = [0.2, 1];
 ml4.scaleOut = 3;
@@ -75,8 +75,3 @@ document.addEventListener("DOMContentLoaded", () => {
         footer.classList.remove("hidden");
     }, 5000); // Adjust time (matches animation duration)
 });
-
-/*function openPopup() {
-    // Open a new window with the desired file
-    window.open("avatar.female.html", "popupWindow", "width=320,height=480,resizable=no,scrollbars=yes");
-}*/
