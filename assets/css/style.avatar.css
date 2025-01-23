@@ -142,6 +142,17 @@ body {
   box-shadow: 0 0 8px rgba(0, 0, 255, 0.6);
 }
 
+.thumbnail-zoom {
+  transform: scale(2.5);
+  /* Zooms in the image */
+  overflow: hidden;
+}
+
+.thumbnail-zoom-md {
+  transform: scale(1.5);
+  overflow: hidden;
+}
+
 .clear-thumbnail {
   display: flex;
   flex-direction: column;
@@ -160,14 +171,8 @@ body {
 }
 
 .back-button {
-  font-size: 12px;
-  width: 60px;
-  height: 30px;
-  color: #333;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .back-button:focus {
