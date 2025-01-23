@@ -72,7 +72,6 @@ body {
 .thumbnail {
   display: flex;
   flex-direction: column;
-  /* Stack image and text */
   align-items: center;
   width: 50px;
   height: auto;
@@ -180,8 +179,6 @@ body {
 
 /* Color Picker */
 .color-picker {
-  margin-top: 20px;
-  /* Adjusts spacing from the thumbnails */
   display: flex;
   flex-direction: column;
   /* Stacks the elements vertically */
@@ -252,6 +249,6 @@ body {
   .color-picker {
     max-width: 600px;
     justify-content: center;
-    gap: 30px;
+
   }
 }
