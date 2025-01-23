@@ -14,6 +14,19 @@
   <div id="generator" class="centered-text">
     <h1 class="heading">Avatar Generator</h1>
 
+    <!-- Universal Color Picker -->
+    <div id="universal-color-picker" class="color-picker container hidden">
+      <div class="row">
+        <div class="heading col-12">
+          <p>Pick a Color:</p>
+        </div>
+        <div class="d-flex justify-content-center gap-2 col-12">
+          <button id="apply-color-button" class="btn btn-primary">Apply Color</button>
+          <input type="color" id="color-picker-input" value="#000000">
+        </div>
+      </div>
+    </div>
+
     <!-- Avatar Canvas Container -->
     <div id="canvas-container" class="canvas-container">
       <canvas id="canvas-skin" class="canvas"></canvas>
@@ -90,6 +103,8 @@
 
     <!-- Additional Thumbnails -->
     <div id="additional-thumbnails-container">
+
+
 
       <div id="additional-thumbnails-skin" class="additional-thumbnails hidden">
         <div class="container">
@@ -264,19 +279,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Universal Color Picker -->
-    <div id="universal-color-picker" class="color-picker container hidden">
-      <div class="row">
-        <div class="heading col-12">
-          <p>Pick a Color:</p>
-        </div>
-        <div class="d-flex justify-content-center gap-2 col-12">
-          <button id="apply-color-button" class="btn btn-primary">Apply Color</button>
-          <input type="color" id="color-picker-input" value="#000000">
         </div>
       </div>
     </div>
