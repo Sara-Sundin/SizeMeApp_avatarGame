@@ -207,3 +207,51 @@ body {
   padding: 0 10px;
   cursor: pointer;
 }
+
+/* Responsive Adjustments for Larger Screens */
+@media screen and (min-width: 768px) {
+  .canvas-container {
+    width: 350px;
+    height: 350px;
+  }
+
+  .canvas {
+    width: 350px;
+    height: 350px;
+  }
+
+  .thumbnail-container {
+    width: 400px;
+    gap: 15px;
+  }
+
+  .color-picker {
+    max-width: 500px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .canvas-container {
+    width: 450px;
+    height: 450px;
+  }
+
+  .canvas {
+    width: 450px;
+    height: 450px;
+  }
+
+  .thumbnail-container {
+    width: 500px;
+    gap: 20px;
+  }
+
+  .color-picker {
+    max-width: 600px;
+    justify-content: center;
+    gap: 30px;
+  }
+}
