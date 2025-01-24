@@ -190,14 +190,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin: 10px 0;
-  padding: 10px;
-  background: #f9f9f9;
-  border: 1px solid #ccc;
   border-radius: 8px;
   width: 300px;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Slider track */
@@ -208,9 +203,8 @@ body {
   background: linear-gradient(to right, red, yellow, lime, cyan, blue, magenta, red);
   cursor: pointer;
   overflow: hidden;
+  margin: 0;
 }
-
-
 
 /* Lightness slider */
 #lightness-slider {
@@ -225,7 +219,6 @@ body {
 .swatches {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
   justify-content: center;
 }
 
@@ -233,7 +226,7 @@ body {
   width: 30px;
   height: 30px;
   border: none;
-  border-radius: 50%;
+  border-radius: 8%;
   cursor: pointer;
   outline: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
