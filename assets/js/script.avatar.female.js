@@ -26,6 +26,14 @@ const layers = {
   animal: null,
 };
 
+// Initialize canvas dimensions
+function initializeCanvases() {
+  Object.values(canvases).forEach((canvas) => {
+    canvas.width = 400;
+    canvas.height = 400;
+  });
+}
+
 // Utility: Convert HSL to RGB
 function hslToRgb(h, s, l) {
   let r, g, b;
@@ -45,15 +53,56 @@ function hslToRgb(h, s, l) {
   return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
 }
 
-// Function: Load and draw a single layer
+// Convert RGB to HSL
+function rgbToHsl(r, g, b) {
+  r /= 255;
+  g /= 255;
+  b /= 255;
+
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  let h, s, l = (max + min) / 2;
+
+  if (max === min) {
+    h = s = 0; // Achromatic
+  } else {
+    const d = max - min;
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+    switch (max) {
+      case r:
+        h = (g - b) / d + (g < b ? 6 : 0);
+        break;
+      case g:
+        h = (b - r) / d + 2;
+        break;
+      case b:
+        h = (r - g) / d + 4;
+        break;
+    }
+    h /= 6;
+  }
+
+  return [h, s, l];
+}
+
+// Convert HEX to RGB
+function hexToRgb(hex) {
+  let c = hex.substring(1).split('');
+  if (c.length === 3) {
+    c = [c[0], c[0], c[1], c[1], c[2], c[2]];
+  }
+  const r = parseInt(c[0] + c[1], 16);
+  const g = parseInt(c[2] + c[3], 16);
+  const b = parseInt(c[4] + c[5], 16);
+  return [r, g, b];
+}
+
+// Load and draw a single layer
 function loadAndDrawLayer(layerName) {
   const ctx = contexts[layerName];
   const src = layers[layerName];
 
-  if (!ctx) {
-    console.error(`Context for layer "${layerName}" not found.`);
-    return;
-  }
+  if (!ctx) return;
 
   if (!src) {
     ctx.clearRect(0, 0, canvases[layerName].width, canvases[layerName].height);
@@ -67,13 +116,9 @@ function loadAndDrawLayer(layerName) {
     ctx.clearRect(0, 0, canvases[layerName].width, canvases[layerName].height);
     ctx.drawImage(img, 0, 0, canvases[layerName].width, canvases[layerName].height);
   };
-
-  img.onerror = () => {
-    console.error(`Failed to load image for layer: ${layerName}, source: ${src}`);
-  };
 }
 
-// Function: Handle thumbnail selection
+// Handle thumbnail selection
 function handleThumbnailSelection() {
   document.querySelectorAll(".thumbnail-radio").forEach((radio) => {
     radio.addEventListener("change", (e) => {
@@ -84,7 +129,6 @@ function handleThumbnailSelection() {
         layers[layer] = src;
         loadAndDrawLayer(layer);
 
-        // Show color picker if applicable
         const colorPicker = document.getElementById("custom-color-picker");
         if (colorPicker) {
           colorPicker.classList.remove("hidden");
@@ -94,69 +138,49 @@ function handleThumbnailSelection() {
   });
 }
 
-// Function: Apply color to the active layer
-// Function: Apply color to the active layer
+// Apply color to the active layer
 function applyColorToActiveLayer() {
   const hueSlider = document.getElementById("hue-slider");
   const lightnessSlider = document.getElementById("lightness-slider");
-
-  if (!hueSlider || !lightnessSlider) {
-    console.error("Hue or lightness slider not found.");
-    return;
-  }
+  const swatches = document.querySelectorAll(".swatch");
 
   let hue = 0;
   let lightness = 50;
 
-  const updateColor = () => {
+  function updateColor() {
     const activeRadio = document.querySelector(".thumbnail-radio:checked");
     if (!activeRadio) return;
 
     const layer = activeRadio.dataset.layer;
+
     if (!layer || !layers[layer]) return;
 
     const ctx = contexts[layer];
     const canvas = canvases[layer];
-    const src = layers[layer];
 
-    if (!ctx || !canvas || !src) return;
+    const rgb = hslToRgb(hue / 360, 1, lightness / 100);
 
     const img = new Image();
-    img.src = src;
+    img.src = layers[layer];
 
     img.onload = () => {
-      // Clear and redraw the original image
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-      // Fetch image data
       const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
       const data = imageData.data;
 
-      // Convert HSL to RGB
-      const rgb = hslToRgb(hue / 360, 1, lightness / 100);
-
-      // Modify image data
       for (let i = 0; i < data.length; i += 4) {
-        // Replace near-white colors with the selected color
         if (data[i] > 200 && data[i + 1] > 200 && data[i + 2] > 200) {
-          data[i] = rgb[0]; // Red
-          data[i + 1] = rgb[1]; // Green
-          data[i + 2] = rgb[2]; // Blue
+          [data[i], data[i + 1], data[i + 2]] = rgb;
         }
       }
 
-      // Put updated image data back onto the canvas
       ctx.putImageData(imageData, 0, 0);
-      console.log(`Color applied to layer: ${layer}`);
     };
+  }
 
-    img.onerror = () => {
-      console.error(`Failed to load image for layer: ${layer}`);
-    };
-  };
-
-  // Attach events to sliders
+  // Attach slider events
   const attachSliderEvents = (slider, callback) => {
     let isDragging = false;
 
@@ -185,9 +209,23 @@ function applyColorToActiveLayer() {
     lightness = Math.round(value * 100);
     updateColor();
   });
+
+  // Add swatch click event
+  swatches.forEach((swatch) => {
+    swatch.addEventListener("click", (e) => {
+      const color = e.target.dataset.color;
+      if (!color) return;
+
+      const [r, g, b] = hexToRgb(color);
+      const [h, s, l] = rgbToHsl(r, g, b);
+      hue = h * 360;
+      lightness = l * 100;
+      updateColor();
+    });
+  });
 }
 
-// Function: Additional thumbnails
+// Setup additional thumbnails
 function setupAdditionalThumbnails() {
   document.querySelectorAll(".thumbnail-radio.main-thumbnail").forEach((radio) => {
     radio.addEventListener("change", (event) => {
@@ -231,14 +269,6 @@ function setupBackButtons() {
         mainThumbnails.querySelectorAll("div").forEach((thumb) => thumb.classList.remove("hidden"));
       }
     });
-  });
-}
-
-// Initialize canvases
-function initializeCanvases() {
-  Object.values(canvases).forEach((canvas) => {
-    canvas.width = 400;
-    canvas.height = 400;
   });
 }
 
