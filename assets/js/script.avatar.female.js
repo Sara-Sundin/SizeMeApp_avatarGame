@@ -1,17 +1,22 @@
 // Layers setup
 const canvases = {
   skin: document.getElementById("canvas-skin"),
+  clothes: document.getElementById("canvas-clothes"),
   hair: document.getElementById("canvas-hair"),
   nose: document.getElementById("canvas-nose"),
   eyes: document.getElementById("canvas-eyes"),
   brows: document.getElementById("canvas-brows"),
   mouth: document.getElementById("canvas-mouth"),
+  beard: document.getElementById("canvas-beard"),
+  glasses: document.getElementById("canvas-glasses"),
   animal: document.getElementById("canvas-animal"),
-  clothes: document.getElementById("canvas-clothes"),
 };
 
 const contexts = {
   skin: canvases.skin.getContext("2d", {
+    willReadFrequently: true
+  }),
+  clothes: canvases.clothes.getContext("2d", {
     willReadFrequently: true
   }),
   hair: canvases.hair.getContext("2d", {
@@ -29,23 +34,28 @@ const contexts = {
   mouth: canvases.mouth.getContext("2d", {
     willReadFrequently: true
   }),
-  animal: canvases.animal.getContext("2d", {
+  beard: canvases.beard.getContext("2d", {
     willReadFrequently: true
   }),
-  clothes: canvases.clothes.getContext("2d", {
+  glasses: canvases.glasses.getContext("2d", {
+    willReadFrequently: true
+  }),
+  animal: canvases.animal.getContext("2d", {
     willReadFrequently: true
   }),
 };
 
 const layers = {
   skin: null,
+  clothes: null,
   hair: null,
   nose: null,
   eyes: null,
   brows: null,
   mouth: null,
+  beard: null,
+  glasses: null,
   animal: null,
-  clothes: null,
 };
 
 function initializeCanvases() {
