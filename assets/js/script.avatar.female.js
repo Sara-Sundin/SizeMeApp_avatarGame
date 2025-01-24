@@ -7,6 +7,7 @@ const canvases = {
   brows: document.getElementById("canvas-brows"),
   mouth: document.getElementById("canvas-mouth"),
   animal: document.getElementById("canvas-animal"),
+  clothes: document.getElementById("canvas-clothes"),
 };
 
 const contexts = {
@@ -31,6 +32,9 @@ const contexts = {
   animal: canvases.animal.getContext("2d", {
     willReadFrequently: true
   }),
+  clothes: canvases.clothes.getContext("2d", {
+    willReadFrequently: true
+  }),
 };
 
 const layers = {
@@ -41,6 +45,7 @@ const layers = {
   brows: null,
   mouth: null,
   animal: null,
+  clothes: null,
 };
 
 function initializeCanvases() {

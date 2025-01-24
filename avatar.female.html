@@ -40,6 +40,7 @@
       <canvas id="canvas-eyes" class="canvas"></canvas>
       <canvas id="canvas-mouth" class="canvas"></canvas>
       <canvas id="canvas-animal" class="canvas"></canvas>
+      <canvas id="canvas-clothes" class="canvas"></canvas>
     </div>
 
     <!-- Main Thumbnails -->
@@ -112,6 +113,16 @@
         <label for="thumbnail-animal" class="thumbnail">
           <span>Animal</span>
           <img class="thumbnail-zoom-md" src="assets/images/images_avatar/animal/fox_1.png" alt="Fox Ears">
+        </label>
+      </div>
+
+      <!-- Clothes Thumbnail -->
+      <div>
+        <input type="radio" id="thumbnail-clothes" name="thumbnail" class="thumbnail-radio main-thumbnail"
+          data-layer="clothes" data-src="assets/images/images_avatar/outlines/female-shirt.png" />
+        <label for="thumbnail-clothes" class="thumbnail">
+          <span>Clothes</span>
+          <img class="thumbnail-zoom-md" src="assets/images/images_avatar/outlines/female-shirt.png" alt="Shirt">
         </label>
       </div>
     </div>
@@ -330,12 +341,40 @@
           </div>
         </div>
       </div>
+
+      <!-- Additional Thumbnail Clothes -->
+      <div id="additional-thumbnails-clothes" class="additional-thumbnails hidden">
+        <div class="container">
+          <div class="row">
+            <div>
+              <button class="back-button btn btn-primary">Back</button>
+            </div>
+            <div class="thumbnails-row">
+              <div class="thumbnail">
+                <input type="radio" id="clear-thumbnail-clothes" name="thumbnail" class="thumbnail-radio clear-radio"
+                  data-layer="clothes">
+                <label for="clear-thumbnail-clothes" class="clear-label">
+                  <img src="assets/images/images_page/clear-line.png" alt="Clear Feature">
+                </label>
+              </div>
+              <div class="thumbnail">
+                <input type="radio" id="thumbnail-clothes" name="thumbnail" class="thumbnail-radio" data-layer="clothes"
+                  data-src="assets/images/images_avatar/outlines/female-shirt.png" />
+                <label for="thumbnail-clothes">
+                  <img class="thumbnail-zoom-md" src="assets/images/images_avatar/outlines/female-shirt.png"
+                    alt="Shirt">
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Download Button -->
-    <button id="download-button" class="btn btn-primary">Download Avatar</button>
+    <div>
+      <button id="download-button" class="btn btn-primary">Download Avatar</button>
+    </div>
   </div>
-
-
 
   <script src="assets/js/script.avatar.female.js"></script>
 </body>
