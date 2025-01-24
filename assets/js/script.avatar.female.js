@@ -9,12 +9,24 @@ const canvases = {
 };
 
 const contexts = {
-  skin: canvases.skin.getContext("2d"),
-  hair: canvases.hair.getContext("2d"),
-  eyes: canvases.eyes.getContext("2d"),
-  brows: canvases.brows.getContext("2d"),
-  mouth: canvases.mouth.getContext("2d"),
-  animal: canvases.animal.getContext("2d"),
+  skin: canvases.skin.getContext("2d", {
+    willReadFrequently: true
+  }),
+  hair: canvases.hair.getContext("2d", {
+    willReadFrequently: true
+  }),
+  eyes: canvases.eyes.getContext("2d", {
+    willReadFrequently: true
+  }),
+  brows: canvases.brows.getContext("2d", {
+    willReadFrequently: true
+  }),
+  mouth: canvases.mouth.getContext("2d", {
+    willReadFrequently: true
+  }),
+  animal: canvases.animal.getContext("2d", {
+    willReadFrequently: true
+  }),
 };
 
 const layers = {
