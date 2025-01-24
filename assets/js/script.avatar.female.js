@@ -381,6 +381,125 @@ document.getElementById("download-button").addEventListener("click", () => {
   link.click(); // Trigger the download
 });
 
+// Define options for each layer
+const options = {
+  skin: [
+    "assets/images/images_avatar/outlines/shape_female_outline.png",
+    "assets/images/images_avatar/outlines/shape_male_outline.png",
+  ],
+  hair: [
+    "assets/images/images_avatar/outlines/hair_shoulder_outline.png",
+    "assets/images/images_avatar/outlines/hair_long_outline.png",
+    "assets/images/images_avatar/outlines/hair_short_outline.png",
+  ],
+  eyes: [
+    "assets/images/images_avatar/outlines/eyes_1.png",
+    "assets/images/images_avatar/outlines/eyes_2.png",
+  ],
+  brows: [
+    "assets/images/images_avatar/outlines/brows_1.png",
+    "assets/images/images_avatar/outlines/brows_2.png",
+  ],
+  mouth: [
+    "assets/images/images_avatar/outlines/happy_mouth_1.png",
+    "assets/images/images_avatar/outlines/filler_mouth_outline.png",
+  ],
+  glasses: [
+    "assets/images/images_avatar/outlines/sunglasses.png",
+    "assets/images/images_avatar/outlines/glasses_1.png",
+  ],
+  animal: [
+    null, // Increased chance for "no animal"
+    null,
+    "assets/images/images_avatar/animal/rabbit_1.png",
+    "assets/images/images_avatar/animal/fox_1.png",
+  ],
+};
+
+// Utility: Get a random option from an array
+function getRandomOption(array) {
+  const randomIndex = Math.floor(Math.random() * array.length);
+  return array[randomIndex];
+}
+
+// Utility: Generate random RGB values
+function getRandomRgb() {
+  return [Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256)];
+}
+
+// Apply random color to a layer
+function applyRandomColor(layerName) {
+  const ctx = contexts[layerName];
+  const canvas = canvases[layerName];
+  const rgb = getRandomRgb();
+
+  const img = new Image();
+  img.src = layers[layerName];
+
+  img.onload = () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const data = imageData.data;
+
+    const whiteThreshold = 240; // Adjust this value as needed for more coverage
+    for (let i = 0; i < data.length; i += 4) {
+      if (data[i] > whiteThreshold && data[i + 1] > whiteThreshold && data[i + 2] > whiteThreshold) {
+        [data[i], data[i + 1], data[i + 2]] = rgb;
+      }
+    }
+
+    ctx.putImageData(imageData, 0, 0);
+  };
+}
+
+// Randomize avatar function
+function randomizeAvatar() {
+  for (const layer in options) {
+    const randomOption = getRandomOption(options[layer]);
+    layers[layer] = randomOption;
+
+    if (randomOption) {
+      // If an image is selected, draw it on the canvas and apply a random color
+      loadAndDrawLayer(layer);
+      applyRandomColor(layer);
+    } else {
+      // If `null` is selected, clear the canvas for this layer
+      const ctx = contexts[layer];
+      const canvas = canvases[layer];
+      if (ctx) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+    }
+  }
+}
+
+// Load and draw a single layer
+function loadAndDrawLayer(layerName) {
+  const ctx = contexts[layerName];
+  const src = layers[layerName];
+
+  if (!ctx) return;
+
+  if (!src) {
+    // Clear the layer if no image is provided
+    ctx.clearRect(0, 0, canvases[layerName].width, canvases[layerName].height);
+    return;
+  }
+
+  const img = new Image();
+  img.src = src;
+
+  img.onload = () => {
+    ctx.clearRect(0, 0, canvases[layerName].width, canvases[layerName].height);
+    ctx.drawImage(img, 0, 0, canvases[layerName].width, canvases[layerName].height);
+  };
+}
+
+// Add event listener to a button for randomization
+document.getElementById("randomize-button").addEventListener("click", randomizeAvatar);
+
 // Initialize everything
 document.addEventListener("DOMContentLoaded", () => {
   initializeCanvases();
