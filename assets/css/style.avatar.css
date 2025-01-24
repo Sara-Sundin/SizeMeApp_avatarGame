@@ -150,21 +150,28 @@ body {
   overflow: hidden !important;
 }
 
-.clear-thumbnail {
+.clear-label {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* Center content vertically */
   width: 50px;
   height: 50px;
-  /* Set explicit height */
   border: 1px solid black;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.3s, border-color 0.3s;
-  background-color: #f5f5f5;
-  /* Add background color for visibility */
+  position: relative;
+  overflow: hidden;
+}
+
+.clear-label img {
+  width: 100%;
+  /* Ensures the image fills the label */
+  height: 100%;
+  /* Ensures the image fills the label */
+  object-fit: contain;
+  /* Maintains aspect ratio */
+  pointer-events: none;
+  /* Prevents interference with clicks */
 }
 
 .back-button {

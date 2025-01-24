@@ -281,6 +281,34 @@ function setupAdditionalThumbnails() {
   });
 }
 
+// Clear the active canvas layer
+function setupClearThumbnail() {
+  document.querySelectorAll(".clear-thumbnail").forEach((clearThumbnail) => {
+    clearThumbnail.addEventListener("click", (event) => {
+      const layer = event.target.dataset.layer; // Get the associated layer from the data attribute
+
+      if (layer) {
+        // Clear the layer data
+        layers[layer] = null;
+
+        // Get the canvas and its context
+        const canvas = canvases[layer];
+        const ctx = contexts[layer];
+
+        // Clear the canvas
+        if (ctx) {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          console.log(`Cleared selection for layer: ${layer}`);
+        }
+
+        // Uncheck any selected radio buttons in this layer's group
+        const radios = document.querySelectorAll(`.thumbnail-radio[data-layer="${layer}"]`);
+        radios.forEach((radio) => (radio.checked = false));
+      }
+    });
+  });
+}
+
 function setupBackButtons() {
   document.querySelectorAll(".back-button").forEach((button) => {
     button.addEventListener("click", () => {
@@ -315,5 +343,6 @@ document.addEventListener("DOMContentLoaded", () => {
   handleThumbnailSelection();
   applyColorToActiveLayer();
   setupAdditionalThumbnails();
+  setupClearThumbnail();
   setupBackButtons();
 });
