@@ -334,8 +334,32 @@ function setupBackButtons() {
   });
 }
 
+document.getElementById("download-button").addEventListener("click", () => {
+  // Create a temporary canvas to merge all layers
+  const tempCanvas = document.createElement("canvas");
+  const tempContext = tempCanvas.getContext("2d");
 
+  // Set the temporary canvas size to match the base canvas size
+  const baseCanvas = canvases.skin;
+  tempCanvas.width = baseCanvas.width;
+  tempCanvas.height = baseCanvas.height;
 
+  // Draw all layers onto the temporary canvas in order
+  Object.values(canvases).forEach((canvas) => {
+    if (canvas) {
+      tempContext.drawImage(canvas, 0, 0);
+    }
+  });
+
+  // Convert the temporary canvas content to a data URL
+  const dataURL = tempCanvas.toDataURL("image/png");
+
+  // Create a temporary link element
+  const link = document.createElement("a");
+  link.href = dataURL;
+  link.download = "avatar.png"; // Set the file name for the download
+  link.click(); // Trigger the download
+});
 
 // Initialize everything
 document.addEventListener("DOMContentLoaded", () => {
