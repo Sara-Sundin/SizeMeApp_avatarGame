@@ -16,7 +16,7 @@
     <!-- Color Picker-->
 
     <div id="custom-color-picker" class="hidden">
-      <p aria-label="Color Picker">Color Picker:</p>
+      <p aria-label="Color Picker">Pick your colors!</p>
       <div id="hue-slider" class="slider"></div>
       <div id="lightness-slider" class="slider"></div>
       <div id="color-swatches" class="swatches">
@@ -36,6 +36,7 @@
       <canvas id="canvas-skin" class="canvas"></canvas>
       <canvas id="canvas-brows" class="canvas"></canvas>
       <canvas id="canvas-hair" class="canvas"></canvas>
+      <canvas id="canvas-nose" class="canvas"></canvas>
       <canvas id="canvas-eyes" class="canvas"></canvas>
       <canvas id="canvas-mouth" class="canvas"></canvas>
       <canvas id="canvas-animal" class="canvas"></canvas>
@@ -61,6 +62,16 @@
         <label for="thumbnail-hair" class="thumbnail">
           <span>Hair</span>
           <img src="assets/images/images_avatar/outlines/hair_shoulder_outline.png" alt="Hair">
+        </label>
+      </div>
+
+      <!-- Nose Thumbnail -->
+      <div>
+        <input type="radio" id="thumbnail-nose" name="thumbnail" class="thumbnail-radio main-thumbnail"
+          data-layer="nose" data-src="assets/images/images_avatar/outlines/nose_1.png" />
+        <label for="thumbnail-nose" class="thumbnail">
+          <span>Nose</span>
+          <img class="thumbnail-zoom" src="assets/images/images_avatar/outlines/nose_1.png" alt="Nose">
         </label>
       </div>
 
@@ -178,6 +189,34 @@
                 <label for="thumbnail-eyes-2">
                   <img class="thumbnail-zoom" src="assets/images/images_avatar/outlines/eyes_2.png"
                     alt="Alternative Eyes">
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Thumbnail Eyes -->
+      <div id="additional-thumbnails-nose" class="additional-thumbnails hidden">
+        <div class="container">
+          <div class="row">
+            <div>
+              <button class="back-button btn btn-primary">Back</button>
+            </div>
+            <div class="thumbnails-row">
+              <div class="thumbnail">
+                <input type="radio" id="clear-thumbnail-nose" name="thumbnail" class="thumbnail-radio clear-radio"
+                  data-layer="nose">
+                <label for="clear-thumbnail-nose" class="clear-label">
+                  <img src="assets/images/images_page/clear-line.png" alt="Clear Feature">
+                </label>
+              </div>
+              <div class="thumbnail">
+                <input type="radio" id="thumbnail-nose-1" name="thumbnail" class="thumbnail-radio" data-layer="nose"
+                  data-src="assets/images/images_avatar/outlines/nose_1.png" />
+                <label for="thumbnail-nose-1">
+                  <img class="thumbnail-zoom" src="assets/images/images_avatar/outlines/nose_1.png"
+                    alt="Alternative Nose">
                 </label>
               </div>
             </div>

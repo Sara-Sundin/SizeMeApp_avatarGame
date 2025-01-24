@@ -2,6 +2,7 @@
 const canvases = {
   skin: document.getElementById("canvas-skin"),
   hair: document.getElementById("canvas-hair"),
+  nose: document.getElementById("canvas-nose"),
   eyes: document.getElementById("canvas-eyes"),
   brows: document.getElementById("canvas-brows"),
   mouth: document.getElementById("canvas-mouth"),
@@ -13,6 +14,9 @@ const contexts = {
     willReadFrequently: true
   }),
   hair: canvases.hair.getContext("2d", {
+    willReadFrequently: true
+  }),
+  nose: canvases.nose.getContext("2d", {
     willReadFrequently: true
   }),
   eyes: canvases.eyes.getContext("2d", {
@@ -32,6 +36,7 @@ const contexts = {
 const layers = {
   skin: null,
   hair: null,
+  nose: null,
   eyes: null,
   brows: null,
   mouth: null,
