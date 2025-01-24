@@ -106,12 +106,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  /* Space between the canvas and thumbnails */
   flex-wrap: wrap;
-  /* Allow wrapping if thumbnails overflow */
   width: 100%;
-  /* Ensure it spans the canvas width */
 }
 
 .additional-thumbnails {
@@ -122,8 +118,6 @@ body {
   /* Center align content */
   width: 100%;
   gap: 15px;
-  /* Space between rows */
-  padding: 10px;
   box-sizing: border-box;
   overflow: hidden;
 }
