@@ -38,13 +38,18 @@ const layers = {
   animal: null,
 };
 
-// Initialize canvas dimensions
 function initializeCanvases() {
   Object.values(canvases).forEach((canvas) => {
     canvas.width = 400;
     canvas.height = 400;
   });
+
+  // Set the default skin image
+  const defaultSkinImage = "assets/images/images_avatar/outlines/shape_female_outline.png";
+  layers.skin = defaultSkinImage;
+  loadAndDrawLayer("skin", defaultSkinImage); // Preload the default skin image
 }
+
 
 // Utility: Convert HSL to RGB
 function hslToRgb(h, s, l) {
@@ -110,9 +115,9 @@ function hexToRgb(hex) {
 }
 
 // Load and draw a single layer
-function loadAndDrawLayer(layerName) {
+function loadAndDrawLayer(layerName, imageSrc = null) {
   const ctx = contexts[layerName];
-  const src = layers[layerName];
+  const src = imageSrc || layers[layerName];
 
   if (!ctx) return;
 
@@ -129,6 +134,7 @@ function loadAndDrawLayer(layerName) {
     ctx.drawImage(img, 0, 0, canvases[layerName].width, canvases[layerName].height);
   };
 }
+
 
 // Handle thumbnail selection
 function handleThumbnailSelection() {
@@ -150,6 +156,7 @@ function handleThumbnailSelection() {
   });
 }
 
+
 // Apply color to the active layer
 function applyColorToActiveLayer() {
   const hueSlider = document.getElementById("hue-slider");
@@ -161,11 +168,7 @@ function applyColorToActiveLayer() {
 
   function updateColor() {
     const activeRadio = document.querySelector(".thumbnail-radio:checked");
-    if (!activeRadio) return;
-
-    const layer = activeRadio.dataset.layer;
-
-    if (!layer || !layers[layer]) return;
+    const layer = activeRadio ? activeRadio.dataset.layer : "skin";
 
     const ctx = contexts[layer];
     const canvas = canvases[layer];
@@ -192,7 +195,6 @@ function applyColorToActiveLayer() {
     };
   }
 
-  // Attach slider events
   const attachSliderEvents = (slider, callback) => {
     let isDragging = false;
 
@@ -233,11 +235,16 @@ function applyColorToActiveLayer() {
       hue = h * 360;
       lightness = l * 100;
       updateColor();
+
+      // Keep the main-thumbnail radio checked
+      const activeMainRadio = document.querySelector(".thumbnail-radio.main-thumbnail:checked");
+      if (activeMainRadio) {
+        activeMainRadio.checked = true;
+      }
     });
   });
 }
 
-// Setup additional thumbnails
 function setupAdditionalThumbnails() {
   document.querySelectorAll(".thumbnail-radio.main-thumbnail").forEach((radio) => {
     radio.addEventListener("change", (event) => {
@@ -246,43 +253,61 @@ function setupAdditionalThumbnails() {
       const additionalThumbnails = document.getElementById(additionalThumbnailsId);
 
       if (additionalThumbnails) {
+        // Hide other thumbnails
         document.querySelectorAll(".thumbnail-container > div").forEach((thumb) => thumb.classList.add("hidden"));
+        // Show the additional thumbnails for the selected layer
         additionalThumbnails.classList.remove("hidden");
       }
     });
-  });
 
-  document.querySelectorAll(".thumbnail-radio").forEach((radio) => {
+    // Enable repeated clicks on the main-thumbnail to toggle additional thumbnails
     radio.addEventListener("click", (event) => {
       const layer = event.target.dataset.layer;
       const additionalThumbnailsId = `additional-thumbnails-${layer}`;
       const additionalThumbnails = document.getElementById(additionalThumbnailsId);
 
-      if (additionalThumbnails && !additionalThumbnails.classList.contains("hidden")) {
-        return;
-      }
-
-      document.querySelectorAll(".thumbnail-container > div").forEach((thumb) => thumb.classList.add("hidden"));
       if (additionalThumbnails) {
-        additionalThumbnails.classList.remove("hidden");
+        if (additionalThumbnails.classList.contains("hidden")) {
+          // Open the additional thumbnails
+          document.querySelectorAll(".thumbnail-container > div").forEach((thumb) => thumb.classList.add("hidden"));
+          additionalThumbnails.classList.remove("hidden");
+        } else {
+          // Close the additional thumbnails and show main thumbnails
+          additionalThumbnails.classList.add("hidden");
+          document.querySelectorAll(".thumbnail-container > div").forEach((thumb) => thumb.classList.remove("hidden"));
+        }
       }
     });
   });
 }
 
-// Back buttons
 function setupBackButtons() {
   document.querySelectorAll(".back-button").forEach((button) => {
     button.addEventListener("click", () => {
+      // Hide additional thumbnails
       document.querySelectorAll(".additional-thumbnails").forEach((el) => el.classList.add("hidden"));
 
+      // Show main thumbnails
       const mainThumbnails = document.querySelector(".thumbnail-container");
       if (mainThumbnails) {
         mainThumbnails.querySelectorAll("div").forEach((thumb) => thumb.classList.remove("hidden"));
       }
+
+      // Re-check the active main-thumbnail radio button
+      const activeAdditionalRadio = document.querySelector(".thumbnail-radio:checked");
+      if (activeAdditionalRadio) {
+        const layer = activeAdditionalRadio.dataset.layer;
+        const correspondingMainRadio = document.querySelector(`.thumbnail-radio.main-thumbnail[data-layer="${layer}"]`);
+        if (correspondingMainRadio) {
+          correspondingMainRadio.checked = true; // Mark the main-thumbnail as active
+        }
+      }
     });
   });
 }
+
+
+
 
 // Initialize everything
 document.addEventListener("DOMContentLoaded", () => {
