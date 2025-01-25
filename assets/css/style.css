@@ -160,7 +160,7 @@ h1 {
     position: relative;
     width: 120%;
     height: auto;
-    min-height: 480px;
+    min-height: 520px;
     overflow: hidden;
     /* Ensure no overflow when scaling */
 }

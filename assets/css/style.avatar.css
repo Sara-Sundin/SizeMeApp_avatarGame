@@ -54,6 +54,14 @@ body {
   height: 250px;
 }
 
+.button-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+
 .thumbnail-container {
   display: flex;
   flex-wrap: wrap;

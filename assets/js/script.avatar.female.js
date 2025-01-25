@@ -500,6 +500,28 @@ function loadAndDrawLayer(layerName) {
 // Add event listener to a button for randomization
 document.getElementById("randomize-button").addEventListener("click", randomizeAvatar);
 
+function resetCanvas() {
+  // Clear each canvas and reset the corresponding layer
+  Object.keys(canvases).forEach((layer) => {
+    const ctx = contexts[layer];
+    const canvas = canvases[layer];
+    if (ctx && canvas) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
+      layers[layer] = null; // Reset the layer data
+    }
+  });
+
+  // Reset all radio buttons for thumbnails
+  const radios = document.querySelectorAll(".thumbnail-radio");
+  radios.forEach((radio) => {
+    radio.checked = false; // Uncheck the radio button
+  });
+
+  console.log("Canvas has been reset."); // Debug message
+}
+
+document.getElementById("reset-button").addEventListener("click", resetCanvas);
+
 // Initialize everything
 document.addEventListener("DOMContentLoaded", () => {
   initializeCanvases();
