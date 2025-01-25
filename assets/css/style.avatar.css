@@ -85,7 +85,7 @@ body {
   height: auto;
   border: 1px solid black;
   border-radius: 8px;
-  cursor: pointer;
+  cursor: crosshair;
   transition: transform 0.3s, border-color 0.3s;
   overflow: hidden;
 }
