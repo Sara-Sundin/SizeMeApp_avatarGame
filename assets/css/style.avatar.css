@@ -79,8 +79,8 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 5px;
-  width: 250px;
+  gap: 15px;
+  width: 400px;
   margin: 0 auto;
 }
 
@@ -265,7 +265,7 @@ body {
 }
 
 /* Responsive Adjustments for Larger Screens */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 
   #custom-color-picker {
     width: 400px;
@@ -282,8 +282,22 @@ body {
   }
 
   .thumbnail-container {
-    width: 400px;
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 450px;
+  }
+
+  #generator {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .full-width {
+    grid-column: 1 / -1;
+    /* Full width on smaller screens */
   }
 }
 

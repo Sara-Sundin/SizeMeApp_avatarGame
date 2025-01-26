@@ -147,6 +147,11 @@ h1 {
     background-color: red;
 }
 
+.modal.fade {
+    --bs-modal-margin: 0;
+    --bs-modal-padding: 0.4rem;
+}
+
 .modal-title {
     color: #000;
     font-family: "Fredoka", sans-serif;
