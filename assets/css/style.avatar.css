@@ -22,6 +22,12 @@ body {
   display: none;
 }
 
+.column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Avatar Generator */
 
 #generator {
@@ -31,7 +37,6 @@ body {
   justify-content: center;
   gap: 20px;
   width: 100%;
-  max-width: 800px;
   margin: 0 auto;
   text-align: center;
 }
@@ -52,6 +57,9 @@ body {
   left: 0;
   width: 250px;
   height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button-container {
@@ -59,7 +67,7 @@ body {
   gap: 30px;
   justify-content: center;
   align-items: center;
-  width: 300px;
+  width: 250px;
 }
 
 .thumbnail-container {
@@ -68,7 +76,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  width: 300px;
+  width: 250px;
   margin: 0 auto;
 }
 
@@ -249,25 +257,18 @@ body {
 /* Responsive Adjustments for Larger Screens */
 @media screen and (min-width: 768px) {
   .canvas-container {
-    width: 350px;
-    height: 350px;
+    width: 400px;
+    height: 400px;
   }
 
   .canvas {
-    width: 350px;
-    height: 350px;
+    width: 400px;
+    height: 400px;
   }
 
   .thumbnail-container {
     width: 400px;
     gap: 15px;
-  }
-
-  .color-picker {
-    max-width: 500px;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
   }
 }
 

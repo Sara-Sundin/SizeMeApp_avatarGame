@@ -159,7 +159,7 @@ h1 {
 .responsive-iframe-container {
     position: relative;
     width: 120%;
-    height: auto;
+    height: 150%;
     min-height: 520px;
     overflow: hidden;
     /* Ensure no overflow when scaling */
