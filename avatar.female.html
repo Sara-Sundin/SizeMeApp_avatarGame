@@ -36,6 +36,7 @@
     <!-- Avatar Canvas Container -->
     <div class="column">
       <div id="canvas-container" class="canvas-container">
+        <canvas id="canvas-base" class="canvas"></canvas>
         <canvas id="canvas-skin" class="canvas"></canvas>
         <canvas id="canvas-clothes" class="canvas"></canvas>
         <canvas id="canvas-brows" class="canvas"></canvas>
@@ -59,6 +60,17 @@
 
     <!-- Main Thumbnails -->
     <div id="main-thumbnails" class="thumbnail-container column">
+
+      <!-- Background Thumbnail-->
+      <div>
+        <input type="radio" id="thumbnail-base" name="thumbnail" class="thumbnail-radio main-thumbnail"
+          data-layer="base" data-src="assets/images/images_avatar/outlines/background.png" />
+        <label for="thumbnail-base" class="thumbnail">
+          <span>Base</span>
+          <img src="assets/images/images_avatar/outlines/background.png" alt="Background">
+        </label>
+      </div>
+
       <!-- Skin Thumbnail -->
       <div>
         <input type="radio" id="thumbnail-skin" name="thumbnail" class="thumbnail-radio main-thumbnail"
@@ -159,9 +171,6 @@
         </label>
       </div>
     </div>
-
-
-
 
     <!-- Additional Thumbnails -->
     <div id="additional-thumbnails-container">

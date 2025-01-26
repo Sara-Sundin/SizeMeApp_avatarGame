@@ -1,5 +1,6 @@
 // Layers setup
 const canvases = {
+  base: document.getElementById("canvas-base"),
   skin: document.getElementById("canvas-skin"),
   clothes: document.getElementById("canvas-clothes"),
   hair: document.getElementById("canvas-hair"),
@@ -13,6 +14,9 @@ const canvases = {
 };
 
 const contexts = {
+  base: canvases.base.getContext("2d", {
+    willReadFrequently: true
+  }),
   skin: canvases.skin.getContext("2d", {
     willReadFrequently: true
   }),
@@ -46,6 +50,7 @@ const contexts = {
 };
 
 const layers = {
+  base: null,
   skin: null,
   clothes: null,
   hair: null,
