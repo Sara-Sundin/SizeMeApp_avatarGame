@@ -327,6 +327,7 @@ footer {
     .responsive-iframe-container {
         max-width: 100%;
         min-height: 400px;
+        min-width: 950px;
     }
 
     .modal.fade {

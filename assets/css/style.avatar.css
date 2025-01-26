@@ -22,6 +22,10 @@ body {
   display: none;
 }
 
+.row {
+  max-width: 350px;
+}
+
 .column {
   display: flex;
   align-items: center;
@@ -109,13 +113,6 @@ body {
   object-fit: cover;
   border-radius: 8px;
   overflow: hidden;
-}
-
-.thumbnails-row {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  width: 100%;
 }
 
 #additional-thumbnails-container {
@@ -208,7 +205,7 @@ body {
   flex-direction: column;
   gap: 10px;
   border-radius: 8px;
-  width: 300px;
+  width: 400px;
   align-items: center;
 }
 
@@ -256,41 +253,45 @@ body {
 
 /* Responsive Adjustments for Larger Screens */
 @media screen and (min-width: 768px) {
-  .canvas-container {
+
+  #custom-color-picker {
     width: 400px;
-    height: 400px;
+  }
+
+  .canvas-container {
+    width: 300px;
+    height: 300px;
   }
 
   .canvas {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
   }
 
   .thumbnail-container {
     width: 400px;
-    gap: 15px;
   }
 }
 
 @media screen and (min-width: 1024px) {
+
+  .row {
+    width: 1000px;
+  }
+
+  .column {
+    width: 300px;
+  }
+
   .canvas-container {
-    width: 450px;
-    height: 450px;
+    width: 250px;
   }
 
   .canvas {
-    width: 450px;
-    height: 450px;
+    width: 250px;
   }
 
   .thumbnail-container {
-    width: 500px;
-    gap: 20px;
-  }
-
-  .color-picker {
-    max-width: 600px;
-    justify-content: center;
-
+    width: 250px;
   }
 }
