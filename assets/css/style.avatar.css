@@ -76,13 +76,12 @@ body {
 
 .thumbnail-container {
   display: flex;
-
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 10px;
   width: 250px;
   margin: 0 auto;
-  overflow-x: auto;
 }
 
 /* Radio Button Styling for Thumbnails */
@@ -101,7 +100,6 @@ body {
   cursor: pointer;
   transition: transform 0.3s, border-color 0.3s;
   overflow: hidden;
-  /* Enable horizontal scrolling */
 }
 
 .thumbnail span {
