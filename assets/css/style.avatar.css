@@ -23,7 +23,7 @@ body {
 }
 
 .row {
-  max-width: 350px;
+  max-width: 400px;
 }
 
 .column {
@@ -79,7 +79,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   width: 250px;
   margin: 0 auto;
 }
@@ -283,6 +283,7 @@ body {
 
   .thumbnail-container {
     width: 400px;
+    gap: 20px;
   }
 }
 
