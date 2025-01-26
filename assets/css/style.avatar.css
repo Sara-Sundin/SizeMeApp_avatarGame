@@ -118,21 +118,34 @@ body {
 #additional-thumbnails-container {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  gap: 20px;
+  /* Space between rows of thumbnails */
 }
 
 .additional-thumbnails {
   display: flex;
   flex-direction: column;
-  /* Stack the back button and thumbnails vertically */
-  align-items: center;
-  /* Center align content */
+  /* Keep the button and thumbnails stacked */
+  gap: 20px;
+  /* Add spacing between the "Back" button and thumbnails */
   width: 100%;
-  gap: 15px;
+  /* Ensure the container takes full width */
   box-sizing: border-box;
-  overflow: hidden;
+}
+
+.thumbnails-row {
+  display: flex;
+  /* Arrange the thumbnails in a row */
+  flex-wrap: wrap;
+  /* Allow wrapping if they exceed the width */
+  gap: 15px;
+  /* Add space between thumbnails */
+  justify-content: center;
+  /* Center thumbnails horizontally */
+  align-items: center;
+  /* Align thumbnails vertically */
 }
 
 .additional-thumbnails.hidden {
