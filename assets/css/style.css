@@ -329,9 +329,8 @@ footer {
         min-height: 400px;
     }
 
-    .responsive-iframe-container iframe {
-        transform: scale(1);
-        /* Restore original size for large screens */
-        transform-origin: center;
+    .modal.fade {
+        --bs-modal-width: 1000px;
+        /* Set the width */
     }
 }
