@@ -70,7 +70,7 @@ function initializeCanvases() {
   });
 
   // Set the default skin image
-  const defaultSkinImage = "assets/images/avatar/female_avatar/skin/shape_female_outline.png";
+  const defaultSkinImage = "assets/images/avatar/male_avatar/skin";
   layers.skin = defaultSkinImage;
   loadAndDrawLayer("skin", defaultSkinImage); // Preload the default skin image
 }
@@ -393,19 +393,17 @@ const options = {
     "assets/images/avatar/female_avatar/base/background.png",
   ],
   skin: [
-    "assets/images/avatar/female_avatar/skin/shape_female_outline.png",
+    "assets/images/avatar/male_avatar/skin",
   ],
   clothes: [
     "assets/images/avatar/female_avatar/clothes/female-hoodie.png",
     "assets/images/avatar/female_avatar/clothes/female-shirt.png",
   ],
   hair: [
-    "assets/images/avatar/female_avatar/hair/hair_shoulder_outline.png",
-    "assets/images/avatar/female_avatar/hair/hair_long_outline.png",
-    "assets/images/avatar/female_avatar/hair/hair_short_outline.png",
-    "assets/images/avatar/female_avatar/hair/hair_short-2_outline.png",
-    "assets/images/avatar/female_avatar/hair/hair_short-3_outline.png",
-    "assets/images/avatar/female_avatar/hair/hair_wavy_outline.png",
+    "assets/images/avatar/male_avatar/hair/hair_long_outline_male.png",
+    "assets/images/avatar/male_avatar/hair/hair_short_outline_male.png",
+    "assets/images/avatar/male_avatar/hair/hair_short-2_outline_male.png",
+    "assets/images/avatar/male_avatar/hair/hair_short-3_outline_male.png",
   ],
   nose: [
     null,
