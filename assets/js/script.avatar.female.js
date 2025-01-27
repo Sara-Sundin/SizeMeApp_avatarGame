@@ -70,7 +70,7 @@ function initializeCanvases() {
   });
 
   // Set the default skin image
-  const defaultSkinImage = "assets/images/images_avatar/outlines/shape_female_outline.png";
+  const defaultSkinImage = "assets/images/avatar/female_avatar/skin/shape_female_outline.png";
   layers.skin = defaultSkinImage;
   loadAndDrawLayer("skin", defaultSkinImage); // Preload the default skin image
 }
@@ -389,34 +389,34 @@ document.getElementById("download-button").addEventListener("click", () => {
 // Define options for each layer
 const options = {
   skin: [
-    "assets/images/images_avatar/outlines/shape_female_outline.png",
+    "assets/images/avatar/female_avatar/skin/shape_female_outline.png",
   ],
   hair: [
-    "assets/images/images_avatar/outlines/hair_shoulder_outline.png",
-    "assets/images/images_avatar/outlines/hair_long_outline.png",
-    "assets/images/images_avatar/outlines/hair_short_outline.png",
+    "assets/images/avatar/female_avatar/hair/hair_shoulder_outline.png",
+    "assets/images/avatar/female_avatar/hair/hair_long_outline.png",
+    "assets/images/avatar/female_avatar/hair/hair_short_outline.png",
   ],
   eyes: [
-    "assets/images/images_avatar/outlines/eyes_1.png",
-    "assets/images/images_avatar/outlines/eyes_2.png",
+    "assets/images/avatar/female_avatar/eyes/eyes_1.png",
+    "assets/images/avatar/female_avatar/eyes/eyes_2.png",
   ],
   brows: [
-    "assets/images/images_avatar/outlines/brows_1.png",
-    "assets/images/images_avatar/outlines/brows_2.png",
+    "assets/images/avatar/female_avatar/brows/brows_1.png",
+    "assets/images/avatar/female_avatar/brows/brows_2.png",
   ],
   mouth: [
-    "assets/images/images_avatar/outlines/happy_mouth_1.png",
-    "assets/images/images_avatar/outlines/filler_mouth_outline.png",
+    "assets/images/avatar/female_avatar/mouth/happy_mouth_1.png",
+    "assets/images/avatar/female_avatar/mouth/filler_mouth_outline.png",
   ],
   glasses: [
-    "assets/images/images_avatar/outlines/sunglasses.png",
-    "assets/images/images_avatar/outlines/glasses_1.png",
+    "assets/images/avatar/female_avatar/glasses/sunglasses.png",
+    "assets/images/avatar/female_avatar/glasses/glasses_1.png",
   ],
   animal: [
     null, // Increased chance for "no animal"
     null,
-    "assets/images/images_avatar/animal/rabbit_1.png",
-    "assets/images/images_avatar/animal/fox_1.png",
+    "assets/images/avatar/female_avatar/animal/rabbit_1.png",
+    "assets/images/avatar/female_avatar/animal/fox_1.png",
   ],
 };
 
