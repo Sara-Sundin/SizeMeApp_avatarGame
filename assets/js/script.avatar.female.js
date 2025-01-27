@@ -390,7 +390,6 @@ document.getElementById("download-button").addEventListener("click", () => {
 const options = {
   skin: [
     "assets/images/images_avatar/outlines/shape_female_outline.png",
-    "assets/images/images_avatar/outlines/shape_male_outline.png",
   ],
   hair: [
     "assets/images/images_avatar/outlines/hair_shoulder_outline.png",

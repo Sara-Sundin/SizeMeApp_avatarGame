@@ -339,4 +339,9 @@ footer {
         --bs-modal-width: 1000px;
         /* Set the width */
     }
+
+    .modal-title {
+        padding-left: 355px;
+        font-size: 35px;
+    }
 }
