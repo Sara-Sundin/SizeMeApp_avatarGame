@@ -210,8 +210,9 @@ function applyColorToActiveLayer() {
       const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
       const data = imageData.data;
 
+      const whiteThreshold = 100; // Adjust this threshold to change sensitivity
       for (let i = 0; i < data.length; i += 4) {
-        if (data[i] > 200 && data[i + 1] > 200 && data[i + 2] > 200) {
+        if (data[i] > whiteThreshold && data[i + 1] > whiteThreshold && data[i + 2] > whiteThreshold) {
           [data[i], data[i + 1], data[i + 2]] = rgb;
         }
       }
@@ -388,35 +389,66 @@ document.getElementById("download-button").addEventListener("click", () => {
 
 // Define options for each layer
 const options = {
+  base: [
+    "assets/images/avatar/female_avatar/base/background.png",
+  ],
   skin: [
     "assets/images/avatar/female_avatar/skin/shape_female_outline.png",
+  ],
+  clothes: [
+    "assets/images/avatar/female_avatar/clothes/female-hoodie.png",
+    "assets/images/avatar/female_avatar/clothes/female-shirt.png",
   ],
   hair: [
     "assets/images/avatar/female_avatar/hair/hair_shoulder_outline.png",
     "assets/images/avatar/female_avatar/hair/hair_long_outline.png",
     "assets/images/avatar/female_avatar/hair/hair_short_outline.png",
+    "assets/images/avatar/female_avatar/hair/hair_short-2_outline.png",
+    "assets/images/avatar/female_avatar/hair/hair_short-3_outline.png",
+    "assets/images/avatar/female_avatar/hair/hair_wavy_outline.png",
+  ],
+  nose: [
+    null,
+    null,
+    "assets/images/avatar/female_avatar/nose/nose_1.png",
   ],
   eyes: [
     "assets/images/avatar/female_avatar/eyes/eyes_1.png",
     "assets/images/avatar/female_avatar/eyes/eyes_2.png",
+    "assets/images/avatar/female_avatar/eyes/eyes_3.png",
   ],
   brows: [
     "assets/images/avatar/female_avatar/brows/brows_1.png",
     "assets/images/avatar/female_avatar/brows/brows_2.png",
+    "assets/images/avatar/female_avatar/brows/brows_3.png",
   ],
   mouth: [
     "assets/images/avatar/female_avatar/mouth/happy_mouth_1.png",
     "assets/images/avatar/female_avatar/mouth/filler_mouth_outline.png",
+    "assets/images/avatar/female_avatar/mouth/plain_mouth_1.png",
   ],
   glasses: [
+    null,
+    null,
+    null,
     "assets/images/avatar/female_avatar/glasses/sunglasses.png",
     "assets/images/avatar/female_avatar/glasses/glasses_1.png",
   ],
   animal: [
     null, // Increased chance for "no animal"
     null,
+    null,
+    null,
+    null,
     "assets/images/avatar/female_avatar/animal/rabbit_1.png",
     "assets/images/avatar/female_avatar/animal/fox_1.png",
+    "assets/images/avatar/female_avatar/animal/bear-1.png",
+    "assets/images/avatar/female_avatar/animal/dog-1.png",
+    "assets/images/avatar/female_avatar/animal/giraffe-1.png",
+    "assets/images/avatar/female_avatar/animal/panda-1.png",
+    "assets/images/avatar/female_avatar/animal/pig-1.png",
+    "assets/images/avatar/female_avatar/animal/sheep-1.png",
+    "assets/images/avatar/female_avatar/animal/tiger-1.png",
   ],
 };
 
@@ -447,7 +479,7 @@ function applyRandomColor(layerName) {
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     const data = imageData.data;
 
-    const whiteThreshold = 240; // Adjust this value as needed for more coverage
+    const whiteThreshold = 100; // Adjust this value as needed for more coverage
     for (let i = 0; i < data.length; i += 4) {
       if (data[i] > whiteThreshold && data[i + 1] > whiteThreshold && data[i + 2] > whiteThreshold) {
         [data[i], data[i + 1], data[i + 2]] = rgb;
@@ -458,16 +490,19 @@ function applyRandomColor(layerName) {
   };
 }
 
-// Randomize avatar function
 function randomizeAvatar() {
   for (const layer in options) {
     const randomOption = getRandomOption(options[layer]);
     layers[layer] = randomOption;
 
     if (randomOption) {
-      // If an image is selected, draw it on the canvas and apply a random color
+      // If an image is selected, draw it on the canvas
       loadAndDrawLayer(layer);
-      applyRandomColor(layer);
+
+      // Skip coloring for the "animal" layer
+      if (layer !== "animal") {
+        applyRandomColor(layer);
+      }
     } else {
       // If `null` is selected, clear the canvas for this layer
       const ctx = contexts[layer];
