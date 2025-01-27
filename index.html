@@ -68,12 +68,13 @@
                                 <div class="col-12">
                                     <h3 class="heading-font">Choose your gender!</h3>
                                 </div>
+                                <!-- Male Image as Modal Trigger -->
                                 <div id="gender-male-container" class="col-6 col-lg-6">
                                     <img class="image-hover" src="assets/images/images_page/choose_male_outline.png"
-                                        alt="Male Shape">
+                                        alt="Male Shape" data-bs-toggle="modal" data-bs-target="#exampleModal">>
                                 </div>
                                 <div id="gender-female-container" class="col-6 col-lg-6">
-                                    <!-- Image as Modal Trigger -->
+                                    <!-- Female Image as Modal Trigger -->
                                     <img class="image-hover" src="assets/images/images_page/choose_female_outline.png"
                                         alt="Female Shape" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 </div>
@@ -94,6 +95,28 @@
                                                 <!-- Iframe Embed -->
                                                 <div class="responsive-iframe-container">
                                                     <iframe src="avatar.female.html" title="Female Avatar"></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Male Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal Header  -->
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Avatar Generator</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <!-- Modal Body -->
+                                            <div class="modal-body">
+                                                <!-- Iframe Embed -->
+                                                <div class="responsive-iframe-container">
+                                                    <iframe src="avatar.male.html" title="Male Avatar"></iframe>
                                                 </div>
                                             </div>
                                         </div>
