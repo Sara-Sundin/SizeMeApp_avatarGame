@@ -116,6 +116,7 @@ h1 {
     height: auto;
     display: block;
     margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 /* Pick Gender Section*/
@@ -327,6 +328,7 @@ footer {
     #arrow img {
         transform: rotate(-90deg);
         /* Rotate the image */
+        margin-bottom: -50px;
     }
 
     .responsive-iframe-container {
