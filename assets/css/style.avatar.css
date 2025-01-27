@@ -71,7 +71,7 @@ body {
   gap: 30px;
   justify-content: center;
   align-items: center;
-  width: 250px;
+  width: 300px;
 }
 
 .thumbnail-container {
@@ -113,26 +113,6 @@ body {
   object-fit: cover;
   border-radius: 8px;
   overflow: hidden;
-}
-
-#additional-thumbnails-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 20px;
-  /* Space between rows of thumbnails */
-}
-
-.additional-thumbnails {
-  display: flex;
-  flex-direction: column;
-  /* Keep the button and thumbnails stacked */
-  gap: 20px;
-  /* Add spacing between the "Back" button and thumbnails */
-  width: 100%;
-  /* Ensure the container takes full width */
-  box-sizing: border-box;
 }
 
 .thumbnails-row {
@@ -180,8 +160,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
   border: 1px solid black;
   border-radius: 8px;
   cursor: pointer;
@@ -265,61 +243,88 @@ body {
 }
 
 /* Responsive Adjustments for Larger Screens */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-
-  #custom-color-picker {
-    width: 400px;
-  }
-
-  .canvas-container {
-    width: 300px;
-    height: 300px;
-  }
-
-  .canvas {
-    width: 300px;
-    height: 300px;
-  }
-
-  .thumbnail-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 450px;
-  }
+@media screen and (min-width: 768px) {
 
   #generator {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    /* 5 equal columns */
+    grid-template-rows: repeat(2, auto);
+    /* Create 2 rows of equal height */
+    padding-left: 20px;
+    padding-right: 10px;
   }
 
-  .full-width {
-    grid-column: 1 / -1;
-    /* Full width on smaller screens */
-  }
-}
-
-@media screen and (min-width: 1024px) {
-
-  .row {
-    width: 1000px;
+  .column-1 {
+    grid-column: 1 / 2;
+    /* First column */
+    grid-row: 2 / 1;
+    /* Place in the second row */
   }
 
-  .column {
+  .column-2 {
+    grid-column: 2 / 3;
+    /* Second column */
+    grid-row: 1 / 2;
+    /* Only in the first row */
+  }
+
+  .column-3 {
+    grid-column: 2;
+    /* Span the entire width */
+    grid-row: 3;
+    /* Place in the third row */
+  }
+
+  .column-4 {
+    grid-column: 3 / 4;
+    /* Third column */
+    grid-row: 1 / 2;
+    /* Only in the first row */
+    width: 300px;
+    /* Optional width */
+  }
+
+  .column-5 {
+    grid-column: 1 / 2;
+    /* Same column as column-1 */
+    grid-row: 1 / 1;
+    /* Place in the first row */
+    align-self: start;
+    /* Align at the top of its row */
     width: 300px;
   }
 
-  .canvas-container {
-    width: 250px;
+  #custom-color-picker {
+    width: 300px;
   }
 
-  .canvas {
-    width: 250px;
+  #hue-slider {
+    height: 50px;
   }
 
   .thumbnail-container {
-    width: 250px;
+    gap: 10px;
+    height: 300px;
+  }
+
+  .thumbnail {
+    height: 65px;
+    width: 65px;
+  }
+
+  .clear-label img {
+    height: 65px;
+    width: 65px;
+  }
+
+  .canvas-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .canvas {
+    width: 300px;
+    height: 300px;
   }
 }

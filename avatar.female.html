@@ -11,11 +11,11 @@
 </head>
 
 <body>
-  <div id="generator" class="centered-text row">
+  <div id="generator" class="centered-text grid-container">
 
     <!-- Color Picker-->
 
-    <div id="custom-color-picker" class="hidden column">
+    <div id="custom-color-picker" class="hidden column column-1">
       <p aria-label="Color Picker">Pick your colors!</p>
 
       <div id="hue-slider" class="slider"></div>
@@ -34,7 +34,7 @@
 
 
     <!-- Avatar Canvas Container -->
-    <div class="column">
+    <div class="column column-2">
       <div id="canvas-container" class="canvas-container">
         <canvas id="canvas-base" class="canvas"></canvas>
         <canvas id="canvas-skin" class="canvas"></canvas>
@@ -50,7 +50,7 @@
       </div>
     </div>
 
-    <div class="button-container column order-lg-end full-width">
+    <div class="button-container column column-3">
       <button id="reset-button" class="btn btn-dark">Reset</button>
       <button id="randomize-button" class="btn btn-dark">Randomize</button>
     </div>
@@ -59,7 +59,7 @@
     <!-- Thumbnails -->
 
     <!-- Main Thumbnails -->
-    <div id="main-thumbnails" class="thumbnail-container column">
+    <div id="main-thumbnails" class="thumbnail-container column column-4">
 
       <!-- Background Thumbnail-->
       <div>
@@ -173,7 +173,7 @@
     </div>
 
     <!-- Additional Thumbnails -->
-    <div id="additional-thumbnails-container">
+    <div id="additional-thumbnails-container" class="column-4">
 
       <!-- Additional Thumbnail Clothes -->
       <div id="additional-thumbnails-clothes" class="additional-thumbnails hidden">
@@ -454,7 +454,7 @@
     </div>
 
     <!-- Download Button -->
-    <div class="column order-lg-2">
+    <div class="column-5">
       <button id="download-button" class="btn btn-primary">Download Avatar</button>
     </div>
   </div>
