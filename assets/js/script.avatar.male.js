@@ -70,7 +70,7 @@ function initializeCanvases() {
   });
 
   // Set the default skin image
-  const defaultSkinImage = "assets/images/avatar/male_avatar/skin";
+  const defaultSkinImage = "assets/images/avatar/male_avatar/skin/shape_male.png";
   layers.skin = defaultSkinImage;
   loadAndDrawLayer("skin", defaultSkinImage); // Preload the default skin image
 }
@@ -393,11 +393,11 @@ const options = {
     "assets/images/avatar/female_avatar/base/background.png",
   ],
   skin: [
-    "assets/images/avatar/male_avatar/skin",
+    "assets/images/avatar/male_avatar/skin/shape_male.png",
   ],
   clothes: [
-    "assets/images/avatar/female_avatar/clothes/female-hoodie.png",
-    "assets/images/avatar/female_avatar/clothes/female-shirt.png",
+    "assets/images/avatar/male_avatar/clothes/male-hoodie.png",
+    "assets/images/avatar/male_avatar/clothes/male-shirt.png",
   ],
   hair: [
     "assets/images/avatar/male_avatar/hair/hair_long_outline_male.png",
