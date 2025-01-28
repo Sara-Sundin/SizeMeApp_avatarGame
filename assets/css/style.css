@@ -129,6 +129,14 @@ h1 {
     align-items: center;
 }
 
+/* Zoom-in effect */
+#pick-gender.zoomed {
+    transform: scale(1.2);
+    /* Zoom in */
+    opacity: 1;
+    /* Optional: keep it fully visible */
+}
+
 #pick-gender img {
     width: 100%;
     /* Image will take up 100% of the container's width */
@@ -238,30 +246,63 @@ span img {
 }
 
 #download-heading {
-    color: white;
+    color: #000;
     height: 50px;
     background-color: #000;
+    padding-top: 20px;
+    margin-bottom: 20px;
 }
 
-#download-avatar-row {
-    height: 100%;
-    text-align: center;
+.background-container {
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 400px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    /* Solid background for the main container */
+    overflow: hidden;
+    /* Ensures the pseudo-element doesn’t overflow */
+}
+
+.background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/images/images_page/collage-avatars.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    /* Adjust transparency here */
+    z-index: 1;
+    /* Places it behind the content */
+}
+
+.background-container .button {
+    position: relative;
+    z-index: 2;
+    /* Ensures button appears above the background */
+    height: 80px;
+    width: 160px;
+    font-size: 20px;
+    color: #000;
     background-color: white;
+    transition: transform 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
 }
 
-#download-avatar-row img {
-    padding-top: 20px;
-    width: 70%;
-    height: auto;
+.background-container .button:hover {
+    transform: scale(1.3);
+    background-color: #000;
+    color: white;
 }
 
-#download-button-div {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
 
 /* Contact Section */
 #contact {
