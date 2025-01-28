@@ -167,14 +167,36 @@ function handleThumbnailSelection() {
     radio.addEventListener("change", (e) => {
       const layer = e.target.dataset.layer;
       const src = e.target.dataset.src;
+      const isMainThumbnail = e.target.classList.contains("main-thumbnail");
 
       if (layer) {
-        layers[layer] = src;
-        loadAndDrawLayer(layer);
+        if (isMainThumbnail) {
+          if (layer === "base" || layer === "skin") {
+            // Always draw base and skin
+            layers[layer] = src;
+            loadAndDrawLayer(layer);
+          } else {
+            // Toggle visibility of additional thumbnails
+            const additionalThumbnailsId = `additional-thumbnails-${layer}`;
+            const additionalThumbnails = document.getElementById(additionalThumbnailsId);
 
-        const colorPicker = document.getElementById("custom-color-picker");
-        if (colorPicker) {
-          colorPicker.classList.remove("hidden");
+            // Hide all additional thumbnail sections
+            document.querySelectorAll(".additional-thumbnails").forEach((el) => el.classList.add("hidden"));
+
+            // Show the relevant additional thumbnails section if it exists
+            if (additionalThumbnails) {
+              additionalThumbnails.classList.remove("hidden");
+            }
+          }
+        } else {
+          // For additional thumbnails, update the layer and draw
+          layers[layer] = src;
+          loadAndDrawLayer(layer);
+
+          const colorPicker = document.getElementById("custom-color-picker");
+          if (colorPicker) {
+            colorPicker.classList.remove("hidden");
+          }
         }
       }
     });
