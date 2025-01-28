@@ -305,14 +305,16 @@ span img {
 
 
 /* Contact Section */
+
 #contact {
     padding: 15px 0 15px 0;
-    color: white;
+    background-color: white;
+    color: #000;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    flex-direction: row;
 }
 
 #button-contact {
@@ -386,5 +388,10 @@ footer {
     .modal-title {
         padding-left: 355px;
         font-size: 35px;
+    }
+
+    #introduction {
+        scroll-margin-top: 150px;
+        /* Adjust for smaller screens */
     }
 }
