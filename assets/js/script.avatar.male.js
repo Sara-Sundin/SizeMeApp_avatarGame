@@ -409,6 +409,8 @@ const options = {
     null,
     null,
     "assets/images/avatar/female_avatar/nose/nose_1.png",
+    "assets/images/avatar/female_avatar/nose/nose_2.png",
+    "assets/images/avatar/female_avatar/nose/nose_3.png",
   ],
   eyes: [
     "assets/images/avatar/female_avatar/eyes/eyes_1.png",
