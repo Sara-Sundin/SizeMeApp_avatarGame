@@ -406,8 +406,6 @@ const options = {
     "assets/images/avatar/male_avatar/hair/hair_short-3_outline_male.png",
   ],
   nose: [
-    null,
-    null,
     "assets/images/avatar/female_avatar/nose/nose_1.png",
     "assets/images/avatar/female_avatar/nose/nose_2.png",
     "assets/images/avatar/female_avatar/nose/nose_3.png",
@@ -491,25 +489,61 @@ function applyRandomColor(layerName) {
 }
 
 function randomizeAvatar() {
+  let showNose = false;
+  let showAnimal = false;
+
+  // Randomly decide which layer to prioritize: nose or animal
+  if (Math.random() < 0.5) {
+    showNose = true; // 50% chance to show the nose
+  } else {
+    showAnimal = true; // 50% chance to show the animal
+  }
+
   for (const layer in options) {
     const randomOption = getRandomOption(options[layer]);
-    layers[layer] = randomOption;
 
-    if (randomOption) {
+    if (layer === "nose") {
+      if (showNose) {
+        layers[layer] = randomOption; // Only set the nose if showNose is true
+      } else {
+        layers[layer] = null; // Clear the nose if showNose is false
+      }
+    } else if (layer === "animal") {
+      if (showAnimal) {
+        layers[layer] = randomOption; // Only set the animal if showAnimal is true
+      } else {
+        layers[layer] = null; // Clear the animal if showAnimal is false
+      }
+    } else {
+      // For all other layers, proceed as normal
+      layers[layer] = randomOption;
+    }
+
+    if (layers[layer]) {
       // If an image is selected, draw it on the canvas
       loadAndDrawLayer(layer);
 
-      // Skip coloring for the "animal" layer
+      // Skip coloring for the animal layer
       if (layer !== "animal") {
         applyRandomColor(layer);
       }
     } else {
-      // If `null` is selected, clear the canvas for this layer
+      // Clear the canvas if the layer is not selected
       const ctx = contexts[layer];
       const canvas = canvases[layer];
       if (ctx) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
       }
+    }
+  }
+
+  // Ensure the nose is shown if the animal is null
+  if (layers["animal"] === null) {
+    const randomNoseOption = getRandomOption(options["nose"]);
+    layers["nose"] = randomNoseOption; // Set a random nose option
+    if (randomNoseOption) {
+      loadAndDrawLayer("nose");
+      applyRandomColor("nose"); // Apply color to the nose
     }
   }
 }
