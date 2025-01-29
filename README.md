@@ -305,7 +305,7 @@ As a visitor, I want to provide feedback on my experience, so that I can contrib
 - [Aria labels](#aria-labels-used)
 - 
 ## Colour Scheme
-![Colour Scheme](#)
+![Colour Scheme](assets/images/images_read_me/colours-project-2.png)
 <br>
 <br>
 The Avatar Maker website employs a vibrant and dynamic color scheme with bright red and blue accents set against a clean black-and-white foundation. Red is used to highlight actions, drawing attention and evoking a sense of energy and urgency, while blue provides a calming counterbalance, fostering trust, balance, and creativity. The deliberate use of these colors creates a striking visual hierarchy that guides users intuitively. The strong contrast ensures excellent accessibility, readability, and a visually engaging experience across devices.
@@ -315,7 +315,7 @@ The Avatar Maker website employs a vibrant and dynamic color scheme with bright 
 ## Typography
 The chosen typography for my website are both Google fonts and combine Fredoka for headings and Lato for the main content. This pairing enhances the user experience by creating a playful and approachable aesthetic while maintaining excellent readability and a clean design throughout.
 
-![Fonts](#)
+![Fonts](assets/images/images_read_me/fonts-project-2.png)
 
 Fredoka: This rounded, bold typeface brings a sense of friendliness and vibrancy to the website. Its approachable design makes it perfect for attention-grabbing headings, aligning well with the creative and interactive theme of the site.
 
@@ -331,7 +331,7 @@ The images used in this site are created by myself as sketches in Adobe Illustra
 ## Wire Frames
 The wireframes were created in Adobe Illustrator for mobile, tablet and desktop. I have developed and used my own toolkit for the wireframes. The outcome for the website looks slightly different than the initial wireframes but the introduction of the page remained consistent.
 
-<details open><summary><h4>Page Wireframe</h4></summary><#></details>
+<details open><summary><h4>Page Wireframe</h4></summary><img src=assets/images/images_read_me/wireframes_project-2.jpg></details>
 
 <hr>
 
@@ -344,34 +344,43 @@ The website includes a custom favicon to enhance its identity and improve user e
 
 I designed the favicon in Adobe Illustrator, featuring a simplified avatar icon to match the site’s overall aesthetic. Its vibrant colors and clean lines ensure visibility and clarity, even at small sizes. This attention to detail reinforces the website's branding and provides users with a polished, professional experience.
 
+<details open><summary><h4>Favicon Image</h4></summary><img src=assets/images/images_read_me/favicon-avatar-readme.png>></details>
+
+### Header
+
+<details open><summary><h4>Header Image - Desktop</h4></summary><img src=assets/images/images_read_me/header-desktop.jpg>></details>
+
 #### Introduction Section
 The Avatar Maker website welcomes users with an engaging and user-friendly introduction. The homepage features a bold heading, "Your vibe, your style, your avatar – let’s get started!", which sets the tone for creativity and individuality. A brief introductory paragraph invites users to explore the avatar customization journey with an arrow pointing to the images where the avatar generator opens, highlighting the fun and versatility of the tool.
 
-<details open><summary><h4>Introduction Section Image - Desktop</h4></summary><img src=#>></details>
+<details open><summary><h4>Introduction Section Image - Desktop</h4></summary><img src=assets/images/images_read_me/introduction-desktop.jpg>></details>
 <details><summary><h4>Introduction Section Image - Mobile</h4></summary><img src=#></details>
 
 #### Choose Gender Section
 The Choose-Gender section invites users to begin their avatar creation journey with a choice between male and female avatars. Featuring clear, clickable icons and hover animations, the images respond dynamically, enhancing the experience and making it clear what to do. This responsive feedback captures attention and ensures seamless navigation. Each selection opens a modal for customization, making the transition smooth and intuitive. Designed for accessibility, this section is engaging and inclusive across all devices.
 
-<details open><summary><h4>Choose Gender Section Image - Desktop</h4></summary><img src=#>></details>
+<details open><summary><h4>Choose Gender Section Image - Desktop</h4></summary><img src=assets/images/images_read_me/choose-gender-desktop.jpg>></details>
 <details><summary><h4>Choose Gender Section Image - Mobile</h4></summary><img src=#></details>
 
 #### Avatar Generator Modal
 The Avatar Generator Modal is a central feature of the site, designed to provide users with an engaging and interactive experience. When triggered, the modal opens to reveal the Avatar Maker interface, where users can customize their avatars with ease. This full-screen design ensures focus on the creative process, eliminating distractions. With intuitive controls and seamless transitions, users can select features, adjust colors, and preview their avatars in real time. The modal's clean layout and responsive design enhance usability across devices, ensuring accessibility for all users.
 
-<details open><summary><h4>Avatar Generator Modal Image - Desktop</h4></summary><img src=#>></details>
-<details><summary><h4>Avatar Generator Modal Image - Mobile</h4></summary><img src=#></details>
+<details open><summary><h4>Female Modal Image - Desktop</h4></summary><img src=assets/images/images_read_me/modal-avatar-female-desktop.jpg>></details>
+<details><summary><h4>Avatar Female Modal Image - Mobile</h4></summary><img src=#></details>
+
+<details open><summary><h4>Female Modal Image - Desktop</h4></summary><img src=assets/images/images_read_me/modal-avatar-male-desktop.jpg>></details>
+<details><summary><h4>Avatar Female Modal Image - Mobile</h4></summary><img src=#></details>
 
 #### Avatar Collage Section
 The Avatar Collage section showcases a vibrant collection of avatars designed by users, serving as both an inspiring visual element and a navigation feature. At the center of the collage, a prominent button labeled "Download your avatar!" captures attention and provides guidance. This button links users back to the start of the introduction, ensuring a seamless flow through the site. 
 
-<details open><summary><h4>Avatar Collage Section Image - Desktop</h4></summary><img src=#>></details>
+<details open><summary><h4>Avatar Collage Section Image - Desktop</h4></summary><img src=assets/images/images_read_me/collage-desktop.jpg>></details>
 <details><summary><h4>Avatar Collage Section Image - Mobile</h4></summary><img src=#></details>
 
 #### Contact Section
 The Contact Section offers an intuitive way for users to connect. At its heart is a prominently displayed button that, when clicked, opens a modal containing a clean and user-friendly email form. This design ensures seamless communication by allowing users to send inquiries or feedback directly without navigating away from the page. The straightforward functionality and modern design make it easy for users to engage, reinforcing accessibility and creating a streamlined user experience.
 
-<details open><summary><h4>Contact Section Image - Desktop</h4></summary><img src=#>></details>
+<details open><summary><h4>Contact Section Image - Desktop</h4></summary><img src=assets/images/images_read_me/contact-desktop.jpg>></details>
 <details><summary><h4>Contact Section Image - Mobile</h4></summary><img src=#></details>
 
 #### Contact Modal
@@ -389,7 +398,7 @@ The Success Modal Window provides users with immediate feedback after successful
 #### Footer
 The Footer serves as a compact and functional closing section of the website, providing essential information and quick access to external links. It includes prominent social media icons, enabling users to easily connect on platforms like Instagram, LinkedIn, and WhatsApp. The footer's minimalist design aligns with the overall aesthetic of the site, ensuring it complements rather than distracts. The three social media icons are added with Font Awesome.
 
-<details open><summary><h4>Footer Image - Desktop</h4></summary><img src=#>></details>
+<details open><summary><h4>Footer Image - Desktop</h4></summary><img src=assets/images/images_read_me/footer-desktop.jpg>></details>
 <details><summary><h4>FooterImage - Mobile</h4></summary><img src=#></details>
 
 #### Future Pages - Avatar Inspiration Gallery
