@@ -118,8 +118,9 @@ Goal: Engage with the website and share feedback.
 - Share the Avatar Maker with friends or colleagues using the site’s social sharing options (User Story 8).
 - Provide feedback on their experience to contribute to future improvements (User Story 10).
 
-  <details open>
+<details open>
 <summary><h4>User Story 1 (must-have)</h4></summary>
+  
 ### User Story 1 (must-have)
 As a visitor, I want to see a welcoming homepage with a brief introduction,
 so that I can quickly understand the purpose of the Avatar Maker site.
@@ -283,3 +284,39 @@ As a visitor, I want to provide feedback on my experience, so that I can contrib
 - Add a "Submit Feedback" button that sends data to the server or stores it locally.
 - Ensure the form is accessible and mobile-friendly.
 </details> 
+
+[Back to Content Table](#content)
+
+<br>
+<br>
+<hr>
+<hr>
+<br>
+<br>
+
+# DESIGN
+- [Colour Scheme](#colour-scheme)
+- [Typography](#typography)
+- [Imagery](#imagery)
+- [Wire Frames](#wire-frames)
+- [Structure of the website](#structure-of-the-website)
+- [Features](#features)
+- [Accessibility](#accessibility)
+- [Aria labels](#aria-labels-used)
+- 
+## Colour Scheme
+![Colour Scheme](#)
+<br>
+<br>
+The Avatar Maker website employs a vibrant and dynamic color scheme with bright red and blue accents set against a clean black-and-white foundation. Red is used to highlight actions, drawing attention and evoking a sense of energy and urgency, while blue provides a calming counterbalance, fostering trust, balance, and creativity. The deliberate use of these colors creates a striking visual hierarchy that guides users intuitively. The strong contrast ensures excellent accessibility, readability, and a visually engaging experience across devices.
+
+<hr>
+
+## Typography
+The chosen typography for my website are both Google fonts and combine Fredoka for headings and Lato for the main content. This pairing enhances the user experience by creating a playful and approachable aesthetic while maintaining excellent readability and a clean design throughout.
+
+![Fonts](#)
+
+Fredoka: This rounded, bold typeface brings a sense of friendliness and vibrancy to the website. Its approachable design makes it perfect for attention-grabbing headings, aligning well with the creative and interactive theme of the site.
+
+Lato: A modern sans-serif font with a humanist touch, Lato ensures clear readability for the main content. Its clean, neutral design complements the bold playfulness of Fredoka, providing a harmonious balance that enhances the overall user experience.
