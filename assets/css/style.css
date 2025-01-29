@@ -226,6 +226,7 @@ h1 {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .collage-avatars img {
