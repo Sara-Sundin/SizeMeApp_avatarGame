@@ -107,6 +107,7 @@ Goal: Quickly understand the purpose of the website and begin creating their ava
 - Learn about the Avatar Maker and its features through brief, engaging descriptions (User Story 2).
 - Access the gender selection section to start creating their avatar (User Story 3).
 - Experience seamless navigation across devices with responsive design (User Story 4).
+- View samples of responsive avatars to get inspired and see the possibilities (User Story 9).
 ### Returning Visitors
 Goal: Continue customizing or exploring new features.
 - Revisit the Avatar Maker to experiment with different styles or features (User Story 5).
@@ -115,7 +116,138 @@ Goal: Continue customizing or exploring new features.
 Goal: Engage with the website and share feedback.
 - Explore updates or new features added to the Avatar Maker (User Story 7).
 - Share the Avatar Maker with friends or colleagues using the site’s social sharing options (User Story 8).
-- Provide feedback on their experience to contribute to future improvements (User Story 9).
+- Provide feedback on their experience to contribute to future improvements (User Story 10).
 
   <details open>
 <summary><h4>User Story 1 (must-have)</h4></summary>
+### User Story 1 (must-have)
+As a visitor, I want to see a welcoming homepage with a brief introduction,
+so that I can quickly understand the purpose of the Avatar Maker site.
+
+#### Acceptance Criteria
+- A clear heading introduces the Avatar Maker.
+- Brief text explains what the site does.
+- Navigation links to the gender selection.
+- 
+#### Tasks
+- Design a clean homepage layout.
+- Add a prominent heading and introductory text.
+- Implement responsive navigation links.
+</details>
+
+<details>
+<summary><h4>User Story 2 (must-have)</h4></summary>
+  
+### User Story 2 (must-have)
+As a visitor, I want to explore the features of the Avatar Maker,
+so that I can understand what customizations are available.
+
+#### Acceptance Criteria
+- A section highlights the customization features (e.g., gender, clothing, accessories).
+- Buttons or links guide users to start creating their avatar.
+- Responsive design ensures usability on all devices.- 
+
+#### Tasks
+- Create a features section with descriptive icons or images.
+- Add buttons to direct users to the customization interface.
+- Test responsiveness across various screen sizes.
+
+### User Story 3 (must-have)
+As a visitor, I want to select a gender to begin my avatar creation,
+so that I can personalize my experience.
+
+#### Acceptance Criteria
+- Male and female options are presented clearly.
+- Clicking on an option opens the avatar editor.
+- A modal or page transition confirms the selected option.
+
+#### Tasks
+- Design a visually appealing gender selection section.
+- Implement clickable gender options linked to their respective modals or pages.
+- Test functionality to ensure a seamless experience.
+
+### User Story 4 (must-have)
+As a visitor, I want the site to be responsive, so that I can navigate and use it across devices.
+
+#### Acceptance Criteria
+- The site layout adjusts seamlessly on mobile, tablet, and desktop screens.
+- All interactive elements (e.g., buttons, modals) remain functional on touch devices.
+
+#### Tasks
+- Use a responsive grid system for layout design.
+- Test the site’s usability across various devices and browsers.
+
+### User Story 5 (could-have)
+- As a returning visitor, I want to experiment with new styles and features, so that I can further customize my avatar.
+
+#### Acceptance Criteria
+- The customization interface offers a variety of options.
+- New styles or features are clearly marked.
+- Users can easily apply changes and see them reflected in real time.
+
+#### Tasks
+- Add diverse customization options for clothing, accessories, etc.
+- Highlight new features with labels or icons.
+- Ensure real-time updates on the avatar canvas.
+
+### User Story 6 (should-have)
+As a visitor, I want to download my avatar, so that I can save it for personal or professional use.
+
+#### Acceptance Criteria
+- A download button is prominently displayed in the editor or final screen.
+- Clicking the button saves the avatar as a high-resolution image.
+
+#### Tasks
+- Implement a download feature that merges all avatar layers.
+- Optimize the download button for both desktop and mobile.
+
+### User Story 7 (could-have)
+- As a frequent visitor, I want to provide feedback about the Avatar Maker, so that I can contribute to its improvement.
+
+#### Acceptance Criteria
+- A feedback form is easily accessible.
+- Users can rate their experience and leave comments.
+- A confirmation message is displayed after submission.
+
+#### Tasks
+- Design a feedback form with rating options and a text box.
+- Add a backend to collect and store feedback data.
+- Display a confirmation message or thank-you page.
+
+#### User Story 8 (could-have)
+As a frequent visitor, I want to share the Avatar Maker with others, so that my friends or colleagues can use it too.
+
+#### Acceptance Criteria
+- Social sharing buttons are prominently displayed.
+- Users can share the site link via social media or email.
+
+#### Tasks
+- Add social media sharing buttons (e.g., Facebook, Twitter, LinkedIn).
+- Test sharing functionality to ensure links work correctly.
+
+### User Story 9 (want-have)
+As a visitor, I want to view samples of responsive avatars, so that I can get inspired and see the possibilities before creating my own.
+
+#### Acceptance Criteria
+- A gallery section showcases a variety of pre-designed avatars.
+- Clicking on a sample opens it in the editor for further customization.
+- The gallery is visually appealing and easy to navigate.
+
+#### Tasks
+- Design a gallery layout with a grid or carousel of avatars.
+- Link gallery items to the avatar editor with the preloaded design.
+- Ensure the gallery is responsive and loads efficiently
+
+### User Story 10 (want-have)
+As a visitor, I want to provide feedback on my experience, so that I can contribute to improving the Avatar Maker site.
+
+#### Acceptance Criteria
+- A feedback form is accessible from the main navigation or footer.
+- The form allows users to rate their experience and leave comments.
+- A confirmation message is displayed after successful submission.
+
+#### Tasks
+- Design and implement a feedback form with fields for rating and comments.
+- Add a "Submit Feedback" button that sends data to the server or stores it locally.
+- Ensure the form is accessible and mobile-friendly.
+</details>
