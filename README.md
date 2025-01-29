@@ -70,3 +70,32 @@ Welcome to the Avatar Maker! This web application allows users to design persona
 <hr>
 <br>
 <br>
+
+## My website across UX planes
+
+### Strategy Plane
+The primary goal of the website is to provide users with an engaging, interactive tool to create personalized avatars while showcasing my technical and creative abilities. The target audience includes casual users looking for a fun avatar generator, as well as potential collaborators or employers interested in my web development and design skills. The website meets user needs by offering a seamless avatar creation experience and a visually appealing, intuitive interface.
+
+### Scope Plane
+The website includes essential features like an avatar creation tool, gender selection, and customization options. Additional features, such as randomization and a download button for created avatars, enhance the experience. The design focuses on must-have functionality for accessibility and entertainment while offering optional features that make the process more enjoyable and engaging.
+
+### Structure Plane
+The website is structured to ensure ease of navigation and interaction:
+- A welcoming homepage introduces the Avatar Maker with clear instructions.
+- A gender selection section allows users to start their journey with tailored avatar options.
+- Customization tools are presented logically, offering intuitive interaction.
+- A download feature lets users save their creations effortlessly.
+  
+### Skeleton Plane
+The layout is simple and user-friendly:
+- Interactive elements like buttons, sliders, and thumbnails are placed where users naturally expect them.
+- A responsive design ensures the website adapts seamlessly to mobile, tablet, and desktop devices.
+- Clear labels and visual cues such as headings and tooltips guide users through the avatar creation process without confusion.
+  
+### Surface Plane
+The visual design is playful and creative, reflecting the theme of personalization and self-expression:
+- Bright, welcoming colors and clean typography set a friendly tone.
+- Background images and avatar previews enhance visual appeal and interactivity.
+- Hover effects, animations, and transparent overlays add subtle interactivity while maintaining focus on the core functionality.
+- 
+<hr>
