@@ -8,7 +8,7 @@
 
 Welcome to the Avatar Maker! This web application allows users to design personalized avatars with ease. Whether you're looking to create a playful, professional, or unique representation of yourself, the Avatar Maker provides a variety of customization options, including gender selection, facial features, colors, and accessories. With an intuitive interface and interactive tools, you can create and download your perfect avatar in just a few clicks. Perfect for profiles, games, or creative projects!
 
-![Screenshot of the website on multi devices](assets/images/images read_me/mockup-techsini.png).
+![Screenshot of the website on multi devices](assets/images/images_read_me/mockup-techsini.png)
 
 # CONTENT
 
