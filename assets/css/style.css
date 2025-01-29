@@ -228,7 +228,7 @@ h1 {
     overflow: hidden;
 }
 
-.collage-avatars .collage-image {
+.collage-avatars img {
     position: absolute;
     top: 0;
     left: 0;
