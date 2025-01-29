@@ -334,3 +334,65 @@ The wireframes were created in Adobe Illustrator for mobile, tablet and desktop.
 <details open><summary><h4>Page Wireframe</h4></summary><#></details>
 
 <hr>
+
+## Features
+
+### Features on all pages
+
+#### Favicon
+The website includes a custom favicon to enhance its identity and improve user experience. The favicon, a small yet recognizable icon displayed in the browser tab, represents the creative and interactive nature of the Avatar Maker.
+
+I designed the favicon in Adobe Illustrator, featuring a simplified avatar icon to match the site’s overall aesthetic. Its vibrant colors and clean lines ensure visibility and clarity, even at small sizes. This attention to detail reinforces the website's branding and provides users with a polished, professional experience.
+
+#### Introduction Section
+The Avatar Maker website welcomes users with an engaging and user-friendly introduction. The homepage features a bold heading, "Your vibe, your style, your avatar – let’s get started!", which sets the tone for creativity and individuality. A brief introductory paragraph invites users to explore the avatar customization journey with an arrow pointing to the images where the avatar generator opens, highlighting the fun and versatility of the tool.
+
+<details open><summary><h4>Introduction Section Image - Desktop</h4></summary><img src=#>></details>
+<details><summary><h4>Introduction Section Image - Mobile</h4></summary><img src=#></details>
+
+#### Choose Gender Section
+The Choose-Gender section invites users to begin their avatar creation journey with a choice between male and female avatars. Featuring clear, clickable icons and hover animations, the images respond dynamically, enhancing the experience and making it clear what to do. This responsive feedback captures attention and ensures seamless navigation. Each selection opens a modal for customization, making the transition smooth and intuitive. Designed for accessibility, this section is engaging and inclusive across all devices.
+
+<details open><summary><h4>Choose Gender Section Image - Desktop</h4></summary><img src=#>></details>
+<details><summary><h4>Choose Gender Section Image - Mobile</h4></summary><img src=#></details>
+
+#### Avatar Generator Modal
+The Avatar Generator Modal is a central feature of the site, designed to provide users with an engaging and interactive experience. When triggered, the modal opens to reveal the Avatar Maker interface, where users can customize their avatars with ease. This full-screen design ensures focus on the creative process, eliminating distractions. With intuitive controls and seamless transitions, users can select features, adjust colors, and preview their avatars in real time. The modal's clean layout and responsive design enhance usability across devices, ensuring accessibility for all users.
+
+<details open><summary><h4>Avatar Generator Modal Image - Desktop</h4></summary><img src=#>></details>
+<details><summary><h4>Avatar Generator Modal Image - Mobile</h4></summary><img src=#></details>
+
+#### Avatar Collage Section
+The Avatar Collage section showcases a vibrant collection of avatars designed by users, serving as both an inspiring visual element and a navigation feature. At the center of the collage, a prominent button labeled "Download your avatar!" captures attention and provides guidance. This button links users back to the start of the introduction, ensuring a seamless flow through the site. 
+
+<details open><summary><h4>Avatar Collage Section Image - Desktop</h4></summary><img src=#>></details>
+<details><summary><h4>Avatar Collage Section Image - Mobile</h4></summary><img src=#></details>
+
+#### Contact Section
+The Contact Section offers an intuitive way for users to connect. At its heart is a prominently displayed button that, when clicked, opens a modal containing a clean and user-friendly email form. This design ensures seamless communication by allowing users to send inquiries or feedback directly without navigating away from the page. The straightforward functionality and modern design make it easy for users to engage, reinforcing accessibility and creating a streamlined user experience.
+
+<details open><summary><h4>Contact Section Image - Desktop</h4></summary><img src=#>></details>
+<details><summary><h4>Contact Section Image - Mobile</h4></summary><img src=#></details>
+
+#### Contact Modal
+The contact modal is displaying a clean and simple form for submitting inquiries or feedback. The form includes fields for name, email, and message, ensuring all necessary details are collected efficiently. Designed for ease of use, the modal keeps the user on the page without the need for redirection.
+
+<details open><summary><h4>Contact Modal Image - Desktop</h4></summary><img src=#>></details>
+<details><summary><h4>Contact Modal Image - Mobile</h4></summary><img src=#></details>
+
+#### Success Modal
+The Success Modal Window provides users with immediate feedback after successfully submitting the contact form. Once the "Send" button is pressed, the contact modal gracefully closes, and a success modal appears, confirming that the message has been sent. This modal includes a brief thank-you message to acknowledge the user's effort and reassure them that their inquiry has been received.
+
+<details open><summary><h4>Success Modal Image - Desktop</h4></summary><img src=#>></details>
+<details><summary><h4>Success Modal Image - Mobile</h4></summary><img src=#></details>
+
+#### Footer
+The Footer serves as a compact and functional closing section of the website, providing essential information and quick access to external links. It includes prominent social media icons, enabling users to easily connect on platforms like Instagram, LinkedIn, and WhatsApp. The footer's minimalist design aligns with the overall aesthetic of the site, ensuring it complements rather than distracts. The three social media icons are added with Font Awesome.
+
+<details open><summary><h4>Footer Image - Desktop</h4></summary><img src=#>></details>
+<details><summary><h4>FooterImage - Mobile</h4></summary><img src=#></details>
+
+#### Future Pages - Avatar Inspiration Gallery
+A planned addition to the website is an Avatar Inspiration Gallery, designed to inspire users and showcase the creative possibilities of the Avatar Maker. This feature will display a visually appealing grid or carousel of pre-designed avatars, each tailored to highlight unique styles and combinations. Users can browse the gallery and click on a sample to load it directly into the avatar editor for further customization. The responsive design will ensure seamless accessibility across all devices, enhancing the user experience. This gallery will serve as both an inspiration hub and a practical starting point for creating personalized avatars.
+
+<hr>
