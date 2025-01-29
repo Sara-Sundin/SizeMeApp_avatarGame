@@ -136,7 +136,8 @@ so that I can quickly understand the purpose of the Avatar Maker site.
 </details>
 
 <details>
-<summary><h4>User Story 2 (must-have)</h4>
+<summary><h4>User Story 2 (must-have)</h4></summary>
+  
 ### User Story 2 (must-have)
 As a visitor, I want to explore the features of the Avatar Maker,
 so that I can understand what customizations are available.
@@ -150,11 +151,11 @@ so that I can understand what customizations are available.
 - Create a features section with descriptive icons or images.
 - Add buttons to direct users to the customization interface.
 - Test responsiveness across various screen sizes.
-</summary>
 </details>  
 
 <details>
-<summary><h4>User Story 3 (must-have)</h4>
+<summary><h4>User Story 3 (must-have)</h4></summary>
+  
 ### User Story 3 (must-have)
 As a visitor, I want to select a gender to begin my avatar creation,
 so that I can personalize my experience.
@@ -168,11 +169,11 @@ so that I can personalize my experience.
 - Design a visually appealing gender selection section.
 - Implement clickable gender options linked to their respective modals or pages.
 - Test functionality to ensure a seamless experience.
-</summary>
 </details>  
 
 <details>
-<summary><h4>User Story 4 (must-have)</h4>
+<summary><h4>User Story 4 (must-have)</h4></summary>
+  
 ### User Story 4 (must-have)
 As a visitor, I want the site to be responsive, so that I can navigate and use it across devices.
 
@@ -183,12 +184,11 @@ As a visitor, I want the site to be responsive, so that I can navigate and use i
 #### Tasks
 - Use a responsive grid system for layout design.
 - Test the site’s usability across various devices and browsers.
-</summary>
 </details>  
 
 <details>
-<summary><h4>User Story 5 (must-have)</h4>
-### User Story 5 (must-have)
+<summary><h4>User Story 5 (must-have)</h4></summary>
+
 ### User Story 5 (could-have)
 - As a returning visitor, I want to experiment with new styles and features, so that I can further customize my avatar.
 
@@ -201,11 +201,11 @@ As a visitor, I want the site to be responsive, so that I can navigate and use i
 - Add diverse customization options for clothing, accessories, etc.
 - Highlight new features with labels or icons.
 - Ensure real-time updates on the avatar canvas.
-</summary>
 </details> 
 
 <details>
-<summary><h4>User Story 6 (should-have)</h4>
+<summary><h4>User Story 6 (should-have)</h4></summary>
+  
 ### User Story 6 (should-have)
 As a visitor, I want to download my avatar, so that I can save it for personal or professional use.
 
@@ -216,11 +216,11 @@ As a visitor, I want to download my avatar, so that I can save it for personal o
 #### Tasks
 - Implement a download feature that merges all avatar layers.
 - Optimize the download button for both desktop and mobile.
-</summary>
 </details> 
 
 <details>
-<summary><h4>User Story 7 (could-have)</h4>
+<summary><h4>User Story 7 (could-have)</h4></summary>
+  
 ### User Story 7 (could-have)
 - As a frequent visitor, I want to provide feedback about the Avatar Maker, so that I can contribute to its improvement.
 
@@ -233,11 +233,11 @@ As a visitor, I want to download my avatar, so that I can save it for personal o
 - Design a feedback form with rating options and a text box.
 - Add a backend to collect and store feedback data.
 - Display a confirmation message or thank-you page.
-</summary>
 </details> 
 
 <details>
-<summary><h4>User Story 8 (could-have)</h4>
+<summary><h4>User Story 8 (could-have)</h4></summary>
+  
 #### User Story 8 (could-have)
 As a frequent visitor, I want to share the Avatar Maker with others, so that my friends or colleagues can use it too.
 
@@ -248,11 +248,11 @@ As a frequent visitor, I want to share the Avatar Maker with others, so that my 
 #### Tasks
 - Add social media sharing buttons (e.g., Facebook, Twitter, LinkedIn).
 - Test sharing functionality to ensure links work correctly.
-</summary>
 </details> 
 
 <details>
-<summary><h4>User Story 9 (want-have)</h4>
+<summary><h4>User Story 9 (want-have)</h4></summary>
+  
 ### User Story 9 (want-have)
 As a visitor, I want to view samples of responsive avatars, so that I can get inspired and see the possibilities before creating my own.
 
@@ -265,11 +265,11 @@ As a visitor, I want to view samples of responsive avatars, so that I can get in
 - Design a gallery layout with a grid or carousel of avatars.
 - Link gallery items to the avatar editor with the preloaded design.
 - Ensure the gallery is responsive and loads efficiently
-</summary>
 </details> 
 
 <details>
-<summary><h4>User Story 10 (want-have)</h4>
+<summary><h4>User Story 10 (want-have)</h4></summary>
+  
 ### User Story 10 (want-have)
 As a visitor, I want to provide feedback on my experience, so that I can contribute to improving the Avatar Maker site.
 
@@ -282,5 +282,4 @@ As a visitor, I want to provide feedback on my experience, so that I can contrib
 - Design and implement a feedback form with fields for rating and comments.
 - Add a "Submit Feedback" button that sends data to the server or stores it locally.
 - Ensure the form is accessible and mobile-friendly.
-</summary>
 </details> 
