@@ -396,3 +396,75 @@ The Footer serves as a compact and functional closing section of the website, pr
 A planned addition to the website is an Avatar Inspiration Gallery, designed to inspire users and showcase the creative possibilities of the Avatar Maker. This feature will display a visually appealing grid or carousel of pre-designed avatars, each tailored to highlight unique styles and combinations. Users can browse the gallery and click on a sample to load it directly into the avatar editor for further customization. The responsive design will ensure seamless accessibility across all devices, enhancing the user experience. This gallery will serve as both an inspiration hub and a practical starting point for creating personalized avatars.
 
 <hr>
+
+## ARIA Labels Used
+
+### Modal Dialogs:
+Female Modal: aria-labelledby="femaleModalLabel", aria-hidden="true"
+Male Modal: aria-labelledby="maleModalLabel", aria-hidden="true"
+
+### Buttons:
+Contact Button: aria-label="Open contact form modal"
+Download Avatar Button: aria-label="Download your avatar and return to the introduction"
+
+### Social Media Links:
+aria-label="Visit my Instagram page (opens in a new tab)"
+<br>
+aria-label="Visit my LinkedIn page (opens in a new tab)"
+<br>
+aria-label="Connect on Whatsapp (opens in a new tab)"
+
+### Color Picker
+Pick your colors! text:
+Current: aria-label="Color Picker"
+Update Suggestion: Change to aria-labelledby and associate it with an ID for better semantic clarity.
+Hue Slider:
+aria-label="Adjust Hue"
+Add role="slider".
+Lightness Slider:
+aria-label="Adjust Lightness"
+Add role="slider".
+Color Swatches:
+Example for the red swatch:
+aria-label="Select red color"
+
+### Canvases:
+Each canvas should include a label to describe its purpose. For instance:
+aria-label="Avatar base layer"
+aria-label="Skin layer"
+aria-label="Hair layer"
+
+### Buttons
+Reset Button:
+aria-label="Reset avatar to default"
+Randomize Button:
+aria-label="Generate a random avatar"
+Download Button:
+aria-label="Download the current avatar"
+
+### Thumbnails
+Main Thumbnails:
+
+Each input should include a descriptive label. For example:
+Base Thumbnail: aria-label="Select base background for avatar"
+Hair Thumbnail: aria-label="Select hair style for avatar"
+Additional Thumbnails:
+
+Ensure each thumbnail has a unique and clear aria-label for selection. For example:
+aria-label="Select long wavy hair style"
+
+### Back Button:
+aria-label="Go back to main thumbnail options"
+
+## Download Avatar Section
+### Download Button:
+aria-label="Download your avatar in its current state"
+
+[Back to Content Table](#content)
+
+<br>
+<br>
+<hr>
+<hr>
+<br>
+<br>
