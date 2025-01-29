@@ -99,3 +99,23 @@ The visual design is playful and creative, reflecting the theme of personalizati
 - Hover effects, animations, and transparent overlays add subtle interactivity while maintaining focus on the core functionality.
 - 
 <hr>
+
+## User Stories
+### First-Time Visitors
+Goal: Quickly understand the purpose of the website and begin creating their avatar.
+- See a welcoming homepage with a clear introduction and instructions (User Story 1).
+- Learn about the Avatar Maker and its features through brief, engaging descriptions (User Story 2).
+- Access the gender selection section to start creating their avatar (User Story 3).
+- Experience seamless navigation across devices with responsive design (User Story 4).
+### Returning Visitors
+Goal: Continue customizing or exploring new features.
+- Revisit the Avatar Maker to experiment with different styles or features (User Story 5).
+- Use the download feature to save their avatar for personal or professional use (User Story 6).
+### Frequent Visitors
+Goal: Engage with the website and share feedback.
+- Explore updates or new features added to the Avatar Maker (User Story 7).
+- Share the Avatar Maker with friends or colleagues using the site’s social sharing options (User Story 8).
+- Provide feedback on their experience to contribute to future improvements (User Story 9).
+
+  <details open>
+<summary><h4>User Story 1 (must-have)</h4></summary>
