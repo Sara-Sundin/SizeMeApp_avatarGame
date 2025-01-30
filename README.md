@@ -459,8 +459,56 @@ aria-label="Select long wavy hair style"
 aria-label="Go back to main thumbnail options"
 
 ## Download Avatar Section
+
 ### Download Button:
 aria-label="Download your avatar in its current state"
+
+[Back to Content Table](#content)
+
+<br>
+<br>
+<hr>
+<hr>
+<br>
+<br>
+
+# TECHNOLOGIES USED
+- [Languages used to create the website](#languages-used-to-create-the-website)
+- [Frameworks & Libraries](#frameworks-and-libraries)
+- [Software](#software)
+- [Automated Tools](#automated-tools)
+- [ChatGPT](#chatgpt)
+- [Jest](#jest)
+  
+## Languages Used to Create the Website
+- HTML
+- CSS
+- JavaScript
+  
+## Frameworks and Libraries
+- Bootstrap (for responsive design and styling).
+- Font Awesome (for icons).
+- Google Fonts (for typography).
+- Iloveimg.com (to compress images for faster loading).
+- Jest (for testing javascript).
+  
+## Software
+- Adobe Illustrator (for wireframes and hero image creation).
+- Adobe Photoshop (for image editing and optimization).
+- Git (for version control).
+- GitHub (to save and store the website's code and files).
+- VS Code (repository).
+  
+## Automated Tools
+- Chrome DevTools (for debugging and testing).
+- Lighthouse (to analyze performance, accessibility, and SEO).
+- Am I Responsive (to test responsive design on various devices).
+- W3C HTML & CSS Validator (to validate and check the html and css).
+- JSHint (to validate and check the javascript code).
+- Techsini.com (for multidevice image and testing responsiveness).
+
+## Jest
+I used Jest to test the javascript code for the contact modal. Due to this I separated the javascript code for the contact modal in the repository.
 
 [Back to Content Table](#content)
 
