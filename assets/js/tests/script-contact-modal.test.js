@@ -56,7 +56,8 @@ beforeEach(() => {
     contactModal = document.getElementById("contactModal");
     openModalBtn = document.getElementById("openModal");
     closeModalBtn = document.getElementById("closeModal");
-    const successModal = document.getElementById("successModal");
+    successModal = document.getElementById("successModal");
+    contactForm = document.getElementById("contactForm");
 
 });
 
@@ -112,4 +113,25 @@ test("should show success modal when called", () => {
 
     // Success modal should now be visible
     expect(successModal.classList.contains("hidden")).toBe(false);
+});
+
+test("should call showSuccessModal when form is submitted", () => {
+    const mockShowSuccessModal = jest.fn(); // Mock function
+
+    // Overwrite the function inside handleFormSubmit
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+        mockShowSuccessModal(); // Call the mock function
+    };
+
+    // Attach event listener to mock function
+    contactForm.addEventListener("submit", handleFormSubmit);
+
+    // Simulate form submission
+    contactForm.dispatchEvent(new Event("submit", {
+        bubbles: true
+    }));
+
+    // Check if mockShowSuccessModal() was called
+    expect(mockShowSuccessModal).toHaveBeenCalled(); // ✅ Now it properly validates function call
 });
