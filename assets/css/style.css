@@ -367,12 +367,6 @@ h1 {
     background-color: #0056b3;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 480px) {
-    .modal-content-contact {
-        width: 90%;
-    }
-}
 
 /* Footer */
 footer {
