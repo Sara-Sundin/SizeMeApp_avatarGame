@@ -2,6 +2,7 @@
 const contactModal = document.getElementById("contactModal");
 const openModalBtn = document.getElementById("openModal");
 const closeModalBtn = document.getElementById("closeModal");
+const successModal = document.getElementById("successModal");
 
 // Function to show modal
 const showContactModal = () => {
@@ -18,3 +19,9 @@ const closeContactModal = () => {
 
 // Event listener to close modal on button click
 closeModalBtn.addEventListener("click", closeContactModal);
+
+const showSuccessModal = () => {
+    console.log("showSuccessModal() called!"); // Debugging line
+    contactModal.classList.add("hidden"); // Hide contact modal
+    successModal.classList.remove("hidden"); // Show success modal
+};
