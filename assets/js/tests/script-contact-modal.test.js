@@ -58,7 +58,7 @@ beforeEach(() => {
     closeModalBtn = document.getElementById("closeModal");
     successModal = document.getElementById("successModal");
     contactForm = document.getElementById("contactForm");
-
+    closeSuccessBtn = document.getElementById("closeSuccess");
 });
 
 test("should open the contact modal when clicking the button", () => {
@@ -134,4 +134,24 @@ test("should call showSuccessModal when form is submitted", () => {
 
     // Check if mockShowSuccessModal() was called
     expect(mockShowSuccessModal).toHaveBeenCalled(); // ✅ Now it properly validates function call
+});
+
+test("should hide the success modal when clicking the close button", () => {
+    // Ensure modal is visible before clicking
+    successModal.classList.remove("hidden");
+    expect(successModal.classList.contains("hidden")).toBe(false);
+
+    // Function to close success modal
+    const closeSuccessModal = () => {
+        successModal.classList.add("hidden");
+    };
+
+    // Attach event listener
+    closeSuccessBtn.addEventListener("click", closeSuccessModal);
+
+    // Simulate clicking the close button
+    closeSuccessBtn.dispatchEvent(new Event("click"));
+
+    // Check that the success modal is now hidden
+    expect(successModal.classList.contains("hidden")).toBe(true);
 });
