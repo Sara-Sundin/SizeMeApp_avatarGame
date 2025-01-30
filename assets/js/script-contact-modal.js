@@ -3,6 +3,7 @@ const contactModal = document.getElementById("contactModal");
 const openModalBtn = document.getElementById("openModal");
 const closeModalBtn = document.getElementById("closeModal");
 const successModal = document.getElementById("successModal");
+const closeSuccessBtn = document.getElementById("closeSuccess");
 
 // Function to show modal
 const showContactModal = () => {
@@ -36,3 +37,14 @@ const handleFormSubmit = (event) => {
 
 // Attach event listener for form submission
 contactForm.addEventListener("submit", handleFormSubmit);
+
+// Function to close the success modal
+const closeSuccessModal = () => {
+    successModal.classList.add("hidden");
+};
+
+// Event listener to close the success modal when clicking 
+closeSuccessBtn.addEventListener("click", closeSuccessModal);
+
+console.log("closeSuccessBtn:", closeSuccessBtn);
+console.log("successModal:", successModal);
