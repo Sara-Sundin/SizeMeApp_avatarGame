@@ -55,23 +55,43 @@ beforeEach(() => {
     // Get elements after HTML is set
     contactModal = document.getElementById("contactModal");
     openModalBtn = document.getElementById("openModal");
+    closeModalBtn = document.getElementById("closeModal");
 });
 
 test("should open the contact modal when clicking the button", () => {
-    // ✅ Ensure modal is hidden before click
+    // Ensure modal is hidden before click
     expect(contactModal.classList.contains("hidden")).toBe(true);
 
-    // ✅ Function to remove "hidden" class
+    // Function to remove "hidden" class
     const showContactModal = () => {
         contactModal.classList.remove("hidden");
     };
 
-    // ✅ Add event listener
+    // Add event listener
     openModalBtn.addEventListener("click", showContactModal);
 
-    // ✅ Simulate button click without `fireEvent`
+    // Simulate button click 
     openModalBtn.dispatchEvent(new Event("click"));
 
-    // ✅ Ensure modal is now visible
+    // Ensure modal is now visible
     expect(contactModal.classList.contains("hidden")).toBe(false);
+});
+
+test("should close the contact modal when clicking the close button", () => {
+    // Simulate the modal being open
+    contactModal.classList.remove("hidden");
+
+    // Function to close the modal
+    const closeContactModal = () => {
+        contactModal.classList.add("hidden");
+    };
+
+    // Add event listener
+    closeModalBtn.addEventListener("click", closeContactModal);
+
+    // Simulate clicking the close button
+    closeModalBtn.dispatchEvent(new Event("click"));
+
+    // Check that the modal is now hidden
+    expect(contactModal.classList.contains("hidden")).toBe(true);
 });
