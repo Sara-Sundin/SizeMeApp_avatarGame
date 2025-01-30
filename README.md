@@ -15,6 +15,8 @@ Welcome to the Avatar Maker! This web application allows users to design persona
 [USER EXPERIENCE (UX)](#user-experience)
 - The website across UX planes
 - User Stories
+- Accessibility
+- Aria labels
 <br>
 
 [DESIGN](#design)
@@ -24,8 +26,6 @@ Welcome to the Avatar Maker! This web application allows users to design persona
 - Wire Frames
 - Structure of the website
 - Features
-- Accessibility
-- Aria labels
 <br>
 
 [TECHNOLOGIES USED](#technologies-used)
@@ -72,6 +72,10 @@ Welcome to the Avatar Maker! This web application allows users to design persona
 <br>
 
 # USER EXPERIENCE
+- [UX planes](#the-website-across-UX-planes)
+- [User Stories](#user-stories)
+- [Accessibility](#accessibility)
+- [Aria labels](#aria-labels-used)
 
 ## The website across UX planes
 
@@ -289,6 +293,91 @@ As a visitor, I want to provide feedback on my experience, so that I can contrib
 
 [Back to Content Table](#content)
 
+<hr>
+
+## Accessibility
+The following measures has been taken to make sure the website is accessible.
+- Semantic Elements: Elements like header, main, and footer are used to provide clear structure, making it easier for screen readers to interpret content.
+- Descriptive Headings: Properly structured heading levels (e.g., h1, h2, h3) to create a logical document outline.
+- Alt Attributes: Every image includes meaningful alt text, ensuring visually impaired users understand the content.
+- Focusable Elements: Navigation links, buttons, and forms are fully accessible using only the keyboard (e.g., via tab and enter keys).
+- High Contrast: Text and background colors are chosen to meet the standards.
+- Flexible Layouts: The website is fully responsive, ensuring accessibility across various devices, including desktops, tablets, and smartphones.
+- Viewport Meta Tag: Ensures proper scaling and readability on mobile devices.
+- Labels for Form Fields: All form fields include <label> tags or appropriate aria-label attributes to guide users through form completion.
+- ARIA labels: Aria roles are added where necessary to define regions of the page for assistive technologies.
+- Readable Fonts: Fonts like Raleway are legible with sufficient size and line spacing for comfortable reading.
+- Scalable Text: Text can be resized without loss of content or functionality.
+- Accessibility Testing Tools: Lighthouse has been used to identify and address accessibility issues.
+
+<hr>
+
+## ARIA Labels Used
+
+### Modal Dialogs:
+Female Modal: aria-labelledby="femaleModalLabel", aria-hidden="true"
+Male Modal: aria-labelledby="maleModalLabel", aria-hidden="true"
+
+### Buttons:
+Contact Button: aria-label="Open contact form modal"
+Download Avatar Button: aria-label="Download your avatar and return to the introduction"
+
+### Social Media Links:
+aria-label="Visit my Instagram page (opens in a new tab)"
+<br>
+aria-label="Visit my LinkedIn page (opens in a new tab)"
+<br>
+aria-label="Connect on Whatsapp (opens in a new tab)"
+
+### Color Picker
+Pick your colors! text:
+Current: aria-label="Color Picker"
+Update Suggestion: Change to aria-labelledby and associate it with an ID for better semantic clarity.
+Hue Slider:
+aria-label="Adjust Hue"
+Add role="slider".
+Lightness Slider:
+aria-label="Adjust Lightness"
+Add role="slider".
+Color Swatches:
+Example for the red swatch:
+aria-label="Select red color"
+
+### Canvases:
+Each canvas should include a label to describe its purpose. For instance:
+aria-label="Avatar base layer"
+aria-label="Skin layer"
+aria-label="Hair layer"
+
+### Buttons
+Reset Button:
+aria-label="Reset avatar to default"
+Randomize Button:
+aria-label="Generate a random avatar"
+Download Button:
+aria-label="Download the current avatar"
+
+### Thumbnails
+Main Thumbnails:
+
+Each input should include a descriptive label. For example:
+Base Thumbnail: aria-label="Select base background for avatar"
+Hair Thumbnail: aria-label="Select hair style for avatar"
+Additional Thumbnails:
+
+Ensure each thumbnail has a unique and clear aria-label for selection. For example:
+aria-label="Select long wavy hair style"
+
+### Back Button:
+aria-label="Go back to main thumbnail options"
+
+## Download Avatar Section
+
+### Download Button:
+aria-label="Download your avatar in its current state"
+
+[Back to Content Table](#content)
+
 <br>
 <br>
 <hr>
@@ -303,9 +392,7 @@ As a visitor, I want to provide feedback on my experience, so that I can contrib
 - [Wire Frames](#wire-frames)
 - [Structure of the website](#structure-of-the-website)
 - [Features](#features)
-- [Accessibility](#accessibility)
-- [Aria labels](#aria-labels-used)
-- 
+  
 ## Colour Scheme
 ![Colour Scheme](assets/images/images_read_me/colours-project-2.png)
 <br>
@@ -396,74 +483,6 @@ The Footer serves as a compact and functional closing section of the website, pr
 
 #### Future Pages - Avatar Inspiration Gallery
 A planned addition to the website is an Avatar Inspiration Gallery, designed to inspire users and showcase the creative possibilities of the Avatar Maker. This feature will display a visually appealing grid or carousel of pre-designed avatars, each tailored to highlight unique styles and combinations. Users can browse the gallery and click on a sample to load it directly into the avatar editor for further customization. The responsive design will ensure seamless accessibility across all devices, enhancing the user experience. This gallery will serve as both an inspiration hub and a practical starting point for creating personalized avatars.
-
-<hr>
-
-## ARIA Labels Used
-
-### Modal Dialogs:
-Female Modal: aria-labelledby="femaleModalLabel", aria-hidden="true"
-Male Modal: aria-labelledby="maleModalLabel", aria-hidden="true"
-
-### Buttons:
-Contact Button: aria-label="Open contact form modal"
-Download Avatar Button: aria-label="Download your avatar and return to the introduction"
-
-### Social Media Links:
-aria-label="Visit my Instagram page (opens in a new tab)"
-<br>
-aria-label="Visit my LinkedIn page (opens in a new tab)"
-<br>
-aria-label="Connect on Whatsapp (opens in a new tab)"
-
-### Color Picker
-Pick your colors! text:
-Current: aria-label="Color Picker"
-Update Suggestion: Change to aria-labelledby and associate it with an ID for better semantic clarity.
-Hue Slider:
-aria-label="Adjust Hue"
-Add role="slider".
-Lightness Slider:
-aria-label="Adjust Lightness"
-Add role="slider".
-Color Swatches:
-Example for the red swatch:
-aria-label="Select red color"
-
-### Canvases:
-Each canvas should include a label to describe its purpose. For instance:
-aria-label="Avatar base layer"
-aria-label="Skin layer"
-aria-label="Hair layer"
-
-### Buttons
-Reset Button:
-aria-label="Reset avatar to default"
-Randomize Button:
-aria-label="Generate a random avatar"
-Download Button:
-aria-label="Download the current avatar"
-
-### Thumbnails
-Main Thumbnails:
-
-Each input should include a descriptive label. For example:
-Base Thumbnail: aria-label="Select base background for avatar"
-Hair Thumbnail: aria-label="Select hair style for avatar"
-Additional Thumbnails:
-
-Ensure each thumbnail has a unique and clear aria-label for selection. For example:
-aria-label="Select long wavy hair style"
-
-### Back Button:
-aria-label="Go back to main thumbnail options"
-
-## Download Avatar Section
-
-### Download Button:
-aria-label="Download your avatar in its current state"
-
-[Back to Content Table](#content)
 
 <br>
 <br>
