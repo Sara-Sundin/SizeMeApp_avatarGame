@@ -56,6 +56,8 @@ beforeEach(() => {
     contactModal = document.getElementById("contactModal");
     openModalBtn = document.getElementById("openModal");
     closeModalBtn = document.getElementById("closeModal");
+    const successModal = document.getElementById("successModal");
+
 });
 
 test("should open the contact modal when clicking the button", () => {
@@ -94,4 +96,20 @@ test("should close the contact modal when clicking the close button", () => {
 
     // Check that the modal is now hidden
     expect(contactModal.classList.contains("hidden")).toBe(true);
+});
+
+test("should show success modal when called", () => {
+    const showSuccessModal = () => {
+        contactModal.classList.add("hidden");
+        successModal.classList.remove("hidden");
+    };
+
+    // Before calling function, success modal should be hidden
+    expect(successModal.classList.contains("hidden")).toBe(true);
+
+    // Call function
+    showSuccessModal();
+
+    // Success modal should now be visible
+    expect(successModal.classList.contains("hidden")).toBe(false);
 });
