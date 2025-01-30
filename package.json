@@ -1,0 +1,23 @@
+{
+  "name": "sizemeapp_avatargame",
+  "version": "1.0.0",
+  "description": "# Avatar Maker Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sara-Sundin/SizeMeApp_avatarGame.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sara-Sundin/SizeMeApp_avatarGame/issues"
+  },
+  "homepage": "https://github.com/Sara-Sundin/SizeMeApp_avatarGame#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
