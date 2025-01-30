@@ -557,6 +557,142 @@ Visit this URL to view your deployed website.
 
 [Back to Content Table](#content)
 
+# TESTING
+- [Devices](#devices)
+- [Browsers](#browsers)
+- [Testing Grid](#testing-grid)
+- [Chrome Dev Tools](#chrome-dev-tools)
+- [Lighthouse](#lighthouse)
+- [Validation](#validation)
+- [Bugs & Fixes](#bugs-and-fixes)
+  
+## Devices
+
+### The testing on the site has been made on four different devices:
+Samsung Galaxy Mobile A25 <br>
+Apple IPad Mini <br>
+Apple IPad  <br>
+Lenovo Desktop 15"
+
+<hr>
+
+## Browsers
+### The different browsers used for testing:
+Google Chrome <br>
+Microsoft Edge <br>
+Safari <br>
+Firefox <br>
+Samsung Internet
+
+<hr>
+
+## Testing grid
+I have used a grid for testing all components of the website. After testing I have fixed any issues arising and put a note in the grid what has been done. See below dropdown menu for the grid that I created in an excel spreadsheet using a free template as base. [Link to excel spreadsheet](#)
+<details open><summary><h3>Testing Grid</h3></summary><img src=#></details>
+
+<hr>
+
+## Chrome Dev Tools
+I have used Chrome Dev Tools throughout the development of the website to test for responsiveness and troubleshooting.
+
+<hr>
+
+## Lighthouse
+I used Chrome Dev Tools Lightouse to help improve the website's performance, accessibility, SEO, and user experience. The first time I ran the testing I received messages for some of the pages for improvement I have recorded above each page below. The Lighthouse tool provided actionable insights to optimize speed and fix issues. After fixing the issues all areas turned green.
+
+### Home Page
+Improvement messages: 
+- Organise the headings for better accessability
+- Make images WEBP.
+<details open><summary><h4>Home Page Second run - after fixing the issues</h4></summary><img src=#></details>
+
+### Female Avatar Modal 
+Improvement messages: 
+- Organise the headings for better accessability
+- Make images WEBP.
+<details open><summary><h4>Project Page 1 Second run - after fixing the issues</h4></summary><img src=#></details>
+
+### Female Avatar Modal 
+Improvement messages: 
+- Organise the headings for better accessability
+- Make images WEBP.
+<details open><summary><h4>Project Page 1 Second run - after fixing the issues</h4></summary><img src=#></details>
+
+### Contact Modal 
+Improvement messages: 
+- Organise the headings for better accessability
+- Make images WEBP.
+<details open><summary><h4>Project Page 1 Second run - after fixing the issues</h4></summary><img src=#></details>
+
+<hr>
+
+## Validation
+The HTML, CSS and Javascript code has been validated on below editors. The issues arising has been recorded in the dropdown menus.
+
+### W3C HTML Validator
+I have included screenprints of the first and final validation of the HTML with W3C validation on all pages. Mostly I needed to remove spaces from the images.
+<br>
+
+#### Home Page Fixes
+<details open><summary><h4>Home Page-Initial Check </h4></summary><img src=assets/docs/validation_html_1st_check_homepage.jpg></details>
+- remove spaces from images
+<details open><summary><h4>Home Page-Final Check </h4></summary><img src=assets/docs/validation_html_1st_check_successpage.jpg></details>
+
+#### Female Avatar Modal Fixes
+<details><summary><h4>Project Page 1-Initial Check </h4></summary><img src=assets/docs/validation_html_1st_check_project_1.jpg></details>
+- remove spaces from images
+<br>
+- added aria label on gallery
+<br>
+- added main opening tag
+<details><summary><h4>Project Page 1-Final Check </h4></summary><img src=assets/docs/validation_html_1st_check_successpage.jpg></details>
+
+#### Male Avatar Modal Fixes
+<details><summary><h4>Project Page 2-Initial Check </h4></summary><img src=assets/docs/validation_html_1st_check_project_2.jpg></details>
+- remove spaces from images
+<br>
+- added aria label on gallery
+<br>
+- added main opening tag
+<details><summary><h4>Project Page 2-Final Check </h4></summary><img src=assets/docs/validation_html_1st_check_successpage.jpg></details>
+
+#### Contact Modal Fixes
+<details><summary><h4>Project Page 3-Initial Check </h4></summary><img src=assets/docs/validation_html_1st_check_project_3.jpg></details>
+- remove spaces from images
+<br>
+- added aria label on gallery
+<br>
+- added main opening tag
+<details><summary><h4>Project Page 3-Final Check </h4></summary><img src=assets/docs/validation_html_1st_check_successpage.jpg></details>
+
+### W3C CSS Validator
+The CSS was succesfully validated.
+
+![Screenshot of the CSS Validation](assets/docs/validation_css.jpg)
+
+<hr>
+
+### Bugs and Fixes
+Here I have recorded some issues that I spent excessive time solving with the solutions indicated below.
+
+#### The media queiry for the male and female modals were not responsive.
+
+<details open><summary><h4>Image</h4></summary><img src=assets/docs/gap_bug_image.jpg></details>
+
+#### Solution  (partly unfixed)
+After many hours I ran the whole code through ChatGPT and it turned out there was a missing section opening tag for the porfolio section above. It did not seem related so I did not look at this section to begin with. In the end it was just a simple mistake.
+
+<details open><summary><h4>Solution Code</h4></summary><img src=assets/docs/gap_bug_code.jpg></details>
+
+[Back to Content Table](#content)
+
+<br>
+<br>
+<hr>
+<hr>
+<br>
+<br>
+
 <br>
 <br>
 <hr>
