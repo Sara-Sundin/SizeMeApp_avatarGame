@@ -172,25 +172,22 @@ h1 {
 
 .responsive-iframe-container {
     position: relative;
-    width: 120%;
-    height: 150%;
-    min-height: 520px;
+    width: 100%;
+    /* Make the container flexible */
+    height: 750px;
     overflow: hidden;
-    /* Ensure no overflow when scaling */
 }
-
 
 .responsive-iframe-container iframe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 120%;
-    height: 150%;
+    width: 100%;
+    /* Make iframe fill container */
+    height: 100%;
     border: 0;
-    transform: scale(0.7);
-    /* Scale down to 80% of the original size */
-    transform-origin: top left;
-    /* Scale from the top-left corner */
+    transform: none;
+    /* Remove scaling */
 }
 
 /* Download Avatar Section */
@@ -484,21 +481,11 @@ footer {
     }
 }
 
-
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
 
     .responsive-iframe-container {
-        width: 100%;
-        min-height: 750px;
-    }
-
-    .responsive-iframe-container iframe {
-        width: 100%;
-        height: 100%;
-        transform: scale(1);
-        /* Adjust scaling for larger screens */
-        transform-origin: top left;
+        height: 800px;
     }
 
     .modal-title {
@@ -523,9 +510,7 @@ footer {
     }
 
     .responsive-iframe-container {
-        max-width: 100%;
-        min-height: 400px;
-        min-width: 950px;
+        height: 400px;
     }
 
     .modal.fade {
