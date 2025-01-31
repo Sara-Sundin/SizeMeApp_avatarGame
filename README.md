@@ -470,7 +470,10 @@ The wireframes were created in Adobe Illustrator for mobile, tablet and desktop.
 
 ## Features
 
-### Features on all pages
+### Animation Intro
+When accessing the website an animation intro displaying Ready.. Set.. Create! One word showing at a time with the word expanding at the end of each display. The intro becomes hidden and the main page displays.
+
+<details open><summary><h4>Animation Intro</h4></summary><img src=assets/images/images_read_me/animation-intro.jpg>></details>
 
 #### Favicon
 The website includes a custom favicon to enhance its identity and improve user experience. The favicon, a small yet recognizable icon displayed in the browser tab, represents the creative and interactive nature of the Avatar Maker.
