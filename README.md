@@ -643,31 +643,16 @@ I have used Chrome Dev Tools throughout the development of the website to test f
 <hr>
 
 ## Lighthouse
-I used Chrome Dev Tools Lightouse to help improve the website's performance, accessibility, SEO, and user experience. The first time I ran the testing I received messages for some of the pages for improvement I have recorded above each page below. The Lighthouse tool provided actionable insights to optimize speed and fix issues. After fixing the issues all areas turned green.
+I used Chrome Dev Tools Lightouse to help improve the website's performance, accessibility, SEO, and user experience. The first time I ran the testing I received messages for improvement that I have recorded below. The Lighthouse tool provided actionable insights to optimize speed and fix issues. For the second run with Lighthouse I disabled the intro animation since it disturbed the accessability in terms of the color choices on the third word in the animation (Create!). I did not want to change the color since it was obvious it would not interfere with the overall user experience. After fixing the issues recorded below  all areas turned green and I received a score of 100 for all categories accompanied with a firework animation on the page.
 
-### Home Page
-Improvement messages: 
-- Organise the headings for better accessability
-- Make images WEBP.
-<details open><summary><h4>Home Page Second run - after fixing the issues</h4></summary><img src=#></details>
+<details><summary><h4>1st run with Lighthouse</h4></summary><img src=assets/images/images_read_me/Lighthouse 1st run.jpg></details>
 
-### Female Avatar Modal 
 Improvement messages: 
-- Organise the headings for better accessability
-- Make images WEBP.
-<details open><summary><h4>Project Page 1 Second run - after fixing the issues</h4></summary><img src=#></details>
-
-### Female Avatar Modal 
-Improvement messages: 
-- Organise the headings for better accessability
-- Make images WEBP.
-<details open><summary><h4>Project Page 1 Second run - after fixing the issues</h4></summary><img src=#></details>
-
-### Contact Modal 
-Improvement messages: 
-- Organise the headings for better accessability
-- Make images WEBP.
-<details open><summary><h4>Project Page 1 Second run - after fixing the issues</h4></summary><img src=#></details>
+- Organise the headings for better accessability.
+- The word Create! in the animation intro do not have enough contrast.
+- Missing meta tag for description.
+  
+<details open><summary><h4>2nd run with Lighthouse - after fixing the issues</h4></summary><img src=assets/images/images_read_me/Lighthouse 2nd run.jpg></details>
 
 <hr>
 
