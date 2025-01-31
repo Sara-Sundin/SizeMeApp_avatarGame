@@ -514,12 +514,12 @@ The Contact Section offers an intuitive way for users to connect. At its heart i
 #### Contact Modal
 The contact modal is displaying a clean and simple form for submitting inquiries or feedback. The form includes fields for name, email, and message, ensuring all necessary details are collected efficiently. Designed for ease of use, the modal keeps the user on the page without the need for redirection.
 
-<details open><summary><h4>Contact Modal Image - Desktop</h4></summary><img src=#>></details>
+<details open><summary><h4>Contact Modal Image - Desktop</h4></summary><img src=assets/images/images_read_me/contact-modal-desktop.jpg>></details>
 
 #### Success Modal
 The Success Modal Window provides users with immediate feedback after successfully submitting the contact form. Once the "Send" button is pressed, the contact modal gracefully closes, and a success modal appears, confirming that the message has been sent. This modal includes a brief thank-you message to acknowledge the user's effort and reassure them that their inquiry has been received.
 
-<details open><summary><h4>Success Modal Image - Desktop</h4></summary><img src=#>></details>
+<details open><summary><h4>Success Modal Image - Desktop</h4></summary><img src=assets/images/images_read_me/success-modal-desktop.jpg>></details>
 
 #### Footer
 The Footer serves as a compact and functional closing section of the website, providing essential information and quick access to external links. It includes prominent social media icons, enabling users to easily connect on platforms like Instagram, LinkedIn, and WhatsApp. The footer's minimalist design aligns with the overall aesthetic of the site, ensuring it complements rather than distracts. The three social media icons are added with Font Awesome.
