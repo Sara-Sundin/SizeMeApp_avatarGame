@@ -83,18 +83,25 @@ Welcome to the Avatar Maker! This web application allows users to design persona
 I have included a diagram to provide a clear overview of the project's file structure, categorizing files based on their type and purpose. The project consists of HTML, CSS, and JavaScript files, along with automated tests written using Jest.
 ### HTML (Content)
 index.html – The main entry point of the application, linking all necessary styles and scripts.
+<hr>
 avatar-female.html & avatar-male.html – Separate pages for different avatar selections.
+
 ### CSS (Styling)
 style.css – Main stylesheet for the project.
+<hr>
 style-avatar.css – Specific styles for avatar-related pages.
+
 ### JavaScript (Functionality)
 script.js – Primary script handling general interactions.
+<hr>
 script-avatar-female.js & script-avatar-male.js – Control avatar-related interactions.
+<hr>
 script-contact.js – Manages the contact form and modal. I separated this since I tested this code with jest.
+
 ### Testing (Jest)
 script-contact-test.js – Jest test suite ensuring that script-contact.js functions correctly.
 
-<details open><summary><h4>Repository Overview</h4></summary><#></details>
+<details open><summary><h4>Repository Overview</h4></summary><img scr=assets/images/images_read_me/repository-overview.jpg></details>
 
 [Back to Content Table](#content)
 
@@ -424,9 +431,9 @@ aria-label="Download your avatar in its current state"
 - [Features](#features)
 
 ## Design Planning
-This diagram represents the initial planning and user flow for the website, designed to create a personalized user experience by incorporating body type selection, user preferences, and avatar customization. The original concept was more extensive than the final outcome, the avatar maker was first intended to be a part of a larger flow from registration as a user for another application. This diagram illustrates the planning of the journey from registration to avatar creation and user preference collection. It serves as a reference for future improvements and expansion.
+The original concept for the website was more extensive than the final outcome, the avatar maker was first intended to be a part of a larger flow from registration as a user for another application. This diagram represents the initial planning and user flow for the website, designed to create a personalized user experience by incorporating body type selection, user preferences, and avatar customization. The diagram illustrates the planning of the journey and serves as a reference for future improvements and expansion.
 
-<details open><summary><h4>Design Planning Diagram</h4></summary><img src=#></details>
+<details open><summary><h4>Design Planning Diagram</h4></summary><img src=assets/images/images_read_me/design_planning.jpg></details>
   
 ## Colour Scheme
 ![Colour Scheme](assets/images/images_read_me/colours-project-2.png)
