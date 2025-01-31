@@ -83,7 +83,7 @@ Welcome to the Avatar Maker! This web application allows users to design persona
 I have included a diagram to provide a clear overview of the project's file structure, categorizing files based on their type and purpose. The project consists of HTML, CSS, and JavaScript files, along with automated tests written using Jest.
 ### HTML (Content)
 index.html – The main entry point of the application, linking all necessary styles and scripts.
-<hr>
+
 avatar-female.html & avatar-male.html – Separate pages for different avatar selections.
 
 ### CSS (Styling)
