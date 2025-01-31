@@ -407,8 +407,6 @@ aria-label="Select long wavy hair style"
 ### Back Button:
 aria-label="Go back to main thumbnail options"
 
-## Download Avatar Section
-
 ### Download Button:
 aria-label="Download your avatar in its current state"
 
