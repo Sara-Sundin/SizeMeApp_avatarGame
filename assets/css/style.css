@@ -1,17 +1,17 @@
 /* General Styling*/
-main {
-    color: white;
+body {
+    background-color: #000 !important;
+    margin: 0;
 }
 
 header {
     color: white;
 }
 
-body {
-    background-color: #000 !important;
-    margin: 0;
+main {
+    color: white;
+    font-family: "Lato", sans-serif;
 }
-
 
 .hidden {
     display: none !important;
