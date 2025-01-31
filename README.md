@@ -12,7 +12,7 @@ Welcome to the Avatar Maker! This web application allows users to design persona
 
 # CONTENT
 
-[REPOSITORY OVERVIEW)](#repository-overview)
+[REPOSITORY OVERVIEW](#repository-overview)
 - Project Structure & Explanation
 <br>
 
@@ -24,6 +24,7 @@ Welcome to the Avatar Maker! This web application allows users to design persona
 <br>
 
 [DESIGN](#design)
+- Design Planning
 - Colour Scheme
 - Typography
 - Imagery
@@ -414,12 +415,18 @@ aria-label="Download your avatar in its current state"
 <br>
 
 # DESIGN
+- [Design Planning](#design-planning)
 - [Colour Scheme](#colour-scheme)
 - [Typography](#typography)
 - [Imagery](#imagery)
 - [Wire Frames](#wire-frames)
 - [Structure of the website](#structure-of-the-website)
 - [Features](#features)
+
+## Design Planning
+This diagram represents the initial planning and user flow for the website, designed to create a personalized user experience by incorporating body type selection, user preferences, and avatar customization. The original concept was more extensive than the final outcome, the avatar maker was first intended to be a part of a larger flow from registration as a user for another application. This diagram illustrates the planning of the journey from registration to avatar creation and user preference collection. It serves as a reference for future improvements and expansion.
+
+<details open><summary><h4>Design Planning Diagram</h4></summary><img src=#></details>
   
 ## Colour Scheme
 ![Colour Scheme](assets/images/images_read_me/colours-project-2.png)
