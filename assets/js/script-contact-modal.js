@@ -5,46 +5,46 @@ const closeModalBtn = document.getElementById("closeModal");
 const successModal = document.getElementById("successModal");
 const closeSuccessBtn = document.getElementById("closeSuccess");
 
-// Function to show modal
-const showContactModal = () => {
-    contactModal.classList.remove("hidden");
-};
+document.addEventListener("DOMContentLoaded", () => {
 
-// Event listener to show modal
-openModalBtn.addEventListener("click", showContactModal);
+    // Function to show modal
+    const showContactModal = () => {
+        contactModal.classList.remove("hidden");
+    };
 
-// Function to close the modal
-const closeContactModal = () => {
-    contactModal.classList.add("hidden"); // Correct method to hide modal
-};
+    // Event listener to show modal
+    openModalBtn.addEventListener("click", showContactModal);
 
-// Event listener to close modal on button click
-closeModalBtn.addEventListener("click", closeContactModal);
+    // Function to close the modal
+    const closeContactModal = () => {
+        contactModal.classList.add("hidden"); // Correct method to hide modal
+    };
 
-// Function to show success modal
-const showSuccessModal = () => {
-    console.log("showSuccessModal() called!"); // Debugging
-    contactModal.classList.add("hidden"); // Hide contact modal
-    successModal.classList.remove("hidden"); // Show success modal
-};
+    // Event listener to close modal on button click
+    closeModalBtn.addEventListener("click", closeContactModal);
 
-// Function to handle form submission
-const handleFormSubmit = (event) => {
-    event.preventDefault(); // Prevent page reload
-    console.log("Form submitted!"); // Debugging
-    showSuccessModal(); // Show success modal after submission
-};
+    // Function to show success modal
+    const showSuccessModal = () => {
+        console.log("showSuccessModal() called!"); // Debugging
+        contactModal.classList.add("hidden"); // Hide contact modal
+        successModal.classList.remove("hidden"); // Show success modal
+    };
 
-// Attach event listener for form submission
-contactForm.addEventListener("submit", handleFormSubmit);
+    // Function to handle form submission
+    const handleFormSubmit = (event) => {
+        event.preventDefault(); // Prevent page reload
+        console.log("Form submitted!"); // Debugging
+        showSuccessModal(); // Show success modal after submission
+    };
 
-// Function to close the success modal
-const closeSuccessModal = () => {
-    successModal.classList.add("hidden");
-};
+    // Attach event listener for form submission
+    contactForm.addEventListener("submit", handleFormSubmit);
 
-// Event listener to close the success modal when clicking 
-closeSuccessBtn.addEventListener("click", closeSuccessModal);
+    // Function to close the success modal
+    const closeSuccessModal = () => {
+        successModal.classList.add("hidden");
+    };
 
-console.log("closeSuccessBtn:", closeSuccessBtn);
-console.log("successModal:", successModal);
+    // Event listener to close the success modal when clicking 
+    closeSuccessBtn.addEventListener("click", closeSuccessModal);
+});
