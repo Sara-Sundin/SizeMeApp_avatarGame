@@ -88,20 +88,20 @@ avatar-female.html & avatar-male.html – Separate pages for different avatar se
 
 ### CSS (Styling)
 style.css – Main stylesheet for the project.
-<hr>
+
 style-avatar.css – Specific styles for avatar-related pages.
 
 ### JavaScript (Functionality)
 script.js – Primary script handling general interactions.
-<hr>
+
 script-avatar-female.js & script-avatar-male.js – Control avatar-related interactions.
-<hr>
+
 script-contact.js – Manages the contact form and modal. I separated this since I tested this code with jest.
 
 ### Testing (Jest)
 script-contact-test.js – Jest test suite ensuring that script-contact.js functions correctly.
 
-<details open><summary><h4>Repository Overview</h4></summary><img scr=assets/images/images_read_me/repository-overview.jpg></details>
+<details open><summary><h4>Repository Overview</h4></summary><img src=assets/images/images_read_me/repository-overview.jpg></details>
 
 [Back to Content Table](#content)
 
@@ -434,6 +434,8 @@ aria-label="Download your avatar in its current state"
 The original concept for the website was more extensive than the final outcome, the avatar maker was first intended to be a part of a larger flow from registration as a user for another application. This diagram represents the initial planning and user flow for the website, designed to create a personalized user experience by incorporating body type selection, user preferences, and avatar customization. The diagram illustrates the planning of the journey and serves as a reference for future improvements and expansion.
 
 <details open><summary><h4>Design Planning Diagram</h4></summary><img src=assets/images/images_read_me/design_planning.jpg></details>
+
+<hr>
   
 ## Colour Scheme
 ![Colour Scheme](assets/images/images_read_me/colours-project-2.png)
