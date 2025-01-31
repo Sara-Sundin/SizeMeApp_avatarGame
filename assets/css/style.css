@@ -161,13 +161,21 @@ h1 {
     --bs-modal-padding: 0.4rem;
 }
 
+.modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
 .modal-title {
     color: #000;
     font-family: "Fredoka", sans-serif;
     font-weight: 100;
     text-align: center;
-    padding-left: 45px;
-    font-size: 20px;
+    width: 100%;
 }
 
 .responsive-iframe-container {
@@ -487,18 +495,12 @@ footer {
     .responsive-iframe-container {
         height: 800px;
     }
+}
 
-    .modal-title {
-        padding-left: 105px;
-        font-size: 35px;
-    }
-
-    .background-container .btn {
-        height: 50px;
-        width: 120px;
-        font-size: 13px;
-    }
-
+.background-container .btn {
+    height: 50px;
+    width: 120px;
+    font-size: 13px;
 }
 
 /* Medium devices (tablets, 1024px and up) */
@@ -519,7 +521,6 @@ footer {
     }
 
     .modal-title {
-        padding-left: 355px;
         font-size: 35px;
     }
 
