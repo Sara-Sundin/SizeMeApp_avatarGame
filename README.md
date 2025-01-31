@@ -12,6 +12,10 @@ Welcome to the Avatar Maker! This web application allows users to design persona
 
 # CONTENT
 
+[REPOSITORY OVERVIEW)](#repository-overview)
+- Project Structure & Explanation
+<br>
+
 [USER EXPERIENCE (UX)](#user-experience)
 - The website across UX planes
 - User Stories
@@ -71,7 +75,31 @@ Welcome to the Avatar Maker! This web application allows users to design persona
 <br>
 <br>
 
-# USER EXPERIENCE
+# REPOSITORY OVERVIEW
+- [Project Structure & Explanation](#project-structure-&-explanation)
+
+## Project Structure & Explanation
+I have included a diagram to provide a clear overview of the project's file structure, categorizing files based on their type and purpose. The project consists of HTML, CSS, and JavaScript files, along with automated tests written using Jest.
+### HTML (Content)
+index.html – The main entry point of the application, linking all necessary styles and scripts.
+avatar-female.html & avatar-male.html – Separate pages for different avatar selections.
+### CSS (Styling)
+style.css – Main stylesheet for the project.
+style-avatar.css – Specific styles for avatar-related pages.
+### JavaScript (Functionality)
+script.js – Primary script handling general interactions.
+script-avatar-female.js & script-avatar-male.js – Control avatar-related interactions.
+script-contact.js – Manages the contact form and modal. I separated this since I tested this code with jest.
+### Testing (Jest)
+script-contact-test.js – Jest test suite ensuring that script-contact.js functions correctly.
+
+<details open><summary><h4>Repository Overview</h4></summary><#></details>
+
+[Back to Content Table](#content)
+
+<hr>
+
+- # USER EXPERIENCE
 - [UX planes](#the-website-across-UX-planes)
 - [User Stories](#user-stories)
 - [Accessibility](#accessibility)
