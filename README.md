@@ -745,6 +745,65 @@ I spent most of my time debugging why the canvas did not draw after adding anoth
 <br>
 <br>
 
+# REFERENCES
+- [Media References](#media-references)
+- [Content References](#content-references)
+
+## Media References
+https://www.youtube.com/watch?v=xwKbtUP87Dk
+https://www.youtube.com/watch?v=W6NZfCO5SIk
+https://www.youtube.com/watch?v=PkZNo7MFNFg
+https://www.w3schools.com/html/html5_canvas.asp
+- Slack Community and information
+- Stand Ups with Kay on Thursdays
+
+## Content References
+- Free Download Template for website checking from https://www.hubspot.com
+- Code Institute Tutorials and Learning Content
+
+[Back to Content Table](#content)
+
+<br>
+<br>
+<hr>
+
+# CREDITS
+- [Images](#images)
+- [Code](#code)
+
+## Animation Intro
+I have borrowed the javascript for the animation intro at the start of the page from a designer called Tobias Ahlin. You can find his work at https://tobiasahlin.com. I modified te code by changing the letters and colors of the text to implement my own design.
+
+## Images
+All images are created by myself in Adobe Illustrator.
+
+## Code
+- The Javascript for closing navbar from Code Institute
+- Code Institute - I have used small snippets of code in the source code for Love Running and Boardwalk Games projects in the gallery section and contact form.
+- I have used ChatGPT for problem solving and ideas throughout the project.
+- I received some tips from my mentor, mostly in terms of Bootstrap classes that is used.
+
+## ChatGPT
+I have used ChatGPT throughout the process as a sparring partner for ideas, troubleshooting, and problem-solving. I have asked ChatGPT on solutions with the HTML, styling CSS and solutions for Javascript that I have followed in either writing or copied snippets of code into the IDE.
+
+<hr>
+<hr>
+<br>
+<br>
+
+# PERSONAL NOTES
+This project was a fun yet challenging deep dive into canvas-based rendering, allowing users to customize avatars by layering different facial features, clothing, and accessories. My goal was to create an intuitive, interactive experience with a clean UI and smooth interactions—something I’m proud to say I think I achieved.
+
+Throughout this process, I not only strengthened my event-driven JavaScript skills but also refined my experience with HTML, CSS, and Chrome Developer Tools. There were moments when I genuinely doubted I would be able to finish due to JavaScript syntax, but pushing through those challenges made the result even more rewarding.
+
+One personal touch I added was the red and blue color scheme on the website's gender selection, a subtle reference to the red and blue pill scene in The Matrix. Just like Neo, I chose the red pill of knowledge, diving headfirst into learning and overcoming obstacles.
+
+# ACKNOWLEDGMENTS
+I want to thank my mentor Rory Patrick who organized to have the final mentor session for the project even though he was on holidays. Also a big shout out to the Slack community at Code Institute and the peers who are always eager to help out.
+
+[Back to Content Table](#content)
+
+
 <br>
 <br>
 <hr>
