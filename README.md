@@ -139,7 +139,7 @@ The visual design is playful and creative, reflecting the theme of personalizati
 - Bright, welcoming colors and clean typography set a friendly tone.
 - Background images and avatar previews enhance visual appeal and interactivity.
 - Hover effects, animations, and transparent overlays add subtle interactivity while maintaining focus on the core functionality.
-- 
+
 <hr>
 
 ## User Stories
@@ -156,9 +156,8 @@ Goal: Continue customizing or exploring new features.
 - Use the download feature to save their avatar for personal or professional use (User Story 6).
 ### Frequent Visitors
 Goal: Engage with the website and share feedback.
-- Explore updates or new features added to the Avatar Maker (User Story 7).
-- Share the Avatar Maker with friends or colleagues using the site’s social sharing options (User Story 8).
-- Provide feedback on their experience to contribute to future improvements (User Story 10).
+- Share the Avatar Maker with friends or colleagues using the site’s social sharing options (User Story 7).
+- Provide feedback on their experience to contribute to future improvements (User Story 8).
 
 <details open>
 <summary><h4>User Story 1 (must-have)</h4></summary>
@@ -308,23 +307,6 @@ As a visitor, I want to view samples of responsive avatars, so that I can get in
 - Design a gallery layout with a grid or carousel of avatars.
 - Link gallery items to the avatar editor with the preloaded design.
 - Ensure the gallery is responsive and loads efficiently
-</details> 
-
-<details>
-<summary><h4>User Story 10 (want-have)</h4></summary>
-  
-### User Story 10 (want-have)
-As a visitor, I want to provide feedback on my experience, so that I can contribute to improving the Avatar Maker site.
-
-#### Acceptance Criteria
-- A feedback form is accessible from the main navigation or footer.
-- The form allows users to rate their experience and leave comments.
-- A confirmation message is displayed after successful submission.
-
-#### Tasks
-- Design and implement a feedback form with fields for rating and comments.
-- Add a "Submit Feedback" button that sends data to the server or stores it locally.
-- Ensure the form is accessible and mobile-friendly.
 </details> 
 
 [Back to Content Table](#content)
