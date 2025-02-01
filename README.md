@@ -664,19 +664,19 @@ I have included screenprints of the first and final validation of the HTML with 
 <br>
 
 <details><summary><h4>Index Page HTML- Initial Check </h4></summary><img src=assets/images/images_read_me/index_page_html_initial_check.jpg></details>
-- space on text for image favicon - removed<hr>
+- space on text for image favicon - removed<br>
 - missing heading for gallery section - added.
 <details open><summary><h4>Index Page HTML- Final Check </h4></summary><img src=assets/images/images_read_me/index_page_html_final_check.jpg></details>
 
 <details><summary><h4>Female Avatar Modal HTML- Initial Check </h4></summary><img src=assets/images/images_read_me/female_avatar_html_initial_check.jpg></details>
-- misuse of aria-label - removed.<hr>
+- misuse of aria-label - removed.<br>
 - backlash on open tags - removed.
 <details open><summary><h4>Female Avatar Modal HTML- Final Check </h4></summary><img src=assets/images/images_read_me/female_avatar_html_final_check.jpg></details>
 
 <details open><summary><h4>Male Avatar Modal HTML- Initial Check (no fixes </h4></summary><img src=assets/images/images_read_me/male_avatar_html_final_check.jpg></details>
 
 ### W3C CSS Validator
-The CSS was succesfully validated.
+The CSS was succesfully validated for all pages.
 
 ![Screenshot of the CSS Validation](assets/images/images_read_me/css_validation_all_pages.jpg)
 
