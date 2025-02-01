@@ -519,7 +519,7 @@ function randomizeAvatar() {
   }
 
   for (const key in options) {
-    if (options.hasOwnProperty(key)) { // ✅ Only process own properties
+    if (options.hasOwnProperty(key)) { // Only process own properties
       const randomOption = getRandomOption(options[key]);
 
       if (key === "nose") {
