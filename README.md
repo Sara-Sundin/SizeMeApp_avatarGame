@@ -726,18 +726,9 @@ After removing below css from the iframe the media queiry returned back to norma
 The swatches in the color picker did not work when picking the colors.
 
 #### Solution
-Since I had hex colors indicated in the swatches for the color picker they did not work due to the color-picker being set up as rgb. When adding the HexToRgb as the code the swatches became active.
+Since I had hex colors indicated in the swatches for the color picker they did not work due to the color-picker being set up as rgb. When adding the HexToRgb as the code in the dropdown menu the swatches became active.
 
-function hexToRgb(hex) {
-  let c = hex.substring(1).split('');
-  if (c.length === 3) {
-    c = [c[0], c[0], c[1], c[1], c[2], c[2]];
-  }
-  const r = parseInt(c[0] + c[1], 16);
-  const g = parseInt(c[2] + c[3], 16);
-  const b = parseInt(c[4] + c[5], 16);
-  return [r, g, b];
-}
+<details open><summary><h4>Code for HEX swatches</h4></summary><img src=assets/images/images_read_me/hex-to-rgb.jpg></details>
 
 #### Canvas
 The canvas did not draw for several reasons during the development.
