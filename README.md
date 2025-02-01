@@ -499,12 +499,10 @@ A planned addition to the website is an Avatar Inspiration Gallery, designed to 
 - Adobe Photoshop (for image editing and optimization).
 - Git (for version control).
 - GitHub (to save and store the website's code and files).
-- VS Code (repository).
   
 ## Automated Tools
 - Chrome DevTools (for debugging and testing).
 - Lighthouse (to analyze performance, accessibility, and SEO).
-- Am I Responsive (to test responsive design on various devices).
 - W3C HTML & CSS Validator (to validate and check the html and css).
 - JSHint (to validate and check the javascript code).
 - Techsini.com (for multidevice image and testing responsiveness).
