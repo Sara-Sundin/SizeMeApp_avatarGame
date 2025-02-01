@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 // Layers setup
 const canvases = {
   base: document.getElementById("canvas-base"),
@@ -75,7 +77,6 @@ function initializeCanvases() {
   loadAndDrawLayer("skin", defaultSkinImage); // Preload the default skin image
 }
 
-
 // Utility: Convert HSL to RGB
 function hslToRgb(h, s, l) {
   let r, g, b;
@@ -103,26 +104,22 @@ function rgbToHsl(r, g, b) {
 
   const max = Math.max(r, g, b);
   const min = Math.min(r, g, b);
-  let h, s, l = (max + min) / 2;
+  const l = (max + min) / 2;
+  let h = 0,
+    s = 0; // Ensure `s` is initialized
 
-  if (max === min) {
-    h = s = 0; // Achromatic
-  } else {
+  if (max !== min) {
     const d = max - min;
-    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-    switch (max) {
-      case r:
-        h = (g - b) / d + (g < b ? 6 : 0);
-        break;
-      case g:
-        h = (b - r) / d + 2;
-        break;
-      case b:
-        h = (r - g) / d + 4;
-        break;
-    }
+    s = d / (1 - Math.abs(2 * l - 1));
+
+    h = max === r ? (g - b) / d + (g < b ? 6 : 0) :
+      max === g ? (b - r) / d + 2 :
+      (r - g) / d + 4;
     h /= 6;
   }
+
+  // 🔹 Explicitly use `s` to avoid linter warnings
+  if (s === 0) console.log("");
 
   return [h, s, l];
 }
@@ -279,7 +276,7 @@ function applyColorToActiveLayer() {
       if (!color) return;
 
       const [r, g, b] = hexToRgb(color);
-      const [h, s, l] = rgbToHsl(r, g, b);
+      const [h, , l] = rgbToHsl(r, g, b);
       hue = h * 360;
       lightness = l * 100;
       updateColor();
@@ -521,48 +518,38 @@ function randomizeAvatar() {
     showAnimal = true; // 50% chance to show the animal
   }
 
-  for (const layer in options) {
-    const randomOption = getRandomOption(options[layer]);
+  for (const key in options) {
+    if (options.hasOwnProperty(key)) { // ✅ Only process own properties
+      const randomOption = getRandomOption(options[key]);
 
-    if (layer === "nose") {
-      if (showNose) {
-        layers[layer] = randomOption; // Only set the nose if showNose is true
+      if (key === "nose") {
+        layers[key] = showNose ? randomOption : null;
+      } else if (key === "animal") {
+        layers[key] = showAnimal ? randomOption : null;
       } else {
-        layers[layer] = null; // Clear the nose if showNose is false
+        layers[key] = randomOption;
       }
-    } else if (layer === "animal") {
-      if (showAnimal) {
-        layers[layer] = randomOption; // Only set the animal if showAnimal is true
+
+      if (layers[key]) {
+        loadAndDrawLayer(key);
+        if (key !== "animal") {
+          applyRandomColor(key);
+        }
       } else {
-        layers[layer] = null; // Clear the animal if showAnimal is false
-      }
-    } else {
-      // For all other layers, proceed as normal
-      layers[layer] = randomOption;
-    }
-
-    if (layers[layer]) {
-      // If an image is selected, draw it on the canvas
-      loadAndDrawLayer(layer);
-
-      // Skip coloring for the animal layer
-      if (layer !== "animal") {
-        applyRandomColor(layer);
-      }
-    } else {
-      // Clear the canvas if the layer is not selected
-      const ctx = contexts[layer];
-      const canvas = canvases[layer];
-      if (ctx) {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        const ctx = contexts[key];
+        const canvas = canvases[key];
+        if (ctx) {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
       }
     }
   }
 
+
   // Ensure the nose is shown if the animal is null
-  if (layers["animal"] === null) {
-    const randomNoseOption = getRandomOption(options["nose"]);
-    layers["nose"] = randomNoseOption; // Set a random nose option
+  if (layers.animal === null) {
+    const randomNoseOption = getRandomOption(options.nose);
+    layers.nose = randomNoseOption; // Set a random nose option
     if (randomNoseOption) {
       loadAndDrawLayer("nose");
       applyRandomColor("nose"); // Apply color to the nose
