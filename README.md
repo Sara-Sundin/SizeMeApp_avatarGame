@@ -673,7 +673,7 @@ I have included screenprints of the first and final validation of the HTML with 
 - backlash on open tags - removed.
 <details open><summary><h4>Female Avatar Modal HTML- Final Check </h4></summary><img src=assets/images/images_read_me/female_avatar_html_final_check.jpg></details>
 
-<details open><summary><h4>Male Avatar Modal HTML- Initial Check (no fixes </h4></summary><img src=assets/images/images_read_me/male_avatar_html_final_check.jpg></details>
+<details open><summary><h4>Male Avatar Modal HTML- Initial Check (no fixes) </h4></summary><img src=assets/images/images_read_me/male_avatar_html_final_check.jpg></details>
 
 ### W3C CSS Validator
 The CSS was succesfully validated for all pages.
@@ -698,23 +698,52 @@ I have included screenprints of the first and final validation for each script v
 - loop should be wrapped in if statement - fixed.<br>
 <details open><summary><h4>Male Avatar Modal Script- Final Check </h4></summary><img src=assets/images/images_read_me/male_avatar_page_jshint_final_check.jpg></details>
 
-<details><summary><h4>ontact Modal Script- Initial Check </h4></summary><img src=assets/images/images_read_me/contact_page_jshint_first_check.jpg></details>
+<details><summary><h4>Contact Modal Script- Initial Check </h4></summary><img src=assets/images/images_read_me/contact_page_jshint_first_check.jpg></details>
 - loop should be wrapped in if statement - fixed.<br>
-<details open><summary><h4>Male Avatar Modal Script- Final Check </h4></summary><img src=assets/images/images_read_me/contact_page_jshint_final_check.jpg></details>
+<details open><summary><h4>Contact Modal Script- Final Check </h4></summary><img src=assets/images/images_read_me/contact_page_jshint_final_check.jpg></details>
 
 <hr>
 
 ### Bugs and Fixes
 Here I have recorded some issues that I spent excessive time solving with the solutions indicated below.
 
-#### The media queiry for the male and female modals were not responsive.
+#### Media Queirys Avatar Modals
+The media queirys for the male and female modals did not work. I noticed the media queiry for 768px and up was applied to the modals instead of the intended media queiry for 1024px. Due to this I first applied the media queirys I wanted for the larger screen to the medium size screen.
 
-<details open><summary><h4>Image</h4></summary><img src=assets/docs/gap_bug_image.jpg></details>
+#### Solution
+After removing below css from the iframe the media queiry returned back to normal.
+ .responsive-iframe-container iframe {
+    width: 120%;
+    height: 130%;
+    border: 0;
+    transform: scale(0.7);
+    /* Scale down to 80% of the original size */
+    transform-origin: top left;
+    /* Scale from the top-left corner */
+}
 
-#### Solution  (partly unfixed)
-After many hours I ran the whole code through ChatGPT and it turned out there was a missing section opening tag for the porfolio section above. It did not seem related so I did not look at this section to begin with. In the end it was just a simple mistake.
+#### Swatches Color Picker
+The swatches in the color picker did not work when picking the colors.
 
-<details open><summary><h4>Solution Code</h4></summary><img src=assets/docs/gap_bug_code.jpg></details>
+#### Solution
+Since I had hex colors indicated in the swatches for the color picker they did not work due to the color-picker being set up as rgb. When adding the HexToRgb as the code the swatches became active.
+
+function hexToRgb(hex) {
+  let c = hex.substring(1).split('');
+  if (c.length === 3) {
+    c = [c[0], c[0], c[1], c[1], c[2], c[2]];
+  }
+  const r = parseInt(c[0] + c[1], 16);
+  const g = parseInt(c[2] + c[3], 16);
+  const b = parseInt(c[4] + c[5], 16);
+  return [r, g, b];
+}
+
+#### Canvas
+The canvas did not draw for several reasons during the development.
+
+#### Solution
+I spent most of my time debugging why the canvas did not draw after adding another function or changing something in the css. Mostly the main thumbnails and the additional thumbnail functions were conflicting with each other. After a while I realised that if I changed something in the handleThumbnailSelection function I also needed to implement updates for the setupAdditionalThumbnails function.
 
 [Back to Content Table](#content)
 
