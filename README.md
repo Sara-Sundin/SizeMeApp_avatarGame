@@ -660,45 +660,37 @@ Improvement messages:
 The HTML, CSS and Javascript code has been validated on below editors. The issues arising has been recorded in the dropdown menus.
 
 ### W3C HTML Validator
-I have included screenprints of the first and final validation of the HTML with W3C validation on all pages. Mostly I needed to remove spaces from the images.
+I have included screenprints of the first and final validation of the HTML with W3C validation.
 <br>
 
-#### Home Page Fixes
-<details open><summary><h4>Home Page-Initial Check </h4></summary><img src=assets/docs/validation_html_1st_check_homepage.jpg></details>
-- remove spaces from images
-<details open><summary><h4>Home Page-Final Check </h4></summary><img src=assets/docs/validation_html_1st_check_successpage.jpg></details>
+#### HTML Fixes
+<details><summary><h4>Index Page HTML- Initial Check </h4></summary><img src=#></details>
+- remove space from image favicon.
+- add heading for gallery section.
+<details open><summary><h4>Index Page HTML- Final Check </h4></summary><img src=#></details>
 
 #### Female Avatar Modal Fixes
-<details><summary><h4>Project Page 1-Initial Check </h4></summary><img src=assets/docs/validation_html_1st_check_project_1.jpg></details>
-- remove spaces from images
-<br>
-- added aria label on gallery
-<br>
-- added main opening tag
-<details><summary><h4>Project Page 1-Final Check </h4></summary><img src=assets/docs/validation_html_1st_check_successpage.jpg></details>
+<details><summary><h4>Female Avatar Modal HTML- Initial Check </h4></summary><img src=#></details>
+- remove space from image favicon.
+- add heading for gallery section.
+<details open><summary><h4>Female Avatar Modal HTML- Final Check </h4></summary><img src=#></details>
 
 #### Male Avatar Modal Fixes
-<details><summary><h4>Project Page 2-Initial Check </h4></summary><img src=assets/docs/validation_html_1st_check_project_2.jpg></details>
-- remove spaces from images
-<br>
-- added aria label on gallery
-<br>
-- added main opening tag
-<details><summary><h4>Project Page 2-Final Check </h4></summary><img src=assets/docs/validation_html_1st_check_successpage.jpg></details>
+<details><summary><h4>Female Avatar Modal HTML- Initial Check </h4></summary><img src=#></details>
+- remove space from image favicon.
+- add heading for gallery section.
+<details open><summary><h4>Female Avatar Modal HTML- Final Check </h4></summary><img src=#></details>
 
 #### Contact Modal Fixes
-<details><summary><h4>Project Page 3-Initial Check </h4></summary><img src=assets/docs/validation_html_1st_check_project_3.jpg></details>
-- remove spaces from images
-<br>
-- added aria label on gallery
-<br>
-- added main opening tag
-<details><summary><h4>Project Page 3-Final Check </h4></summary><img src=assets/docs/validation_html_1st_check_successpage.jpg></details>
+<details><summary><h4>Female Avatar Modal HTML- Initial Check </h4></summary><img src=#></details>
+- remove space from image favicon.
+- add heading for gallery section.
+<details open><summary><h4>Female Avatar Modal HTML- Final Check </h4></summary><img src=#></details>
 
 ### W3C CSS Validator
 The CSS was succesfully validated.
 
-![Screenshot of the CSS Validation](assets/docs/validation_css.jpg)
+![Screenshot of the CSS Validation](#)
 
 <hr>
 
