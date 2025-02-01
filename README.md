@@ -663,20 +663,17 @@ The HTML, CSS and Javascript code has been validated on below editors. The issue
 I have included screenprints of the first and final validation of the HTML with W3C validation.
 <br>
 
-#### HTML Fixes
 <details><summary><h4>Index Page HTML- Initial Check </h4></summary><img src=assets/images/images_read_me/index_page_html_initial_check.jpg></details>
-- space on text for image favicon - removed
+- space on text for image favicon - removed<hr>
 - missing heading for gallery section - added.
 <details open><summary><h4>Index Page HTML- Final Check </h4></summary><img src=assets/images/images_read_me/index_page_html_final_check.jpg></details>
 
-#### Female Avatar Modal Fixes
 <details><summary><h4>Female Avatar Modal HTML- Initial Check </h4></summary><img src=assets/images/images_read_me/female_avatar_html_initial_check.jpg></details>
-- misuse of aria-label - removed.
+- misuse of aria-label - removed.<hr>
 - backlash on open tags - removed.
 <details open><summary><h4>Female Avatar Modal HTML- Final Check </h4></summary><img src=assets/images/images_read_me/female_avatar_html_final_check.jpg></details>
 
-#### Male Avatar Modal Fixes (no fixes)
-<details open><summary><h4>Male Avatar Modal HTML- Final Check </h4></summary><img src=assets/images/images_read_me/male_avatar_html_final_check.jpg></details>
+<details open><summary><h4>Male Avatar Modal HTML- Initial Check (no fixes </h4></summary><img src=assets/images/images_read_me/male_avatar_html_final_check.jpg></details>
 
 ### W3C CSS Validator
 The CSS was succesfully validated.
