@@ -324,7 +324,7 @@ The following measures has been taken to make sure the website is accessible.
 - Viewport Meta Tag: Ensures proper scaling and readability on mobile devices.
 - Labels for Form Fields: All form fields include <label> tags or appropriate aria-label attributes to guide users through form completion.
 - ARIA labels: Aria roles are added where necessary to define regions of the page for assistive technologies.
-- Readable Fonts: Fonts like Raleway are legible with sufficient size and line spacing for comfortable reading.
+- Readable Fonts: Fonts like "Lato" are legible with sufficient size and line spacing for comfortable reading.
 - Scalable Text: Text can be resized without loss of content or functionality.
 - Accessibility Testing Tools: Lighthouse has been used to identify and address accessibility issues.
 
@@ -332,65 +332,21 @@ The following measures has been taken to make sure the website is accessible.
 
 ## ARIA Labels Used
 
-### Modal Dialogs:
-Female Modal: aria-labelledby="femaleModalLabel", aria-hidden="true"
-Male Modal: aria-labelledby="maleModalLabel", aria-hidden="true"
+### Female Modal
+- aria-labelledby="femaleModalLabel"
+- aria-hidden="true"
 
-### Buttons:
-Contact Button: aria-label="Open contact form modal"
-Download Avatar Button: aria-label="Download your avatar and return to the introduction"
+### Male Modal
+- aria-labelledby="maleModalLabel"
+ aria-hidden="true"
 
-### Social Media Links:
-aria-label="Visit my Instagram page (opens in a new tab)"
-<br>
-aria-label="Visit my LinkedIn page (opens in a new tab)"
-<br>
-aria-label="Connect on Whatsapp (opens in a new tab)"
+### Close Button (Female Modal & Male Modal)
+- aria-label="Close"
 
-### Color Picker
-Pick your colors! text:
-Current: aria-label="Color Picker"
-Update Suggestion: Change to aria-labelledby and associate it with an ID for better semantic clarity.
-Hue Slider:
-aria-label="Adjust Hue"
-Add role="slider".
-Lightness Slider:
-aria-label="Adjust Lightness"
-Add role="slider".
-Color Swatches:
-Example for the red swatch:
-aria-label="Select red color"
-
-### Canvases:
-Each canvas should include a label to describe its purpose. For instance:
-aria-label="Avatar base layer"
-aria-label="Skin layer"
-aria-label="Hair layer"
-
-### Buttons
-Reset Button:
-aria-label="Reset avatar to default"
-Randomize Button:
-aria-label="Generate a random avatar"
-Download Button:
-aria-label="Download the current avatar"
-
-### Thumbnails
-Main Thumbnails:
-
-Each input should include a descriptive label. For example:
-Base Thumbnail: aria-label="Select base background for avatar"
-Hair Thumbnail: aria-label="Select hair style for avatar"
-Additional Thumbnails:
-
-Ensure each thumbnail has a unique and clear aria-label for selection. For example:
-aria-label="Select long wavy hair style"
-
-### Back Button:
-aria-label="Go back to main thumbnail options"
-
-### Download Button:
-aria-label="Download your avatar in its current state"
+### Social Media Links
+- Instagram: aria-label="Visit my Instagram page (opens in a new tab)"
+- LinkedIn: aria-label="Visit my LinkedIn page (opens in a new tab)"
+- WhatsApp: aria-label="Connect on Whatsapp (opens in a new tab)"
 
 [Back to Content Table](#content)
 
