@@ -1,9 +1,12 @@
+/* jshint esversion: 6 */
+
 // Get modal and button elements
 const contactModal = document.getElementById("contactModal");
 const openModalBtn = document.getElementById("openModal");
 const closeModalBtn = document.getElementById("closeModal");
 const successModal = document.getElementById("successModal");
 const closeSuccessBtn = document.getElementById("closeSuccess");
+const contactForm = document.getElementById("contactForm");
 
 document.addEventListener("DOMContentLoaded", () => {
 
