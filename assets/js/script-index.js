@@ -1,4 +1,8 @@
-var ml4 = {};
+/* jshint esversion: 6 */
+/* global anime */ // Declare anime as a global variable
+
+
+let ml4 = {};
 ml4.opacityIn = [0, 1];
 ml4.scaleIn = [0.2, 1];
 ml4.scaleOut = 3;
