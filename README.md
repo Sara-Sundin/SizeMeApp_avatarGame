@@ -680,6 +680,28 @@ The CSS was succesfully validated for all pages.
 
 ![Screenshot of the CSS Validation](assets/images/images_read_me/css_validation_all_pages.jpg)
 
+### JSHint Validator
+I have included screenprints of the first and final validation for each script validated with JSHint.
+
+<details><summary><h4>Index Page Script- Initial Check </h4></summary><img src=assets/images/images_read_me/index_page_jshint_first_check.jpg></details>
+- use  esversion: 6 - included /* jshint esversion: 6 */ to enforce ES6 syntax in JSHint.<br>
+- undefined variable (anime) - included /* global anime */ due to (anime) defined in html head script.
+<details open><summary><h4>Index Page Script- Final Check </h4></summary><img src=assets/images/images_read_me/index_page_jshint_final_check.jpg></details>
+
+<details><summary><h4>Female Avatar Modal Script- Initial Check </h4></summary><img src=assets/images/images_read_me/female_avatar_page_jshint_first_check.jpg></details>
+- loop should be wrapped in if statement - fixed.<br>
+- use dont notation instead of brackets for "animal" and "nose" - fixed.<br>
+- unused variable - defined.
+<details open><summary><h4>Female Avatar Modal Script- Final Check </h4></summary><img src=assets/images/images_read_me/female_avatar_page_jshint_final_check.jpg></details>
+
+<details><summary><h4>Male Avatar Modal Script- Initial Check </h4></summary><img src=assets/images/images_read_me/female_avatar_page_jshint_first_check.jpg></details>
+- loop should be wrapped in if statement - fixed.<br>
+<details open><summary><h4>Male Avatar Modal Script- Final Check </h4></summary><img src=assets/images/images_read_me/male_avatar_page_jshint_final_check.jpg></details>
+
+<details><summary><h4>ontact Modal Script- Initial Check </h4></summary><img src=assets/images/images_read_me/contact_page_jshint_first_check.jpg></details>
+- loop should be wrapped in if statement - fixed.<br>
+<details open><summary><h4>Male Avatar Modal Script- Final Check </h4></summary><img src=assets/images/images_read_me/contact_page_jshint_final_check.jpg></details>
+
 <hr>
 
 ### Bugs and Fixes
