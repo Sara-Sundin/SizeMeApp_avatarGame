@@ -736,11 +736,11 @@ I have used ChatGPT throughout the process as a sparring partner for ideas, trou
 <br>
 
 # PERSONAL NOTES
-This project was a fun yet challenging deep dive into canvas-based rendering, allowing users to customize avatars by layering different facial features, clothing, and accessories. My goal was to create an intuitive, interactive experience with a clean UI and smooth interactions—something I’m proud to say I think I achieved.
+This project was a fun yet challenging deep dive into canvas-based rendering, allowing users to customize avatars by layering different facial features, clothing, and accessories. My goal was to create an intuitive, interactive experience with a clean UI and smooth interactions.  While there’s always room for improvement, I’m happy with what I was able to accomplish.
 
-Throughout this process, I not only strengthened my event-driven JavaScript skills but also refined my experience with HTML, CSS, and Chrome Developer Tools. There were moments when I genuinely doubted I would be able to finish due to JavaScript syntax, but pushing through those challenges made the result even more rewarding.
+Throughout this process, I not only came to understand event-driven JavaScript but also refined my experience with HTML, CSS, and Chrome Developer Tools. There were moments when I genuinely doubted I would be able to finish due to JavaScript syntax. But working through those challenges made the process all the more rewarding.
 
-One personal touch I added was the red and blue color scheme on the website's gender selection, a subtle reference to the red and blue pill scene in The Matrix. Just like Neo, I chose the red pill of knowledge, diving headfirst into learning and overcoming obstacles.
+One personal touch I added was the red and blue color scheme on the website's shape selection, a subtle reference to the red and blue pill scene in The Matrix. For me, this is a reminder that growth comes from embracing challenges, even when they feel daunting.
 
 <hr>
 
