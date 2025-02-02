@@ -538,6 +538,13 @@ Visit this URL to view your deployed website.
 
 [Back to Content Table](#content)
 
+<br>
+<br>
+<hr>
+<hr>
+<br>
+<br>
+
 # TESTING
 - [Devices](#devices)
 - [Browsers](#browsers)
