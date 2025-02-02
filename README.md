@@ -640,25 +640,25 @@ I have included screenprints of the first and final validation for each script v
 
 <hr>
 
-### Bugs and Fixes
+## Bugs and Fixes
 Here I have recorded some issues that I spent excessive time solving with the solutions indicated below.
 
-#### Media Queirys Avatar Modals
+### Media Queirys Avatar Modals
 The media queirys for the male and female modals did not work. I noticed the media queiry for 768px and up was applied to the modals instead of the intended media queiry for 1024px. Due to this I first applied the media queirys I wanted for the larger screen to the medium size screen.
 
 #### Solution
 After removing below css from the iframe the media queiry returned back to normal.
- .responsive-iframe-container iframe {
-    width: 120%;
-    height: 130%;
-    border: 0;
-    transform: scale(0.7);
-    /* Scale down to 80% of the original size */
-    transform-origin: top left;
-    /* Scale from the top-left corner */
+ .responsive-iframe-container iframe {<br>
+    width: 120%;<br>
+    height: 130%;<br>
+    border: 0;<br>
+    transform: scale(0.7);<br>
+    /* Scale down to 80% of the original size */<br>
+    transform-origin: top left;<br>
+    /* Scale from the top-left corner */<br>
 }
 
-#### Swatches Color Picker
+### Swatches Color Picker
 The swatches in the color picker did not work when picking the colors.
 
 #### Solution
@@ -666,11 +666,11 @@ Since I had hex colors indicated in the swatches for the color picker they did n
 
 <details open><summary><h4>Code for HEX swatches</h4></summary><img src=assets/images/images_read_me/hex-to-rgb.jpg></details>
 
-#### Canvas
+### Handling Multiple Canvases
 The canvas did not draw for several reasons during the development.
 
 #### Solution
-I spent most of my time debugging why the canvas did not draw after adding another function or changing something in the css. Mostly the main thumbnails and the additional thumbnail functions were conflicting with each other. After a while I realised that if I changed something in the handleThumbnailSelection function I also needed to implement updates for the setupAdditionalThumbnails function.
+I spent a lot of my time debugging why the canvas did not draw after adding another function or changing something in the css. Mostly the main thumbnails and the additional thumbnail functions were conflicting with each other. After a while I realised that if I changed something in the handleThumbnailSelection function I also needed to implement updates for the setupAdditionalThumbnails function. Since most of the functions in my scripts for the avatar generators are related to the canvas I had to investigate and see the script as a whole.
 
 [Back to Content Table](#content)
 
@@ -686,10 +686,10 @@ I spent most of my time debugging why the canvas did not draw after adding anoth
 - [Content References](#content-references)
 
 ## Media References
-https://www.youtube.com/watch?v=xwKbtUP87Dk
-https://www.youtube.com/watch?v=W6NZfCO5SIk
-https://www.youtube.com/watch?v=PkZNo7MFNFg
-https://www.w3schools.com/html/html5_canvas.asp
+https://www.youtube.com/watch?v=xwKbtUP87Dk<br>
+https://www.youtube.com/watch?v=W6NZfCO5SIk<br>
+https://www.youtube.com/watch?v=PkZNo7MFNFg<br>
+https://www.w3schools.com/html/html5_canvas.asp<br>
 - Slack Community and information
 - Stand Ups with Kay on Thursdays
 
@@ -707,19 +707,15 @@ https://www.w3schools.com/html/html5_canvas.asp
 - [Images](#images)
 - [Code](#code)
 
-## Animation Intro
-I have borrowed the javascript for the animation intro at the start of the page from a designer called Tobias Ahlin. You can find his work at https://tobiasahlin.com. I modified te code by changing the letters and colors of the text to implement my own design.
-
 ## Images
 All images are created by myself in Adobe Illustrator.
 
 ## Code
-- The Javascript for closing navbar from Code Institute
-- Code Institute - I have used small snippets of code in the source code for Love Running and Boardwalk Games projects in the gallery section and contact form.
-- I have used ChatGPT for problem solving and ideas throughout the project.
-- I received some tips from my mentor, mostly in terms of Bootstrap classes that is used.
 
-## ChatGPT
+### Animation Intro
+I have borrowed the javascript for the animation intro at the start of the page from a designer called Tobias Ahlin. You can find his work at https://tobiasahlin.com. I modified te code by changing the letters and colors of the text to implement my own design.
+
+### ChatGPT
 I have used ChatGPT throughout the process as a sparring partner for ideas, troubleshooting, and problem-solving. I have asked ChatGPT on solutions with the HTML, styling CSS and solutions for Javascript that I have followed in either writing or copied snippets of code into the IDE.
 
 <hr>
@@ -735,7 +731,7 @@ Throughout this process, I not only strengthened my event-driven JavaScript skil
 One personal touch I added was the red and blue color scheme on the website's gender selection, a subtle reference to the red and blue pill scene in The Matrix. Just like Neo, I chose the red pill of knowledge, diving headfirst into learning and overcoming obstacles.
 
 # ACKNOWLEDGMENTS
-I want to thank my mentor Rory Patrick who organized to have the final mentor session for the project even though he was on holidays. Also a big shout out to the Slack community at Code Institute and the peers who are always eager to help out.
+I want to thank my mentor Rory Patrick for always being so supporting and engaging in showing me new tips and tricks. Also a big thank you to the Slack community at Code Institute and the peers who are always eager to help out.
 
 [Back to Content Table](#content)
 
