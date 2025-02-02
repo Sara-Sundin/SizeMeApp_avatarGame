@@ -702,6 +702,9 @@ https://www.w3schools.com/html/html5_canvas.asp<br>
 <br>
 <br>
 <hr>
+<hr>
+<br>
+<br>
 
 # CREDITS
 - [Images](#images)
@@ -718,6 +721,8 @@ I have borrowed the javascript for the animation intro at the start of the page 
 ### ChatGPT
 I have used ChatGPT throughout the process as a sparring partner for ideas, troubleshooting, and problem-solving. I have asked ChatGPT on solutions with the HTML, styling CSS and solutions for Javascript that I have followed in either writing or copied snippets of code into the IDE.
 
+<br>
+<br>
 <hr>
 <hr>
 <br>
@@ -729,6 +734,8 @@ This project was a fun yet challenging deep dive into canvas-based rendering, al
 Throughout this process, I not only strengthened my event-driven JavaScript skills but also refined my experience with HTML, CSS, and Chrome Developer Tools. There were moments when I genuinely doubted I would be able to finish due to JavaScript syntax, but pushing through those challenges made the result even more rewarding.
 
 One personal touch I added was the red and blue color scheme on the website's gender selection, a subtle reference to the red and blue pill scene in The Matrix. Just like Neo, I chose the red pill of knowledge, diving headfirst into learning and overcoming obstacles.
+
+<hr>
 
 # ACKNOWLEDGMENTS
 I want to thank my mentor Rory Patrick for always being so supporting and engaging in showing me new tips and tricks. Also a big thank you to the Slack community at Code Institute and the peers who are always eager to help out.
