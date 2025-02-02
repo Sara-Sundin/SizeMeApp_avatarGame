@@ -654,7 +654,7 @@ Here I have recorded some issues that I spent excessive time solving with the so
 The media queirys for the male and female modals did not work. I noticed the media queiry for 768px and up was applied to the modals instead of the intended media queiry for 1024px. Due to this I first applied the media queirys I wanted for the larger screen to the medium size screen.
 
 #### Solution
-After removing below css from the iframe the media queiry returned back to normal.
+After removing below css from the iframe the media queiry returned back to normal.<br>
  .responsive-iframe-container iframe {<br>
     width: 120%;<br>
     height: 130%;<br>
