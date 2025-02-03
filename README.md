@@ -77,7 +77,6 @@ Welcome to the Avatar Maker! This web application allows users to design persona
 <br>
 
 # REPOSITORY OVERVIEW
-- [Project Structure & Explanation](#project-structure-&-explanation)
 
 ## Project Structure & Explanation
 I have included a diagram to provide a clear overview of the project's file structure, categorizing files based on their type and purpose. The project consists of HTML, CSS, and JavaScript files, along with automated tests written using Jest.
