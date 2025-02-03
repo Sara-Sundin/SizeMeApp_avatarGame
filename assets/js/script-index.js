@@ -2,6 +2,7 @@
 /* global anime */ // Declare anime as a global variable
 
 
+// Intro Animation // link to script in head html
 let ml4 = {};
 ml4.opacityIn = [0, 1];
 ml4.scaleIn = [0.2, 1];
@@ -56,13 +57,14 @@ anime.timeline({
         delay: 500
     });
 
+// Wait for the DOM to fully load before selecting key elements for the page
 document.addEventListener("DOMContentLoaded", () => {
     const introAnimation = document.getElementById("intro-animation");
     const header = document.querySelector("header");
     const main = document.querySelector("main");
     const footer = document.querySelector("footer");
 
-    // Simulate animation duration
+    // Hides content while intro animation runs
     setTimeout(() => {
         // Hide intro animation
         introAnimation.classList.add("hidden");
