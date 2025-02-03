@@ -1,6 +1,6 @@
 /* jshint esversion: 6 */
 
-// Layers setup
+// Canvas layers setup - stores references to different avatar layers
 const canvases = {
   base: document.getElementById("canvas-base"),
   skin: document.getElementById("canvas-skin"),
@@ -15,6 +15,7 @@ const canvases = {
   animal: document.getElementById("canvas-animal"),
 };
 
+// Contexts for each canvas layer to allow drawing operations
 const contexts = {
   base: canvases.base.getContext("2d", {
     willReadFrequently: true
@@ -51,6 +52,7 @@ const contexts = {
   }),
 };
 
+// Stores the currently selected layer images
 const layers = {
   base: null,
   skin: null,
@@ -65,6 +67,7 @@ const layers = {
   animal: null,
 };
 
+// Initializes all canvases by setting their dimensions and loading default skin
 function initializeCanvases() {
   Object.values(canvases).forEach((canvas) => {
     canvas.width = 400;
@@ -77,7 +80,7 @@ function initializeCanvases() {
   loadAndDrawLayer("skin", defaultSkinImage); // Preload the default skin image
 }
 
-// Utility: Convert HSL to RGB
+// Utility function to convert HSL to RGB
 function hslToRgb(h, s, l) {
   let r, g, b;
   const hueToRgb = (p, q, t) => {
@@ -136,7 +139,7 @@ function hexToRgb(hex) {
   return [r, g, b];
 }
 
-// Load and draw a single layer
+// Load and draw a single layer onto its corresponding canvas
 function loadAndDrawLayer(layerName, imageSrc = null) {
   const ctx = contexts[layerName];
   const src = imageSrc || layers[layerName];
@@ -158,7 +161,7 @@ function loadAndDrawLayer(layerName, imageSrc = null) {
 }
 
 
-// Handle thumbnail selection
+// Handle user thumbnail selections to change avatar features
 function handleThumbnailSelection() {
   document.querySelectorAll(".thumbnail-radio").forEach((radio) => {
     radio.addEventListener("change", (e) => {
@@ -210,6 +213,11 @@ function applyColorToActiveLayer() {
   let hue = 0;
   let lightness = 50;
 
+  /* - Updates the selected avatar layer with the current hue and lightness values.
+   * - Retrieves the active layer based on the selected radio button.
+   * - Loads the corresponding image and applies the updated color.
+   * - Replaces white areas (above a defined threshold) with the chosen color.
+   * - Ensures smooth color application while preserving the original image details.*/
   function updateColor() {
     const activeRadio = document.querySelector(".thumbnail-radio:checked");
     const layer = activeRadio ? activeRadio.dataset.layer : "skin";
@@ -290,6 +298,7 @@ function applyColorToActiveLayer() {
   });
 }
 
+// Setup additional thumbnails
 function setupAdditionalThumbnails() {
   document.querySelectorAll(".thumbnail-radio.main-thumbnail").forEach((radio) => {
     radio.addEventListener("change", (event) => {
@@ -354,6 +363,7 @@ function setupClearThumbnail() {
   });
 }
 
+// Back button in additional thumbnails
 function setupBackButtons() {
   document.querySelectorAll(".back-button").forEach((button) => {
     button.addEventListener("click", () => {
@@ -507,6 +517,7 @@ function applyRandomColor(layerName) {
   };
 }
 
+// Random avatar in generator
 function randomizeAvatar() {
   let showNose = false;
   let showAnimal = false;
