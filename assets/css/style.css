@@ -17,6 +17,12 @@ main {
     display: none !important;
 }
 
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Show when active */
 .visible {
     display: block !important;
@@ -88,17 +94,11 @@ h1 {
     /* Full width of the page */
     height: 200px;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Introduction Section*/
 #introduction {
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding-top: 30px;
     padding-bottom: 20px;
 }
@@ -106,9 +106,6 @@ h1 {
 #introduction-text {
     color: #000;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #arrow img {
@@ -124,9 +121,6 @@ h1 {
     text-align: center;
     border: 10px solid #000;
     background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Zoom-in effect */
@@ -162,9 +156,6 @@ h1 {
 }
 
 .modal-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     width: 100%;
     padding: 10px;
@@ -201,9 +192,6 @@ h1 {
 /* Download Avatar Section */
 #download-avatar {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #000;
     text-align: center;
 }
@@ -211,25 +199,16 @@ h1 {
 .blk-heading {
     color: #000;
     height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #contact p {
     color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .collage-avatars {
     position: relative;
     width: 100%;
     height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
     margin-bottom: 30px;
 }
@@ -257,9 +236,6 @@ h1 {
     transition: transform 0.3s ease;
     text-align: center;
     text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
     border: none;
 }
@@ -275,9 +251,6 @@ h1 {
     background-color: white;
     color: #000;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: row;
 }
 
@@ -298,9 +271,6 @@ h1 {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     /* Semi-transparent overlay */
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Contact Modal - Content Box */
@@ -379,10 +349,7 @@ footer {
 #social-links {
     background-color: white;
     font-size: 30px;
-    display: flex;
-    /* Activates Flexbox */
     padding: 10px 50px 20px 50px;
-    justify-content: center;
     gap: 40px;
     /* Add spacing between icons */
 }
