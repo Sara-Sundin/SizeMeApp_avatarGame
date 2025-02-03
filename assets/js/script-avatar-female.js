@@ -202,7 +202,6 @@ function handleThumbnailSelection() {
   });
 }
 
-// Function to update the selected avatar layer with the current hue and lightness values.
 // Declare hue and lightness as global variables
 let hue = 0;
 let lightness = 50;
