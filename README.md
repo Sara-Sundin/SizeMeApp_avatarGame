@@ -533,7 +533,7 @@ I used Jest to test the javascript code for the contact modal. Due to this I sep
 After a few moments, GitHub Pages will generate a URL for your site (e.g., https://username.github.io/repository-name).
 Visit this URL to view your deployed website.
 
-<details open><summary><h4>GitHub Deployment Page</h4></summary><img src=#></details>
+<details open><summary><h4>GitHub Deployment Page</h4></summary><img src=assets/images/images_read_me/deployment_github.jpg></details>
 
 [Back to Content Table](#content)
 
