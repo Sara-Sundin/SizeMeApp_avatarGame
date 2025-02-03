@@ -204,69 +204,81 @@ function handleThumbnailSelection() {
 }
 
 
+// Declare hue and lightness as global variables
+let hue = 0;
+let lightness = 50;
+
+// Function to update the selected avatar layer with the current hue and lightness values.
+function updateColor() {
+  const activeRadio = document.querySelector(".thumbnail-radio:checked");
+  const layer = activeRadio ? activeRadio.dataset.layer : "skin";
+
+  const ctx = contexts[layer];
+  const canvas = canvases[layer];
+
+  if (!ctx || !canvas || !layers[layer]) return;
+
+  const rgb = hslToRgb(hue / 360, 1, lightness / 100);
+
+  const img = new Image();
+  img.src = layers[layer];
+
+  img.onload = () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const data = imageData.data;
+
+    const whiteThreshold = 100; // Adjust this threshold to change sensitivity
+    for (let i = 0; i < data.length; i += 4) {
+      if (data[i] > whiteThreshold && data[i + 1] > whiteThreshold && data[i + 2] > whiteThreshold) {
+        [data[i], data[i + 1], data[i + 2]] = rgb;
+      }
+    }
+
+    ctx.putImageData(imageData, 0, 0);
+  };
+}
+
 // Apply color to the active layer
 function applyColorToActiveLayer() {
   const hueSlider = document.getElementById("hue-slider");
   const lightnessSlider = document.getElementById("lightness-slider");
   const swatches = document.querySelectorAll(".swatch");
 
-  let hue = 0;
-  let lightness = 50;
-
-  /* - Updates the selected avatar layer with the current hue and lightness values.
-   * - Retrieves the active layer based on the selected radio button.
-   * - Loads the corresponding image and applies the updated color.
-   * - Replaces white areas (above a defined threshold) with the chosen color.
-   * - Ensures smooth color application while preserving the original image details.*/
-  function updateColor() {
-    const activeRadio = document.querySelector(".thumbnail-radio:checked");
-    const layer = activeRadio ? activeRadio.dataset.layer : "skin";
-
-    const ctx = contexts[layer];
-    const canvas = canvases[layer];
-
-    const rgb = hslToRgb(hue / 360, 1, lightness / 100);
-
-    const img = new Image();
-    img.src = layers[layer];
-
-    img.onload = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-
-      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-      const data = imageData.data;
-
-      const whiteThreshold = 100; // Adjust this threshold to change sensitivity
-      for (let i = 0; i < data.length; i += 4) {
-        if (data[i] > whiteThreshold && data[i + 1] > whiteThreshold && data[i + 2] > whiteThreshold) {
-          [data[i], data[i + 1], data[i + 2]] = rgb;
-        }
-      }
-
-      ctx.putImageData(imageData, 0, 0);
-    };
+  function updateHandlePosition(slider, value) {
+    const percentage = value * 100;
+    const handle = slider.querySelector(".slider-handle");
+    if (handle) {
+      handle.style.left = `${percentage}%`;
+    }
   }
 
-  const attachSliderEvents = (slider, callback) => {
+  function attachSliderEvents(slider, callback) {
     let isDragging = false;
 
-    slider.addEventListener("mousedown", () => (isDragging = true));
+    function updatePosition(event) {
+      const rect = slider.getBoundingClientRect();
+      const value = Math.min(Math.max((event.clientX - rect.left) / rect.width, 0), 1);
+      callback(value);
+      updateHandlePosition(slider, value);
+    }
+
+    slider.addEventListener("mousedown", (event) => {
+      isDragging = true;
+      updatePosition(event);
+    });
+
     window.addEventListener("mouseup", () => (isDragging = false));
-    window.addEventListener("mousemove", (e) => {
-      if (!isDragging) return;
-      const rect = slider.getBoundingClientRect();
-      const value = Math.min(Math.max((e.clientX - rect.left) / rect.width, 0), 1);
-      callback(value);
+    window.addEventListener("mousemove", (event) => {
+      if (isDragging) updatePosition(event);
     });
 
-    slider.addEventListener("click", (e) => {
-      const rect = slider.getBoundingClientRect();
-      const value = Math.min(Math.max((e.clientX - rect.left) / rect.width, 0), 1);
-      callback(value);
-    });
-  };
+    slider.addEventListener("click", (event) => updatePosition(event));
+  }
 
+  // Attach slider events for hue and lightness
   attachSliderEvents(hueSlider, (value) => {
     hue = Math.round(value * 360);
     updateColor();
@@ -277,7 +289,7 @@ function applyColorToActiveLayer() {
     updateColor();
   });
 
-  // Add swatch click event
+  // Add click event for swatches
   swatches.forEach((swatch) => {
     swatch.addEventListener("click", (e) => {
       const color = e.target.dataset.color;
@@ -289,6 +301,10 @@ function applyColorToActiveLayer() {
       lightness = l * 100;
       updateColor();
 
+      // Update slider handle positions to reflect new values
+      updateHandlePosition(hueSlider, hue / 360);
+      updateHandlePosition(lightnessSlider, lightness / 100);
+
       // Keep the main-thumbnail radio checked
       const activeMainRadio = document.querySelector(".thumbnail-radio.main-thumbnail:checked");
       if (activeMainRadio) {
@@ -296,6 +312,10 @@ function applyColorToActiveLayer() {
       }
     });
   });
+
+  // Set initial handle positions
+  updateHandlePosition(hueSlider, hue / 360);
+  updateHandlePosition(lightnessSlider, lightness / 100);
 }
 
 // Setup additional thumbnails
