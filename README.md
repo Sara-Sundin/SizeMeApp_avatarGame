@@ -131,7 +131,7 @@ The website is structured to ensure ease of navigation and interaction:
 The layout is simple and user-friendly:
 - Interactive elements like buttons, sliders, and thumbnails are placed where users naturally expect them.
 - A responsive design ensures the website adapts seamlessly to mobile, tablet, and desktop devices.
-- Clear labels and visual cues such as headings and tooltips guide users through the avatar creation process without confusion.
+- Clear labels and visual cues guide users through the avatar creation process without confusion.
   
 ### Surface Plane
 The visual design is playful and creative, reflecting the theme of personalization and self-expression:
