@@ -722,7 +722,7 @@ All images are created by myself in Adobe Illustrator.
 ## Code
 
 ### Animation Intro
-I have borrowed the javascript for the animation intro at the start of the page from a designer called Tobias Ahlin. You can find his work at https://tobiasahlin.com. I modified te code by changing the letters and colors of the text to implement my own design.
+I have borrowed the javascript for the animation intro at the start of the page from a designer called Tobias Ahlin. You can find his work at https://tobiasahlin.com. I modified the code by changing the letters and colors of the text to implement my own design.
 
 ### ChatGPT
 I have used ChatGPT throughout the process as a sparring partner for ideas, troubleshooting, and problem-solving. I have asked ChatGPT on solutions with the HTML, styling CSS and solutions for Javascript that I have followed in either writing or copied snippets of code into the IDE.
