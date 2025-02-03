@@ -741,6 +741,8 @@ Throughout this process, I not only came to understand event-driven JavaScript b
 
 One personal touch I added was the red and blue color scheme on the website's shape selection, a subtle reference to the red and blue pill scene in The Matrix. For me, this is a reminder that growth comes from embracing challenges, even when they feel daunting.
 
+![Red and Blue Pill](assets/images/images_read_me/red_blue_pill.jpg)
+
 <hr>
 
 # ACKNOWLEDGMENTS
