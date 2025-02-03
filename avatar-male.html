@@ -13,17 +13,17 @@
 </head>
 
 <body>
-  <div id="generator" class="centered-text grid-container">
+  <div id="generator" class="flex-center grid-container">
 
     <!-- Color Picker-->
 
-    <div id="custom-color-picker" class="hidden column column-1">
+    <div id="custom-color-picker" class="hidden flex-center column-1">
       <p>Pick your colors!</p>
 
       <div id="hue-slider" class="slider"></div>
       <div id="lightness-slider" class="slider"></div>
 
-      <div id="color-swatches" class="swatches">
+      <div id="color-swatches" class="swatches flex-center">
         <button class="swatch" style="background-color: #ff0000;" data-color="#ff0000"></button>
         <button class="swatch" style="background-color: #00ff00;" data-color="#00ff00"></button>
         <button class="swatch" style="background-color: #0000ff;" data-color="#0000ff"></button>
@@ -36,8 +36,8 @@
 
 
     <!-- Avatar Canvas Container -->
-    <div class="column column-2">
-      <div id="canvas-container" class="canvas-container">
+    <div class="column-2">
+      <div id="canvas-container" class="canvas-container flex-center">
         <canvas id="canvas-base" class="canvas"></canvas>
         <canvas id="canvas-skin" class="canvas"></canvas>
         <canvas id="canvas-clothes" class="canvas"></canvas>
@@ -52,7 +52,7 @@
       </div>
     </div>
 
-    <div class="button-container column column-3">
+    <div class="button-container flex-center column-3">
       <button id="reset-button" class="btn btn-dark">Reset</button>
       <button id="randomize-button" class="btn btn-dark">Randomize</button>
     </div>
@@ -61,7 +61,7 @@
     <!-- Thumbnails -->
 
     <!-- Main Thumbnails -->
-    <div id="main-thumbnails" class="thumbnail-container column column-4">
+    <div id="main-thumbnails" class="thumbnail-container flex-center column-4">
 
       <!-- Background Thumbnail-->
       <div>

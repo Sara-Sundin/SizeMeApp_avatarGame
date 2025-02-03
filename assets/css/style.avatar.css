@@ -3,30 +3,18 @@
 
 /* General Styling */
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Lato", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
 }
 
-.heading {
-  font-family: "Montserrat", sans-serif;
-}
-
-.centered-text {
-  text-align: center;
-}
-
 .hidden {
   display: none;
 }
 
-.row {
-  max-width: 400px;
-}
-
-.column {
+.flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,10 +23,7 @@ body {
 /* Avatar Generator */
 
 #generator {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 17px;
   width: 100%;
   margin: 0 auto;
@@ -49,9 +34,6 @@ body {
   position: relative;
   width: 260px;
   height: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .canvas {
@@ -67,18 +49,11 @@ body {
 }
 
 .button-container {
-  display: flex;
   gap: 30px;
-  justify-content: center;
-  align-items: center;
-
 }
 
 .thumbnail-container {
-  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   gap: 13px;
   margin: 0 auto;
 }
@@ -120,21 +95,10 @@ body {
   flex-wrap: wrap;
   /* Allow wrapping if they exceed the width */
   gap: 15px;
-  /* Add space between thumbnails */
   justify-content: center;
   /* Center thumbnails horizontally */
   align-items: center;
   /* Align thumbnails vertically */
-}
-
-.additional-thumbnails.hidden {
-  display: none;
-  /* Completely hide thumbnails when "hidden" class is applied */
-}
-
-.additional-thumbnails:not(.hidden) {
-  opacity: 1;
-  /* Ensures visible thumbnails are fully opaque */
 }
 
 /* Highlight Active Thumbnail */
@@ -173,8 +137,6 @@ body {
   /* Ensures the image fills the label */
   object-fit: contain;
   /* Maintains aspect ratio */
-  pointer-events: none;
-  /* Prevents interference with clicks */
 }
 
 .back-button {
@@ -191,11 +153,8 @@ body {
 
 /* General styles for the color picker */
 #custom-color-picker {
-  display: flex;
   flex-direction: column;
   gap: 10px;
-  border-radius: 8px;
-  align-items: center;
 }
 
 /* Slider track */
@@ -212,21 +171,13 @@ body {
   height: 40px;
 }
 
-/* Lightness slider */
 #lightness-slider {
   background: linear-gradient(to right, black, white);
   height: 30px;
 }
 
-/* Adjust the slider handle position dynamically via JS */
-.slider[data-value]::after {
-  left: calc(var(--slider-value, 0) * 100%);
-}
-
 .swatches {
-  display: flex;
   gap: 10px;
-  justify-content: center;
 }
 
 .swatch {
