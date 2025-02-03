@@ -28,6 +28,7 @@ main {
     display: block !important;
 }
 
+/* Image hover */
 .image-hover {
     width: 50px;
     /* Default width */
@@ -150,6 +151,7 @@ h1 {
     background-color: red;
 }
 
+/* Modal Styles Avatar */
 .modal.fade {
     --bs-modal-margin: 0;
     --bs-modal-padding: 0.4rem;
@@ -194,15 +196,6 @@ h1 {
     margin: 0;
     background-color: #000;
     text-align: center;
-}
-
-.blk-heading {
-    color: #000;
-    height: 50px;
-}
-
-#contact p {
-    color: #000;
 }
 
 .collage-avatars {
@@ -254,111 +247,22 @@ h1 {
     flex-direction: row;
 }
 
+.blk-heading {
+    color: #000;
+    height: 50px;
+}
+
+#contact p {
+    color: #000;
+}
+
 #button-contact {
     padding-top: 10px;
     padding-bottom: 15px;
 }
 
-/* Contact Modal - Overlay Background */
+/* Contact Modal Styles */
 
-.modal-contact {
-    position: fixed;
-    z-index: 1000;
-    /* Ensure it's above other elements */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent overlay */
-}
-
-/* Contact Modal - Content Box */
-.modal-content-contact {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    width: 320px;
-    position: relative;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Close Button */
-.close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    cursor: pointer;
-    color: #333;
-}
-
-.close:hover {
-    color: red;
-}
-
-/* Form Styling */
-.modal-content-contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-/* Input Fields */
-.modal-content-contact input,
-.modal-content-contact textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-/* Textarea */
-.modal-content-contact textarea {
-    resize: vertical;
-    height: 100px;
-}
-
-/* Submit Button */
-.modal-content-contact .btn-primary {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.modal-content-contact .btn-primary:hover {
-    background-color: #0056b3;
-}
-
-
-/* Footer */
-footer {
-    margin-top: 0;
-    background-color: white;
-    bottom: 0;
-    position: relative;
-}
-
-#social-links {
-    background-color: white;
-    font-size: 30px;
-    padding: 10px 50px 20px 50px;
-    gap: 40px;
-    /* Add spacing between icons */
-}
-
-#social-links a {
-    color: #000
-}
-
-/* Contact Modal - Overlay Background */
 .modal-contact {
     display: none;
     /* Hidden by default */
@@ -446,6 +350,26 @@ footer {
 
 .modal-content-contact .btn-primary:hover {
     background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    margin-top: 0;
+    background-color: white;
+    bottom: 0;
+    position: relative;
+}
+
+#social-links {
+    background-color: white;
+    font-size: 30px;
+    padding: 10px 50px 20px 50px;
+    gap: 40px;
+    /* Add spacing between icons */
+}
+
+#social-links a {
+    color: #000
 }
 
 /* Small devices (mobiles, 480px and down */
