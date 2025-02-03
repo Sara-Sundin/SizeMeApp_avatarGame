@@ -575,8 +575,8 @@ Samsung Internet
 <hr>
 
 ## Testing grid
-I have used a grid for testing all components of the website. After testing I have fixed any issues arising and put a note in the grid what has been done. See below dropdown menu for the grid that I created in an excel spreadsheet using a free template as base. [Link to excel spreadsheet](#)
-<details open><summary><h3>Testing Grid</h3></summary><img src=#></details>
+I have used a grid for testing all components of the website. After testing I have fixed any issues arising and put a note in the grid what has been done. See below dropdown menu for the grid that I created in an excel spreadsheet using a free template as base. [Link to excel spreadsheet](assets/docs/test_checklist_project-2.xlsx)
+<details open><summary><h3>Testing Grid</h3></summary><img src=assets/images/images_read_me/checklist-project-2.jpg></details>
 
 <hr>
 
