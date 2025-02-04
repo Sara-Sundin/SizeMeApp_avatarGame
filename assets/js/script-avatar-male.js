@@ -15,6 +15,8 @@ const canvases = {
   animal: document.getElementById("canvas-animal"),
 };
 
+console.log("Canvases initialized:", canvases);
+
 // Contexts for each canvas layer to allow drawing operations
 const contexts = {
   base: canvases.base.getContext("2d", {
@@ -52,6 +54,8 @@ const contexts = {
   }),
 };
 
+console.log("Contexts initialized:", contexts);
+
 // Stores the currently selected layer images
 const layers = {
   base: null,
@@ -66,6 +70,8 @@ const layers = {
   glasses: null,
   animal: null,
 };
+
+console.log("Layers initialized:", layers);
 
 // Initializes all canvases by setting their dimensions and loading default skin
 function initializeCanvases() {
@@ -216,6 +222,8 @@ function updateColor() {
   const ctx = contexts[layer];
   const canvas = canvases[layer];
 
+  console.log("Active layer for color update:", layer);
+
   if (!ctx || !canvas || !layers[layer]) return;
 
   const rgb = hslToRgb(hue / 360, 1, lightness / 100);
@@ -300,6 +308,8 @@ function applyColorToActiveLayer() {
       hue = h * 360;
       lightness = l * 100;
       updateColor();
+
+      console.log(`Swatch clicked: ${color}`);
 
       // Update slider handle positions to reflect new values
       updateHandlePosition(hueSlider, hue / 360);
@@ -643,4 +653,5 @@ document.addEventListener("DOMContentLoaded", () => {
   setupAdditionalThumbnails();
   setupClearThumbnail();
   setupBackButtons();
+  console.log("Avatar generator initialized successfully.");
 });
