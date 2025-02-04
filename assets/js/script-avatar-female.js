@@ -81,6 +81,11 @@ function initializeCanvases() {
 }
 
 // Utility function to convert HSL to RGB
+// h=hue, s=saturation, l=lightness
+// r=red, g=green, b=blue
+// p represents the darkest possible value. p = 0.0 → No black or white added.
+// q represents the brightest possible value. q = 1.0 → Pure, bright color.
+
 function hslToRgb(h, s, l) {
   let r, g, b;
   const hueToRgb = (p, q, t) => {
