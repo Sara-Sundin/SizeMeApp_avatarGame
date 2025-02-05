@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to show success modal
     const showSuccessModal = () => {
-        console.log("showSuccessModal() called!"); // Debugging
         contactModal.classList.add("hidden"); // Hide contact modal
         successModal.classList.remove("hidden"); // Show success modal
     };
@@ -36,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Function to handle form submission
     const handleFormSubmit = (event) => {
         event.preventDefault(); // Prevent page reload
-        console.log("Form submitted!"); // Debugging
         showSuccessModal(); // Show success modal after submission
     };
 
