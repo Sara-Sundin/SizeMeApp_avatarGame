@@ -81,3 +81,36 @@ document.addEventListener("DOMContentLoaded", () => {
         footer.classList.remove("hidden");
     }, 5000); // Adjust time (matches animation duration)
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".modal").forEach(modal => {
+        // Prevent Bootstrap from setting aria-hidden
+        new MutationObserver(mutations => {
+            mutations.forEach(mutation => {
+                if (mutation.attributeName === "aria-hidden" && modal.getAttribute("aria-hidden") === "true") {
+                    modal.removeAttribute("aria-hidden");
+                    modal.removeAttribute("inert");
+                }
+            });
+        }).observe(modal, {
+            attributes: true
+        });
+
+        modal.addEventListener("show.bs.modal", function () {
+            this.removeAttribute("aria-hidden");
+            this.removeAttribute("inert");
+            this.setAttribute("aria-modal", "true");
+        });
+
+        modal.addEventListener("shown.bs.modal", function () {
+            setTimeout(() => {
+                (this.querySelector("button, input, textarea, select, a") || this).focus();
+            }, 50);
+        });
+
+        modal.addEventListener("hide.bs.modal", function () {
+            this.setAttribute("aria-hidden", "true");
+            this.setAttribute("inert", "");
+        });
+    });
+});
