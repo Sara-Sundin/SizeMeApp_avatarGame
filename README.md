@@ -943,6 +943,13 @@ I have included screenprints of the first and final validation of the HTML with 
 
 </details>
 
+<details open>
+  <summary>404 Page HTML- Initial Check (no fixes)</summary>
+
+  ![Validation HTML 404 Final](assets/images/images_read_me/male_avatar_html_final_check.jpg)
+
+</details>
+
 ### W3C CSS Validator
 The CSS was succesfully validated for all pages.
 
