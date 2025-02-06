@@ -35,6 +35,7 @@ Welcome to the Avatar Maker! This web application allows users to design persona
 
 [TECHNOLOGIES USED](#technologies-used)
 - Languages used to create the website
+- Summary of the Javascript's functions and features
 - Frameworks & Libraries
 - Software
 - Automated Tools
@@ -635,6 +636,7 @@ A planned addition to the website is an Avatar Inspiration Gallery, designed to 
 
 # TECHNOLOGIES USED
 - [Languages used to create the website](#languages-used-to-create-the-website)
+- [Summary of the Javascript's functions and features](#summary-of-the-javascript's-functions-and-features)
 - [Frameworks & Libraries](#frameworks-and-libraries)
 - [Software](#software)
 - [Automated Tools](#automated-tools)
@@ -645,6 +647,40 @@ A planned addition to the website is an Avatar Inspiration Gallery, designed to 
 - HTML
 - CSS
 - JavaScript
+
+## Summary of the Javascript's functions and features
+The JavaScript in this project powers the interactive experience of the Avatar Maker, handling everything from rendering custom avatars on a canvas to managing user interactions. It dynamically updates different avatar layers—such as skin, hair, and clothing—allowing users to personalize their creations in real time.
+
+Key features include:
+
+- Canvas-based rendering: Each avatar element is drawn on separate layers, enabling smooth updates without affecting the entire image.
+- Event-driven interactions: User selections instantly update the avatar through event listeners, ensuring a responsive experience.
+- Color customization: Using HSL-to-RGB conversion, the code allows users to adjust colors dynamically.
+- Randomization and resets: Users can randomize their avatar’s features or reset them with a single click.
+- Download functionality: The avatar can be saved as an image, enabling users to keep their custom designs.
+
+### Summary of Functions in the Avatar script
+- initializeCanvases() - Sets up canvas dimensions and initializes the avatar type.
+- setAvatarType() -	Loads the appropriate skin for male or female avatars.
+- hslToRgb() -	Converts HSL values to RGB for color processing.
+- rgbToHsl() -	Converts RGB values back to HSL.
+- hexToRgb() -	Converts HEX color codes to RGB.
+- loadAndDrawLayer() -	Loads and draws selected avatar features on the canvas.
+- handleThumbnailSelection() -	Handles user feature selection (e.g., choosing a different nose or eyes).
+- updateColor() -	Applies color changes to selected features.
+- randomizeAvatar() -	Randomly generates avatar features and colors.
+- resetCanvas() -	Clears all layers and resets the avatar.
+- setupAdditionalThumbnails() -	Controls visibility of extra feature selections.
+- setupClearThumbnail() -	Allows users to remove specific features.
+- setupBackButtons() -	Navigates back to the main selection menu.
+- applyColorToActiveLayer() -	Enables dynamic color changes with sliders.
+
+### Features in the Avatar script
+- Objects -	Store canvases, feature layers and avatar options.
+- Event Listeners -	Handle user interactions (selecting features, downloading the avatar).
+- Loops -	Iterate through options using forEach() and for...in.
+
+  <hr>
   
 ## Frameworks and Libraries
 - Bootstrap (for responsive design and styling).
