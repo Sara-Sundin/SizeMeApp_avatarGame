@@ -166,7 +166,7 @@ Goal: Engage with the website and share feedback.
 - Provide feedback on their experience to contribute to future improvements (User Story 8).
 
 <details open>
-<summary><h4>User Story 1 (must-have)</h4></summary>
+<summary>User Story 1 (must-have)</summary>
   
 ### User Story 1 (must-have)
 As a visitor, I want to see a welcoming homepage with a brief introduction,
@@ -184,7 +184,7 @@ so that I can quickly understand the purpose of the Avatar Maker site.
 </details>
 
 <details>
-<summary><h4>User Story 2 (must-have)</h4></summary>
+<summary>User Story 2 (must-have)</summary>
   
 ### User Story 2 (must-have)
 As a visitor, I want to explore the features of the Avatar Maker,
@@ -202,7 +202,7 @@ so that I can understand what customizations are available.
 </details>  
 
 <details>
-<summary><h4>User Story 3 (must-have)</h4></summary>
+<summary>User Story 3 (must-have)</summary>
   
 ### User Story 3 (must-have)
 As a visitor, I want to select a gender to begin my avatar creation,
@@ -220,7 +220,7 @@ so that I can personalize my experience.
 </details>  
 
 <details>
-<summary><h4>User Story 4 (must-have)</h4></summary>
+<summary>User Story 4 (must-have)</summary>
   
 ### User Story 4 (must-have)
 As a visitor, I want the site to be responsive, so that I can navigate and use it across devices.
@@ -235,7 +235,7 @@ As a visitor, I want the site to be responsive, so that I can navigate and use i
 </details>  
 
 <details>
-<summary><h4>User Story 5 (must-have)</h4></summary>
+<summary>User Story 5 (must-have)</summary>
 
 ### User Story 5 (could-have)
 - As a returning visitor, I want to experiment with new styles and features, so that I can further customize my avatar.
@@ -252,7 +252,7 @@ As a visitor, I want the site to be responsive, so that I can navigate and use i
 </details> 
 
 <details>
-<summary><h4>User Story 6 (should-have)</h4></summary>
+<summary>User Story 6 (should-have)</summary>
   
 ### User Story 6 (should-have)
 As a visitor, I want to download my avatar, so that I can save it for personal or professional use.
@@ -267,7 +267,7 @@ As a visitor, I want to download my avatar, so that I can save it for personal o
 </details> 
 
 <details>
-<summary><h4>User Story 7 (could-have)</h4></summary>
+<summary>User Story 7 (could-have)</summary>
   
 ### User Story 7 (could-have)
 - As a frequent visitor, I want to provide feedback about the Avatar Maker, so that I can contribute to its improvement.
@@ -284,7 +284,7 @@ As a visitor, I want to download my avatar, so that I can save it for personal o
 </details> 
 
 <details>
-<summary><h4>User Story 8 (could-have)</h4></summary>
+<summary>User Story 8 (could-have)</summary>
   
 #### User Story 8 (could-have)
 As a frequent visitor, I want to share the Avatar Maker with others, so that my friends or colleagues can use it too.
@@ -299,7 +299,7 @@ As a frequent visitor, I want to share the Avatar Maker with others, so that my 
 </details> 
 
 <details>
-<summary><h4>User Story 9 (want-have)</h4></summary>
+<summary>User Story 9 (want-have)</summary>
   
 ### User Story 9 (want-have)
 As a visitor, I want to view samples of responsive avatars, so that I can get inspired and see the possibilities before creating my own.
@@ -375,7 +375,12 @@ The following measures has been taken to make sure the website is accessible.
 ## Design Planning
 The original concept for the website was more extensive than the final outcome, the avatar maker was first intended to be a part of a larger flow from registration as a user for another application. This diagram represents the initial planning and user flow for the website, designed to create a personalized user experience by incorporating body type selection, user preferences, and avatar customization. The diagram illustrates the planning of the journey and serves as a reference for future improvements and expansion.
 
-<details open><summary>Design Planning Diagram</summary><img src=assets/images/images_read_me/design_planning.jpg></details>
+<details open>
+  <summary>Design Planning Diagram</summary>
+
+  ![Design Planning](assets/images/images_read_me/design_planning.jpg)
+
+</details>
 
 <hr>
   
@@ -406,7 +411,12 @@ The images used in this site are created by myself as sketches in Adobe Illustra
 ## Wire Frames
 The wireframes were created in Adobe Illustrator for mobile, tablet and desktop. I have developed and used my own toolkit for the wireframes. The outcome for the website looks slightly different than the initial wireframes but the introduction of the page remained consistent.
 
-<details open><summary><h4>Page Wireframe</h4></summary><img src=assets/images/images_read_me/wireframes_project-2.jpg></details>
+<details open>
+  <summary>Page Wireframe</summary>
+
+  ![Wireframes](assets/images/images_read_me/wireframes_project-2.jpg)
+
+</details>
 
 <hr>
 
@@ -415,71 +425,191 @@ The wireframes were created in Adobe Illustrator for mobile, tablet and desktop.
 ### Animation Intro
 When accessing the website an animation intro displaying Ready.. Set.. Create! One word showing at a time with the word expanding at the end of each display. The intro becomes hidden and the main page displays.
 
-<details open><summary><h4>Animation Intro</h4></summary><img src=assets/images/images_read_me/animation-intro.jpg>></details>
+<details open>
+  <summary>Animation Intro</summary>
+
+  ![Intro](assets/images/images_read_me/animation-intro.jpg)
+
+</details>
 
 #### Favicon
 The website includes a custom favicon to enhance its identity and improve user experience. The favicon, a small yet recognizable icon displayed in the browser tab, represents the creative and interactive nature of the Avatar Maker.
 
 I designed the favicon in Adobe Illustrator, featuring a simplified avatar icon to match the site’s overall aesthetic. Its vibrant colors and clean lines ensure visibility and clarity, even at small sizes. This attention to detail reinforces the website's branding and provides users with a polished, professional experience.
 
-<details open><summary><h4>Favicon Image</h4></summary><img src=assets/images/images_read_me/favicon-avatar-readme.png>></details>
+<details open>
+  <summary>Favicon Image</summary>
+
+  ![Favicon](assets/images/images_read_me/favicon-avatar-readme.png)
+
+</details>
 
 ### Header
 The header of the Avatar Maker website provides a clear and engaging introduction, featuring the site title that sets the creative tone. It ensures easy navigation and a strong visual identity, making the user experience seamless and inviting.
 
-<details open><summary><h4>Header Image - Desktop</h4></summary><img src=assets/images/images_read_me/header-desktop.jpg>></details>
-<details><summary><h4>Header Image - Mobile</h4></summary><img src=assets/images/images_read_me/header-mobile.jpg>></details>
+<details open>
+  <summary>Header Image - Desktop</summary>
+
+  ![Header Desktop](assets/images/images_read_me/header-desktop.jpg)
+
+</details>
+
+<details>
+  <summary>Header Image - Mobile</summary>
+
+  ![Header Mobile](assets/images/images_read_me/header-mobile.jpg)
+
+</details>
 
 #### Introduction Section
 The Avatar Maker website welcomes users with an engaging and user-friendly introduction. The homepage features a bold heading, "Your vibe, your style, your avatar – let’s get started!", which sets the tone for creativity and individuality. A brief introductory paragraph invites users to explore the avatar customization journey with an arrow pointing to the images where the avatar generator opens, highlighting the fun and versatility of the tool.
 
-<details open><summary><h4>Introduction Section Image - Desktop</h4></summary><img src=assets/images/images_read_me/introduction-desktop.jpg></details>
-<details><summary><h4>Introduction Section Image - Mobile</h4></summary><img src=assets/images/images_read_me/introduction-mobile.jpg></details>
+<details open>
+  <summary>Introduction Section Image - Desktop</summary>
+
+  ![Introduction Desktop](assets/images/images_read_me/introduction-desktop.jpg)
+
+</details>
+
+<details>
+  <summary>Introduction Section Image - Mobile</summary>
+
+  ![Introduction Mobile](assets/images/images_read_me/introduction-mobile.jpg)
+
+</details>
 
 #### Choose Gender Section
 The Choose-Gender section invites users to begin their avatar creation journey with a choice between male and female avatars. Featuring clear, clickable icons and hover animations, the images respond dynamically, enhancing the experience and making it clear what to do. This responsive feedback captures attention and ensures seamless navigation. Each selection opens a modal for customization, making the transition smooth and intuitive. Designed for accessibility, this section is engaging and inclusive across all devices.
 
-<details open><summary><h4>Choose Gender Section Image - Desktop</h4></summary><img src=assets/images/images_read_me/choose-gender-desktop.jpg></details>
-<details><summary><h4>Choose Gender Section Image - Mobile</h4></summary><img src=assets/images/images_read_me/choose-gender-mobile.jpg></details>
+<details open>
+  <summary>Choose Gender Section Image - Desktop</summary>
+
+  ![Choose Gender Desktop](assets/images/images_read_me/choose-gender-desktop.jpg)
+
+</details>
+
+<details open>
+  <summary>Choose Gender Section Image - Mobile</summary>
+
+  ![Choose Gender Mobile](assets/images/images_read_me/choose-gender-mobile.jpg)
+
+</details>
 
 #### Avatar Generator Modal
 The Avatar Generator Modal is a central feature of the site, designed to provide users with an engaging and interactive experience. When triggered, the modal opens to reveal the Avatar Maker interface, where users can customize their avatars with ease. This full-screen design ensures focus on the creative process, eliminating distractions. With intuitive controls and seamless transitions, users can select features, adjust colors, and preview their avatars in real time. The modal's clean layout and responsive design enhance usability across devices, ensuring accessibility for all users.
 
-<details open><summary><h4>Female Modal Image - Desktop</h4></summary><img src=assets/images/images_read_me/modal-avatar-female-desktop.jpg></details>
-<details><summary><h4>Female Modal Image - Mobile</h4></summary><img src=assets/images/images_read_me/modal-avatar-female-mobile.jpg></details>
+<details open>
+  <summary>Female Modal Image - Desktop</summary>
 
-<details open><summary><h4>Male Modal Image - Desktop</h4></summary><img src=assets/images/images_read_me/modal-avatar-male-desktop.jpg>></details>
-<details><summary><h4>Male Modal Image - Mobile</h4></summary><img src=assets/images/images_read_me/modal-avatar-male-mobile.jpg></details>
+  ![Female Modal Desktop](assets/images/images_read_me/modal-avatar-female-desktop.jpg)
+
+</details>
+
+<details open>
+  <summary>Female Modal Image - Mobile</summary>
+
+  ![Female Modal Mobile](assets/images/images_read_me/modal-avatar-female-mobile.jpg)
+
+</details>
+
+<details open>
+  <summary>Male Modal Image - Desktop</summary>
+
+  ![Male Modal Desktop](assets/images/images_read_me/modal-avatar-male-desktop.jpg)
+
+</details>
+
+<details open>
+  <summary>Male Modal Image - Mobile</summary>
+
+  ![Male Modal Mobile](assets/images/images_read_me/modal-avatar-male-mobile.jpg)
+
+</details>
 
 #### Avatar Collage Section
 The Avatar Collage section showcases a vibrant collection of avatars designed by users, serving as both an inspiring visual element and a navigation feature. At the center of the collage, a prominent button labeled "Download your avatar!" captures attention and provides guidance. This button links users back to the start of the introduction, ensuring a seamless flow through the site. 
 
-<details open><summary><h4>Avatar Collage Section Image - Desktop</h4></summary><img src=assets/images/images_read_me/collage-desktop.jpg></details>
-<details><summary><h4>Avatar Collage Section Image - Mobile</h4></summary><img src=assets/images/images_read_me/collage-mobile.jpg></details>
+<details open>
+  <summary>Avatar Collage Section Image - Desktop</summary>
+
+  ![Gallery Avatars](assets/images/images_read_me/collage-desktop.jpg)
+
+</details>
+
+<details>
+  <summary>Avatar Collage Section Image - Mobile</summary>
+
+  ![Gallery Avatars](assets/images/images_read_me/collage-mobile.jpg)
+
+</details>
 
 #### Contact Section
 The Contact Section offers an intuitive way for users to connect. At its heart is a prominently displayed button that, when clicked, opens a modal containing a clean and user-friendly email form. This design ensures seamless communication by allowing users to send inquiries or feedback directly without navigating away from the page. The straightforward functionality and modern design make it easy for users to engage, reinforcing accessibility and creating a streamlined user experience.
 
-<details><summary><h4>Contact Section Image - Desktop</h4></summary><img src=assets/images/images_read_me/contact-desktop.jpg></details>
-<details open><summary><h4>Contact Section Image - Mobile</h4></summary><img src=assets/images/images_read_me/contact-mobile.jpg></details>
+<details>
+  <summary>Contact Section Image - Desktop</summary>
+
+  ![Contact Section Desktop](assets/images/images_read_me/contact-desktop.jpg)
+
+</details>
+
+<details open>
+  <summary>Contact Section Image - Mobile</summary>
+
+  ![Contact Section Desktop](assets/images/images_read_me/contact-mobile.jpg)
+
+</details>
 
 #### Contact Modal
 The contact modal is displaying a clean and simple form for submitting inquiries or feedback. The form includes fields for name, email, and message, ensuring all necessary details are collected efficiently. Designed for ease of use, the modal keeps the user on the page without the need for redirection.
 
-<details open><summary><h4>Contact Modal Image - Desktop</h4></summary><img src=assets/images/images_read_me/contact-modal-desktop.jpg></details>
-<details><summary><h4>Contact Modal Image - Mobile</h4></summary><img src=assets/images/images_read_me/contact-modal-mobile.jpg></details>
+<details open>
+  <summary>Contact Modal Image - Desktop</summary>
+
+  ![Contact Modal Desktop](assets/images/images_read_me/contact-modal-desktop.jpg)
+
+</details>
+
+<details>
+  <summary>Contact Modal Image - Mobile</summary>
+
+  ![Contact Modal Mobile](assets/images/images_read_me/contact-modal-mobile.jpg)
+
+</details>
 
 #### Success Modal
 The Success Modal Window provides users with immediate feedback after successfully submitting the contact form. Once the "Send" button is pressed, the contact modal gracefully closes, and a success modal appears, confirming that the message has been sent. This modal includes a brief thank-you message to acknowledge the user's effort and reassure them that their inquiry has been received.
 
-<details open><summary><h4>Success Modal Image - Desktop</h4></summary><img src=assets/images/images_read_me/success-modal-desktop.jpg></details>
-<details><summary><h4>Success Modal Image - Mobile</h4></summary><img src=assets/images/images_read_me/success-modal-mobile.jpg></details>
+<details>
+  <summary>Success Modal Image - Desktop</summary>
+
+  ![Success Modal Desktop](assets/images/images_read_me/success-modal-desktop.jpg)
+
+</details>
+
+<details open>
+  <summary>Success Modal Image - Mobile</summary>
+
+  ![Success Modal Mobile](assets/images/images_read_me/success-modal-mobile.jpg)
+
+</details>
 
 #### Footer
 The Footer serves as a compact and functional closing section of the website, providing essential information and quick access to external links. It includes prominent social media icons, enabling users to easily connect on platforms like Instagram, LinkedIn, and WhatsApp. The footer's minimalist design aligns with the overall aesthetic of the site, ensuring it complements rather than distracts. The three social media icons are added with Font Awesome.
 
-<details open><summary><h4>Footer Image - Desktop</h4></summary><img src=assets/images/images_read_me/footer-desktop.jpg></details>
-<details><summary><h4>Footer Image - Mobile</h4></summary><img src=assets/images/images_read_me/footer-mobile.jpg></details>
+<details open>
+  <summary>Footer Image - Desktop</summary>
+
+  ![Footer Desktop](assets/images/images_read_me/footer-desktop.jpg)
+
+</details>
+
+<details>
+  <summary>Footer Image - Mobile</summary>
+
+  ![Footer Mobile](assets/images/images_read_me/footer-mobile.jpg)
+
+</details>
 
 #### Future Pages - Avatar Inspiration Gallery
 A planned addition to the website is an Avatar Inspiration Gallery, designed to inspire users and showcase the creative possibilities of the Avatar Maker. This feature will display a visually appealing grid or carousel of pre-designed avatars, each tailored to highlight unique styles and combinations. Users can browse the gallery and click on a sample to load it directly into the avatar editor for further customization. The responsive design will ensure seamless accessibility across all devices, enhancing the user experience. This gallery will serve as both an inspiration hub and a practical starting point for creating personalized avatars.
@@ -593,7 +723,13 @@ Samsung Internet
 
 ## Testing grid
 I have used a grid for testing all components of the website. After testing I have fixed any issues arising and put a note in the grid what has been done. See below dropdown menu for the grid that I created in an excel spreadsheet using a free template as base. [Link to excel spreadsheet](assets/docs/test_checklist_project-2.xlsx)
-<details open><summary><h3>Testing Grid</h3></summary><img src=assets/images/images_read_me/checklist-project-2.jpg></details>
+
+<details open>
+  <summary>Testing Grid</summary>
+
+  ![Testing Grid](assets/images/images_read_me/checklist-project-2.jpg)
+
+</details>
 
 <hr>
 
@@ -605,14 +741,24 @@ I have used Chrome Dev Tools throughout the development of the website to test f
 ## Lighthouse
 I used Chrome Dev Tools Lightouse to help improve the website's performance, accessibility, SEO, and user experience. The first time I ran the testing I received messages for improvement that I have recorded below. The Lighthouse tool provided actionable insights to optimize speed and fix issues. For the second run with Lighthouse I disabled the intro animation since it disturbed the accessability in terms of the color choices on the third word in the animation (Create!). I did not want to change the color since it was obvious it would not interfere with the overall user experience. After fixing the issues recorded below  all areas turned green and I received a score of 100 for all categories accompanied with a firework animation on the page.
 
-<details><summary><h4>1st run with Lighthouse</h4></summary><img src=assets/images/images_read_me/lighthouse_1st_run.jpg></details>
+<details>
+  <summary>1st run with Lighthouse</summary>
+
+  ![Lighthouse 1st run](assets/images/images_read_me/lighthouse_1st_run.jpg)
+
+</details>
 
 Improvement messages: 
 - Organise the headings for better accessability.
 - The word Create! in the animation intro do not have enough contrast.
 - Missing meta tag for description.
   
-<details open><summary><h4>2nd run with Lighthouse - after fixing the issues</h4></summary><img src=assets/images/images_read_me/lighthouse_2nd_run.jpg></details>
+<details open>
+  <summary>2nd run with Lighthouse - after fixing the issues</summary>
+
+  ![Lighthouse 2nd run](assets/images/images_read_me/lighthouse_2nd_run.jpg)
+
+</details>
 
 <hr>
 
@@ -623,17 +769,45 @@ The HTML, CSS and Javascript code has been validated on below editors. The issue
 I have included screenprints of the first and final validation of the HTML with W3C validation.
 <br>
 
-<details><summary><h4>Index Page HTML- Initial Check </h4></summary><img src=assets/images/images_read_me/index_page_html_initial_check.jpg></details>
+<details>
+  <summary>Index Page HTML- Initial Check</summary>
+
+  ![Validation HTML Index 1st](assets/images/images_read_me/index_page_html_initial_check.jpg)
+
+</details>
+
 - space on text for image favicon - removed<br>
 - missing heading for gallery section - added.
-<details open><summary><h4>Index Page HTML- Final Check </h4></summary><img src=assets/images/images_read_me/index_page_html_final_check.jpg></details>
+  
+<details open>
+  <summary>Index Page HTML- Final Check</summary>
 
-<details><summary><h4>Female Avatar Modal HTML- Initial Check </h4></summary><img src=assets/images/images_read_me/female_avatar_html_initial_check.jpg></details>
+  ![Validation HTML Index Final](assets/images/images_read_me/index_page_html_final_check.jpg)
+
+</details>
+
+<details>
+  <summary>Female Avatar Modal HTML- Initial Check</summary>
+
+  ![Validation HTML Female Avatar 1st](assets/images/images_read_me/female_avatar_html_initial_check.jpg)
+
+</details>
 - misuse of aria-label - removed.<br>
 - backlash on open tags - removed.
-<details open><summary><h4>Female Avatar Modal HTML- Final Check </h4></summary><img src=assets/images/images_read_me/female_avatar_html_final_check.jpg></details>
 
-<details open><summary><h4>Male Avatar Modal HTML- Initial Check (no fixes) </h4></summary><img src=assets/images/images_read_me/male_avatar_html_final_check.jpg></details>
+<details open>
+  <summary>Female Avatar Modal HTML- Final Check</summary>
+
+  ![Validation HTML Female Final](assets/images/images_read_me/female_avatar_html_final_check.jpg)
+
+</details>
+
+<details open>
+  <summary>Male Avatar Modal HTML- Initial Check (no fixes)</summary>
+
+  ![Validation HTML Male Final](assets/images/images_read_me/male_avatar_html_final_check.jpg)
+
+</details>
 
 ### W3C CSS Validator
 The CSS was succesfully validated for all pages.
