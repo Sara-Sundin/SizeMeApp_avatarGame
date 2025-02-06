@@ -746,7 +746,7 @@ Visit this URL to view your deployed website.
 <br>
 
 # TESTING
-- [Manual vs. Automated Testing](#manual-vs.-automated-testing)
+- [Manual vs. Automated Testing](#manual-vs-automated-testing)
 - [Devices](#devices)
 - [Browsers](#browsers)
 - [User Story Testing](#user-story-testing)
@@ -756,7 +756,7 @@ Visit this URL to view your deployed website.
 - [Validation](#validation)
 - [Bugs & Fixes](#bugs-and-fixes)
   
-## Manual vs. Automated Testing
+## Manual vs Automated Testing
 Software testing ensures that applications work as expected, are free of critical bugs, and provide a good user experience. Testing can be done manually by human testers or automatically using scripts and testing frameworks. The choice between manual and automated testing depends on factors like project complexity, budget, and the need for speed and accuracy. Both manual and automated testing play crucial roles in software development. Manual testing is best for exploratory testing and user experience evaluation, while automated testing is essential for repetitive tasks and continuous testing in large projects. A combination of both approaches often provides the best results.
 
 The manual testing in this project has been done to check the responsiveness on different devices and browsers as well as the user experience both in terms of functionality and various workflows to find unexpected behavior. I have used a testing grid to make sure all components are being included.
