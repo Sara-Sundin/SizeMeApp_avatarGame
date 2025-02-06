@@ -661,19 +661,19 @@ Key features include:
 
 ### Summary of Functions in the Avatar script
 - initializeCanvases() - Sets up canvas dimensions and initializes the avatar type.
-- setAvatarType() -	Loads the appropriate skin for male or female avatars.
+- setAvatarType() -	Loads the appropriate default canvas for male or female avatar.
 - hslToRgb() -	Converts HSL values to RGB for color processing.
 - rgbToHsl() -	Converts RGB values back to HSL.
-- hexToRgb() -	Converts HEX color codes to RGB.
+- hexToRgb() -	Converts HEX color codes to RGB. This is used for the swatches selections.
 - loadAndDrawLayer() -	Loads and draws selected avatar features on the canvas.
-- handleThumbnailSelection() -	Handles user feature selection (e.g., choosing a different nose or eyes).
+- handleThumbnailSelection() -	Handles user feature selection like choosing a nose or eyes thumbnail.
 - updateColor() -	Applies color changes to selected features.
 - randomizeAvatar() -	Randomly generates avatar features and colors.
 - resetCanvas() -	Clears all layers and resets the avatar.
-- setupAdditionalThumbnails() -	Controls visibility of extra feature selections.
-- setupClearThumbnail() -	Allows users to remove specific features.
+- setupAdditionalThumbnails() -	Controls visibility of extra feature selections inside the main selection thumbnails.
+- setupClearThumbnail() -	Allows users to remove specific features in the additional thumbnail menus.
 - setupBackButtons() -	Navigates back to the main selection menu.
-- applyColorToActiveLayer() -	Enables dynamic color changes with sliders.
+- applyColorToActiveLayer() -	Enables dynamic color changes with sliders included.
 
 ### Features in the Avatar script
 - Objects -	Store canvases, feature layers and avatar options.
