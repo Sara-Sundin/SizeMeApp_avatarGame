@@ -102,7 +102,7 @@ script-contact.js – Manages the contact form and modal. I separated this since
 ### Testing (Jest)
 script-contact-test.js – Jest test suite ensuring that script-contact.js functions correctly.
 
-<details open><summary><h4>Repository Overview</h4></summary><img src=assets/images/images_read_me/repository-overview.jpg></details>
+<details open><summary>Repository Overview</summary>![Repository](assets/images/images_read_me/repository-overview.jpg)</details>
 
 [Back to Content Table](#content)
 
