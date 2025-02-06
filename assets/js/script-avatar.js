@@ -634,7 +634,7 @@ function randomizeAvatar() {
             if (layers[key]) {
                 loadAndDrawLayer(key, layers[key]);
 
-                if (["base", "skin", "clothes", "hair", "beard", "glasses"].includes(key)) {
+                if (["base", "skin", "clothes", "hair", "mouth", "beard", "glasses"].includes(key)) {
                     applyRandomColor(key);
                 }
             } else {
