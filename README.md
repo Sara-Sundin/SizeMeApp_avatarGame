@@ -636,7 +636,7 @@ A planned addition to the website is an Avatar Inspiration Gallery, designed to 
 
 # TECHNOLOGIES USED
 - [Languages used to create the website](#languages-used-to-create-the-website)
-- [Summary of the Javascript's functions and features](#summary-of-the-javascript's-functions-and-features)
+- [Summary of the Javascript's functions and features](#summary-of-the-javascripts-functions-and-features)
 - [Frameworks & Libraries](#frameworks-and-libraries)
 - [Software](#software)
 - [Automated Tools](#automated-tools)
