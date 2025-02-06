@@ -370,7 +370,7 @@ The following measures has been taken to make sure the website is accessible.
 ## Design Planning
 The original concept for the website was more extensive than the final outcome, the avatar maker was first intended to be a part of a larger flow from registration as a user for another application. This diagram represents the initial planning and user flow for the website, designed to create a personalized user experience by incorporating body type selection, user preferences, and avatar customization. The diagram illustrates the planning of the journey and serves as a reference for future improvements and expansion.
 
-<details open><summary><h4>Design Planning Diagram</h4></summary><img src=assets/images/images_read_me/design_planning.jpg></details>
+<details open><summary>Design Planning Diagram</summary><img src=assets/images/images_read_me/design_planning.jpg></details>
 
 <hr>
   
