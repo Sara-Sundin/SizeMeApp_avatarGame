@@ -344,7 +344,7 @@ The following measures has been taken to make sure the website is accessible.
 
 ### Male Modal
 - aria-labelledby="maleModalLabel"
- aria-hidden="true"
+ - aria-hidden="true"
 
 ### Close Button (Female Modal & Male Modal)
 - aria-label="Close"
