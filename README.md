@@ -740,7 +740,7 @@ Samsung Internet
 <hr>
 
 ## User Story Testing
-I have included examples of the manual testing conducted, each accompanied by a relevant user story. These tests ensure that the application meets user expectations by verifying functionality, usability, and responsiveness. Each user story is tested through real interactions, checking that the intended experience aligns with the actual behavior of the application.
+I have included some examples of the manual testing conducted for the user stories. These tests ensure that the application meets user expectations by verifying functionality, usability, and responsiveness. Each user story is tested through real interactions, checking that the intended experience aligns with the actual behavior of the application.
 
 ### User Story 1 - See a welcoming homepage with a clear introduction and instructions.
 As a visitor, I want to see a welcoming homepage with a brief introduction,
@@ -754,8 +754,8 @@ so that I can quickly understand the purpose of the Avatar Maker site. To ensure
   
 The homepage successfully meets the user story criteria, providing a clear, engaging, and accessible introduction to the application.
 
- ![Test User Story 1 Desktop](#)
-  ![Test User Story 1 Mobile](#)
+ ![Test User Story 1 Desktop](assets/images/images_read_me/test-user-story-1-desktop.jpg)
+  ![Test User Story 1 Mobile](assets/images/images_read_me/test-user-story-1-mobile.jpg)
 
 ### User Story 2  - Explore the Avatar Maker and its features through brief, engaging descriptions.
 As a visitor, I want to explore the features of the Avatar Maker, so that I can understand what customizations are available. To verify that users can easily understand the Avatar Maker and its features, the following manual tests were conducted:
@@ -769,8 +769,8 @@ As a visitor, I want to explore the features of the Avatar Maker, so that I can 
 
 The tests confirmed that users can quickly understand the purpose of the Avatar Maker and how to interact with it effectively.
 
- ![Test User Story 2 Desktop](#)
-  ![Test User Story 2 Mobile](#)
+ ![Test User Story 2 Desktop](assets/images/images_read_me/test-user-story-2-desktop.jpg)
+  ![Test User Story 2 Mobile](assets/images/images_read_me/test-user-story-2-mobile.jpg)
 
 ### User Story 4 - Experience seamless navigation across devices with responsive design.
 As a visitor, I want the site to be responsive, so that I can navigate and use it across devices.To ensure a smooth and consistent navigation experience across different devices, the following tests were conducted:
@@ -783,9 +783,6 @@ As a visitor, I want the site to be responsive, so that I can navigate and use i
 - Automated Lighthouse Audit – Ran an automated test using Chrome DevTools Lighthouse to evaluate mobile-friendliness and accessibility.
   
 The tests confirmed that the application provides a seamless and responsive navigation experience across different devices and screen sizes.
-
- ![Test User Story 4 Desktop](#)
-  ![Test User Story 4 Mobile](#)
 
 ### User Story 6 - Use the download feature to save their avatar for personal or professional use.
 As a visitor, I want to download my avatar, so that I can save it for personal or professional use. To ensure users can successfully download their customized avatar, the following manual tests were performed:
@@ -800,8 +797,8 @@ As a visitor, I want to download my avatar, so that I can save it for personal o
   
 The tests confirmed that users can reliably download their avatar in a user-friendly and efficient manner.
 
- ![Test User Story 6 Desktop](#)
-  ![Test User Story 6 Mobile](#)
+ ![Test User Story 6 Desktop](assets/images/images_read_me/test-user-story-6-desktop.jpg)
+  ![Test User Story 6 Mobile](assets/images/images_read_me/test-user-story-6-mobile.jpg)
 
 <hr>
 
