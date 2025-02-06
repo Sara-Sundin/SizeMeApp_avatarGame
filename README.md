@@ -613,6 +613,16 @@ The Footer serves as a compact and functional closing section of the website, pr
 
 </details>
 
+#### 404 Page
+The 404 Page is an essential feature of the website that enhances the user experience by providing a clear and friendly response when a user navigates to a non-existent or broken link. Instead of displaying a generic browser error, the custom 404 page ensures that users are guided back to the homepage or other relevant sections of the site.
+
+<details open>
+  <summary>404 Page - Desktop</summary>
+
+  ![404 Page Desktop](assets/images/images_read_me/404-page.jpg)
+
+</details>
+
 #### Future Pages - Avatar Inspiration Gallery
 A planned addition to the website is an Avatar Inspiration Gallery, designed to inspire users and showcase the creative possibilities of the Avatar Maker. This feature will display a visually appealing grid or carousel of pre-designed avatars, each tailored to highlight unique styles and combinations. Users can browse the gallery and click on a sample to load it directly into the avatar editor for further customization. The responsive design will ensure seamless accessibility across all devices, enhancing the user experience. This gallery will serve as both an inspiration hub and a practical starting point for creating personalized avatars.
 
