@@ -49,6 +49,7 @@ Welcome to the Avatar Maker! This web application allows users to design persona
 - Manual vs. Automated Testing
 - Devices
 - Browsers
+- User Story Testing
 - Testing Grid
 - Chrome Dev Tools
 - Lighthouse
@@ -153,7 +154,7 @@ The visual design is playful and creative, reflecting the theme of personalizati
 ### First-Time Visitors
 Goal: Quickly understand the purpose of the website and begin creating their avatar.
 - See a welcoming homepage with a clear introduction and instructions (User Story 1).
-- Learn about the Avatar Maker and its features through brief, engaging descriptions (User Story 2).
+- Explore the Avatar Maker and its features through brief, engaging descriptions (User Story 2).
 - Access the gender selection section to start creating their avatar (User Story 3).
 - Experience seamless navigation across devices with responsive design (User Story 4).
 - View samples of responsive avatars to get inspired and see the possibilities (User Story 9).
@@ -702,6 +703,7 @@ Visit this URL to view your deployed website.
 - [Manual vs. Automated Testing](#manual-vs.-automated-testing)
 - [Devices](#devices)
 - [Browsers](#browsers)
+- [User Story Testing](#user-story-testing)
 - [Testing Grid](#testing-grid)
 - [Chrome Dev Tools](#chrome-dev-tools)
 - [Lighthouse](#lighthouse)
@@ -714,6 +716,8 @@ Software testing ensures that applications work as expected, are free of critica
 The manual testing in this project has been done to check the responsiveness on different devices and browsers as well as the user experience both in terms of functionality and various workflows to find unexpected behavior. I have used a testing grid to make sure all components are being included.
 
 The automated testing have used frameworks and tools such as Lighthouse, W3C Validators, JSHint, and Jest  to run test cases, making it more efficient for large-scale and repetitive testing.
+
+<hr>
 
 ## Devices
 
@@ -732,6 +736,72 @@ Microsoft Edge <br>
 Safari <br>
 Firefox <br>
 Samsung Internet
+
+<hr>
+
+## User Story Testing
+I have included examples of the manual testing conducted, each accompanied by a relevant user story. These tests ensure that the application meets user expectations by verifying functionality, usability, and responsiveness. Each user story is tested through real interactions, checking that the intended experience aligns with the actual behavior of the application.
+
+### User Story 1 - See a welcoming homepage with a clear introduction and instructions.
+As a visitor, I want to see a welcoming homepage with a brief introduction,
+so that I can quickly understand the purpose of the Avatar Maker site. To ensure that the homepage provides a welcoming experience with clear instructions, the following tests were conducted:
+
+#### Browser used - Google Chrome, Safari, Samsung Internet
+- Visual Inspection – Manually reviewed the homepage layout to verify that the introduction text is prominently displayed and easy to read.
+- Usability Testing – Asked test users to navigate the homepage and provide feedback on whether the instructions were clear and intuitive.
+- Accessibility Testing – Verified color contrast, keyboard navigation, and screen reader compatibility to ensure inclusivity.
+- Automated UI Testing – Used browser dev tools to confirm correct element placement and ensure key sections load as expected.
+  
+The homepage successfully meets the user story criteria, providing a clear, engaging, and accessible introduction to the application.
+
+ ![Test User Story 1 Desktop](#)
+  ![Test User Story 1 Mobile](#)
+
+### User Story 2  - Explore the Avatar Maker and its features through brief, engaging descriptions.
+As a visitor, I want to explore the features of the Avatar Maker, so that I can understand what customizations are available. To verify that users can easily understand the Avatar Maker and its features, the following manual tests were conducted:
+
+#### Browser used - Google Chrome, Safari, Samsung Internet
+- Visibility Check: Ensured that descriptions of the Avatar Maker’s features are clearly displayed on the homepage and relevant sections.
+- Readability Test: Checked that the descriptions are concise, engaging, and free from jargon to ensure accessibility for all users.
+- Guidance Evaluation: Tested whether users could follow the instructions without confusion and begin customizing their avatar seamlessly.
+- Mobile and Desktop Comparison: Verified that descriptions and instructions are legible and properly formatted across different screen sizes.
+- User Feedback: Gathered informal feedback from testers to determine if the information provided was clear and sufficient for a smooth onboarding experience.
+
+The tests confirmed that users can quickly understand the purpose of the Avatar Maker and how to interact with it effectively.
+
+ ![Test User Story 2 Desktop](#)
+  ![Test User Story 2 Mobile](#)
+
+### User Story 4 - Experience seamless navigation across devices with responsive design.
+As a visitor, I want the site to be responsive, so that I can navigate and use it across devices.To ensure a smooth and consistent navigation experience across different devices, the following tests were conducted:
+
+#### Browser used - Microsoft Edge, Google Chrome, Safari, Firefox, Samsung Internet
+.- Responsive Design Testing – Manually resized the browser window and tested on various screen sizes (mobile, tablet, desktop) to verify layout adaptability.
+- Cross-Browser Testing – Checked navigation functionality on multiple browsers (Chrome, Firefox, Safari, Edge) to ensure consistent performance.
+- Mobile Usability Testing – Interacted with the site on both iOS and Android devices to confirm touch responsiveness and intuitive navigation.
+- Navigation Flow Testing – Clicked through all menu options and links to confirm that users can access key sections without errors or unexpected behavior.
+- Automated Lighthouse Audit – Ran an automated test using Chrome DevTools Lighthouse to evaluate mobile-friendliness and accessibility.
+  
+The tests confirmed that the application provides a seamless and responsive navigation experience across different devices and screen sizes.
+
+ ![Test User Story 4 Desktop](#)
+  ![Test User Story 4 Mobile](#)
+
+### User Story 6 - Use the download feature to save their avatar for personal or professional use.
+As a visitor, I want to download my avatar, so that I can save it for personal or professional use. To ensure users can successfully download their customized avatar, the following manual tests were performed:
+
+#### Browser used - Microsoft Edge, Google Chrome, Safari, Samsung Internet
+- Button Visibility & Accessibility: Confirmed that the download button is clearly visible, labeled appropriately, and accessible via keyboard navigation and screen readers.
+- Click Functionality: Tested that clicking the download button triggers the expected action without delays or errors.
+- File Format & Quality: Verified that the downloaded avatar is saved in the correct format with high image quality, maintaining all customizations.
+- Cross-Browser Testing: Ensured the feature works consistently across multiple browsers, including Chrome, Samsung, Safari, and Edge.
+- Mobile & Desktop Compatibility: Checked that users can download their avatar on both mobile and desktop devices without issues.
+- Error Handling: Simulated potential issues (e.g., incomplete avatar customizations, multiple rapid clicks) to ensure the system prevents unexpected failures.
+  
+The tests confirmed that users can reliably download their avatar in a user-friendly and efficient manner.
+
+ ![Test User Story 6 Desktop](#)
+  ![Test User Story 6 Mobile](#)
 
 <hr>
 
