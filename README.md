@@ -80,6 +80,7 @@ Welcome to the Avatar Maker! This web application allows users to design persona
 
 ## Project Structure & Explanation
 I have included a diagram to provide a clear overview of the project's file structure, categorizing files based on their type and purpose. The project consists of HTML, CSS, and JavaScript files, along with automated tests written using Jest.
+
 ### HTML (Content)
 index.html – The main entry point of the application, linking all necessary styles and scripts.
 
@@ -93,7 +94,7 @@ style-avatar.css – Specific styles for avatar-related pages.
 ### JavaScript (Functionality)
 script.js – Primary script handling general interactions.
 
-script-avatar-female.js & script-avatar-male.js – Control avatar-related interactions.
+script-avatar.jsscript – Control avatar-related interactions. (I originally had separate scripts for the two avatar modals (avatar-female.js & script-avatar-male.js). In my final mentor session for this project my mentor advised me to combine the two files due to repeating code. I then created a file with a function to select the avatar type depending on female or male modal.
 
 script-contact.js – Manages the contact form and modal. I separated this since I tested this code with jest.
 
