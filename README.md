@@ -792,6 +792,7 @@ I have included screenprints of the first and final validation of the HTML with 
   ![Validation HTML Female Avatar 1st](assets/images/images_read_me/female_avatar_html_initial_check.jpg)
 
 </details>
+
 - misuse of aria-label - removed.<br>
 - backlash on open tags - removed.
 
@@ -817,24 +818,90 @@ The CSS was succesfully validated for all pages.
 ### JSHint Validator
 I have included screenprints of the first and final validation for each script validated with JSHint.
 
-<details><summary><h4>Index Page Script- Initial Check </h4></summary><img src=assets/images/images_read_me/index_page_jshint_first_check.jpg></details>
+<details>
+  <summary>Index Page Script- Initial Check</summary>
+
+  ![Index JSHint Check](assets/images/images_read_me/index_page_jshint_first_check.jpg)
+
+</details>
+
 - use  esversion: 6 - included /* jshint esversion: 6 */ to enforce ES6 syntax in JSHint.<br>
 - undefined variable (anime) - included /* global anime */ due to (anime) defined in html head script.
-<details open><summary><h4>Index Page Script- Final Check </h4></summary><img src=assets/images/images_read_me/index_page_jshint_final_check.jpg></details>
+- added aria-hidden forcement function after first check.
+  
+<details open>
+  <summary>Index Page Script- Final Check</summary>
 
-<details><summary><h4>Female Avatar Modal Script- Initial Check </h4></summary><img src=assets/images/images_read_me/female_avatar_page_jshint_first_check.jpg></details>
+  ![Index JSHint Final Check](assets/images/images_read_me/index_page_jshint_final_check.jpg)
+
+</details>
+
+<details>
+  <summary>Female Avatar Modal Script- Initial Check (this script was later refactored and deleted)</summary>
+
+  ![Female Avatar JSHint Check](assets/images/images_read_me/female_avatar_page_jshint_first_check.jpg)
+
+</details>
+
 - loop should be wrapped in if statement - fixed.<br>
 - use dont notation instead of brackets for "animal" and "nose" - fixed.<br>
 - unused variable - defined.
-<details open><summary><h4>Female Avatar Modal Script- Final Check </h4></summary><img src=assets/images/images_read_me/female_avatar_page_jshint_final_check.jpg></details>
+  
+<details open>
+  <summary>Female Avatar Modal Script- Final Check</summary>
 
-<details><summary><h4>Male Avatar Modal Script- Initial Check </h4></summary><img src=assets/images/images_read_me/female_avatar_page_jshint_first_check.jpg></details>
-- loop should be wrapped in if statement - fixed.<br>
-<details open><summary><h4>Male Avatar Modal Script- Final Check </h4></summary><img src=assets/images/images_read_me/male_avatar_page_jshint_final_check.jpg></details>
+  ![Female Avatar JSHint Final Check](assets/images/images_read_me/female_avatar_page_jshint_final_check.jpg)
 
-<details><summary><h4>Contact Modal Script- Initial Check </h4></summary><img src=assets/images/images_read_me/contact_page_jshint_first_check.jpg></details>
+</details>
+
+<details>
+  <summary>Male Avatar Modal Script- Initial Check (this script was later refactored and deleted)</summary>
+
+  ![Male Avatar JSHint Check](assets/images/images_read_me/female_avatar_page_jshint_first_check.jpg)
+
+</details>
+
 - loop should be wrapped in if statement - fixed.<br>
-<details open><summary><h4>Contact Modal Script- Final Check </h4></summary><img src=assets/images/images_read_me/contact_page_jshint_final_check.jpg></details>
+
+<details open>
+  <summary>Male Avatar Modal Script- Final Check</summary>
+
+  ![Male Avatar JSHint Final Check](assets/images/images_read_me/male_avatar_page_jshint_final_check.jpg)
+
+</details>
+
+<details>
+  <summary>Avatar Modal Script- Initial Check (this script is refactored from previous avatar scripts)</summary>
+
+  ![Avatar JSHint Check](assets/images/images_read_me/refactored_avatar_page_jshint_first_check.jpg)
+
+</details>
+
+- loop should be wrapped in if statement - fixed.<br>
+- remove unused variable - fixed.<br>
+
+<details>
+  <summary>Avatar Modal Script- Final Check</summary>
+
+  ![Avatar JSHint Final Check](assets/images/images_read_me/refactored_avatar_page_jshint_final_check.jpg)
+
+</details>
+
+<details>
+  <summary>Contact Modal Script- Initial Check</summary>
+
+  ![Contact Modal JSHint Check](assets/images/images_read_me/contact_page_jshint_first_check.jpg)
+
+</details>
+
+- loop should be wrapped in if statement - fixed.<br>
+
+<details open>
+  <summary>Contact Modal Script- Final Check</summary>
+
+  ![Contact Modal JSHint Final Check](assets/images/images_read_me/contact_page_jshint_final_check.jpg)
+
+</details>
 
 <hr>
 
