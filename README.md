@@ -178,7 +178,7 @@ so that I can quickly understand the purpose of the Avatar Maker site.
 - A clear heading introduces the Avatar Maker.
 - Brief text explains what the site does.
 - Navigation links to the gender selection.
-- 
+  
 #### Tasks
 - Design a clean homepage layout.
 - Add a prominent heading and introductory text.
@@ -375,7 +375,7 @@ The following measures has been taken to make sure the website is accessible.
 - [Features](#features)
 
 ## Design Planning
-The original concept for the website was more extensive than the final outcome, the avatar maker was first intended to be a part of a larger flow from registration as a user for another application. This diagram represents the initial planning and user flow for the website, designed to create a personalized user experience by incorporating body type selection, user preferences, and avatar customization. The diagram illustrates the planning of the journey and serves as a reference for future improvements and expansion.
+The original concept for the website was more extensive than the final outcome. The avatar maker was first intended to be part of a larger flow in registration as a user for another application. This diagram represents the initial planning and user flow for the website, designed to create a personalized user experience by incorporating body type selection, user preferences, and avatar customization. The diagram illustrates the planning of the journey and serves as a reference for future improvements and expansion.
 
 <details open>
   <summary>Design Planning Diagram</summary>
@@ -401,12 +401,12 @@ The chosen typography for my website are both Google fonts and combine Fredoka f
 
 Fredoka: This rounded, bold typeface brings a sense of friendliness and vibrancy to the website. Its approachable design makes it perfect for attention-grabbing headings, aligning well with the creative and interactive theme of the site.
 
-Lato: A modern sans-serif font with a humanist touch, Lato ensures clear readability for the main content. Its clean, neutral design complements the bold playfulness of Fredoka, providing a harmonious balance that enhances the overall user experience.
+Lato: A modern sans-serif font with a humanist touch, Lato ensures clear readability for the main content. Its clean, neutral design complements the playfulness of Fredoka, providing a harmonious balance that enhances the overall user experience.
 
 <hr>
 
 ## Imagery
-The images used in this site are created by myself as sketches in Adobe Illustrator. The collage of avatars was created by inviting friends and peers to design their own avatars, which were then collected and curated into a dynamic composition that celebrates creativity and individuality.
+The images used on this site are created by myself as sketches in Adobe Illustrator. The collage of avatars was created by inviting friends and peers to design their own avatars, which were then collected and curated into a dynamic composition that celebrates creativity and individuality.
 
 <hr>
 
@@ -490,15 +490,15 @@ The Choose-Gender section invites users to begin their avatar creation journey w
 
 </details>
 
-<details open>
+<details>
   <summary>Choose Gender Section Image - Mobile</summary>
 
   ![Choose Gender Mobile](assets/images/images_read_me/choose-gender-mobile.jpg)
 
 </details>
 
-#### Avatar Generator Modal
-The Avatar Generator Modal is a central feature of the site, designed to provide users with an engaging and interactive experience. When triggered, the modal opens to reveal the Avatar Maker interface, where users can customize their avatars with ease. This full-screen design ensures focus on the creative process, eliminating distractions. With intuitive controls and seamless transitions, users can select features, adjust colors, and preview their avatars in real time. The modal's clean layout and responsive design enhance usability across devices, ensuring accessibility for all users.
+#### Avatar Generator Modals - Female & Male
+The Avatar Generator Modals are the central features of the site, designed to provide users with an engaging and interactive experience. When triggered, the modals open to reveal the Avatar Maker interface, where users can customize their avatars with ease. The full-screen design ensures focus on the creative process, eliminating distractions. With intuitive controls and seamless transitions, users can select features, adjust colors, and preview their avatars in real time. The modals clean layout and responsive design enhance usability across devices, ensuring accessibility for all users.
 
 <details open>
   <summary>Female Modal Image - Desktop</summary>
@@ -580,7 +580,7 @@ The contact modal is displaying a clean and simple form for submitting inquiries
 </details>
 
 #### Success Modal
-The Success Modal Window provides users with immediate feedback after successfully submitting the contact form. Once the "Send" button is pressed, the contact modal gracefully closes, and a success modal appears, confirming that the message has been sent. This modal includes a brief thank-you message to acknowledge the user's effort and reassure them that their inquiry has been received.
+The Success Modal Window provides users with immediate feedback after successfully submitting the contact form. Once the "Send" button is pressed, the contact modal gracefully closes, and a success modal appears, confirming that the message has been sent. 
 
 <details>
   <summary>Success Modal Image - Desktop</summary>
@@ -597,7 +597,7 @@ The Success Modal Window provides users with immediate feedback after successful
 </details>
 
 #### Footer
-The Footer serves as a compact and functional closing section of the website, providing essential information and quick access to external links. It includes prominent social media icons, enabling users to easily connect on platforms like Instagram, LinkedIn, and WhatsApp. The footer's minimalist design aligns with the overall aesthetic of the site, ensuring it complements rather than distracts. The three social media icons are added with Font Awesome.
+The Footer serves as a compact and functional closing section of the website with quick access to external links. It includes prominent social media icons, enabling users to easily connect on platforms like Instagram, LinkedIn, and WhatsApp. The footer's minimalist design aligns with the overall aesthetic of the site, ensuring it complements rather than distracts. The three social media icons are added with Font Awesome.
 
 <details open>
   <summary>Footer Image - Desktop</summary>
@@ -654,7 +654,7 @@ A planned addition to the website is an Avatar Inspiration Gallery, designed to 
 - Jest (for testing javascript).
   
 ## Software
-- Adobe Illustrator (for wireframes and hero image creation).
+- Adobe Illustrator (for wireframes and image creation).
 - Adobe Photoshop (for image editing and optimization).
 - Git (for version control).
 - GitHub (to save and store the website's code and files).
@@ -765,7 +765,13 @@ so that I can quickly understand the purpose of the Avatar Maker site. To ensure
 The homepage successfully meets the user story criteria, providing a clear, engaging, and accessible introduction to the application.
 
  ![Test User Story 1 Desktop](assets/images/images_read_me/test-user-story-1-desktop.jpg)
-  ![Test User Story 1 Mobile](assets/images/images_read_me/test-user-story-1-mobile.jpg)
+
+ <details>
+  <summary>Test User Story 1 - mobile view</summary>
+
+  ![Testing Grid](assets/images/images_read_me/test-user-story-1-mobile.jpg)
+
+</details>
 
 ### User Story 2  - Explore the Avatar Maker and its features through brief, engaging descriptions.
 As a visitor, I want to explore the features of the Avatar Maker, so that I can understand what customizations are available. To verify that users can easily understand the Avatar Maker and its features, the following manual tests were conducted:
@@ -971,7 +977,7 @@ I have included screenprints of the first and final validation for each script v
 - loop should be wrapped in if statement - fixed.<br>
 - remove unused variable - fixed.<br>
 
-<details>
+<details open>
   <summary>Avatar Modal Script- Final Check</summary>
 
   ![Avatar JSHint Final Check](assets/images/images_read_me/refactored_avatar_page_jshint_final_check.jpg)
@@ -1090,7 +1096,7 @@ All images are created by myself in Adobe Illustrator.
 ## Code
 
 ### Animation Intro
-I have borrowed the javascript for the animation intro at the start of the page from a designer called Tobias Ahlin. You can find his work at https://tobiasahlin.com. I modified the code by changing the letters and colors of the text to implement my own design.
+The JavaScript for the animation intro at the start of the page is based on code by designer Tobias Ahlin. You can find his work at https://tobiasahlin.com. I modified the code by changing the letters and colors of the text to match my own design.
 
 ### ChatGPT
 I have used ChatGPT throughout the process as a sparring partner for ideas, troubleshooting, and problem-solving. I have asked ChatGPT on solutions with the HTML, styling CSS and solutions for Javascript that I have followed in either writing or copied snippets of code into the IDE.
@@ -1107,7 +1113,7 @@ This project was a fun yet challenging deep dive into canvas-based rendering, al
 
 Throughout this process, I not only came to understand event-driven JavaScript but also refined my experience with HTML, CSS, and Chrome Developer Tools. There were moments when I genuinely doubted I would be able to finish due to JavaScript syntax. But working through those challenges made the process all the more rewarding.
 
-One personal touch I added was the red and blue color scheme on the website's shape selection, a subtle reference to the red and blue pill scene in The Matrix. For me, this is a reminder that growth comes from embracing challenges, even when they feel daunting.
+One personal touch I added was the red and blue color scheme in the shape selection—a subtle nod to the iconic red pill vs. blue pill scene in The Matrix. Just as Neo’s choice symbolized stepping into the unknown, tackling this project pushed me beyond my comfort zone, forcing me to confront challenges head-on. And in the end, that’s what growth is all about—choosing to keep going, even when the code feels like the Matrix’s cascading green symbols, leaving me wondering if I’ll ever fully decode it.
 
 ![Red and Blue Pill](assets/images/images_read_me/red_blue_pill.jpg)
 
