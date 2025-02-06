@@ -94,7 +94,8 @@ style-avatar.css – Specific styles for avatar-related pages.
 ### JavaScript (Functionality)
 script.js – Primary script handling general interactions.
 
-script-avatar.jsscript – Control avatar-related interactions. (I originally had separate scripts for the two avatar modals (avatar-female.js & script-avatar-male.js). In my final mentor session for this project my mentor advised me to combine the two files due to repeating code. I then created a file with a function to select the avatar type depending on female or male modal.
+script-avatar.js – Control avatar-related interactions. <br>
+(I originally had separate scripts for the two avatar modals (avatar-female.js & script-avatar-male.js). In my final mentor session for this project my mentor advised me to combine the two files due to repeating code. I then created a file with a function to select the avatar type depending on female or male modal.
 
 script-contact.js – Manages the contact form and modal. I separated this since I tested this code with jest.
 
