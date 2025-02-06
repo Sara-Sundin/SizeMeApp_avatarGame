@@ -618,36 +618,30 @@ function applyRandomColor(layerName) {
 // Randomize avatar features including colors
 function randomizeAvatar() {
     let showAnimal = Math.random() < 0.5; // 50% chance for animal
-    let showNose = !showAnimal; // Nose only if no animal
 
     for (const key in options[avatarType]) {
-        let randomOption = getRandomOption(options[avatarType][key]);
+        if (options[avatarType].hasOwnProperty(key)) { // Filter prototype properties
+            let randomOption = getRandomOption(options[avatarType][key]);
 
-        if (key === "animal") {
-            layers[key] = showAnimal ? randomOption : null;
-        } else if (key === "nose") {
-            // If an animal was NOT selected, ensure a nose is set
-            if (!showAnimal) {
-                layers[key] = randomOption;
+            if (key === "animal") {
+                layers[key] = showAnimal ? randomOption : null;
+            } else if (key === "nose") {
+                layers[key] = !showAnimal ? randomOption : null;
             } else {
-                layers[key] = null;
+                layers[key] = randomOption;
             }
-        } else {
-            layers[key] = randomOption;
-        }
 
-        if (layers[key]) {
-            loadAndDrawLayer(key, layers[key]);
+            if (layers[key]) {
+                loadAndDrawLayer(key, layers[key]);
 
-            // Apply random colors only to layers that support coloring
-            if (["base", "skin", "clothes", "hair", "beard", "glasses", ].includes(key)) {
-                applyRandomColor(key);
-            }
-        } else {
-            // Clear the canvas for hidden layers
-            const ctx = contexts[key];
-            if (ctx) {
-                ctx.clearRect(0, 0, canvases[key].width, canvases[key].height);
+                if (["base", "skin", "clothes", "hair", "beard", "glasses"].includes(key)) {
+                    applyRandomColor(key);
+                }
+            } else {
+                const ctx = contexts[key];
+                if (ctx) {
+                    ctx.clearRect(0, 0, canvases[key].width, canvases[key].height);
+                }
             }
         }
     }
