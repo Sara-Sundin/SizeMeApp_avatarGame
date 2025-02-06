@@ -672,6 +672,19 @@ Since I had hex colors indicated in the swatches for the color picker they did n
 
 <details open><summary><h4>Code for HEX swatches</h4></summary><img src=assets/images/images_read_me/hex-to-rgb.jpg></details>
 
+### Bootstrap Blocking Modal Accessibility
+When opening the avatar modals, the framework automatically sets aria-hidden="true" on the modal container. This prevents assistive technologies from recognizing the modal content. The browser blocks this behavior, leading to the following console warning:
+
+<details open><summary><h4>Console Warning aria-hiddens</h4></summary><img src=assets/images/images_read_me/aria-hidden-true.jpg></details>
+
+#### Solution
+I tried to changing to the inert attribute instead, but still got the warning. I even removed all the bootstrap from the modal, using only css but still got the warning. In the final solution I implemented a JavaScript fix to override Bootstrap’s aria-hidden behavior and ensure accessibility compliance.
+- On show.bs.modal: Removes aria-hidden and inert to make the modal accessible.
+- On shown.bs.modal: Moves focus to the first interactive element inside the modal.
+- On hide.bs.modal: Restores aria-hidden="true" and inert when closing.
+
+<details><summary><h4>Javascript Solution Console Warning</h4></summary><img src=assets/images/images_read_me/aria-hidden-solution.jpg></details>
+
 ### Handling Multiple Canvases
 The canvas did not draw for several reasons during the development.
 
