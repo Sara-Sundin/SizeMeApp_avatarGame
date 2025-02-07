@@ -55,6 +55,7 @@ Welcome to the Avatar Maker! This web application allows users to design persona
 - Chrome Dev Tools
 - Lighthouse
 - Validators
+- Testing with Jest
 - Bugs & Fixes
 <br>
 
@@ -771,6 +772,7 @@ Visit this URL to view your deployed website.
 - [Chrome Dev Tools](#chrome-dev-tools)
 - [Lighthouse](#lighthouse)
 - [Validation](#validation)
+- [Testing with Jest](#testing-with-jest)
 - [Bugs & Fixes](#bugs-and-fixes)
   
 ## Manual vs Automated Testing
@@ -1059,6 +1061,19 @@ I have included screenprints of the first and final validation for each script v
   ![Contact Modal JSHint Final Check](assets/images/images_read_me/contact_page_jshint_final_check.jpg)
 
 </details>
+
+<hr>
+
+## Testing with Jest
+I used Jest testing framework to perform unit tests on the contact modal functionality, ensuring a smooth and error-free user experience. These tests verify that the modal behaves as expected when opened, closed, and submitted. There are five tests in the Jest test file (script-contact-modal.test.js):
+
+- Opening the Contact Modal,	showContactModal() -	Ensures clicking the "Contact" button removes the hidden class, making the modal visible.
+- Closing the Contact Modal,	closeContactModal() -	Verifies that clicking the close button adds the hidden class, hiding the modal.
+- Displaying the Success Modal,	showSuccessModal() -	Checks that calling this function hides the contact modal and displays the success modal.
+- Calling showSuccessModal on Form Submission,	handleFormSubmit(event) -	Uses a mock function to confirm that submitting the form triggers showSuccessModal().
+- Closing the Success Modal,	closeSuccessModal()	- Ensures that clicking the close button on the success modal adds the hidden class, hiding it.
+
+Each test focuses on a key interaction, ensuring that the contact form and modals function properly within the application. Three of the tests passed on the first run while two tests (showContactModal, handleFormSubmit) failed on the first run. After fixing the issues all tests passed in this file and I transferred the code to the script-contact-modal.js file to be implemented in the project.
 
 <hr>
 
