@@ -682,10 +682,10 @@ Key features include:
 - DOMContentLoaded event () -	Ensures that the DOM elements (header, main, footer) are fully loaded before manipulating visibility.
 
 ### Summary of Functions in the Contact script (script-contact-modal.js)
-showContactModal()	Displays the contact modal by removing the "hidden" class.
-closeContactModal()	Hides the contact modal by adding the "hidden" class.
-showSuccessModal()	Hides the contact modal and displays the success modal upon form submission.
-closeSuccessModal()	Hides the success modal by adding the "hidden" class.
+- showContactModal()	- Displays the contact modal by removing the "hidden" class.
+- closeContactModal()	- Hides the contact modal by adding the "hidden" class.
+- showSuccessModal()	- Hides the contact modal and displays the success modal upon form submission.
+- closeSuccessModal()	- Hides the success modal by adding the "hidden" class.
 
 ### Features in the scripts
 - Objects -	Store canvases, feature layers and avatar options.
