@@ -649,7 +649,7 @@ A planned addition to the website is an Avatar Inspiration Gallery, designed to 
 - JavaScript
 
 ## Summary of the Javascript's functions and features
-The JavaScript in this project powers the interactive experience of the Avatar Maker, handling everything from rendering custom avatars on a canvas to managing user interactions. It dynamically updates different avatar layers—such as skin, hair, and clothing—allowing users to personalize their creations in real time.
+The JavaScript in this project powers the interactive experience of the Avatar Maker, handling everything from rendering the custom avatars on a canvas to managing user interactions. It dynamically updates different avatar layers such as skin, hair, and clothing — allowing users to personalize their creations in real time.
 
 Key features include:
 
@@ -659,7 +659,7 @@ Key features include:
 - Randomization and resets: Users can randomize their avatar’s features or reset them with a single click.
 - Download functionality: The avatar can be saved as an image, enabling users to keep their custom designs.
 
-### Summary of Functions in the Avatar script
+### Summary of Functions in the Avatar script (script-avatar.js)
 - initializeCanvases() - Sets up canvas dimensions and initializes the avatar type.
 - setAvatarType() -	Loads the appropriate default canvas for male or female avatar.
 - hslToRgb() -	Converts HSL values to RGB for color processing.
@@ -674,11 +674,28 @@ Key features include:
 - setupClearThumbnail() -	Allows users to remove specific features in the additional thumbnail menus.
 - setupBackButtons() -	Navigates back to the main selection menu.
 - applyColorToActiveLayer() -	Enables dynamic color changes with sliders included.
+- DOMContentLoaded event () -	Ensures that the DOM elements are fully loaded before manipulating visibility.
 
-### Features in the Avatar script
+### Summary of Functions in the Index script (script-index.js)
+- anime.timeline() - Controls the sequence of text animations with different scaling and opacity effects.
+- setTimeout() -	Hides the intro animation and makes the main content visible after a delay.
+- DOMContentLoaded event () -	Ensures that the DOM elements (header, main, footer) are fully loaded before manipulating visibility.
+
+### Summary of Functions in the Contact script (script-contact-modal.js)
+showContactModal()	Displays the contact modal by removing the "hidden" class.
+closeContactModal()	Hides the contact modal by adding the "hidden" class.
+showSuccessModal()	Hides the contact modal and displays the success modal upon form submission.
+closeSuccessModal()	Hides the success modal by adding the "hidden" class.
+
+### Features in the scripts
 - Objects -	Store canvases, feature layers and avatar options.
-- Event Listeners -	Handle user interactions (selecting features, downloading the avatar).
+- Event Listeners -	Handle user interactions (selecting features, downloading the avatar, handle contact form submit).
 - Loops -	Iterate through options using forEach() and for...in.
+
+### Bootstrap events for the Contact Modal
+- show.bs.modal event	Removes aria-hidden and inert attributes when a modal opens, allowing interaction.
+- shown.bs.modal event	Sets focus on the first interactive element inside the modal after it appears.
+- hide.bs.modal event	Reapplies aria-hidden and inert attributes when a modal is closed to prevent background interaction.
 
   <hr>
   
